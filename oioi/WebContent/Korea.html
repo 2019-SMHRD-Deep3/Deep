@@ -7,6 +7,7 @@
 <html>
 <head>
 <title>Dimension by HTML5 UP</title>
+
 <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -43,12 +44,17 @@ img#img {
 #mem li {
 	float: right !important;
 }
+
 </style>
 
+<!-- <script>
+	$(document).ready(function() {
+		$(".Slider").bxSlider();
+	});
+</script> -->
 
-
-#texttext2 { display: none; }
-</style>
+<!-- #texttext2 { display: none; }
+</style> -->
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -56,7 +62,9 @@ img#img {
 		<!-- Header -->
 
 		<ul id="mem">
-			<pre><a href="#Login">로그인 </a>   <a href="#Join">회원가입 </a> </pre>
+			<pre>
+				<a href="#Login">로그인 </a>	<a href="#Join">회원가입 </a> 
+			</pre>
 		</ul>
 
 		<header id="header">
@@ -137,12 +145,15 @@ img#img {
 			</form>
 		</article>
 	
-
-
-			<!-- Intro -->
+		<!-- Intro -->
 			<article id="intro">
-				<h2 class="major">서울</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+				
+				<h2 class="Slider">서울</h2>
+				<div class="posting">
+					<img src="img/k1.PNG" alt="" />
+					<img src="img/k2.PNG" alt="" />
+					<img src="img/k3.PNG" alt="" />
+				</div>
 				<p>서울특별시는 대한민국의 수도이자 최대 도시입니다. 한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져
 					있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 끝은 강서구 오곡동이다.
 					시청은 중구 을지로1가(태평로1가 31)에 있다. 한반도의 0.28%(남한 면적의 0.61%)에 해당하는 넓이로, 남북간
@@ -155,14 +166,12 @@ img#img {
 				<p>ㅇㅇㅇ</p>
 			</article>
 
-			<!-- Work -->
+		<!-- Work -->
 
 			<article id="work">
 				<h1>서울 10대 명소</h1>
 				<h2 class="major1" href="#" style="display: inline;">주간</h2>
 				<h2 class="major2" href="#" style="display: inline;">야간</h2>
-
-
 
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
@@ -191,7 +200,6 @@ img#img {
 					<button class="next" id="k9">롯데월드</button>
 
 				</div>
-
 
 				<script type="text/javascript">
 					$(document).ready(function() {
@@ -658,9 +666,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
 		$('#k1:button').on('click', function() {
-			
 			$('#popimg1').attr('src', 'img/1.png');
-			
 			$('#texttext').html(test11);
 		});
 		// 버튼2
