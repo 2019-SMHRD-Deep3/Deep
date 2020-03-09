@@ -5,16 +5,12 @@ public class MemberDTO {
 	private String id;
 	private String pw;
 	private String name;
-	private String nation;
 	private String email;
 	
-	
-	
-	public MemberDTO(String id, String pw, String name, String nation, String email) {
+	public MemberDTO(String id, String pw, String name, String email) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
-		this.nation = nation;
 		this.email = email;
 	}
 	
@@ -23,10 +19,6 @@ public class MemberDTO {
 		this.id = id;
 		this.pw = pw;
 	}
-
-
-
-
 	public String getId() {
 		return id;
 	}
@@ -44,12 +36,6 @@ public class MemberDTO {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getNation() {
-		return nation;
-	}
-	public void setNation(String nation) {
-		this.nation = nation;
 	}
 	public String getEmail() {
 		return email;
