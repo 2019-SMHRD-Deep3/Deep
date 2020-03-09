@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+<meta charset="utf-8" />
+
+<style type="text/css">
+.monBtn{
+	width: 10px;
+	height: 15px;
+	border-radius: 10px;
+}
+.myBtn{
+	width: 10px;
+	height: 15px;
+	border-radius: 10px;
+}
+
+</style>
+
+</head>
+<body>
+
+
+	<form action="K_subvey_result" method="post">
+		<table>
+			<tr>
+				<td>방문예정월</td>
+			</tr>		
+			<tr>
+				<td>1월 <input type="button" class = "monBtn" values = "1월" name = "mon" ></td>
+				<td>2월 <input type="button" class = "monBtn"  values = "2월" name = "mon"></td>
+				<td>3월 <input type="button" class = "monBtn"  values = "3월" name = "mon"></td>
+				<td>4월 <input type="button" class = "monBtn"  values = "4월" name = "mon"></td>
+				<td>5월 <input type="button" class = "monBtn"  values = "5월" name = "mon"></td>
+				<td>6월 <input type="button" class = "monBtn"  values = "6월" name = "mon"></td>
+				<td>7월 <input type="button" class = "monBtn"  values = "7월" name = "mon"></td>
+				<td>8월 <input type="button" class = "monBtn"  values = "8월" name = "mon"></td>
+				<td>9월 <input type="button" class = "monBtn"  values = "9월" name = "mon"></td>
+				<td>10월 <input type="button" class = "monBtn"  values = "10월" name = "mon"></td>
+				<td>11월 <input type="button" class = "monBtn"  values = "11월" name = "mon"></td>
+				<td>12월 <input type="button" class = "monBtn"  values = "12월" name = "mon"></td>
+			</tr>		
+			<tr>
+				<td>방문예정월</td>
+			</tr>		
+			<tr>
+				<td>남 <input type="button" class = "myBtn" ></td>
+				<td>여 <input type="button" class = "myBtn"></td>
+			</tr>		
+			<tr>
+				<td>방문예정월</td>
+			</tr>		
+			<tr>
+				<td>방문예정월</td>
+			</tr>		
+
+
+				<!-- <label for="mon">방문예정월</label> 
+				남 <input type="button" class = "myBtn" >
+				여 <input type="button" class = "myBtn">
+			
+				<label for="email">Email</label> <input type="text" name="email"
+					id="email" />
+			
+				<label for="message">Message</label>
+				<textarea name="message" id="message" rows="4"></textarea> -->
+
+		</table>
+		
+		<input type = "submit" value = "전송">
+		
+	</form>
+	
+	<script type="text/javascript">
+	
+		$('.monBtn').on('click', function() {
+			$('.myBtn').css('background-color', '');
+			$(this).css('background-color', 'yellow');
+			alert( $(this).attr('values'));
+			var value = $(this).attr('values');
+			$(this).css('value', value);
+		});
+		$('.myBtn').on('click', function() {
+			$('.myBtn').css('background-color', '');
+			$(this).css('background-color', 'yellow');
+			
+		});
+	
+	
+	
+	</script>
+
+
+</body>
+</html>
