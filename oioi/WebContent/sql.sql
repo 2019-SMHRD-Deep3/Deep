@@ -1,4 +1,4 @@
-drop table member;
+drop table user_member;
 
 create table member(
 	id varchar2(200) primary key,
