@@ -23,14 +23,14 @@ img#img {
 	height: 200px;
 }
 
-#popimg0 {   /* 반응형 웹 -> 이미지 조절 법 */
-	max-width:100%;
-	height:auto !important;
+#popimg0 { /* 반응형 웹 -> 이미지 조절 법 */
+	max-width: 100%;
+	height: auto !important;
 }
 
-#popimg1 {   /* 반응형 웹 -> 이미지 조절 법 */
-	max-width:100%;
-	height:auto !important;
+#popimg1 { /* 반응형 웹 -> 이미지 조절 법 */
+	max-width: 100%;
+	height: auto !important;
 }
 
 #mem {
@@ -45,16 +45,13 @@ img#img {
 	float: right !important;
 }
 
+.incom{
+	/*background-color: rgba(91,100,113,0.1);*/
+	opacity:0.1;
+}
+
 </style>
 
-<!-- <script>
-	$(document).ready(function() {
-		$(".Slider").bxSlider();
-	});
-</script> -->
-
-<!-- #texttext2 { display: none; }
-</style> -->
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -62,9 +59,12 @@ img#img {
 		<!-- Header -->
 
 		<ul id="mem">
-			<pre>
-				<a href="#Login">로그인 </a>	<a href="#Join">회원가입 </a> 
-			</pre>
+			<table class="incom" bgcolor="#5b6471">
+				<tr>
+					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Login">로그인 </a></td>
+					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Join">회원가입 </a></td> 
+				</tr>
+			</table>
 		</ul>
 
 		<header id="header">
@@ -82,8 +82,8 @@ img#img {
 
 
 		<!-- Main -->
+		
 		<div id="main">
-
 		<!-- Login -->
 		<article id="Login">
 			<form action = "LoginService" method = "post">
@@ -129,10 +129,6 @@ img#img {
 						<td colspan=2><input placeholder="전화번호 입력 " type="text" name=name></td>
 					</tr>
 					<tr>
-						<td>국적</td>
-						<td colspan=2><input placeholder="국적 입력 " type="text" name=nation></td>
-					</tr>
-					<tr>
 						<td>이메일</td>
 						<td colspan=2><input placeholder="이메일 입력 " type="text" name=email></td>
 					</tr>
@@ -146,24 +142,21 @@ img#img {
 		</article>
 	
 		<!-- Intro -->
+
 			<article id="intro">
-				
-				<h2 class="Slider">서울</h2>
-				<div class="posting">
-					<img src="img/k1.PNG" alt="" />
-					<img src="img/k2.PNG" alt="" />
-					<img src="img/k3.PNG" alt="" />
-				</div>
-				<p>서울특별시는 대한민국의 수도이자 최대 도시입니다. 한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져
-					있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 끝은 강서구 오곡동이다.
-					시청은 중구 을지로1가(태평로1가 31)에 있다. 한반도의 0.28%(남한 면적의 0.61%)에 해당하는 넓이로, 남북간
-					연장거리 30.30km, 동서간 연장거리 36.78km이다. 1394년(태조 3)부터 한국의 수도가 되어
-					정치·경제·산업·사회·문화·교통의 중심지가 되어 왔다. 1960년대 이후 경제발전과 함께 도시화가 진행되면서 통근 및
-					거주지역이 반경 30km 내의 주변 수도권에 광역적으로 확장되고 있어, 거대도시(Megalopolis)가 되고 있다.
-					서울 정도(定都) 600년인 1994년에 10월 28일이 서울시민의 날로 제정되어 이후 각종 행사가 열리고 있다.
-					1988년 국제올림픽이 열렸고, 2010년 G20, 2012년 핵안보정상회의가 열렸다.</p>
-				<a href="#work">awesome work</a>.
-				<p>ㅇㅇㅇ</p>
+				<h2 class="major">서울, 새롭게 소개합니다.</h2>
+				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<h3 align="center">웹 페이지 소개</h3>
+				<br /> <br />
+				<p align="center">고객님의 소중한 정보를 받아,</p>
+				<p align="center">
+					한국관광공사에서 제공하는 <b>최신 년도별 외래관광객실태조사 데이터</b>를 토대로
+				</p>
+				<p align="center">자체 모델을 통한 분석 결과를 산출하고</p>
+				<p align="center">
+					당신의 편안하고 흥미로운 <b>서울 여행</b>을 준비하도록 도와드리겠습니다.
+				</p>
+
 			</article>
 
 		<!-- Work -->
@@ -224,9 +217,7 @@ img#img {
 				<p id="texttext">골라골라</p>
 
 			</article>
-
-
-
+			
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">베스트 테마</h2>
@@ -666,7 +657,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
 		$('#k1:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/1.png');
+			$('#popimg1').attr('src', 'img/k1.png');
 			$('#texttext').html(test11);
 		});
 		// 버튼2
