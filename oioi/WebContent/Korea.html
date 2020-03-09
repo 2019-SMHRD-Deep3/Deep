@@ -49,37 +49,37 @@ img#img {
 	background-size: cover;
 }
 
- #videobcg{
-         top: 0px;
-         left: 0px;
-         min-width: 100%;
-         min-height:100%;
-         width:auto;
-         height:auto;
-         z-index:-1000;
-         overflow:hidden;
-      
-      }
+#videobcg {
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1000;
+	overflow: hidden;
+}
 </style>
 
-  
+
 
 #texttext2 { display: none; }
 </style>
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
-	      
-	<div id="wrapper" position = relative;>
-			 <video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"  style="position:fixed;">
-               <source src="video/seoul.mp4" type="video/mp4">
-             
-            </video>
-            
-    <!--         <script>
+
+	<div id="wrapper" position=relative;>
+		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
+			style="position: fixed;">
+			<source src="video/seoul.mp4" type="video/mp4">
+
+		</video>
+
+		<!--         <script>
 				document.getElementById("videobcg").play();
 			</script> -->
-    
+
 		<!-- Header -->
 
 		<ul id="mem">
@@ -104,6 +104,74 @@ img#img {
 		<!-- Main -->
 		<div id="main">
 
+
+			<!-- Login -->
+			<article id="Login">
+				<form action="LoginService" method="post">
+					<table>
+						<tr>
+							<td>아이디</td>
+							<td><input placeholder="아이디 입력" type="text" name=id></td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type=submit value="로그인"> <input
+								type=reset value="초기화"></td>
+						</tr>
+					</table>
+				</form>
+			</article>
+
+
+			<!-- Join -->
+			<article id="Join">
+				<form action="JoinService" method="post">
+					<table>
+						<tr>
+							<td>아이디</td>
+							<td><input placeholder="아이디 입력 " type="text" name=id>
+							</td>
+							<td><input type="button" value="중복 확인"></td>
+						</tr>
+						<tr>
+							<td>비밀번호</td>
+							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
+								name=pw></td>
+						</tr>
+						<tr>
+							<td>비밀번호 확인</td>
+							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
+								name=pw></td>
+						</tr>
+						<tr>
+							<td>이름</td>
+							<td colspan=2><input placeholder="전화번호 입력 " type="text"
+								name=name></td>
+						</tr>
+						<tr>
+							<td>국적</td>
+							<td colspan=2><input placeholder="국적 입력 " type="text"
+								name=nation></td>
+						</tr>
+						<tr>
+							<td>이메일</td>
+							<td colspan=2><input placeholder="이메일 입력 " type="text"
+								name=email></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan=2><input type=submit value="회원가입"> <input
+								type=reset value="초기화"></td>
+						</tr>
+					</table>
+				</form>
+			</article>
+
+			======= <<<<<<< HEAD
 			<!-- Login -->
 			<article id="Login">
 				<form action="LoginService" method="post">
@@ -174,18 +242,19 @@ img#img {
 
 			<!-- Intro -->
 			<article id="intro">
-				<h2 class="major">서울</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-				<p>서울특별시는 대한민국의 수도이자 최대 도시입니다. 한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져
-					있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 끝은 강서구 오곡동이다.
-					시청은 중구 을지로1가(태평로1가 31)에 있다. 한반도의 0.28%(남한 면적의 0.61%)에 해당하는 넓이로, 남북간
-					연장거리 30.30km, 동서간 연장거리 36.78km이다. 1394년(태조 3)부터 한국의 수도가 되어
-					정치·경제·산업·사회·문화·교통의 중심지가 되어 왔다. 1960년대 이후 경제발전과 함께 도시화가 진행되면서 통근 및
-					거주지역이 반경 30km 내의 주변 수도권에 광역적으로 확장되고 있어, 거대도시(Megalopolis)가 되고 있다.
-					서울 정도(定都) 600년인 1994년에 10월 28일이 서울시민의 날로 제정되어 이후 각종 행사가 열리고 있다.
-					1988년 국제올림픽이 열렸고, 2010년 G20, 2012년 핵안보정상회의가 열렸다.</p>
-				<a href="#work">awesome work</a>.
-				<p>ㅇㅇㅇ</p>
+				<h2 class="major">서울, 새롭게 소개합니다.</h2>
+				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<h3 align="center">웹 페이지 소개</h3>
+				<br /> <br />
+				<p align="center">고객님의 소중한 정보를 받아,</p>
+				<p align="center">
+					한국관광공사에서 제공하는 <b>최신 년도별 외래관광객실태조사 데이터</b>를 토대로
+				</p>
+				<p align="center">자체 모델을 통한 분석 결과를 산출하고</p>
+				<p align="center">
+					당신의 편안하고 흥미로운 <b>서울 여행</b>을 준비하도록 도와드리겠습니다.
+				</p>
+
 			</article>
 
 			<!-- Work -->
@@ -194,8 +263,6 @@ img#img {
 				<h1>서울 10대 명소</h1>
 				<h2 class="major1" href="#" style="display: inline;">주간</h2>
 				<h2 class="major2" href="#" style="display: inline;">야간</h2>
-
-
 
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
@@ -260,9 +327,7 @@ img#img {
 			</article>
 
 			<!-- Contact -->
-			<article id="contact">
-				
-			</article>
+			<article id="contact"></article>
 
 			<!-- Elements -->
 			<article id="elements">
@@ -273,8 +338,7 @@ img#img {
 					<p>
 						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
 						and this is <em>emphasized</em>. This is <sup>superscript</sup>
-						text and this is <sub>subscript</sub> text. This is <u>underlined</u>
-						and this is code:
+						text and this is <sub>subscript</sub> and this is code:
 						<code>for (;;) { ... }</code>
 						. Finally, <a href="#">this is a link</a>.
 					</p>
@@ -719,7 +783,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 
+<<<<<<< HEAD
 			$('#popimg1').attr('src', 'img/kn1.PNG');
+=======
+			$('#popimg1').attr('src', 'img/1.png');
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 
 			$('#texttext').html(test11);
 		});
