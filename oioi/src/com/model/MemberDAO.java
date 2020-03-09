@@ -52,15 +52,14 @@ public class MemberDAO {
 		
 		try {
 			getConnection();
-			String sql = "insert into member values(?,?,?,?,?)";
+			String sql = "insert into member values(?,?,?,?)";
 
 			psmt = conn.prepareStatement(sql);
 			
 			psmt.setString(1, dto.getId());
 			psmt.setString(2, dto.getPw());
 			psmt.setString(3, dto.getName());
-			psmt.setString(4, dto.getNation());
-			psmt.setString(5, dto.getEmail());
+			psmt.setString(4, dto.getEmail());
 
 			psmt.executeUpdate(); 
 			
@@ -80,7 +79,6 @@ public class MemberDAO {
 		String l_id = null;
 		String l_pw = null;
 		String l_name = null;
-		String l_nation = null;
 		String l_email = null;
 		
 
@@ -97,10 +95,9 @@ public class MemberDAO {
 				l_id = rs.getString(1);
 				l_pw = rs.getString(2);
 				l_name = rs.getString(3);
-				l_nation = rs.getString(4);
-				l_email = rs.getString(5);
+				l_email = rs.getString(4);
 				
-				info = new MemberDTO(l_id, l_pw, l_name, l_nation, l_email);
+				info = new MemberDTO(l_id, l_pw, l_name, l_email);
 			}
 			
 		} catch (SQLException e) {

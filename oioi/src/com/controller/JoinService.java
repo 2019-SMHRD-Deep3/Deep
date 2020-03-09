@@ -21,11 +21,10 @@ public class JoinService extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
-		String nation = request.getParameter("nation");
 		String email = request.getParameter("email");
 		
-		System.out.println(id + "  " + pw+ "  " + name + "  "+ nation + "  " + email);
-		MemberDTO dto = new MemberDTO(id, pw, name, nation, email);
+		System.out.println(id + "  " + pw+ "  " + name + "  " + email);
+		MemberDTO dto = new MemberDTO(id, pw, name, email);
 		MemberDAO dao = new MemberDAO();
 		dao.join(dto);
 		
