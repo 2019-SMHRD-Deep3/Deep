@@ -1,4 +1,4 @@
-drop table member;
+drop table user_member;
 
 create table member(
 	id varchar2(200) primary key,
@@ -6,7 +6,6 @@ create table member(
 	name varchar2(200),
 	nation varchar2(200),
 	email varchar2(200)
-	
 )
 
 select * from member;
