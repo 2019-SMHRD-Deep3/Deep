@@ -1,21 +1,22 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 <head>
+
+
 <title>Dimension by HTML5 UP</title>
+
 <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+
+
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
-
 </noscript>
+
+
 <style>
 img#img {
 	width: 200px;
@@ -44,6 +45,10 @@ img#img {
 	float: right !important;
 }
 
+ .incom{
+	background-color: rgba(91,100,113,0.0175);
+}
+
 #wrapper {
 	background-repeat: repeat;
 	background-size: cover;
@@ -59,32 +64,32 @@ img#img {
 	z-index: -1000;
 	overflow: hidden;
 }
+
 </style>
 
-
-
-#texttext2 { display: none; }
-</style>
 </head>
-<body class="is-preload">
-	<!-- Wrapper -->
 
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
 	<div id="wrapper" position=relative;>
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
-		<!--         <script>
-				document.getElementById("videobcg").play();
-			</script> -->
 
 		<!-- Header -->
 
 		<ul id="mem">
-			<pre>
-				<a href="#Login">로그인 </a>   <a href="#Join">회원가입 </a> </pre>
+			<table class="incom" bgcolor="#5b6471">
+				<tr>
+					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Login">로그인 </a></td>
+					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Join">회원가입 </a></td> 
+				</tr>
+			</table>
+
 		</ul>
 
 		<header id="header">
@@ -102,208 +107,67 @@ img#img {
 
 
 		<!-- Main -->
+		
 		<div id="main">
+		<!-- Login -->
+		<article id="Login">
+			<form action = "LoginService" method = "post">
+				<table>
+					<tr>
+						<td>아이디</td>
+						<td><input placeholder="아이디 입력" type="text" name=id></td>
+					</tr>
+					<tr>
+						<td>비밀번호</td>
+						<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type=submit value="로그인"> 
+							<input type=reset value="초기화"></td>
+					</tr>
+				</table>
+			</form>
+		</article>
+		
+		
+		<!-- Join -->
+		<article id="Join">
+			<form action = "JoinService" method = "post">
+				<table>
+					<tr>
+						<td>아이디</td>
+						<td><input placeholder="아이디 입력 " type="text" name=id>
+						</td>
+						<td><input type="button" value="중복 확인"></td>
+					</tr>
+					<tr>
+						<td>비밀번호</td>
+						<td colspan=2><input placeholder="비밀번호 입력 " type="password" name=pw></td>
+					</tr>
+					<tr>
+						<td>비밀번호 확인</td>
+						<td colspan=2><input placeholder="비밀번호 재입력 " type="password" name=pw></td>
+					</tr>
+					<tr>
+						<td>이름</td>
+						<td colspan=2><input placeholder="전화번호 입력 " type="text" name=name></td>
+					</tr>
+					<tr>
+						<td>이메일</td>
+						<td colspan=2><input placeholder="이메일 입력 " type="text" name=email></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan=2><input type=submit value="회원가입"> 
+						              <input type=reset value="초기화"></td>
+					</tr>
+				</table>
+			</form>
+		</article>
+	
+		<!-- Intro -->
 
-
-
-			<!-- Login -->
-			<article id="Login">
-				<form action="LoginService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력" type="text" name=id></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><input type=submit value="로그인"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-
-			<!-- Join -->
-			<article id="Join">
-				<form action="JoinService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력 " type="text" name=id>
-							</td>
-							<td><input type="button" value="중복 확인"></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>비밀번호 확인</td>
-							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>이름</td>
-							<td colspan=2><input placeholder="전화번호 입력 " type="text"
-								name=name></td>
-						</tr>
-						<tr>
-							<td>국적</td>
-							<td colspan=2><input placeholder="국적 입력 " type="text"
-								name=nation></td>
-						</tr>
-						<tr>
-							<td>이메일</td>
-							<td colspan=2><input placeholder="이메일 입력 " type="text"
-								name=email></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="회원가입"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-
-
-			<!-- Login -->
-			<article id="Login">
-				<form action="LoginService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력" type="text" name=id></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><input type=submit value="로그인"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-
-			<!-- Join -->
-			<article id="Join">
-				<form action="JoinService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력 " type="text" name=id>
-							</td>
-							<td><input type="button" value="중복 확인"></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>비밀번호 확인</td>
-							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>이름</td>
-							<td colspan=2><input placeholder="전화번호 입력 " type="text"
-								name=name></td>
-						</tr>
-						<tr>
-							<td>이메일</td>
-							<td colspan=2><input placeholder="이메일 입력 " type="text"
-								name=email></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="회원가입"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-			<!-- Login -->
-			<article id="Login">
-				<form action="LoginService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력" type="text" name=id></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><input type=submit value="로그인"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-
-			<!-- Join -->
-			<article id="Join">
-				<form action="JoinService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력 " type="text" name=id>
-							</td>
-							<td><input type="button" value="중복 확인"></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>비밀번호 확인</td>
-							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>이름</td>
-							<td colspan=2><input placeholder="전화번호 입력 " type="text"
-								name=name></td>
-						</tr>
-						<tr>
-							<td>국적</td>
-							<td colspan=2><input placeholder="국적 입력 " type="text"
-								name=nation></td>
-						</tr>
-						<tr>
-							<td>이메일</td>
-							<td colspan=2><input placeholder="이메일 입력 " type="text"
-								name=email></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="회원가입"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-
-
-			<!-- Intro -->
 			<article id="intro">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
 				<span class="image main"><img src="img/main.PNG" alt="서울" /></span>
@@ -320,10 +184,9 @@ img#img {
 
 			</article>
 
-			<!-- Work -->
+		<!-- Work -->
 
 			<article id="work">
-
 				<h1>서울 Top 10 명소</h1>
 				<h2 class="major1" href="#" style="display: inline;">주간</h2>
 				<h2 class="major2" href="#" style="display: inline;">야간</h2>
@@ -356,7 +219,6 @@ img#img {
 
 				</div>
 
-
 				<script type="text/javascript">
 					$(document).ready(function() {
 						$('.display').show(); //페이지를 로드할 때 표시할 요소
@@ -380,9 +242,7 @@ img#img {
 				<p id="texttext">골라골라</p>
 
 			</article>
-
-
-
+			
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">베스트 테마</h2>
@@ -657,9 +517,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-			</p>
+			<p class="copyright">&copy; Team DEEP</p>
 		</footer>
 
 	</div>
@@ -674,55 +532,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 
 	<!-- BG -->
-	<div id="bg"></div>
-	<script type="text/javascript">
-		var popimgs = document.getElementById('popimg0');
-	
-		// 버튼 1
-		$('#ko1:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul1.PNG');
-		});
-		// 버튼2
-		$('#ko2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul2.PNG');
-		});
-		// 버튼3
-		$('#ko3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul3.PNG');
-		});
-		// 버튼4
-		$('#ko4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul4.PNG');
-		});
-		// 버튼5
-		$('#ko5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul5.PNG');
-		});
-		// 버튼6
-		$('#ko6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul6.PNG');
-			$('#texttext').html(test6);
-		});
-		// 버튼7
-		$('#ko7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul7.jpg');
-			$('#texttext').html(test7);
-		});
-		// 버튼8
-		$('#ko8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul8.PNG');
-		});
-		// 버튼9
-		$('#ko9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul9.PNG');
-		});
-		// 버튼10
-		$('#ko10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/seoul10.PNG');
-		});
-	</script>
-
-
 	<p id="texttext11">1번</p>
 	<p id="texttext22">2번</p>
 	<p id="texttext33">3번</p>
@@ -749,11 +558,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test88 = document.querySelector('#texttext88').textContent;
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
+
 		$('#k1:button').on('click', function() {
-
 			$('#popimg1').attr('src', 'img/kn1.PNG');
-			$('#popimg1').attr('src', 'img/1.png');
-
 			$('#texttext').html(test11);
 		});
 		// 버튼2
