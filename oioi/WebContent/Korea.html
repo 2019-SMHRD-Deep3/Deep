@@ -59,12 +59,20 @@ img#img {
 	z-index: -1000;
 	overflow: hidden;
 }
+#day {
+	display: inline;
+}
+
+.h1:hover{
+  color: red;
+}
+.h2:hover{
+color : blue;
+}
+
 </style>
 
 
-
-#texttext2 { display: none; }
-</style>
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -171,73 +179,6 @@ img#img {
 				</form>
 			</article>
 
-			======= <<<<<<< HEAD
-			<!-- Login -->
-			<article id="Login">
-				<form action="LoginService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력" type="text" name=id></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td><input type=submit value="로그인"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
-
-			<!-- Join -->
-			<article id="Join">
-				<form action="JoinService" method="post">
-					<table>
-						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력 " type="text" name=id>
-							</td>
-							<td><input type="button" value="중복 확인"></td>
-						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>비밀번호 확인</td>
-							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td>이름</td>
-							<td colspan=2><input placeholder="전화번호 입력 " type="text"
-								name=name></td>
-						</tr>
-						<tr>
-							<td>국적</td>
-							<td colspan=2><input placeholder="국적 입력 " type="text"
-								name=nation></td>
-						</tr>
-						<tr>
-							<td>이메일</td>
-							<td colspan=2><input placeholder="이메일 입력 " type="text"
-								name=email></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="회원가입"> <input
-								type=reset value="초기화"></td>
-						</tr>
-					</table>
-				</form>
-			</article>
-
 
 
 			<!-- Intro -->
@@ -261,9 +202,8 @@ img#img {
 
 			<article id="work">
 				<h1>서울 10대 명소</h1>
-				<h2 class="major1" href="#" style="display: inline;">주간</h2>
-				<h2 class="major2" href="#" style="display: inline;">야간</h2>
-
+				<h2 class="major1" href="#" style="display: inline;"><div id="day" class = "h1">주간</div></h2>
+				<h2 class="major2" href="#" style="display: inline;"><div id="day" class = "h2">야간</div></h2>
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
 					<button class="ten" id="ko1">경복궁</button>
@@ -782,13 +722,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
 		$('#k1:button').on('click', function() {
-
-<<<<<<< HEAD
 			$('#popimg1').attr('src', 'img/kn1.PNG');
-=======
-			$('#popimg1').attr('src', 'img/1.png');
->>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
-
 			$('#texttext').html(test11);
 		});
 		// 버튼2
