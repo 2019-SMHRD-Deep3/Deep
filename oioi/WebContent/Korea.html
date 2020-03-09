@@ -45,9 +45,24 @@ img#img {
 	float: right !important;
 }
 
-.incom{
-	/*background-color: rgba(91,100,113,0.1);*/
-	opacity:0.1;
+ .incom{
+	background-color: rgba(91,100,113,0.0175);
+}
+
+#wrapper {
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+#videobcg {
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1000;
+	overflow: hidden;
 }
 
 </style>
@@ -55,7 +70,18 @@ img#img {
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
-	<div id="wrapper">
+
+	<div id="wrapper" position=relative;>
+		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
+			style="position: fixed;">
+			<source src="video/seoul.mp4" type="video/mp4">
+
+		</video>
+
+		<!--         <script>
+				document.getElementById("videobcg").play();
+			</script> -->
+
 		<!-- Header -->
 
 		<ul id="mem">
@@ -145,7 +171,7 @@ img#img {
 
 			<article id="intro">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<span class="image main"><img src="img/main.PNG" alt="서울" /></span>
 				<h3 align="center">웹 페이지 소개</h3>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
@@ -162,22 +188,22 @@ img#img {
 		<!-- Work -->
 
 			<article id="work">
-				<h1>서울 10대 명소</h1>
+				<h1>서울 Top 10 명소</h1>
 				<h2 class="major1" href="#" style="display: inline;">주간</h2>
 				<h2 class="major2" href="#" style="display: inline;">야간</h2>
 
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
-					<button class="ten" id="ko1">경복궁</button>
-					<button class="ten" id="ko2">명동</button>
-					<button class="ten" id="ko3">인사동</button>
-					<button class="ten" id="ko4">코엑스</button>
-					<button class="ten" id="ko5">창덕궁</button>
-					<button class="ten" id="ko6">봉은사</button>
-					<button class="ten" id="ko7">63빌딩</button>
-					<button class="ten" id="ko8">전쟁기념관</button>
-					<button class="ten" id="ko9">북촌한옥마을</button>
-					<button class="ten" id="ko10">국립중앙박물관</button>
+					<button class="ten" id="ko1">북촌 한옥마을</button>
+					<button class="ten" id="ko2">경복궁</button>
+					<button class="ten" id="ko3">N서울타워</button>
+					<button class="ten" id="ko4">청계천</button>
+					<button class="ten" id="ko5">명동</button>
+					<button class="ten" id="ko6">홍대</button>
+					<button class="ten" id="ko7">한양도성</button>
+					<button class="ten" id="ko8">동대문 디자인플라자(DDP)</button>
+					<button class="ten" id="ko9">남대문시장</button>
+					<button class="ten" id="ko10">이태원</button>
 				</div>
 
 				<div id='g'>
@@ -222,49 +248,11 @@ img#img {
 			<article id="about">
 				<h2 class="major">베스트 테마</h2>
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit.
-					Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac.
-					Aliquam erat volutpat. Praesent urna nisi, fringila lorem et
-					vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus
-					ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in
-					faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum
-					dolor sit amet.</p>
+				<p>하위~</p>
 			</article>
 
 			<!-- Contact -->
-			<article id="contact">
-				<h2 class="major">Contact</h2>
-				<form method="post" action="#">
-					<div class="fields">
-						<div class="field half">
-							<label for="name">Name</label> <input type="text" name="name"
-								id="name" />
-						</div>
-						<div class="field half">
-							<label for="email">Email</label> <input type="text" name="email"
-								id="email" />
-						</div>
-						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="4"></textarea>
-						</div>
-					</div>
-					<ul class="actions">
-						<li><input type="submit" value="Send Message" class="primary" /></li>
-						<li><input type="reset" value="Reset" /></li>
-					</ul>
-				</form>
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span
-							class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span
-							class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span
-							class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-				</ul>
-			</article>
+			<article id="contact"></article>
 
 			<!-- Elements -->
 			<article id="elements">
@@ -275,8 +263,7 @@ img#img {
 					<p>
 						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
 						and this is <em>emphasized</em>. This is <sup>superscript</sup>
-						text and this is <sub>subscript</sub> text. This is <u>underlined</u>
-						and this is code:
+						text and this is <sub>subscript</sub> and this is code:
 						<code>for (;;) { ... }</code>
 						. Finally, <a href="#">this is a link</a>.
 					</p>
@@ -538,20 +525,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	</div>
 
-	<p id="texttext1">경복궁</p>
-	<p id="texttext2">대한민국에서 가장 비싼 땅인 명동은 서울특별시를 상징하는 번화가이다. 조선 시대에는
-		주택가였으나 일제강점기 충무로가 상업지역으로 발전하며 인접지역인 명동도 상가형태로 변하게 되어 대한민국 최고의 번화가로 발돋움
-		하게 되었다. 명동은 유행의 선도자라고 불릴 정도로 거대한 쇼핑 문화가 형성되어 잇는데, 국내 유명 백화점은 물론 명품,브랜드
-		매장뿐 만아니라 보세가게까지 다양한 상점이 있어 쇼핑에 최적화 되있다고 말할 수 있다. 또한 명동에는 쇼핑과 함게
-		먹을거리,즐길거리 등이 있어 내국인 뿐만아니라 외국인들도 한국에서 즐길 수 있는 최적의 공간이라 불릴수 있다.~</p>
-	<p id="texttext3">하위~</p>
-	<p id="texttext4">하위~</p>
-	<p id="texttext5">하위~</p>
-	<p id="texttext6">하위~</p>
-	<p id="texttext7">하위~</p>
-	<p id="texttext8">하위~</p>
-	<p id="texttext9">하위~</p>
-	<p id="texttext10">하위~</p>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -579,52 +552,52 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
 
-			$('#popimg0').attr('src', 'img/k2.PNG');
+			$('#popimg0').attr('src', 'img/seoul1.PNG');
 			$('#texttext').html(test1);
 		});
 		// 버튼2
 		$('#ko2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k3.PNG');
+			$('#popimg0').attr('src', 'img/seoul2.PNG');
 			$('#texttext').html(test2);
 		});
 		// 버튼3
 		$('#ko3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k4.PNG');
+			$('#popimg0').attr('src', 'img/seoul3.PNG');
 			$('#texttext').html(test3);
 		});
 		// 버튼4
 		$('#ko4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/seoul4.PNG');
 			$('#texttext').html(test4);
 		});
 		// 버튼5
 		$('#ko5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/seoul5.PNG');
 			$('#texttext').html(test5);
 		});
 		// 버튼6
 		$('#ko6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k7.PNG');
+			$('#popimg0').attr('src', 'img/seoul6.PNG');
 			$('#texttext').html(test6);
 		});
 		// 버튼7
 		$('#ko7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k8.jpg');
+			$('#popimg0').attr('src', 'img/seoul7.jpg');
 			$('#texttext').html(test7);
 		});
 		// 버튼8
 		$('#ko8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k9.PNG');
+			$('#popimg0').attr('src', 'img/seoul8.PNG');
 			$('#texttext').html(test8);
 		});
 		// 버튼9
 		$('#ko9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k10.PNG');
+			$('#popimg0').attr('src', 'img/seoul9.PNG');
 			$('#texttext').html(test9);
 		});
 		// 버튼10
 		$('#ko10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k11.PNG');
+			$('#popimg0').attr('src', 'img/seoul10.PNG');
 			$('#texttext').html(test10);
 		});
 	</script>
@@ -656,23 +629,24 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test88 = document.querySelector('#texttext88').textContent;
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
+
 		$('#k1:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k1.png');
+			$('#popimg1').attr('src', 'img/kn1.PNG');
 			$('#texttext').html(test11);
 		});
 		// 버튼2
 		$('#k2:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k3.PNG');
+			$('#popimg1').attr('src', 'img/kn2.PNG');
 			$('#texttext').html(test22);
 		});
 		// 버튼3
 		$('#k3:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k4.PNG');
+			$('#popimg1').attr('src', 'img/kn3.PNG');
 			$('#texttext').html(test33);
 		});
 		// 버튼4
 		$('#k4:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k6.PNG');
+			$('#popimg1').attr('src', 'img/kn3.PNG');
 			$('#texttext').html(test44);
 		});
 		// 버튼5
