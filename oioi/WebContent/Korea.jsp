@@ -82,7 +82,7 @@ img#img {
 
 		<!-- Login -->
 		<article id="Login">
-			<form action = "LoginService" method = "post">
+			<form action = "LoginCon" method = "post">
 				<table>
 					<tr>
 						<td>¾ÆÀÌµğ</td>
