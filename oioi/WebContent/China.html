@@ -74,7 +74,7 @@ img#img {
 
 
 
-#texttext2 { display: none; }
+
 </style>
 </head>
 <body class="is-preload">
@@ -263,7 +263,7 @@ img#img {
 
 					});
 				</script>
-				<p id="texttext">골라골라</p>
+				<p id="texttext"></p>
 
 			</article>
 
@@ -606,7 +606,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<!-- BG -->
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
 		var popimgs = document.getElementById('popimg0');
 		var test1 = document.querySelector('#texttext1').textContent;
 		var test2 = document.querySelector('#texttext2').textContent;
@@ -620,7 +619,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test10 = document.querySelector('#texttext10').textContent;
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
-
 			$('#popimg0').attr('src', 'img/k2.PNG');
 			$('#texttext').html(test1);
 		});
