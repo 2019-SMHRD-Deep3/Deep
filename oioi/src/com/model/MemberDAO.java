@@ -59,7 +59,7 @@ public class MemberDAO {
 		
 		try {
 			getConnection();
-			String sql = "insert into member values(?,?,?,?)";
+			String sql = "insert into user_member values(?,?,?,?)";
 
 			psmt = conn.prepareStatement(sql);
 			
@@ -91,7 +91,7 @@ public class MemberDAO {
 
 		try {
 			getConnection();    
-			String sql = "Select * from member where id = ? and pw = ? ";
+			String sql = "Select * from user_member where id = ? and pw = ? ";
 			psmt = conn.prepareStatement(sql);
 			
 			psmt.setString(1, dto.getId());
@@ -120,7 +120,7 @@ public class MemberDAO {
 		int cnt = 0;
 		try {
 			getConnection(); // 연결
-			String sql = "update web_member set pw = ?, name = ? where email = ?";
+			String sql = "update user_member set pw = ?, name = ? where email = ?";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getPw()); // 물음표값 채워주기. 순서 지킬 것. 이상하게 들어가니까
