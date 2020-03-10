@@ -44,23 +44,49 @@ img#img {
 #mem li {
 	float: right !important;
 }
+ .incom{
+	background-color: rgba(91,100,113,0.0175);
+}
+
+#wrapper {
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+#videobcg {
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1000;
+	overflow: hidden;
+}
+
 </style>
 
-
-
-#texttext2 { display: none; }
-</style>
 </head>
 <body class="is-preload">
 <% MemberDTO info = (MemberDTO) session.getAttribute("info"); %>
-<!-- Wrapper -->
-	<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper" position=relative;>
+		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
+			style="position: fixed;">
+			<source src="video/seoul.mp4" type="video/mp4">
+		</video>
+
+
 		<!-- Header -->
 
 		<ul id="mem">
-			<pre>
-			
-			<a href="#Login">로그인 </a>   <a href="#Join">회원가입 </a> </pre>
+			<table class="incom" bgcolor="#5b6471">
+				<tr>
+					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Login">로그인 </a></td>
+					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Join">회원가입 </a></td> 
+				</tr>
+			</table>
+
 		</ul>
 
 		<header id="header">
@@ -76,13 +102,12 @@ img#img {
 		</header>
 
 
-
 		<!-- Main -->
 		<div id="main">
 
 		<!-- Login -->
 		<article id="Login">
-			<form action = "LoginCon" method = "post">
+			<form action = "LoginService.do" method = "post">
 				<table>
 					<tr>
 						<td>아이디</td>
@@ -104,7 +129,7 @@ img#img {
 		
 		<!-- Join -->
 		<article id="Join">
-			<form action = "JoinService" method = "post">
+			<form action = "JoinService.do" method = "post">
 				<table>
 					<tr>
 						<td>아이디</td>
