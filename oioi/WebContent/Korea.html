@@ -59,12 +59,51 @@ img#img {
 	z-index: -1000;
 	overflow: hidden;
 }
+
 #day {
 	display: inline;
 }
 
-#day:hover{
-  color: red;
+.a1:hover {
+	color: red;
+}
+
+.a2:hover {
+	color: blue;
+}
+
+#lan {
+	top: 0px;
+	/* left: 10; */
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+#lan td {
+	width: 200px;
+}
+
+#dropdownMenuButton {
+	width: auto;
+	height: 40px;
+	font-size: 15px;
+}
+
+p#texttext {
+	color: white;
+}
+
+.intSE {
+	color: white;
+}
+
+article#Join {
+	color: white;
+}
+
+article#Login {
+	color: white;
 }
 </style>
 
@@ -86,17 +125,45 @@ img#img {
 
 		<!-- Header -->
 
-		<ul id="mem">
-			<pre>
-				<a href="#Login">로그인 </a>   <a href="#Join">회원가입 </a> </pre>
-		</ul>
+		<table id="lan" style="position: absolute; right: 0px;">
 
+			<td>
+				<link rel="stylesheet"
+					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+					integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+					crossorigin="anonymous"> <script
+					src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+					crossorigin="anonymous"></script> <script
+					src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous"></script> <script
+					src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous"></script>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button"
+						id="dropdownMenuButton" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="Korea.html">한국어</a> <a
+							class="dropdown-item" href="English.html">English</a> <a
+							class="dropdown-item" href="China.html">简体中文</a> <a
+							class="dropdown-item" href="Japan.html">日本語</a> <a
+							class="dropdown-item" href="Spain.html">Español</a>
+					</div>
+				</div>
+			</td>
+			<td><a href="#Login">로그인 </a></td>
+			<td><a href="#Join">회원가입</a></td>
+
+		</table>
 		<header id="header">
 			<nav>
-				<ul>
-					<li><a href="#intro">어서와</a></li>
-					<li><a href="#work">서울은</a></li>
-					<li><a href="#about">처음이지?</a></li>
+				<ul class="cont">
+					<li><a href="#intro">서비스</a></li>
+					<li><a href="#work">랜드 마크</a></li>
+					<li><a href="#about">코스 목록</a></li>
 					<li><a href="#contact">코스 추천</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
@@ -178,7 +245,7 @@ img#img {
 
 
 			<!-- Intro -->
-			<article id="intro">
+			<article id="intro" class="intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
 				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
 				<h3 align="center">웹 페이지 소개</h3>
@@ -198,8 +265,12 @@ img#img {
 
 			<article id="work">
 				<h1>서울 10대 명소</h1>
-				<h2 class="major1" href="#" style="display: inline;"><div id="day" class = "h1">주간</div></h2>
-				<h2 class="major2" href="#" style="display: inline;"><div id="day" class = "h2">야간</div></h2>
+				<h2 class="major1" href="#" style="display: inline;">
+					<div id="day" class="a1">주간</div>
+				</h2>
+				<h2 class="major2" href="#" style="display: inline;">
+					<div id="day" class="a2">야간</div>
+				</h2>
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
 					<button class="ten" id="ko1">#경복궁</button>

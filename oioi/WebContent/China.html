@@ -64,18 +64,50 @@ img#img {
 	display: inline;
 }
 
-.h1:hover{
-  color: red;
+.a1:hover {
+	color: red;
 }
-.h2:hover{
-  color:blue;
+
+.a2:hover {
+	color: blue;
+}
+
+#lan {
+	top: 0px;
+	/* left: 10; */
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+#lan td {
+	width: 200px;
+}
+
+#dropdownMenuButton {
+	width: auto;
+	height: 40px;
+	font-size: 15px;
+}
+
+p#texttext {
+	color: white;
+}
+
+.intSE {
+	color: white;
+}
+
+article#Join {
+	color: white;
+}
+
+article#login {
+	color: white;
 }
 </style>
 
 
-
-
-</style>
 </head>
 <body class="is-preload">
 	<!-- Wrapper -->
@@ -93,18 +125,49 @@ img#img {
 
 		<!-- Header -->
 
-		<ul id="mem">
-			<pre>
-				<a href="#Login">登入 </a>   <a href="#Join">成为会员</a> </pre>
-		</ul>
 
+		<table id = "lan" style="position:absolute; right:0px;" >
+		
+		<td>
+			<link rel="stylesheet"
+				href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+				integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+				crossorigin="anonymous">
+			<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+				integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+				crossorigin="anonymous"></script>
+			<script
+				src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+				integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+				crossorigin="anonymous"></script>
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button"
+					id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false">LANGAUGE</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="Korea.html">한국어</a> 
+					<a class="dropdown-item" href="English.html">English</a>
+					<a class="dropdown-item" href="China.html">简体中文</a>
+					<a class="dropdown-item" href="Japan.html">日本語</a>
+					<a class="dropdown-item" href="Spain.html">Español</a>
+				</div>
+			</div>
+			</td>
+			<td>
+			<a href="#Login">登入 </a></td><td>  <a href="#Join">成为会员</a> </td>
+			
+</table>
 		<header id="header">
 			<nav>
-				<ul>
-					<li><a href="#intro">어서와</a></li>
-					<li><a href="#work">서울은</a></li>
-					<li><a href="#about">처음이지?</a></li>
-					<li><a href="#contact">코스 추천</a></li>
+				<ul class = "cont">
+					<li><a href="#intro">服务专区</a></li>
+					<li><a href="#work">地标</a></li>
+					<li><a href="#about">课程清单</a></li>
+					<li><a href="#contact">课程推荐</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -144,39 +207,39 @@ img#img {
 					<table>
 						<tr>
 							<td>ID</td>
-							<td><input placeholder="아이디 입력 " type="text" name=id>
+							<td><input placeholder="enter ID" type="text" name=id>
 							</td>
-							<td><input type="button" value="중복 확인"></td>
+							<td><input type="button" value="Confirm Overlap"></td>
 						</tr>
 						<tr>
-							<td>PW</td>
-							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
-								name=pw></td>
+							<td>Password</td>
+							<td colspan=2><input placeholder="at least 6 characters"
+								type="password" name=pw></td>
 						</tr>
 						<tr>
-							<td>비밀번호 확인</td>
-							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
-								name=pw></td>
+							<td>Confirm Password</td>
+							<td colspan=2><input placeholder="re-enter pw"
+								type="password" name=pw></td>
 						</tr>
 						<tr>
-							<td>이름</td>
-							<td colspan=2><input placeholder="전화번호 입력 " type="text"
+							<td>NAME</td>
+							<td colspan=2><input placeholder="enter name" type="text"
 								name=name></td>
 						</tr>
 						<tr>
-							<td>국적</td>
-							<td colspan=2><input placeholder="국적 입력 " type="text"
-								name=nation></td>
+							<td>COUNTRY</td>
+							<td colspan=2><input placeholder="enter country "
+								type="text" name=nation></td>
 						</tr>
 						<tr>
-							<td>이메일</td>
-							<td colspan=2><input placeholder="이메일 입력 " type="text"
+							<td>E-MAIL</td>
+							<td colspan=2><input placeholder="enter email" type="text"
 								name=email></td>
 						</tr>
 						<tr>
 							<td></td>
-							<td colspan=2><input type=submit value="회원가입"> <input
-								type=reset value="초기화"></td>
+							<td colspan=2><input type=submit value="JOIN"> <input
+								type=reset value="RESET"></td>
 						</tr>
 					</table>
 				</form>
@@ -184,8 +247,9 @@ img#img {
 
 
 
+
 			<!-- Intro -->
-			<article id="intro">
+			<article id="intro" class = "intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
 				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
 				<h3 align="center">웹 페이지 소개</h3>
@@ -205,13 +269,16 @@ img#img {
 
 			<!-- Work -->
 
+
+
+
 			<article id="work">
 				<h1>首尔十大景点</h1>
 				<h2 class="major1" href="#" style="display: inline;">
-					<div id="day" class = "h1">每周一次</div>
+					<div id="day" class="a1">每周一次</div>
 				</h2>
 				<h2 class="major2" href="#" style="display: inline;">
-					<div id="day" class = "h2">晚上</div>
+					<div id="day" class="a2">晚上</div>
 				</h2>
 
 				<div class='display'>
