@@ -1,4 +1,4 @@
-drop table member;
+drop table user_member;
 
 create table user_member(
 	id varchar2(200) primary key,
@@ -7,7 +7,7 @@ create table user_member(
 	email varchar2(200)
 )
 
-select * from member;
+select * from user_member;
 
 
 
