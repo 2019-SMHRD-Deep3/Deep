@@ -21,10 +21,11 @@
 
 <style type="text/css">
 
-.ageBtn, .genderBtn, .monBtn, .myBtn, .traBtn   {
-	width: 10px !important;
-	height: 52px !important;
-	border-radius: 25px !important;
+.ageBtn, .genderBtn, .monBtn, .myBtn, .tripBtn   {
+	padding: 0px !important;
+	width: 30px !important;
+	height: 30px !important;
+	border-radius: 15px !important;
 }
 
 table {
@@ -37,7 +38,16 @@ table {
 	margin-top : 50px;
 	background-color: rgba(0,0,0,0.2);
 }
+
+
 #Q{
+	width: 50%;
+	margin: 0px auto;
+	margin-bottom : 20px;
+	text-align: center;
+	font-size: 32px;
+}
+#submit{
 	width: 50%;
 	margin: 0px auto;
 	margin-bottom : 20px;
@@ -46,16 +56,18 @@ table {
 #A_btn, #A_val{
 	width: 50%;
 	margin: 0px auto;
+	padding: 0px auto;
 }
 
 #nation{
 	width: 30%;
 	margin: 0px auto;
 }
-#shop{
-	width: 40%;
+#shop, #item, #stay, #act{
+	width: 50%;
 	margin: 0px auto;
 }
+
 /* body{
 	background-image: url('./img/aa.png');
 } */
@@ -64,20 +76,20 @@ table {
 </head>
 <body>
 
-	<!-- 인코딩 해주는 코드 ===> Jsp 파일로 바꾼 후 코드 넘기기  -->
 
 
 	<form action="K_subvey_result" method="post" id='myForm'>
 		<div id = "all">
 		<!-- 나이 -->
 		<br><br><br><br>
+		
 			<div id = "Q"> <b>나이</b></div>
 			<div id = "A_btn"> 
-				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;"> 
-				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;"> 
-				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;">
-				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;">
-				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;">  
+				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;" val = "15-20세"> 
+				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;" val = "21-30세"> 
+				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;" val = "31-40세">
+				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;" val = "41-50세">
+				<input type="button" class=ageBtn name="age" style="margin-left:11.5%;" val = "51-60세">  
 			</div>
 			
 			<div id = "A_val">
@@ -91,7 +103,7 @@ table {
 			
 				
 		<!-- 성별 -->
-		<br><br>
+		<br><br><br><br>
 			<div id = "Q"> <b>성별</b></div>	
 				<div id = "A_btn">
 					<input type="button" class=genderBtn val="남성" style="margin-left:35%;">
@@ -107,14 +119,14 @@ table {
 			
 			
 		<!-- 국가 -->
-		<br><br>
+		<br><br><br><br>
 			<div id = "Q"> <b>국가</b></div>			
 			<div id = "A_val">
 				<select name = nation id = nation>
-						<option>기타 <option>대만 <option>독일 <option>러시아 <option>말레이시아 <option>몽골
+						<option>대만 <option>독일 <option>러시아 <option>말레이시아 <option>몽골
 						<option>미국 <option>베트남 <option>싱가포르 <option>영국 <option>인도 <option>인도네시아
 						<option>일본 <option>중국 <option>중동 <option>캐나다 <option>태국 <option>프랑스
-						<option>필리핀 <option>호주 <option>홍콩
+						<option>필리핀 <option>호주 <option>홍콩 <option>기타
 				</select>
 			
 			</div>
@@ -122,7 +134,7 @@ table {
 			
 			
 		<!--여행하는 달 -->
-		<br><br>
+		<br><br><br><br>
 			<div id = "Q"> <b>여행하는 달</b></div>			
 				<div id = "A_btn">
 					<input type="button" class="monBtn" val="1월" style="margin-left:9%;">
@@ -165,12 +177,12 @@ table {
 			
 			
 		<!-- 여행형태 취향 -->
-		<br><br>
+		<br><br><br><br>
 			<div id = "Q"> <b>여행형태 취향</b></div>			
 				<div id = "A_btn">
-					<input type="button" class=traBtn val= "trip_type" style="margin-left:20%;">
-					<input type="button" class=traBtn name= "trip_type" style="margin-left:20%;">
-					<input type="button" class=traBtn name= "trip_type" style="margin-left:20%;">
+					<input type="button" class=tripBtn val= "Air-tel" style="margin-left:20%;">
+					<input type="button" class=tripBtn val= "개별여행" style="margin-left:20%;">
+					<input type="button" class=tripBtn val= "단체여행" style="margin-left:20%;">
 				</div> 
 				
 			<div id = "A_val">
@@ -178,18 +190,19 @@ table {
 				<span style="margin-left:19%;"> 개별여행 </span>  
 				<span style="margin-left:17%;"> 단체여행 </span>  
 				
-			</div>
+			</div>   
+				
 			
 			
 			
 		<!-- 쇼핑 품목 -->
-		<br><br>
+		<br><br><br><br>
 			<div id = "Q"> <b>쇼핑을 한다면 구매 1순위 품목</b></div>			
 			<div id = "A_val">
-				<select name = shopping id = shop>
-						<option>가방류  <option>기타 <option>담배 <option>보석/악세사리 <option>식료품 
-						<option>신발류 <option>의류 <option>인삼/한약재 <option>전통민예품/칠기/목각제품 <option>주류
-						<option>한류스타 관련상품 <option>향수, 화장품
+				<select name = item id = item>
+						<option>가방류 <option>담배 <option>보석,악세사리 <option>식료품 
+						<option>신발류<option>의류 <option>인삼,한약재 <option>전통민예품,칠기,목각제품 <option>주류
+						<option>한류스타관련상품 <option>향수,화장품 <option>기타 
 				</select>
 			
 			</div>
@@ -197,12 +210,12 @@ table {
 			
 			
 		<!-- 숙박시설 취향 -->
-		<br><br>
+		<br><br><br><br>
 			<div id = "Q"> <b>숙박시설 취향</b></div>			
 			<div id = "A_val">
-				<select name = stay  id = shop>
-						<option>게스트하우스/호스텔 <option>기타 <option>모텔/여관 <option>민박/공유숙박 <option>친척 또는 친구집
-						<option>콘도, 펜션, 레지던스인
+				<select name = stay  id = stay>
+						<option>게스트하우스,호스텔 <option>모텔,여관 <option>민박,공유숙박 <option>친척또는친구집
+						<option>콘도,펜션,레지던스인 <option>학교,회사 기숙사,연수원 <option>호텔 <option>기타 
 						
 				</select>
 			
@@ -210,160 +223,177 @@ table {
 			
 			
 			
-		<!-- 쇼핑 품목 -->
-		<br><br>
-			<div id = "Q"> <b>쇼핑을 한다면 구매 1순위 품목</b></div>			
+		<!-- 좋아하는 활동 -->
+		<br><br><br><br>
+			<div id = "Q"> <b>좋아하는 활동</b></div>			
 			<div id = "A_val">
-				<select name = shopping id = shop>
-						<option>가방류  <option>기타 <option>담배 <option>보석/악세사리 <option>식료품 
-						<option>신발류 <option>의류 <option>인삼, 한약재 <option>전통민예품, 칠기, 목각제품 <option>주류
-						<option>한류스타 관련상품 <option>향수, 화장품
+				<select name = act id = act>
+						<option>고궁,역사유적지방문 <option>공연,민속,행사,축제 관람및참가 <option>놀이공원,테마파크 
+						<option>드라마,영화찰영지방문 <option>레포츠활동 <option>박물관,전시관방문 <option>뷰티관광
+						<option>쇼핑 <option>스포츠활동 <option>시찰 <option>시티투어버스이용 <option>식도락관광
+						<option>업무수행 <option>연수,교육,연구 <option>유흥,오락 <option>의료관광 
+						<option>자연경관감상 <option>전통문화체험 <option>휴양,휴식 <option>기타
 				</select>
 			
 			</div>
-
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-			
-			
-			
-			
+			<br><br>
+			<div id = "submit">
+				<input type="button" value="전송" onclick="mySub()">
+			</div>
+			 <div>당신이 바라던 서울 : <a id='result' href='#'></a></div>
+			 
 		</div>
-		
-		
-		
-		<table>
-			<tr>
-				<td colspan = 6>나이</td>
-			</tr>
-				<td></td>
-				<td><input type="button" class=ageBtn name="age"> 15-20세</td>
-				<td><input type="button" class=ageBtn name="age"> 21-30세</td>
-				<td><input type="button" class=ageBtn name="age"> 31-40세</td>
-				<td><input type="button" class=ageBtn name="age"> 41-50세</td>
-				<td><input type="button" class=ageBtn name="age"> 51-60세 </td>
-		
 
-			</tr>
-		
-		
-		
-			<tr>
-				<td colspan = 6>성별</td>
-			</tr>
-			<tr>
-				<td colspan = 2></td>
-				<td>남성<input type="button" class=genderBtn name="gender"></td>
-				<td>여성<input type="button" class=genderBtn name="gender"></td>
-				<td colspan = 2></td>
-			</tr>
-			
-		
-
-		
-			<tr>
-				<td colspan = 6>방문예정월</td>	
-			</tr>
-			<tr>
-				<td>1월 <input type="button" class="monBtn" values="1"></td>
-				<td>2월 <input type="button" class="monBtn" values="2"></td>
-				<td>3월 <input type="button" class="monBtn" values="3"></td>
-				<td>4월 <input type="button" class="monBtn" values="4"></td>
-				<td>5월 <input type="button" class="monBtn" values="5"></td>
-				<td>6월 <input type="button" class="monBtn" values="6"></td></tr>
-			<tr>
-				<td>7월 <input type="button" class="monBtn" values="7"></td>
-				<td>8월 <input type="button" class="monBtn" values="8"></td>
-				<td>9월 <input type="button" class="monBtn" values="9"></td>
-				<td>10월 <input type="button" class="monBtn" values="10"></td>
-				<td>11월 <input type="button" class="monBtn" values="11"></td>
-				<td>12월 <input type="button" class="monBtn" values="12"></td>
-			</tr>
-			
-			
-			
-			
-
-			
-
-						
-			
-			<tr>
-				<td colspan = 6>여행형태</td>
-			</tr>
-			<tr>
-				<td colspan = 2></td>
-				<td> 1 <input type="button" class=traBtn name="travel_type"></td>
-				<td> 2 <input type="button" class=traBtn name="travel_type"></td>
-				<td colspan = 2></td>
-			</tr>
-						
-			
-			
-			<tr>
-				<td colspan = 6>방한회차</td>
-			</tr>
-			<tr>
-				<td colspan = 2></td>
-				<td>남 <input type="button" class=genderBtn name="gender"></td>
-				<td>여 <input type="button" class=genderBtn name="gender"></td>
-				<td colspan = 2></td>
-			</tr>
-			
-
-
-			<!-- <label for="mon">방문예정월</label> 
-				남 <input type="button" class = "myBtn" >
-				여 <input type="button" class = "myBtn">
-			
-				<label for="email">Email</label> <input type="text" name="email"
-					id="email" />
-			
-				<label for="message">Message</label>
-				<textarea name="message" id="message" rows="4"></textarea> -->
-			<tr>
-				<td colspan = 4></td>
-				<td colspan = 2><input type="button" value="전송" onclick="mySub()"></td>
-			</tr>
-		</table>
-		<input type="hidden" id='month_check' name='month'> 
+		<input type="hidden" id='age_check' name='age'> 
 		<input type="hidden" id='gender_check' name='gender'> 
+		<input type="hidden" id='month_check' name='month'> 
+		<input type="hidden" id='trip_check' name='trip'> 
+		<input type="hidden" id='month_check' name='month'> 
 		<!-- <input type="button" value="전송" onclick="mySub()"> -->
 
 	</form>
 
 	<script type="text/javascript">
-		//var arr = new Array(); 
-		var mon;
-		$('.monBtn').on('click', function() {
-			$('.monBtn').css('background-color', '');
+
+		var age;
+		var gender;
+		var month;
+		var trip_type; 
+
+		
+		$('.ageBtn').on('click', function() {
+			$('.ageBtn').css('background-color', '');
 			$(this).css('background-color', 'yellow');
-			vvv = $(this).attr('val');
-			//arr.push(value);
-			// alert(arr);
-			$(this).css('value', mon);
+			age = $(this).attr('val');
+			$(this).css('value', age);
 		});
+		
+		
 		$('.genderBtn').on('click', function() {
 			$('.genderBtn').css('background-color', '');
 			$(this).css('background-color', 'yellow');
-
+			gender = $(this).attr('val');
+			$(this).css('value', gender);
 		});
+		
+
+		
+		$('.monBtn').on('click', function() {
+			$('.monBtn').css('background-color', '');
+			$(this).css('background-color', 'yellow');
+			month = $(this).attr('val');
+			$(this).css('value', month);
+		});
+		
+		$('.tripBtn').on('click', function() {
+			$('.tripBtn').css('background-color', '');
+			$(this).css('background-color', 'yellow');
+			trip_type = $(this).attr('val');
+			$(this).css('value', trip_type);
+		});
+		
+
 
 		function mySub() {
-			//$('#month_check').attr('value',arr);
-			$('#month_check').attr('value', mon);
-			$('#gender_check').attr('value', vvv);
-			$('#myForm').submit();
+			console.log(age);
+			console.log(gender);
+			console.log(month);
+			console.log(trip_type);
+			
+			var nation = $('#nation').val();
+			var item = $('#item').val();
+			var stay = $('#stay').val();
+			var act = $('#act').val();
+
+			console.log(nation);
+			console.log(item);
+			console.log(stay);
+			console.log(act);
+			//전송~~    //$('#myForm').submit();
+
+
+		
+		
+		 $.ajax({
+             url : "http://localhost:9000/re/" + age + "/" + gender + "/" + nation + "/" + month + "/" + trip_type + "/" + item
+                   + "/" + stay + "/" + act,
+             method : "POST",
+             success : function(rs) {
+                if (rs.result == "DMC,월드컵경기장") {
+                   $('#result').text('DMC, 월드컵경기장');
+                   $('#result').attr('href', 'K_DMC.jsp');
+                   
+                } else if (rs.result == "가로수길") {
+                   $('#result').text('가로수길');
+                   $('#result').attr('href', 'Main.html');
+                   
+                } else if (rs.result == "강남역") {
+                   $('#result').text('강남역');
+                   $('#result').attr('href', 'Main.html');
+                   
+                } else if (rs.result == "광화문광장") {
+                   $('#result').text('광화문 광장');
+                   $('#result').attr('href', 'Main.html');
+                   
+                } else if (rs.result == "동대문패션타운") {
+                   $('#result').text('동대문 패션타운');
+                   $('#result').attr('href', 'Main.html');
+                   
+                } else if (rs.result == "명동,남대문,북창") {
+                   $('#result').text('명동,남대문,북창');
+                   $('#result').attr('href', 'K_MD.jsp');
+
+                } else if (rs.result == "신촌,홍대주변") {
+                   $('#result').text('신촌, 홍대주변');
+                   $('#result').attr('href', 'Main.html');
+                
+                } else if (rs.result == "여의도(63빌딩)") {
+                   $('#result').text('여의도 (63빌딩)');
+                   $('#result').attr('href', 'Main.html');
+               
+                } else if (rs.result == "이태원(이태원 세계 음식거리,한남동)") {
+                   $('#result').text('이태원 (이태원 세계 음식거리, 한남동)');
+                   $('#result').attr('href', 'Main.html');
+             
+                } else if (rs.result == "잠실") {
+                   $('#result').text('잠실');
+                   $('#result').attr('href', 'Main.html');
+               
+                } else if (rs.result == "종로,청계") {
+                   $('#result').text('종로, 청계');
+                   $('#result').attr('href', 'Main.html');
+             
+                } else if (rs.result == "청담동,압구정동") {
+                   $('#result').text('청담동, 압구정동');
+                   $('#result').attr('href', 'Main.html');
+               
+                } else if (rs.result == "코엑스") {
+                   $('#result').text('코엑스');
+                   $('#result').attr('href', 'Main.html');
+              
+                } else if (rs.result == "한강,유람선") {
+                   $('#result').text('한강, 유람선');
+                   $('#result').attr('href', 'Main.html');
+               
+                } else{
+                   $('#result').text('연결 오류발생');
+                
+                }
+                
+             }
+       }); 
+		
 		}
-		console.log(vvv);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
 	</script>
 
 
