@@ -42,17 +42,31 @@ body .backgroundTransition .image-top {
 	display: none;
 }
 
-/*.backgroundTransition {
-	background-image: url('https://unsplash.it/1920/1400?image=933');
-}*/
-
 .content {
-	margin-top: 38%;
-	width: 540px;
+	margin-top: 34%;
+	width: 420px;
 	margin-left: 120px;
 	padding: 20px;
 	background-color: rgba(0, 0, 0, .3);
 	color: #ffffff;
+}
+
+.selChina{
+	display: none;
+	z-index: 10;
+	width: 200px;
+	margin-top: 25%;
+	margin-right: 40%;
+	margin-left: 40%;
+	padding: 3%;
+	background-color : rgba(0, 0, 0, .3);
+	color: #ffffff;
+	}
+
+.conChina{
+	display: inline;
+	margin-left: 6%;
+	margin-right: 6%;
 }
 </style>
 
@@ -63,33 +77,55 @@ body .backgroundTransition .image-top {
 	<script type="text/javascript" src="assets/js/backgroundTransition.js"></script>
 
 	<script type="text/javascript">
-  $(document).ready(function(){
-	  $('.backgroundTransition').backgroundTransition({
-		  backgrounds:[
-			  { src: 'img/spring_.jpg' },
-			  { src: 'img/forest_.jpg' },
-			  { src: 'img/autumn_.jpg' },
-			  { src: 'img/winter_.jpg' }
-		  ],
-		  transitionDelay: 1,
-		  animationSpeed: 6200
-	  });
-  });
- </script>
-	<!-- 아이콘 클릭 시 이동하는 JQ -->
-
+  		$(document).ready(function(){
+	 		 $('.backgroundTransition').backgroundTransition({
+		  		backgrounds:[
+			  		{ src: 'img/spring_.jpg' },
+			 		{ src: 'img/forest_.jpg' },
+			 		{ src: 'img/autumn_.jpg' },
+					{ src: 'img/winter_.jpg' }
+		  		],
+		 	transitionDelay: 1,
+		  	animationSpeed: 6200
+	  		});
+  		});
+ 	</script>
+	
+	<!-- 국기 선택으로 해당 언어 페이지 이동하기 -->
 	<div class="backgroundTransition">
 		<div class="content">
-			<h1>BackgroundTransition</h1>
-			<p>A jQuery Background Slideshow Plugin.</p>
-
+			<h1>BackgroundTransition</h1></br>
 				<a href="Korea.html"><img id="Korea" class="flag" src='img/Korea.png'></a>
 				<a href="English.html"><img id="USA" class="flag" src='img/Usa.png'></a>
 				<a href="Japan.html"><img id="Japan" class="flag" src='img/Japan.png'></a>
-				<a href="China.html"><img id="China" class="flag" src='img/China.png'></a>
-				
+				<a href="#"><img id="China" class="flag" src='img/China.png'></a>
 		</div>
+		
+		<div class="selChina">
+			<button id="close" style="font-size: 5px; position: absolute; margin-top:-10px; margin-left: 190px;">X</button>
+			<p style="align-content: center; text-align: center;">사용 언어 선택</p>
+				<div class="conChina"><a href="China.html"><img id="China" class="flag" src='img/China.png'></a></div>
+				<div class="conChina"><a href="#"><img id="China" class="flag" src='img/China.png'></a></div>
+				<p style="width: 100px; display:inline; margin:5%;">중국(간체)</p>
+				<p style="width: 100px; display:inline; margin:2%;">중국(광둥)</p>
+		</div>
+		
 	</div>
+
+	<!-- 중국 아이콘 선택시 언어 선택화면 전환 -->
+	<script>
+		$('#China').on('click',function(){
+			$('.content').css({display:'none'}),
+			$('.selChina').css({display:'block'});
+		});
+		
+		$('#close').on('click',function(){
+			$('.content').css({display:'block'}),
+			$('.selChina').css({display:'none'});
+		});
+		
+		//$('body').off('click');
+	</script>
 	
 </body>
 </html>

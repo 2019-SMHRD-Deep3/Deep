@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.controller.IdCheckCon;
 import com.controller.JoinCon;
 import com.controller.LoginCon;
 import com.controller.LogoutCon;
@@ -21,6 +22,7 @@ public class FrontController extends HttpServlet {
 		
 		private void putData() {
 			map.put("JoinService.do", new JoinCon());
+			map.put("IdCheckService.do", new IdCheckCon());
 			map.put("LoginService.do", new LoginCon());
 			map.put("LogoutService.do", new LogoutCon());
 			map.put("updateService.do", new UpdateCon());
@@ -34,7 +36,14 @@ public class FrontController extends HttpServlet {
 			putData();
 			ICommand iCommand = map.get(resultURL);
 			moveURL = iCommand.execute(request, response);
-			response.sendRedirect(moveURL);
+			
+			if(iCommand instanceof IdCheckCon) {
+				response.getWriter().print(moveURL);
+			}else {
+			
+				moveURL = iCommand.execute(request, response);
+				response.sendRedirect(moveURL);
+			}
 		}
 
 }
