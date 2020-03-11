@@ -81,7 +81,7 @@ img#img {
 }
 
 #lan td {
-	width: 200px;
+	width: 50px;
 }
 
 #dropdownMenuButton {
@@ -105,6 +105,17 @@ article#Join {
 article#login {
 	color: white;
 }
+
+.linkcolor {
+	color: black !important;
+}
+
+
+	table tbody tr {
+			border: solid 0px #ffffff; 
+			border-left: 0;
+			border-right: 0;
+		}
 </style>
 
 
@@ -126,48 +137,46 @@ article#login {
 		<!-- Header -->
 
 
-		<table id = "lan" style="position:absolute; right:0px;" >
-		
-		<td>
-			<link rel="stylesheet"
-				href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-				integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-				crossorigin="anonymous">
-			<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-				integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-				crossorigin="anonymous"></script>
-			<script
-				src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-				integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-				crossorigin="anonymous"></script>
-			<script
-				src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-				integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-				crossorigin="anonymous"></script>
-			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button"
-					id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false">LANGAUGE</button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="Korea.html">한국어</a> 
-					<a class="dropdown-item" href="English.html">English</a>
-					<a class="dropdown-item" href="China.html">简体中文</a>
-					<a class="dropdown-item" href="Japan.html">日本語</a>
-					<a class="dropdown-item" href="Spain.html">Español</a>
-				</div>
-			</div>
-			</td>
+		<table id="lan" style="position: absolute; right: 0px;">
+			<td><a class = "linkcolor" href="#Login">Login </a></td>
+			<td><a class = "linkcolor" href="#Join">Join</a></td>
 			<td>
-			<a href="#Login">登入 </a></td><td>  <a href="#Join">成为会员</a> </td>
-			
-</table>
+				<link rel="stylesheet"
+					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+					integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+					crossorigin="anonymous"> <script
+					src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+					crossorigin="anonymous"></script> <script
+					src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous"></script> <script
+					src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous"></script>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button"
+						id="dropdownMenuButton" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="Korea.html">한국어</a> <a
+							class="dropdown-item" href="English.html">English</a> <a
+							class="dropdown-item" href="China.html">简体中文</a> <a
+							class="dropdown-item" href="Japan.html">日本語</a> <a
+							class="dropdown-item" href="Spain.html">Español</a>
+					</div>
+				</div>
+			</td>
+
+
+		</table>
 		<header id="header">
 			<nav>
-				<ul class = "cont">
-					<li><a href="#intro">服务专区</a></li>
-					<li><a href="#work">地标</a></li>
-					<li><a href="#about">课程清单</a></li>
-					<li><a href="#contact">课程推荐</a></li>
+				<ul class="cont">
+					<li><a class = "linkcolor" href="#intro">服务专区</a></li>
+					<li><a class = "linkcolor" href="#work">地标</a></li>
+					<li><a class = "linkcolor" href="#about">课程清单</a></li>
+					<li><a class = "linkcolor" href="#contact">课程推荐</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -249,10 +258,9 @@ article#login {
 
 
 			<!-- Intro -->
-			<article id="intro" class = "intSE">
-				<h2 class="major">서울, 새롭게 소개합니다.</h2>
+			<article id="intro" class="intSE">
+				<h2 class="major">首尔，新的介绍。</h2>
 				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
-				<h3 align="center">웹 페이지 소개</h3>
 				<br /> <br />
 				<p align="center">收到您的宝贵信息，</p>
 				<p align="center">
@@ -344,7 +352,66 @@ article#login {
 			</article>
 
 			<!-- Contact -->
-			<article id="contact"></article>
+			<article id="contact">
+			
+			
+	<form action="K_subvey_result" method="post" id='myForm'>
+		<table>
+			<tr>
+				<td>방문예정월</td>	
+			</tr>
+			<tr>
+				<td>1월 <input type="button" class="monBtn" values="jan"></td>
+				<td>2월 <input type="button" class="monBtn" values="2월"></td>
+				<td>3월 <input type="button" class="monBtn" values="3월"></td>
+				<td>4월 <input type="button" class="monBtn" values="4월"></td>
+				<td>5월 <input type="button" class="monBtn" values="5월"></td>
+				<td>6월 <input type="button" class="monBtn" values="6월"></td>
+				<td>7월 <input type="button" class="monBtn" values="7월"></td>
+				<td>8월 <input type="button" class="monBtn" values="8월"></td>
+				<td>9월 <input type="button" class="monBtn" values="9월"></td>
+				<td>10월 <input type="button" class="monBtn" values="10월"></td>
+				<td>11월 <input type="button" class="monBtn" values="11월"></td>
+				<td>12월 <input type="button" class="monBtn" values="12월"></td>
+			</tr>
+			<tr>
+				<td>방문예정월</td>
+			</tr>
+			<tr>
+				<td>남 <input type="button" class=genderBtn name="gender"></td>
+				<td>여 <input type="button" class="genderBtn" name="gender"></td>
+			</tr>
+			<tr>
+				<td>방문예정월</td>
+			</tr>
+			<tr>
+				<td>방문예정월</td>
+			</tr>
+
+
+			<!-- <label for="mon">방문예정월</label> 
+				남 <input type="button" class = "myBtn" >
+				여 <input type="button" class = "myBtn">
+			
+				<label for="email">Email</label> <input type="text" name="email"
+					id="email" />
+			
+				<label for="message">Message</label>
+				<textarea name="message" id="message" rows="4"></textarea> -->
+
+		</table>
+		<input type="hidden" id='month_check' name='month'> <input
+			type="hidden" id='gender_check' name='gender'> <input
+			type="button" value="전송" onclick="mySub()">
+
+	</form>
+			
+			
+			
+			
+			
+			
+			</article>
 
 			<!-- Elements -->
 			<article id="elements">

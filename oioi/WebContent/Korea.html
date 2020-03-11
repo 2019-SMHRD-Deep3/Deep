@@ -81,7 +81,7 @@ img#img {
 }
 
 #lan td {
-	width: 200px;
+	width: 50px;
 }
 
 #dropdownMenuButton {
@@ -105,6 +105,17 @@ article#Join {
 article#Login {
 	color: white;
 }
+
+.linkcolor {
+	color: black !important;
+}
+
+
+	table tbody tr {
+			border: solid 0px #ffffff; 
+			border-left: 0;
+			border-right: 0;
+		}
 </style>
 
 
@@ -125,8 +136,9 @@ article#Login {
 
 		<!-- Header -->
 
-		<table id="lan" style="position: absolute; right: 0px;">
-
+		<table id="lan" style="position: absolute; right: 0px;" border="0px;">
+			<td><a class="linkcolor" href="#Login">Login </a></td>
+			<td><a class="linkcolor" href="#Join">Join</a></td>
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -154,17 +166,16 @@ article#Login {
 					</div>
 				</div>
 			</td>
-			<td><a href="#Login">로그인 </a></td>
-			<td><a href="#Join">회원가입</a></td>
+
 
 		</table>
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a href="#intro">서비스</a></li>
-					<li><a href="#work">랜드 마크</a></li>
-					<li><a href="#about">코스 목록</a></li>
-					<li><a href="#contact">코스 추천</a></li>
+					<li><a class="linkcolor" href="#intro">서비스</a></li>
+					<li><a class="linkcolor" href="#work">랜드 마크</a></li>
+					<li><a class="linkcolor" href="#about">코스 목록</a></li>
+					<li><a class="linkcolor" href="#contact">코스 추천</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -248,7 +259,6 @@ article#Login {
 			<article id="intro" class="intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
 				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
-				<h3 align="center">웹 페이지 소개</h3>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
 				<p align="center">
@@ -266,9 +276,13 @@ article#Login {
 			<article id="work">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
+=======
+
 >>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 				<h1>서울 10대 명소</h1>
 <<<<<<< HEAD
@@ -779,78 +793,72 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		});
 	</script>
 
-
-	<p id="texttext11">1번</p>
-	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
-	<p id="texttext55">5번</p>
-	<p id="texttext66">6번</p>
-	<p id="texttext77">7번</p>
-	<p id="texttext88">8번</p>
-	<p id="texttext99">9번</p>
-
-
-
-	<div id="bg"></div>
-	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
-		// 버튼 1
-		$('#k1:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn1.PNG');
-			$('#texttext').html(test11);
-		});
-		// 버튼2
-		$('#k2:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn2.PNG');
-			$('#texttext').html(test22);
-		});
-		// 버튼3
-		$('#k3:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
-			$('#texttext').html(test33);
-		});
-		// 버튼4
-		$('#k4:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
-			$('#texttext').html(test44);
-		});
-		// 버튼5
-		$('#k5:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k6.PNG');
-			$('#texttext').html(test55);
-		});
-		// 버튼6
-		$('#k6:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k7.PNG');
-			$('#texttext').html(test66);
-		});
-		// 버튼7
-		$('#k7:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k8.jpg');
-			$('#texttext').html(test77);
-		});
-		// 버튼8
-		$('#k8:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k9.PNG');
-			$('#texttext').html(test88);
-		});
-		// 버튼9
-		$('#k9:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k10.PNG');
-			$('#texttext').html(test99);
-		});
-	</script>
+   <!-- BG -->
+   <div id="bg"></div>
+   <script type="text/javascript">
+      var text = document.querySelector('#texttext');
+      var popimgs = document.getElementById('popimg0');
+      var test1 = document.querySelector('#texttext1').textContent;
+      var test2 = document.querySelector('#texttext2').textContent;
+      var test3 = document.querySelector('#texttext3').textContent;
+      var test4 = document.querySelector('#texttext4').textContent;
+      var test5 = document.querySelector('#texttext5').textContent;
+      var test6 = document.querySelector('#texttext6').textContent;
+      var test7 = document.querySelector('#texttext7').textContent;
+      var test8 = document.querySelector('#texttext8').textContent;
+      var test9 = document.querySelector('#texttext9').textContent;
+      var test10 = document.querySelector('#texttext10').textContent;
+      // 버튼 1
+      $('#ko1:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k2.PNG');
+         $('#texttext').html(test1);
+      });
+      // 버튼2
+      $('#ko2:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k3.PNG');
+         $('#texttext').html(test2);
+      });
+      // 버튼3
+      $('#ko3:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k4.PNG');
+         $('#texttext').html(test3);
+      });
+      // 버튼4
+      $('#ko4:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k6.PNG');
+         $('#texttext').html(test4);
+      });
+      // 버튼5
+      $('#ko5:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k6.PNG');
+         $('#texttext').html(test5);
+      });
+      // 버튼6
+      $('#ko6:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k7.PNG');
+         $('#texttext').html(test6);
+      });
+      // 버튼7
+      $('#ko7:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k8.jpg');
+         $('#texttext').html(test7);
+      });
+      // 버튼8
+      $('#ko8:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k9.PNG');
+         $('#texttext').html(test8);
+      });
+      // 버튼9
+      $('#ko9:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k10.PNG');
+         $('#texttext').html(test9);
+      });
+      // 버튼10
+      $('#ko10:button').on('click', function() {
+         $('#popimg0').attr('src', 'img/k11.PNG');
+         $('#texttext').html(test10);
+      });
+   </script>
 
 </body>
 </html>

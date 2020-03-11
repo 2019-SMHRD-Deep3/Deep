@@ -3,25 +3,93 @@
 <head>
 <meta charset="utf-8" />
 <title>Insert title here</title>
+
+<style>
+html, body, .backgroundTransition, .backgroundTransition .image-top,
+	.backgroundTransition .image-bottom {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+body .backgroundTransition {
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+}
+
+body .backgroundTransition .image-bottom, body .backgroundTransition .image-top
+	{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-size: cover;
+}
+
+body .backgroundTransition .image-bottom {
+	z-index: -2;
+}
+
+body .backgroundTransition .image-top {
+	z-index: -1;
+	display: none;
+}
+
+#image-download {
+	display: none;
+}
+
+/*.backgroundTransition {
+	background-image: url('https://unsplash.it/1920/1400?image=933');
+}*/
+
+.content {
+	margin-top: 38%;
+	width: 540px;
+	margin-left: 120px;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, .3);
+	color: #ffffff;
+}
+</style>
+
 </head>
 <body>
-	<ul class="intro-lang">
-		<li><a href="Korea.html"> <span class="text-box"> <span
-					class="text-box-inner">한국어</span>
-			</span>
-		</a></li>
-		<li><a href="English.html"> <span class="text-box"> <span
-					class="text-box-inner">English</span>
-			</span>
-		</a></li>
-		<li><a href="Japan.html"> <span class="text-box"> <span
-					class="text-box-inner">日本語</span>
-			</span>
-		</a></li>
-		<li><a href="China.html"> <span class="text-box"> <span
-					class="text-box-inner">简体中文</span>
-			</span>
-		</a></li>
-	</ul>
+
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/backgroundTransition.js"></script>
+
+	<script type="text/javascript">
+  $(document).ready(function(){
+	  $('.backgroundTransition').backgroundTransition({
+		  backgrounds:[
+			  { src: 'img/spring_.jpg' },
+			  { src: 'img/forest_.jpg' },
+			  { src: 'img/autumn_.jpg' },
+			  { src: 'img/winter_.jpg' }
+		  ],
+		  transitionDelay: 1,
+		  animationSpeed: 6200
+	  });
+  });
+ </script>
+	<!-- 아이콘 클릭 시 이동하는 JQ -->
+
+	<div class="backgroundTransition">
+		<div class="content">
+			<h1>BackgroundTransition</h1>
+			<p>A jQuery Background Slideshow Plugin.</p>
+
+				<a href="Korea.html"><img id="Korea" class="flag" src='img/Korea.png'></a>
+				<a href="English.html"><img id="USA" class="flag" src='img/Usa.png'></a>
+				<a href="Japan.html"><img id="Japan" class="flag" src='img/Japan.png'></a>
+				<a href="China.html"><img id="China" class="flag" src='img/China.png'></a>
+				
+		</div>
+	</div>
+	
 </body>
 </html>
