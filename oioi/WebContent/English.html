@@ -107,15 +107,23 @@ article#login {
 }
 
 .linkcolor {
-	color: black !important;
+	color: white !important;
+	font-weight: bold;
 }
 
+table tbody tr {
+	border: solid 0px #ffffff;
+	border-left: 0;
+	border-right: 0;
+}
 
-	table tbody tr {
-			border: solid 0px #ffffff; 
-			border-left: 0;
-			border-right: 0;
-		}
+p.txtt {
+	color: black;
+}
+
+.cont li a {
+	box-sizing: content-box;
+}
 </style>
 
 
@@ -138,8 +146,8 @@ article#login {
 		<!-- Header -->
 
 		<table id="lan" style="position: absolute; right: 0px;">
-			<td><a class = "linkcolor" href="#Login">Login </a></td>
-			<td><a class = "linkcolor" href="#Join">Join</a></td>
+			<td><a class="linkcolor" href="#Login">Login </a></td>
+			<td><a class="linkcolor" href="#Join">Join</a></td>
 
 			<td>
 				<link rel="stylesheet"
@@ -164,7 +172,8 @@ article#login {
 							class="dropdown-item" href="English.html">English</a> <a
 							class="dropdown-item" href="China.html">简体中文</a> <a
 							class="dropdown-item" href="Japan.html">日本語</a> <a
-							class="dropdown-item" href="Spain.html">Español</a>
+							class="dropdown-item" href="Spain.html">Español</a> <a
+							class="dropdown-item" href="Frech.html">Français</a>
 					</div>
 				</div>
 			</td>
@@ -173,10 +182,13 @@ article#login {
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a class="linkcolor" href="#intro">Service</a></li>
-					<li><a class="linkcolor" href="#work">LandMarks</a></li>
-					<li><a class="linkcolor" href="#about">Example</a></li>
-					<li><a class="linkcolor" href="#contact">MakeCourse</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#intro">Service</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor" href="#work">LandMarks</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#about">Example</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#contact">MakeCourse</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -347,6 +359,18 @@ article#login {
 				<h2 class="major">베스트 테마</h2>
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 				<p>하위~</p>
+
+
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span
+							class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span
+							class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span
+							class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				</ul>
 			</article>
 
 			<!-- Contact -->
@@ -420,16 +444,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 						<li>Felis enim et feugiat.</li>
 					</ol>
 					<h4>Icons</h4>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span
-								class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span
-								class="label">Github</span></a></li>
-					</ul>
+
 
 					<h4>Actions</h4>
 					<ul class="actions">
@@ -623,31 +638,31 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	</div>
 
-	<p id="texttext1">Gyeongbokgung was the largest palace representing
-		the Republic of Korea and helped the prosperity of the Joseon Dynasty.
-		The size of Gyeongbokgung Palace is about 750 rooms, which symbolizes
-		the size of the country and the royal family beyond the meaning of the
-		space where the king looks at the office. It was a place.
-		Gyeongbokgung Palace, where the king sees his affairs from the
+	<p id="texttext1" class="txtt">Gyeongbokgung was the largest palace
+		representing the Republic of Korea and helped the prosperity of the
+		Joseon Dynasty. The size of Gyeongbokgung Palace is about 750 rooms,
+		which symbolizes the size of the country and the royal family beyond
+		the meaning of the space where the king looks at the office. It was a
+		place. Gyeongbokgung Palace, where the king sees his affairs from the
 		founding of Korea until the end, is still well preserved. It became
 		one of the landmarks representing the country of Joseon, which has
 		been loved by Koreans. Gyeongbokgung Palace is Heungryemun along
 		Gwanghwamun Gate.If you go past the Geunjeongmun, it can be said that
 		it is the building that represents the Joseon Dynasty.</p>
-	<p id="texttext2">Myeong-dong, the most expensive land in Korea, is
-		a symbol of Seoul. In the Joseon Dynasty Although it was a residential
-		area, Chungmuro ​​developed into a commercial area during the Japanese
-		colonial period, and it became a commercial district in Myeong-dong,
-		an adjacent area. Was done. Myeongdong has a huge shopping culture
-		that is said to be the leader of fashion. There are various shops, not
-		just stores, but also bonded shops. Also in Myeongdong, with shopping
-		It is said to be the best place to enjoy not only Koreans but also
-		foreigners in Korea.</p>
-	<p id="texttext3">nsa-dong Ssamji-gil is a building in Insa-dong,
-		Jongno-gu, Seoul. Ssamji is a pure Korean meaning 'pocket'. Ssamji-gil
-		means to add various cultural fun elements to Insa-dong alley by
-		attaching 'gil' after 'ssam-ji'. Ssamji-gil is a shopping mall
-		specializing in crafts and has become a tourist attraction in
+	<p id="texttext2" class="txtt">Myeong-dong, the most expensive land
+		in Korea, is a symbol of Seoul. In the Joseon Dynasty Although it was
+		a residential area, Chungmuro ​​developed into a commercial area
+		during the Japanese colonial period, and it became a commercial
+		district in Myeong-dong, an adjacent area. Was done. Myeongdong has a
+		huge shopping culture that is said to be the leader of fashion. There
+		are various shops, not just stores, but also bonded shops. Also in
+		Myeongdong, with shopping It is said to be the best place to enjoy not
+		only Koreans but also foreigners in Korea.</p>
+	<p id="texttext3" class="txtt">nsa-dong Ssamji-gil is a building in
+		Insa-dong, Jongno-gu, Seoul. Ssamji is a pure Korean meaning 'pocket'.
+		Ssamji-gil means to add various cultural fun elements to Insa-dong
+		alley by attaching 'gil' after 'ssam-ji'. Ssamji-gil is a shopping
+		mall specializing in crafts and has become a tourist attraction in
 		Insadong. A spiral building with a total area of ​​4,066.01m² (about
 		1,200 pyeong) is a collection of more than 70 craft shops, cultural
 		goods, souvenir shops, galleries and restaurants with various designs
@@ -656,7 +671,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		alley. It is a "ㅁ" shape surrounding the lozenge's yard. Each floor
 		leads to a gentle slope, walking through the shops to the rooftop sky
 		garden.</p>
-	<p id="texttext4">Asia's Mecca of Global Business with
+	<p id="texttext4" class="txtt">Asia's Mecca of Global Business with
 		Transportation, Communications and Advanced Business Infrastructure It
 		is the largest general exhibition hall in Korea, opened in March 1979
 		with the aim of providing a place for international trade and cultural
@@ -671,8 +686,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		addition, it has a role to increase trade, and there is an aquarium in
 		COEX, so not only Korean tourists but also foreign tourists Enjoy the
 		aquarium on a large scale.</p>
-	<p id="texttext5">Changdeokgung Palace is a palace of Joseon
-		Dynasty located in Jongno-gu, Seoul. Comprehensive blend of
+	<p id="texttext5" class="txtt">Changdeokgung Palace is a palace of
+		Joseon Dynasty located in Jongno-gu, Seoul. Comprehensive blend of
 		architecture and landscape It is an example of environmental design
 		and an important cultural heritage to read Korean spatial atmosphere.
 		In the history of architecture, The landscaping of patronage is
@@ -684,98 +699,100 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		brothers, built a new palace and saw his office. Changdeokgung Palace.
 		It is a palace that represents Korea, which represents Chosun with a
 		special history as it has a painful history.</p>
-	<p id="texttext6">Bongeunsa is full of people who always pray and
-		worship without weekdays and holidays. A little strange It is a place
-		where religion meets daily life, but it is not so good for those who
-		want to calmly visit the temple. It is also true. It is a place where
-		many people always pray, so facilities and space need to be increased.
-		Bongeunsa Temple was built during King Shilla Uner's castle, and the
-		tomb of Emperor Jung Hyeon, King of Joseon Dynasty, became a tomb.
-		Started. The temples that we know are often outside the mountains
-		where people do not live or the ordinary people's life. In the middle,
-		it is also located in the center of the most floating population in
-		Seoul called Gangnam. Conveniently, many foreign religious people also
-		visited Korea once, making it a representative temple.</p>
-	<p id="texttext7">The 63 building, the tallest building in Korea
-		that represents Seoul until the Lotte Tower was completed, Korean
-		company Hanwha has become a landmark of Seoul, completed in 1985. At
-		the time, there was no skyscraper in Korea. The company built for the
-		purpose of building a company, not for profit, but caught two rabbits
-		at the same time to the title of Landmark of Korea. It was a case.
-		Unlike Lotte Tower, there are offices of Hanwha and other companies,
-		and various facilities, observatory, and underground aquarium It is
-		characterized by the fact that it has provided a tourist space using
-		the advantages of skyscrapers. 63 building in Yeouido, Seoul It is
-		said to be one of the landmarks in Seoul that still attracts many
-		tourists because you can see all of Seoul from the highest observation
-		deck in the center.</p>
-	<p id="texttext8">On June 25, 1950, everyone fell asleep before
-		dawn. Gunfire on a peaceful Korean peninsula Resonated. The Korean War
-		began when the North Koreans invaded the 38th parallel, which was the
-		inter-Korean military demarcation line. The war between Koreans
-		divided by blood The involvement of the US, Soviet Union, and China
-		continued to inflict numerous casualties until the armistice agreement
-		in July 1953. With joy freed from Japanese occupation It was before I
-		enjoyed it. Introduce the Yongsan War Memorial, which records the
-		history of the earth half a century ago. The war memorial is on the
-		first floor You will see the 6.25 war room on the 2nd floor. It has
-		the advantage of being able to hear the explanation in more detail and
-		vividly. In addition, the history of war in the Korean Peninsula You
-		can check it. The war memorial is said to be popular with Germans who
-		are familiar with the situation on the Korean peninsula, which is
+	<p id="texttext6" class="txtt">Bongeunsa is full of people who
+		always pray and worship without weekdays and holidays. A little
+		strange It is a place where religion meets daily life, but it is not
+		so good for those who want to calmly visit the temple. It is also
+		true. It is a place where many people always pray, so facilities and
+		space need to be increased. Bongeunsa Temple was built during King
+		Shilla Uner's castle, and the tomb of Emperor Jung Hyeon, King of
+		Joseon Dynasty, became a tomb. Started. The temples that we know are
+		often outside the mountains where people do not live or the ordinary
+		people's life. In the middle, it is also located in the center of the
+		most floating population in Seoul called Gangnam. Conveniently, many
+		foreign religious people also visited Korea once, making it a
+		representative temple.</p>
+	<p id="texttext7" class="txtt">The 63 building, the tallest
+		building in Korea that represents Seoul until the Lotte Tower was
+		completed, Korean company Hanwha has become a landmark of Seoul,
+		completed in 1985. At the time, there was no skyscraper in Korea. The
+		company built for the purpose of building a company, not for profit,
+		but caught two rabbits at the same time to the title of Landmark of
+		Korea. It was a case. Unlike Lotte Tower, there are offices of Hanwha
+		and other companies, and various facilities, observatory, and
+		underground aquarium It is characterized by the fact that it has
+		provided a tourist space using the advantages of skyscrapers. 63
+		building in Yeouido, Seoul It is said to be one of the landmarks in
+		Seoul that still attracts many tourists because you can see all of
+		Seoul from the highest observation deck in the center.</p>
+	<p id="texttext8" class="txtt">On June 25, 1950, everyone fell
+		asleep before dawn. Gunfire on a peaceful Korean peninsula Resonated.
+		The Korean War began when the North Koreans invaded the 38th parallel,
+		which was the inter-Korean military demarcation line. The war between
+		Koreans divided by blood The involvement of the US, Soviet Union, and
+		China continued to inflict numerous casualties until the armistice
+		agreement in July 1953. With joy freed from Japanese occupation It was
+		before I enjoyed it. Introduce the Yongsan War Memorial, which records
+		the history of the earth half a century ago. The war memorial is on
+		the first floor You will see the 6.25 war room on the 2nd floor. It
+		has the advantage of being able to hear the explanation in more detail
+		and vividly. In addition, the history of war in the Korean Peninsula
+		You can check it. The war memorial is said to be popular with Germans
+		who are familiar with the situation on the Korean peninsula, which is
 		divided into North and South. War memorial I think it's a good way to
 		feel the history of war that we have forgotten through.</p>
-	<p id="texttext9">Hanok Preservation Area is located at the foot of
-		Bukaksan between Gyeongbokgung Palace, Changdeokgung Palace and
-		Geumwon (Biwon). It is also called Bukchon, meaning Upper Town.
-		Bukchon is a high-quality househouse where high-ranking masterpieces,
-		royal families, and four generations gathered. It is a tile house in
-		the Joseon Dynasty. Originally, there were only a few houses with
-		towering gates and about 30 hanoks in this area. It was built a lot,
-		and in 1992, it was lifted from Gahoe-dong Hanok Preservation
-		District. gun There are 2,297 buildings, of which 1,408 are Hanoks and
-		the rest are general buildings. Bukchon Yangban Life Culture
-		Exhibition Center The symbolic sculpture of Bukchon Hanok Village is
-		installed, and the Gahoe-dong Traditional Village Festival is held
-		where you can see the life of the ancestors. Around How do you feel
-		tourist attractions such as Gyeongbokgung Palace, Changdeokgung
+	<p id="texttext9" class="txtt">Hanok Preservation Area is located
+		at the foot of Bukaksan between Gyeongbokgung Palace, Changdeokgung
+		Palace and Geumwon (Biwon). It is also called Bukchon, meaning Upper
+		Town. Bukchon is a high-quality househouse where high-ranking
+		masterpieces, royal families, and four generations gathered. It is a
+		tile house in the Joseon Dynasty. Originally, there were only a few
+		houses with towering gates and about 30 hanoks in this area. It was
+		built a lot, and in 1992, it was lifted from Gahoe-dong Hanok
+		Preservation District. gun There are 2,297 buildings, of which 1,408
+		are Hanoks and the rest are general buildings. Bukchon Yangban Life
+		Culture Exhibition Center The symbolic sculpture of Bukchon Hanok
+		Village is installed, and the Gahoe-dong Traditional Village Festival
+		is held where you can see the life of the ancestors. Around How do you
+		feel tourist attractions such as Gyeongbokgung Palace, Changdeokgung
 		Palace, Deoksugung Palace, Geumwon, and Samcheong Park. Bukchon
 		1-gyeong with a panoramic view of Changdeokgung Palace. 11,
 		Gahoe-dong, Bukchon 3 view, Gahoe-dong 31, 4 hills, Gahoe-dong
 		downhill alleys 5 Bukchon-dong, Through the uphill alleys of
 		Gahoe-dong, 6 Bukchon, 31 Gahoe-dong 31, Bukchon 7, and Samcheong-dong
 		Stone Steps, 8 Bukchon?</p>
-	<p id="texttext10">Precious artifacts of our history have found a
-		wonderful new home. Opened in October 2005 The National Museum of
-		Korea is a world-scale museum that houses and exhibits 300,000
-		artifacts (as of January 2012) in a vast space of 300,000㎡. It is a
-		museum. Located in the former USFK position in Yongsan, it inherits
-		the wisdom of our ancestors who valued the harmony between nature and
-		man-made. The garden is designed to harmonize and it is located in the
-		place of Baesan Imsu, which is surrounded by Namsan and the Han River.
-		1 basement level and 6 ground levels The museum building has an
-		exterior that looks like two buildings connected together. Gathered.
-		As you enter the building, you will be able to find the 10-story
-		pagoda of Gyeongcheonsa Temple and the Gotha-sa Temple. Six permanent
-		exhibition halls are in operation. Three floors left and right:
-		prehistoric and ancient buildings, middle and modern museums, donor
-		halls, calligraphy halls, Asian pavilions, sculptures and crafts halls
-		More than 15,000 artifacts are on display.If you carefully examine the
-		entire artifact, it will take about a week. It is necessary to select
-		courses such as the “100 Important Relics” selected by the museum, or
-		to share them with time. On exhibition floor It is a good idea to use
-		a guided operator's guide time or use an automatic guide. The display
-		of artifacts from the traditional enumerated method It is more
-		interesting because it uses cutting-edge lighting and special effects
-		to highlight the value of each artifact. Also, a lot of hard to see
-		The museum is a permanent exhibition of foreign relics, raising its
-		status as a major Asian museum. In addition to the permanent
-		exhibition hall, planning exhibition hall, children exhibition hall,
-		It is a comprehensive cultural space where outdoor exhibition halls
-		add attractions and even a professional performance hall and library.
-		There's also restaurant spaces all over the museum. We are preparing
-		food with special features. If you prepare the information in advance
-		through the homepage, etc., you can leave more time travel.</p>
+	<p id="texttext10" class="txtt">Precious artifacts of our history
+		have found a wonderful new home. Opened in October 2005 The National
+		Museum of Korea is a world-scale museum that houses and exhibits
+		300,000 artifacts (as of January 2012) in a vast space of 300,000㎡. It
+		is a museum. Located in the former USFK position in Yongsan, it
+		inherits the wisdom of our ancestors who valued the harmony between
+		nature and man-made. The garden is designed to harmonize and it is
+		located in the place of Baesan Imsu, which is surrounded by Namsan and
+		the Han River. 1 basement level and 6 ground levels The museum
+		building has an exterior that looks like two buildings connected
+		together. Gathered. As you enter the building, you will be able to
+		find the 10-story pagoda of Gyeongcheonsa Temple and the Gotha-sa
+		Temple. Six permanent exhibition halls are in operation. Three floors
+		left and right: prehistoric and ancient buildings, middle and modern
+		museums, donor halls, calligraphy halls, Asian pavilions, sculptures
+		and crafts halls More than 15,000 artifacts are on display.If you
+		carefully examine the entire artifact, it will take about a week. It
+		is necessary to select courses such as the “100 Important Relics”
+		selected by the museum, or to share them with time. On exhibition
+		floor It is a good idea to use a guided operator's guide time or use
+		an automatic guide. The display of artifacts from the traditional
+		enumerated method It is more interesting because it uses cutting-edge
+		lighting and special effects to highlight the value of each artifact.
+		Also, a lot of hard to see The museum is a permanent exhibition of
+		foreign relics, raising its status as a major Asian museum. In
+		addition to the permanent exhibition hall, planning exhibition hall,
+		children exhibition hall, It is a comprehensive cultural space where
+		outdoor exhibition halls add attractions and even a professional
+		performance hall and library. There's also restaurant spaces all over
+		the museum. We are preparing food with special features. If you
+		prepare the information in advance through the homepage, etc., you can
+		leave more time travel.</p>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>

@@ -107,15 +107,18 @@ article#login {
 }
 
 .linkcolor {
-	color: black !important;
+	color: white !important;
+	font-weight: bold;
 }
 
-
-	table tbody tr {
-			border: solid 0px #ffffff; 
-			border-left: 0;
-			border-right: 0;
-		}
+table tbody tr {
+	border: solid 0px #ffffff;
+	border-left: 0;
+	border-right: 0;
+}
+.cont li a{
+    box-sizing: content-box;
+}
 </style>
 
 
@@ -138,8 +141,8 @@ article#login {
 
 
 		<table id="lan" style="position: absolute; right: 0px;">
-			<td><a class = "linkcolor" href="#Login">Login </a></td>
-			<td><a class = "linkcolor" href="#Join">Join</a></td>
+			<td><a class="linkcolor" href="#Login">Login </a></td>
+			<td><a class="linkcolor" href="#Join">Join</a></td>
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -173,10 +176,10 @@ article#login {
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a class = "linkcolor" href="#intro">服务专区</a></li>
-					<li><a class = "linkcolor" href="#work">地标</a></li>
-					<li><a class = "linkcolor" href="#about">课程清单</a></li>
-					<li><a class = "linkcolor" href="#contact">课程推荐</a></li>
+					<li><a style = "font-size : 20px;" class="linkcolor" href="#intro">服务专区</a></li>
+					<li><a style = "font-size : 20px;" class="linkcolor" href="#work">地标</a></li>
+					<li><a style = "font-size : 20px;" class="linkcolor" href="#about">课程清单</a></li>
+					<li><a style = "font-size : 20px;" class="linkcolor" href="#contact">课程推荐</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -353,43 +356,43 @@ article#login {
 
 			<!-- Contact -->
 			<article id="contact">
-			
-			
-	<form action="K_subvey_result" method="post" id='myForm'>
-		<table>
-			<tr>
-				<td>방문예정월</td>	
-			</tr>
-			<tr>
-				<td>1월 <input type="button" class="monBtn" values="jan"></td>
-				<td>2월 <input type="button" class="monBtn" values="2월"></td>
-				<td>3월 <input type="button" class="monBtn" values="3월"></td>
-				<td>4월 <input type="button" class="monBtn" values="4월"></td>
-				<td>5월 <input type="button" class="monBtn" values="5월"></td>
-				<td>6월 <input type="button" class="monBtn" values="6월"></td>
-				<td>7월 <input type="button" class="monBtn" values="7월"></td>
-				<td>8월 <input type="button" class="monBtn" values="8월"></td>
-				<td>9월 <input type="button" class="monBtn" values="9월"></td>
-				<td>10월 <input type="button" class="monBtn" values="10월"></td>
-				<td>11월 <input type="button" class="monBtn" values="11월"></td>
-				<td>12월 <input type="button" class="monBtn" values="12월"></td>
-			</tr>
-			<tr>
-				<td>방문예정월</td>
-			</tr>
-			<tr>
-				<td>남 <input type="button" class=genderBtn name="gender"></td>
-				<td>여 <input type="button" class="genderBtn" name="gender"></td>
-			</tr>
-			<tr>
-				<td>방문예정월</td>
-			</tr>
-			<tr>
-				<td>방문예정월</td>
-			</tr>
 
 
-			<!-- <label for="mon">방문예정월</label> 
+				<form action="K_subvey_result" method="post" id='myForm'>
+					<table>
+						<tr>
+							<td>방문예정월</td>
+						</tr>
+						<tr>
+							<td>1월 <input type="button" class="monBtn" values="jan"></td>
+							<td>2월 <input type="button" class="monBtn" values="2월"></td>
+							<td>3월 <input type="button" class="monBtn" values="3월"></td>
+							<td>4월 <input type="button" class="monBtn" values="4월"></td>
+							<td>5월 <input type="button" class="monBtn" values="5월"></td>
+							<td>6월 <input type="button" class="monBtn" values="6월"></td>
+							<td>7월 <input type="button" class="monBtn" values="7월"></td>
+							<td>8월 <input type="button" class="monBtn" values="8월"></td>
+							<td>9월 <input type="button" class="monBtn" values="9월"></td>
+							<td>10월 <input type="button" class="monBtn" values="10월"></td>
+							<td>11월 <input type="button" class="monBtn" values="11월"></td>
+							<td>12월 <input type="button" class="monBtn" values="12월"></td>
+						</tr>
+						<tr>
+							<td>방문예정월</td>
+						</tr>
+						<tr>
+							<td>남 <input type="button" class=genderBtn name="gender"></td>
+							<td>여 <input type="button" class="genderBtn" name="gender"></td>
+						</tr>
+						<tr>
+							<td>방문예정월</td>
+						</tr>
+						<tr>
+							<td>방문예정월</td>
+						</tr>
+
+
+						<!-- <label for="mon">방문예정월</label> 
 				남 <input type="button" class = "myBtn" >
 				여 <input type="button" class = "myBtn">
 			
@@ -399,18 +402,18 @@ article#login {
 				<label for="message">Message</label>
 				<textarea name="message" id="message" rows="4"></textarea> -->
 
-		</table>
-		<input type="hidden" id='month_check' name='month'> <input
-			type="hidden" id='gender_check' name='gender'> <input
-			type="button" value="전송" onclick="mySub()">
+					</table>
+					<input type="hidden" id='month_check' name='month'> <input
+						type="hidden" id='gender_check' name='gender'> <input
+						type="button" value="전송" onclick="mySub()">
 
-	</form>
-			
-			
-			
-			
-			
-			
+				</form>
+
+
+
+
+
+
 			</article>
 
 			<!-- Elements -->
