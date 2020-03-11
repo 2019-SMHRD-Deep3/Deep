@@ -666,6 +666,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 					$('#texttext').html(test8);
 				});
 				// ¹öÆ°9
+				
 				$('#ko9:button').on('click', function() {
 					$('#popimg0').attr('src', 'img/k10.PNG');
 					$('#texttext').html(test9);

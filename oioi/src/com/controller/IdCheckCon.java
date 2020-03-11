@@ -15,7 +15,7 @@ import com.model.MemberDAO;
 import com.model.MemberDTO;
 
 import front.ICommand;
-import front.ICommand2;
+
 
 public class IdCheckCon implements ICommand{
 	
