@@ -78,7 +78,32 @@ public class MemberDAO {
 	
 	}
 
+	public boolean joinCheck(MemberDTO dto) {
+		
+		boolean ischeck = false;
 
+		try {
+			getConnection();    
+			String sql = "Select * from user_member where id = ?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, dto.getId());
+			rs = psmt.executeQuery();
+			
+			if (rs.next()) {
+				ischeck = true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		
+		
+		return ischeck;
+	}
+	
 	public MemberDTO login(MemberDTO dto) {
 		
 		MemberDTO info = null;                                        

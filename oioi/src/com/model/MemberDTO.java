@@ -15,6 +15,12 @@ public class MemberDTO {
 	}
 	
 
+	public MemberDTO(String id) {
+	
+		this.id = id;
+	}
+
+
 	public MemberDTO(String id, String pw) {
 		this.id = id;
 		this.pw = pw;

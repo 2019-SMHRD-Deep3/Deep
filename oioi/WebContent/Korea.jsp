@@ -148,9 +148,9 @@ img#img {
 							<table>
 								<tr>
 									<td>아이디</td>
-									<td><input placeholder="아이디 입력 " type="text" name=id>
+									<td><input id = 'search' placeholder="아이디 입력 " type="text" name=id>
 									</td>
-									<td><input type="button" value="중복 확인"></td>
+									<td><button type="button" id="btn">입력</button></td>
 								</tr>
 								<tr>
 									<td>비밀번호</td>
@@ -751,5 +751,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 					$('#texttext').html(test99);
 				});
 			</script>
+			
+			
+			<script type="text/javascript">
+			
+			$('#btn').on('click',play);
+			
+      function play(){
+         var id = $('#search').val();
+         console.log(id);
+         
+         $.ajax({
+            url : "IdCheckService.do",
+            type : "POST",
+            dataType : "json",
+            data : 'id='+id,
+            success : function(result){
+            	if(result == true)
+            		alert("아이디가 중복되었습니다.");
+            	else
+            		alert("사용가능한 아이디입니다.");
+            },
+            error : function(){
+            	console.log(2);
+            }
+         });
+      }
+   
+            
+   </script>
 </body>
 </html>

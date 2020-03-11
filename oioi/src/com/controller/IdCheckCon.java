@@ -1,7 +1,12 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Collection;
+import java.util.Locale;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,23 +15,27 @@ import com.model.MemberDAO;
 import com.model.MemberDTO;
 
 import front.ICommand;
+import front.ICommand2;
 
-public class JoinCon implements ICommand {
+public class IdCheckCon implements ICommand{
+	
+	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-
+		
 		String moveURL = null;
 		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
 		
 
-		MemberDTO dto = new MemberDTO(id, pw, name, email);
+		MemberDTO dto = new MemberDTO(id);
 		MemberDAO dao = MemberDAO.getDAO();
 		IdCheckCon idcheck = new IdCheckCon();
 		
-		dao.join(dto);
-		moveURL = "Korea.jsp";
-		return moveURL;
+		boolean ischeck = dao.joinCheck(dto);
+
+		Gson gson = new Gson();
+		String value = gson.toJson(ischeck);
+		
+		return value;
 	}
+
 }
