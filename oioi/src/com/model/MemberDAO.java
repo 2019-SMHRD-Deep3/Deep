@@ -13,7 +13,14 @@ public class MemberDAO {
 	private PreparedStatement psmt;
 	private ResultSet rs;
 
+	public static MemberDAO dao;
 	
+	public static MemberDAO getDAO() {
+		if(dao== null) {
+			dao = new MemberDAO();
+		}
+		return dao;
+	}
 	private void getConnection() {  // DB 연동하는 1, 2 단계는 매번 똑같으므로 매소드로 만들어둠
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -52,7 +59,7 @@ public class MemberDAO {
 		
 		try {
 			getConnection();
-			String sql = "insert into member values(?,?,?,?)";
+			String sql = "insert into user_member values(?,?,?,?)";
 
 			psmt = conn.prepareStatement(sql);
 			
@@ -84,7 +91,7 @@ public class MemberDAO {
 
 		try {
 			getConnection();    
-			String sql = "Select * from member where id = ? and pw = ? ";
+			String sql = "Select * from user_member where id = ? and pw = ? ";
 			psmt = conn.prepareStatement(sql);
 			
 			psmt.setString(1, dto.getId());
@@ -109,10 +116,26 @@ public class MemberDAO {
 		
 		return info;
 	}
-	
-	
-	
-	
-	
+	public int update(MemberDTO dto) {
+		int cnt = 0;
+		try {
+			getConnection(); // 연결
+			String sql = "update user_member set pw = ?, name = ? where email = ?";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, dto.getPw()); // 물음표값 채워주기. 순서 지킬 것. 이상하게 들어가니까
+			psmt.setString(2, dto.getName());
+			psmt.setString(3, dto.getEmail()); // 이런 이메일을 가진 사람의 정보를 변경시킬것이기 때문에 써줘야 함.
+			
+			cnt = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return cnt;
+	}
+
 
 }

@@ -1,22 +1,21 @@
 <!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
-
-
 <title>Dimension by HTML5 UP</title>
-
 <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
-
-
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
+
 </noscript>
-
-
 <style>
 img#img {
 	width: 200px;
@@ -45,10 +44,6 @@ img#img {
 	float: right !important;
 }
 
- .incom{
-	background-color: rgba(91,100,113,0.0175);
-}
-
 #wrapper {
 	background-repeat: repeat;
 	background-size: cover;
@@ -64,59 +59,111 @@ img#img {
 	z-index: -1000;
 	overflow: hidden;
 }
-<<<<<<< HEAD
+
 #day {
 	display: inline;
 }
 
-.h1:hover{
-  color: red;
-}
-.h2:hover{
-color : blue;
+.a1:hover {
+	color: red;
 }
 
-=======
+.a2:hover {
+	color: blue;
+}
 
->>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
+#lan {
+	top: 0px;
+	/* left: 10; */
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+#lan td {
+	width: 200px;
+}
+
+#dropdownMenuButton {
+	width: auto;
+	height: 40px;
+	font-size: 15px;
+}
+
+p#texttext {
+	color: white;
+}
+
+.intSE {
+	color: white;
+}
+
+article#Join {
+	color: white;
+}
+
+article#Login {
+	color: white;
+}
 </style>
-<<<<<<< HEAD
 
 
-=======
-
->>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 </head>
-
-
 <body class="is-preload">
-
 	<!-- Wrapper -->
+
 	<div id="wrapper" position=relative;>
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
+
 		</video>
 
+		<!--         <script>
+				document.getElementById("videobcg").play();
+			</script> -->
 
 		<!-- Header -->
 
-		<ul id="mem">
-			<table class="incom" bgcolor="#5b6471">
-				<tr>
-					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Login">로그인 </a></td>
-					<td class="inTag" style="color: rgba(255,255,255,1.0);"><a href="#Join">회원가입 </a></td> 
-				</tr>
-			</table>
+		<table id="lan" style="position: absolute; right: 0px;">
 
-		</ul>
+			<td>
+				<link rel="stylesheet"
+					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+					integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+					crossorigin="anonymous"> <script
+					src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+					crossorigin="anonymous"></script> <script
+					src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous"></script> <script
+					src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous"></script>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button"
+						id="dropdownMenuButton" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="Korea.html">한국어</a> <a
+							class="dropdown-item" href="English.html">English</a> <a
+							class="dropdown-item" href="China.html">简体中文</a> <a
+							class="dropdown-item" href="Japan.html">日本語</a> <a
+							class="dropdown-item" href="Spain.html">Español</a>
+					</div>
+				</div>
+			</td>
+			<td><a href="#Login">로그인 </a></td>
+			<td><a href="#Join">회원가입</a></td>
 
+		</table>
 		<header id="header">
 			<nav>
-				<ul>
-					<li><a href="#intro">어서와</a></li>
-					<li><a href="#work">서울은</a></li>
-					<li><a href="#about">처음이지?</a></li>
+				<ul class="cont">
+					<li><a href="#intro">서비스</a></li>
+					<li><a href="#work">랜드 마크</a></li>
+					<li><a href="#about">코스 목록</a></li>
 					<li><a href="#contact">코스 추천</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
@@ -126,7 +173,6 @@ color : blue;
 
 
 		<!-- Main -->
-<<<<<<< HEAD
 		<div id="main">
 
 
@@ -199,73 +245,9 @@ color : blue;
 
 
 			<!-- Intro -->
-			<article id="intro">
-=======
-		
-		<div id="main">
-		<!-- Login -->
-		<article id="Login">
-			<form action = "LoginService" method = "post">
-				<table>
-					<tr>
-						<td>아이디</td>
-						<td><input placeholder="아이디 입력" type="text" name=id></td>
-					</tr>
-					<tr>
-						<td>비밀번호</td>
-						<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td><input type=submit value="로그인"> 
-							<input type=reset value="초기화"></td>
-					</tr>
-				</table>
-			</form>
-		</article>
-		
-		
-		<!-- Join -->
-		<article id="Join">
-			<form action = "JoinService" method = "post">
-				<table>
-					<tr>
-						<td>아이디</td>
-						<td><input placeholder="아이디 입력 " type="text" name=id>
-						</td>
-						<td><input type="button" value="중복 확인"></td>
-					</tr>
-					<tr>
-						<td>비밀번호</td>
-						<td colspan=2><input placeholder="비밀번호 입력 " type="password" name=pw></td>
-					</tr>
-					<tr>
-						<td>비밀번호 확인</td>
-						<td colspan=2><input placeholder="비밀번호 재입력 " type="password" name=pw></td>
-					</tr>
-					<tr>
-						<td>이름</td>
-						<td colspan=2><input placeholder="전화번호 입력 " type="text" name=name></td>
-					</tr>
-					<tr>
-						<td>이메일</td>
-						<td colspan=2><input placeholder="이메일 입력 " type="text" name=email></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td colspan=2><input type=submit value="회원가입"> 
-						              <input type=reset value="초기화"></td>
-					</tr>
-				</table>
-			</form>
-		</article>
-	
-		<!-- Intro -->
-
-			<article id="intro">
->>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
+			<article id="intro" class="intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span class="image main"><img src="img/main.PNG" alt="서울" /></span>
+				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
 				<h3 align="center">웹 페이지 소개</h3>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
@@ -279,13 +261,17 @@ color : blue;
 
 			</article>
 
-		<!-- Work -->
+			<!-- Work -->
 
 			<article id="work">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 				<h1>서울 10대 명소</h1>
+<<<<<<< HEAD
 				<h2 class="major1" href="#" style="display: inline;"><div id="day" class = "h1">주간</div></h2>
 				<h2 class="major2" href="#" style="display: inline;"><div id="day" class = "h2">야간</div></h2>
 =======
@@ -298,18 +284,26 @@ color : blue;
 
 >>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 >>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
+=======
+				<h2 class="major1" href="#" style="display: inline;">
+					<div id="day" class="a1">주간</div>
+				</h2>
+				<h2 class="major2" href="#" style="display: inline;">
+					<div id="day" class="a2">야간</div>
+				</h2>
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
-					<button class="ten" id="ko1">북촌 한옥마을</button>
-					<button class="ten" id="ko2">경복궁</button>
-					<button class="ten" id="ko3">N서울타워</button>
-					<button class="ten" id="ko4">청계천</button>
-					<button class="ten" id="ko5">명동</button>
-					<button class="ten" id="ko6">홍대</button>
-					<button class="ten" id="ko7">한양도성</button>
-					<button class="ten" id="ko8">동대문 디자인플라자(DDP)</button>
-					<button class="ten" id="ko9">남대문시장</button>
-					<button class="ten" id="ko10">이태원</button>
+					<button class="ten" id="ko1">#경복궁</button>
+					<button class="ten" id="ko2">명동</button>
+					<button class="ten" id="ko3">인사동</button>
+					<button class="ten" id="ko4">코엑스</button>
+					<button class="ten" id="ko5">창덕궁</button>
+					<button class="ten" id="ko6">봉은사</button>
+					<button class="ten" id="ko7">63빌딩</button>
+					<button class="ten" id="ko8">전쟁기념관</button>
+					<button class="ten" id="ko9">북촌한옥마을</button>
+					<button class="ten" id="ko10">국립중앙박물관</button>
 				</div>
 
 				<div id='g'>
@@ -324,6 +318,7 @@ color : blue;
 					<button class="next" id="k8">여의도 한강 공원</button>
 					<button class="next" id="k9">롯데월드</button>
 				</div>
+
 
 				<script type="text/javascript">
 					$(document).ready(function() {
@@ -343,10 +338,12 @@ color : blue;
 						$('#g').show(); //클릭 시 두 번째 요소 표시
 					});
 				</script>
-				<p id="texttext">골라골라</p>
+				<p id="texttext"></p>
 
 			</article>
-			
+
+
+
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">베스트 테마</h2>
@@ -621,11 +618,90 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; Team DEEP</p>
+			<p class="copyright">
+				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+			</p>
 		</footer>
 
 	</div>
 
+	<p id="texttext1">경복궁은 대한민국을 대표하는 가장 큰 궁궐로 조선왕조의 번영에 큰 도움을 주었다.
+		경복궁의 크기는 방이 약 750개정도로 왕이 집무를 보는 공간의 의미를 넘어 국가와 왕실의 크기를 상징적으로 보여주는
+		곳이었다고 한다. 조선의 건국부터 마지막까지 왕이 집무를 보는 경복궁은 지금도 보존이 잘 되어 있어, 외국인 뿐만 아니라
+		한국인에게 지금까지 사랑받는 조선이라는 나라를 대표하는 건축물 중 하나가 되었다. 경복궁은 정문 광화문을 따라 흥례문
+		,근정문을 지나 오면 조선왕조를 대표하는 건축물이라는 것을 한번에 알 수 있는 조선의 색을 담은 건물이라고 할수 있다.</p>
+	<p id="texttext2">대한민국에서 가장 비싼 땅인 명동은 서울특별시를 상징하는 번화가이다. 조선 시대에는
+		주택가였으나 일제강점기 충무로가 상업지역으로 발전하며 인접지역인 명동도 상가형태로 변하게 되어 대한민국 최고의 번화가로 발돋움
+		하게 되었다. 명동은 유행의 선도자라고 불릴 정도로 거대한 쇼핑 문화가 형성되어 잇는데, 국내 유명 백화점은 물론 명품,브랜드
+		매장뿐 만아니라 보세가게까지 다양한 상점이 있어 쇼핑에 최적화 되있다고 말할 수 있다. 또한 명동에는 쇼핑과 함게
+		먹을거리,즐길거리 등이 있어 내국인 뿐만아니라 외국인들도 한국에서 즐길 수 있는 최적의 공간이라 불릴수 있다.~</p>
+	<p id="texttext3">인사동 쌈지길은 서울시 종로구 인사동 내에 있는 건물을 말한다. 쌈지란 '주머니'를
+		뜻하는 순우리말이다. 쌈지길은 '쌈지' 뒤에 '길'을 붙여 인사동 골목에 여러 문화적 재미요소를 더한다는 뜻을 지녔다.쌈지길은
+		가아 건축 연구소 최문규 건축가가 (주)쌈지의 권유로 만든 건물이다. 쌈지길은 공예품전문 쇼핑몰로서 인사동에 관광명소가 되고
+		있다. 연면적 4,066.01m²(1,200여평)의 나선형 건물에 한국의 전통공예품 혹은 한국의 멋이 풍기는 다양한 디자인의
+		70여개의 공예품점, 문화상품과 기념품가게, 갤러리, 음식점들이 모여있어 관광객들에게 다양한 즐길거리를 제공한다.
+		건물에‘길’이 붙은 것은 4층 전체가 하나의 골목으로 연결됐기 때문이다. 마름모꼴의 마당을 둘러싼‘ㅁ’자 형태다. 각 층은
+		완만한 경사로로 이어져 이곳저곳 가게를 구경하며 걷다보면 옥상의 하늘정원에 다다른다.또한 쌈지길은 인사동길에 면해 있던'열두
+		가게' 를 그대로 유지함으로써 인사동길의 성격을 살리는 동시에, 건물 내부에 마당과 오름길을 통해 인사동의 성격을 살림으로써,
+		창의적 재해석과 전통의 진화를 성공적으로 해석해냈다</p>
+	<p id="texttext4">교통과 통신, 첨단 비즈니스 인프라를 두루 갖춘 글로벌 비즈니스의 메카이자 아시아 최고의
+		전시·문화·관광의 명소로서,국제 무역과 문화 교류의 장을 마련할 목적으로 1979년 3월 개관한 한국 최대의 종합전시관이다.
+		총 1만 1000평(연면적 13만여 평)규모로,지상 4층,지하 4층으로 이루어져 있으며, 12개의 전문 전시실과 7000명을
+		동시에 수용할 수 있는 컨벤션홀을 비롯해 61개의 회의실을 갖추고 있다. 또 국제 비즈니스를 위한 종합적인 지원체제를 갖추고
+		연간 150여 회의 전문 전시회,각종 국제회의와 이벤트를 개최하는 한편, 해외 유수의 바이어와 국내 수출입업체를 직접
+		연결시키는 등 교역 증대 역할도 한다.또한 코엑스내 아쿠아리움이 있어 한국인관광객 뿐만 아니라 외국인 관광객들도 도심 속에서
+		큰 규모에 아쿠아리움을 구경할 수 있다.</p>
+	<p id="texttext5">창덕궁은 서울시 종로구에 위치한 조선 시대의 궁궐이다. 건축과 조경이 잘 조화된 종합
+		환경디자인 사례이면서 동시에 한국적인 공간 분위기를 읽게 하는 중요한 문화유산이다. 건축사에 있어 조선 시대 궁궐의 한 전형을
+		보여 주며, 후원의 조경은 우리나라의 대표적인 왕실 정원으로서 가치가 높다창덕궁은 불행한 역사 속에서 탄생한 조선의 궁궐이라고
+		불리우는데,조선을 건국한 이성계의 아들들과 신하들 사이에서 권려 다툼이 벌어져 왕위 다툼을 하던중 왕이 되었던 다섯째 아들이
+		왕이되었으나 형제들을 죽였던 경복궁으로 들어가는것을 싫어했던 태종은 새로운 궁궐을 지어 집무를 보았는데, 그 궁궐이
+		창덕궁이다. 아픈 역사를 지닌 만큼 특별하고 볼 것이 많은 조선을 대표하는 대한민국을 대표하는 궁궐이다.</p>
+	<p id="texttext6">봉은사는 평일과 휴일이 없이 언제나 기도하고 참배하는 사람들로 넘쳐 여느 절같지 않게
+		조금 낯설다. 종교가 일상과 밀접하게 만나는 현장이라 할 수 있으나 차분하게 절을 돌아보고자 하는 사람들에게는 그리 좋지 않는
+		것도 사실이다. 항상 많은 사람들이 기도하는 곳이다 보니 시설이나 공간이 늘어나야 해서 항상 봉은사는 공사중이라고 한다.
+		봉은사는 신라 우너성왕 때 창건한 절로 조선 중종의 왕비 정현황후의 묘가 생겨 조선 왕실의 관심을 받고 발전하는 사찰이 되기
+		시작하였다. 흔히 우리가 아는 절은 사람들이 살지 않는 산이나 일반 시민들의 생활반경 밖에 있는것이 많은데 봉은사는 서울
+		한가운데, 그것도 강남이라는 서울에서 제일 유동인구가 많은 정중앙에 위치해 종교인들의 왕래가 많은것은 물론, 교통과 접근이
+		편리해 많은 외국인 종교인들도 한번씩은 들러가는 대한민국을 대표하는 사찰이 되었다.</p>
+	<p id="texttext7">롯데 타워가 완공 되기 전까지 서울을 대표하는 한국에서 가장 높은 건물 이었던 63빌딩은
+		대한민국 기업 '한화'가 1985년에 완공한 서울을 대표하는 랜드마크로 자리잡았다. 당시, 고층 빌딩이 없던 한국에 한화라는
+		기업이 수익의 목적이 아닌 회사건물을 목적으로 건축 했으나 대한민국의 랜드마크라는 타이틀까지 두마리 토끼를 한번에 잡은
+		케이스가 되기도 하였다. 롯데 타워와 다르게 한화와 다른 기업들의 사무실등이 있고 각종 부대시설과 전망대, 지하에는 수족관
+		까지 초고층건물의 이점을 상술에 이용한 관광공간을 마련한 점이 특징이다. 여의도에 있는 63빌딩은 전망대를 통해 서울
+		정중앙에서 제일 높은 전망대에서 서울을 전부 둘러 볼 수 있어 아직도 많은 관광객들이 찾는 서울에 랜드마크중 한곳이라고 한다.</p>
+	<p id="texttext8">1950년 6월25일, 아직 동이 트기 전 모두가 잠든 새벽. 평화로운 한반도에 총성이
+		울려퍼졌다. 북한군이 남북 군사분계선이던 38선을 넘어 남침하면서 시작된 6·25전쟁. 피를 나눈 한민족끼리의 전쟁은
+		미국·소련·중국의 개입으로 1953년 7월 휴전협정 때까지 수많은 사상자를 내며 계속됐다. 일제강점기에서 벗어난 기쁨을 채
+		누리기도 전이었다. 반세기 전, 이 땅에서 벌어졌던 역사를 기록한 용산의 전쟁기념관을 소개한다. 전쟁 기념관은 1층 전쟁역사실
+		2층 6.25전쟁실을 관람 하게 된다.항상 하루에 2차례 문화해설사의 동행 관람을 통해 우리가 잘 알지 못했던 역사에 대해
+		조금 더 자세하게, 생생하게 설명을 들을 수 있는 장점이 있다. 또한 전쟁역사실에서 지금까지의 한반도의 전쟁 역사를 한번에
+		확인할 수 있다. 전쟁 기념관은 남.북으로 나눠져 있는 한반도 상황을 잘 알고 있는 독일인들에게 인기라고 한다. 전쟁기념관을
+		통해서 우리가 잊고 있던 전쟁역사를 다시한번 느껴보는 것도 좋은 방법이라고 생각한다.</p>
+	<p id="texttext9">경복궁과 창덕궁, 금원(비원) 사이 북악산 기슭에 있는 한옥 보존지구로 청계천과 종로의
+		윗동네라는 뜻으로 북촌이라고도 한다. 북촌은 고관대작들과 왕족, 사대부들이 모여서 거주해온 고급 살림집터로 한옥은 모두
+		조선시대의 기와집이다. 원래 이 지역에는 솟을대문이 있는 집 몇 채와 30여 호의 한옥만이 있었으나 일제강점기 말부터 한옥이
+		많이 지어졌고, 1992년 가회동한옥보존지구에서 해제되고, 1994년 고도제한이 풀리면서 일반 건물들이 많이 들어섰다. 총
+		2,297동의 건물이 있는데, 이 가운데 1,408동이 한옥이고 나머지는 일반 건물이다. 북촌 거리에는 북촌양반생활문화전시관과
+		북촌 한옥촌 상징조형물이 설치되어 있으며, 옛 선조의 생활모습을 구경할 수 있는 가회동 전통 마을축제가 열린다. 주변에
+		경복궁·창덕궁·덕수궁·금원·삼청공원 등의 관광지가 있다. 창덕궁 전경이 잘 보이는 북촌 1경, 원서동 공방길은 북촌2경,
+		가회동 11번지 일대는 북촌3경, 가회동 31번지 언덕이 4경, 한옥이 잘 보존되어 있는 가회동 내리막 골목길이 북촌5경,
+		가회동 오르막 골목길이 북촌6경, 가회동 31번지가 북촌7경, 삼청동 돌계단길이 북촌8경을 통해 대한민국 선조들의 주거 형태를
+		느껴 보는건 어떠한가?</p>
+	<p id="texttext10">우리 역사의 소중한 유물들이 멋진 새 보금자리를 찾았다. 2005년 10월 개관한
+		국립중앙박물관은 30만㎡의 방대한 공간에 30만여 점(2012년 1월 기준)의 유물을 보관, 전시하는 세계적 규모의
+		박물관이다. 용산의 옛 주한미군부대 자리에 위치한 이곳은 자연과 인공의 조화를 소중히 여긴 선조들의 지혜를 이어받아 호수와
+		정원이 어우러지게 설계를 하였으며 남산과 한강이 둘러싸는 ‘배산임수(背山臨水)’의 장소에 자리 잡았다. 지하 1층 지상 6층의
+		박물관 건물은 두 개의 건물이 하나로 연결된 듯 이어지는 외관에 전시 공간과 유물의 보관 공간, 연구 공간과 각종 부대시설이
+		모여 있다. 건물 내부로 들어서면 경천사 십층석탑과 고달사 쌍사자 석등이 자리 잡은 중앙 통로인 ‘역사의 길’을 중심으로
+		6개의 상설 전시관이 운영되고 있다. 세 개 층 좌우로 선사·고대관, 중·근세관, 기증관, 서화관, 아시아관, 조각·공예관으로
+		나뉘어 15,000여 점의 유물이 전시되고 있다. 전체 유물을 꼼꼼히 살핀다면 약 일주일의 시간이 걸린다는 방대한 규모이니
+		박물관이 선정한 ‘중요 유물 100선’ 등의 코스 선택을 하거나 시간을 가지고 나누어 관람하는 요령이 필요하다. 전시관 단위로
+		운영되는 해설사의 안내 시간을 이용하거나 자동 안내기를 사용하는 것도 좋은 방법이다. 유물의 전시는 기존의 나열식 방법에서
+		벗어나 각 유물의 가치를 돋보이게 하는 첨단의 조명과 특수효과 등이 사용되어 더욱 흥미롭다. 또한 그동안 보기 힘들었던 수많은
+		외국 유물들을 상설전시해 아시아의 중심 박물관으로서 위상을 높여가고 있다. 상설전시관과 더불어 기획전시관, 어린이전시관,
+		야외전시관들이 볼거리를 더하며 전문 공연장과 도서관까지 자리하는 종합 문화 공간이다. 박물관 곳곳에 자리하는 식당 공간도
+		특색을 지닌 먹거리를 준비하고 있다. 홈페이지 등을 통하여 사전에 정보를 준비한다면 더욱 알찬 시간여행을 떠날 수 있다.</p>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
@@ -636,6 +712,74 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 
 	<!-- BG -->
+	<div id="bg"></div>
+	<script type="text/javascript">
+		var text = document.querySelector('#texttext');
+		var popimgs = document.getElementById('popimg0');
+		var test1 = document.querySelector('#texttext1').textContent;
+		var test2 = document.querySelector('#texttext2').textContent;
+		var test3 = document.querySelector('#texttext3').textContent;
+		var test4 = document.querySelector('#texttext4').textContent;
+		var test5 = document.querySelector('#texttext5').textContent;
+		var test6 = document.querySelector('#texttext6').textContent;
+		var test7 = document.querySelector('#texttext7').textContent;
+		var test8 = document.querySelector('#texttext8').textContent;
+		var test9 = document.querySelector('#texttext9').textContent;
+		var test10 = document.querySelector('#texttext10').textContent;
+		// 버튼 1
+		$('#ko1:button').on('click', function() {
+
+			$('#popimg0').attr('src', 'img/k2.PNG');
+			$('#texttext').html(test1);
+		});
+		// 버튼2
+		$('#ko2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k3.PNG');
+			$('#texttext').html(test2);
+		});
+		// 버튼3
+		$('#ko3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k4.PNG');
+			$('#texttext').html(test3);
+		});
+		// 버튼4
+		$('#ko4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#texttext').html(test4);
+		});
+		// 버튼5
+		$('#ko5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#texttext').html(test5);
+		});
+		// 버튼6
+		$('#ko6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k7.PNG');
+			$('#texttext').html(test6);
+		});
+		// 버튼7
+		$('#ko7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k8.jpg');
+			$('#texttext').html(test7);
+		});
+		// 버튼8
+		$('#ko8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k9.PNG');
+			$('#texttext').html(test8);
+		});
+		// 버튼9
+		$('#ko9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k10.PNG');
+			$('#texttext').html(test9);
+		});
+		// 버튼10
+		$('#ko10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k11.PNG');
+			$('#texttext').html(test10);
+		});
+	</script>
+
+
 	<p id="texttext11">1번</p>
 	<p id="texttext22">2번</p>
 	<p id="texttext33">3번</p>
@@ -662,13 +806,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test88 = document.querySelector('#texttext88').textContent;
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
-
 		$('#k1:button').on('click', function() {
-<<<<<<< HEAD
 			$('#popimg1').attr('src', 'img/kn1.PNG');
-=======
-			$('#popimg1').attr('src', 'img/kn1.PNG');
->>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 			$('#texttext').html(test11);
 		});
 		// 버튼2
