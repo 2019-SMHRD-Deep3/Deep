@@ -56,7 +56,9 @@ table {
 	width: 40%;
 	margin: 0px auto;
 }
-
+/* body{
+	background-image: url('./img/aa.png');
+} */
 </style>
 
 </head>
