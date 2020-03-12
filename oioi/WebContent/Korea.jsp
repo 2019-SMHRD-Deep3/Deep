@@ -136,7 +136,7 @@ table tbody tr {
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -1004,6 +1004,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 			$('#texttext').html(test99);
 		});
 	</script>
+
 	<script type="text/javascript">
 			
 			$('#btn').on('click',play);

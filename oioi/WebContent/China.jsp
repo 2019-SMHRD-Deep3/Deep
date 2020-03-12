@@ -1001,8 +1001,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 			$('#texttext').html(test99);
 		});
 	</script>
+
 	
 	<script type="text/javascript">
+
 			
 			$('#btn').on('click',play);
 			
