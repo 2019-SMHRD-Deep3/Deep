@@ -28,17 +28,6 @@
 	border-radius: 15px !important;
 }
 
-table {
-	text-align: center;
-	size: 1000px;
-	width: 100px;
-	height: 50px;
-	font-size: 10px;
-	margin: 0px auto;
-	margin-top : 50px;
-	background-color: rgba(0,0,0,0.2);
-}
-
 
 #Q{
 	width: 50%;
@@ -244,12 +233,6 @@ table {
 			 
 		</div>
 
-		<input type="hidden" id='age_check' name='age'> 
-		<input type="hidden" id='gender_check' name='gender'> 
-		<input type="hidden" id='month_check' name='month'> 
-		<input type="hidden" id='trip_check' name='trip'> 
-		<input type="hidden" id='month_check' name='month'> 
-		<!-- <input type="button" value="Àü¼Û" onclick="mySub()"> -->
 
 	</form>
 
