@@ -43,23 +43,25 @@ body .backgroundTransition .image-top {
 }
 
 .content {
-	margin-top: 34%;
-	width: 420px;
+	margin-top: 38%;
+	width: 540px;
 	margin-left: 120px;
 	padding: 20px;
-	background-color: rgba(0, 0, 0, .3);
+	background-color: rgba(0, 0, 0, .15);
 	color: #ffffff;
+	display: table;
+	table-layout: fixed;
 }
 
 .selChina{
 	display: none;
-	z-index: 10;
+	z-index: 5;
 	width: 200px;
 	margin-top: 25%;
 	margin-right: 40%;
 	margin-left: 40%;
 	padding: 3%;
-	background-color : rgba(0, 0, 0, .3);
+	background-color : rgba(0, 0, 0, .15);
 	color: #ffffff;
 	}
 
@@ -68,6 +70,33 @@ body .backgroundTransition .image-top {
 	margin-left: 6%;
 	margin-right: 6%;
 }
+
+.conCle{
+	width: 70px;
+	height: 70px;
+	border-radius: 35px;
+	font-size: 18px;
+	text-align: center;
+	vertical-align: middle;
+	display:table-cell;
+	background-color : #ffffff;
+	color: #000000;
+}
+
+.spin{
+	display:table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.flag{
+	display:none;
+}
+#koreaCall{
+	width:100%;
+	height:100%;
+}
+
 </style>
 
 </head>
@@ -94,28 +123,48 @@ body .backgroundTransition .image-top {
 	<!-- 아이콘 클릭 시 이동하는 JQ -->
 	<div class="backgroundTransition">
 		<div class="content">
-			<h1>BackgroundTransition</h1></br>
-				<a href="Korea.jsp"><img id="Korea" class="flag" src='img/Korea.png'></a>
-				<a href="English.jsp"><img id="USA" class="flag" src='img/Usa.png'></a>
-				<a href="Japan.jsp"><img id="Japan" class="flag" src='img/Japan.png'></a>
-				<a href="China.jsp"><img id="China" class="flag" src='img/China.png'></a>
-				<a href="Spain.jsp"><img id="Spain" class="flag" src='img/Spain.png'></a>
-				<a href="French.jsp"><img id="French" class="flag" src='img/Spain.png'></a>
+			<h1>BackgroundTransition</h1><br>
+			<div>
+				<div class="conCle conCle0">
+					<div id="koreaCall" class="spin">한국어</div>
+					<a href="Korea.html"><img id="Korea" class="flag" src='img/Korea.png'></a>
+				</div>
+				
+				<div class="conCle conCle1">
+					<div id="usaCall" class="spin">영어</div>
+					<a href="English.html"><img id="USA" class="flag" src='img/Usa.png'></a>
+				</div>
+				
+				<div class="conCle conCle2">
+					<div id="japanCall" class="spin">일어</div>
+					<a href="Japan.html"><img id="Japan" class="flag" src='img/Japan.png'></a>
+				</div>
+				
+				<div class="conCle conCle3">
+					<div id="chinaCall" class="spin">중국어</div>
+					<a href="#"><img id="China" class="flag" src='img/China.png'></a>
+				</div>
+				
+				<div class="conCle conCle4">
+					<div id="spainCall" class="spin">스페인어</div>
+					<a href="Spain.html"><img id="Spain" class="flag" src='img/Spain.png'></a>
+				</div>
+			</div>	
 		</div>
 		
 		<div class="selChina">
 			<button id="close" style="font-size: 5px; position: absolute; margin-top:-10px; margin-left: 190px;">X</button>
 			<p style="align-content: center; text-align: center;">사용 언어 선택</p>
-				<div class="conChina"><a href="China.html"><img id="China" class="flag" src='img/China.png'></a></div>
-				<div class="conChina"><a href="#"><img id="China" class="flag" src='img/China.png'></a></div>
+				<div class="conChina"><a href="China.html"><img id="China" src='img/China.png'></a></div>
+				<div class="conChina"><a href="#"><img id="China" src='img/China.png'></a></div>
 				<p style="width: 100px; display:inline; margin:5%;">중국(간체)</p>
 				<p style="width: 100px; display:inline; margin:2%;">중국(광둥)</p>
 		</div>
 		
 	</div>
 
-	<!-- 중국 아이콘 선택시 언어 선택화면 전환 -->
 	<script>
+		// 중국 아이콘 선택시 언어 선택화면 전환 
 		$('#China').on('click',function(){
 			$('.content').css({display:'none'}),
 			$('.selChina').css({display:'block'});
@@ -126,7 +175,54 @@ body .backgroundTransition .image-top {
 			$('.selChina').css({display:'none'});
 		});
 		
-		//$('body').off('click');
+		// 언어별 국기 호출
+		$(".conCle0").hover(function(){
+				$('#koreaCall').css({display:'none'}),
+				$('#Korea').css({display:'block'}),
+				$('.conCle0').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#koreaCall').css({display:'table-cell'}),
+				$('#Korea').css({display:'none'}),
+				$('.conCle0').css({backgroundColor:'#ffffff'});
+			});
+		$(".conCle1").hover(function(){
+				$('#usaCall').css({display:'none'}),
+				$('#USA').css({display:'block'}),
+				$('.conCle1').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#usaCall').css({display:'table-cell'}),
+				$('#USA').css({display:'none'}),
+				$('.conCle1').css({backgroundColor:'#ffffff'});
+			});
+		$(".conCle2").hover(function(){
+				$('#japanCall').css({display:'none'}),
+				$('#Japan').css({display:'block'}),
+				$('.conCle2').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#japanCall').css({display:'table-cell'}),
+				$('#Japan').css({display:'none'}),
+				$('.conCle2').css({backgroundColor:'#ffffff'});
+			});
+		$(".conCle3").hover(function(){
+				$('#chinaCall').css({display:'none'}),
+				$('#China').css({display:'block'}),
+				$('.conCle3').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#chinaCall').css({display:'table-cell'}),
+				$('#China').css({display:'none'}),
+				$('.conCle3').css({backgroundColor:'#ffffff'});
+			});
+		$(".conCle4").hover(function(){
+				$('#spainCall').css({display:'none'}),
+				$('#Spain').css({display:'block'}),
+				$('.conCle4').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#spainCall').css({display:'table-cell'}),
+				$('#Spain').css({display:'none'}),
+				$('.conCle4').css({backgroundColor:'#ffffff'});
+			});
+		
+
 	</script>
 	
 </body>
