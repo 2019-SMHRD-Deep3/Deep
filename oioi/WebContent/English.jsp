@@ -126,7 +126,8 @@ table tbody tr {
 .cont li a {
 	box-sizing: content-box;
 }
-.inTag a{
+
+.inTag a {
 	color: white !important;
 }
 </style>
@@ -155,24 +156,24 @@ table tbody tr {
 
 		<table id="lan" style="position: absolute; right: 0px;">
 			<%
-						if (info == null) {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login">Login</a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Join">Join </a></td>
-					<%
-						} else {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login"><%=info.getId()%> </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="LogoutService.do">로그아웃 </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="update.jsp"> 회원정보수정 </a></td>
-					<%
-						}
-					%>
+				if (info == null) {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login">Login</a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Join">Join </a></td>
+			<%
+				} else {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login"><%=info.getId()%> </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="LogoutService.do">로그아웃 </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="update.jsp"> 회원정보수정 </a></td>
+			<%
+				}
+			%>
 
 			<td>
 				<link rel="stylesheet"
@@ -207,10 +208,13 @@ table tbody tr {
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor" href="#intro">Service</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#intro">Service</a></li>
 					<li><a style="font-size: 20px;" class="linkcolor" href="#work">LandMarks</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#about">Example</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">MakeCourse</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#about">Example</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="K-survey.jsp">MakeCourse</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -224,7 +228,7 @@ table tbody tr {
 
 			<!-- Login -->
 			<article id="Login">
-				<form action="LoginService" method="post">
+				<form action="LoginService.do" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -246,7 +250,7 @@ table tbody tr {
 
 			<!-- Join -->
 			<article id="Join">
-				<form action="JoinService" method="post">
+				<form action="JoinService.do" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -652,7 +656,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	</div>
 
-	<p id="texttext1">Gyeongbokgung was the largest palace representing
+	<p id="texttext1">Tel : 02-3700-3900
+
+		Address: 161, Sajik-ro, Jongno-gu, Seoul Gyeongbokgung District Address: 1-91 Sejong-ro
+
+		Opening Hours: Every day 09:00-18:00 (last admission 17:00) Closed on Tuesdays
+
+		Adult (25 to 64 years old): 3,000 won
+
+		Teens under 24 years old: free disabled, merit: free
+
+		Older than 65 years old: Those wearing free hanbok: Free
+
+		Gyeongbokgung was the largest palace representing
 		the Republic of Korea and helped the prosperity of the Joseon Dynasty.
 		The size of Gyeongbokgung Palace is about 750 rooms, which symbolizes
 		the size of the country and the royal family beyond the meaning of the
@@ -663,7 +679,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		been loved by Koreans. Gyeongbokgung Palace is Heungryemun along
 		Gwanghwamun Gate.If you go past the Geunjeongmun, it can be said that
 		it is the building that represents the Joseon Dynasty.</p>
-	<p id="texttext2">Myeong-dong, the most expensive land in Korea, is
+	<p id="texttext2">Address: Myeong-dong, Jung-gu, Seoul
+
+		Myeong-dong, the most expensive land in Korea, is
 		a symbol of Seoul. In the Joseon Dynasty Although it was a residential
 		area, Chungmuro ​​developed into a commercial area during the Japanese
 		colonial period, and it became a commercial district in Myeong-dong,
@@ -672,7 +690,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		just stores, but also bonded shops. Also in Myeongdong, with shopping
 		It is said to be the best place to enjoy not only Koreans but also
 		foreigners in Korea.</p>
-	<p id="texttext3">nsa-dong Ssamji-gil is a building in Insa-dong,
+	<p id="texttext3">Address: Insa-dong, Jongno-gu, Seoul
+	
+		Insa-dong Ssamji-gil is a building in Insa-dong,
 		Jongno-gu, Seoul. Ssamji is a pure Korean meaning 'pocket'. Ssamji-gil
 		means to add various cultural fun elements to Insa-dong alley by
 		attaching 'gil' after 'ssam-ji'. Ssamji-gil is a shopping mall
@@ -685,7 +705,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		alley. It is a "ㅁ" shape surrounding the lozenge's yard. Each floor
 		leads to a gentle slope, walking through the shops to the rooftop sky
 		garden.</p>
-	<p id="texttext4">Asia's Mecca of Global Business with
+	<p id="texttext4">Tel : 02-6000-0114
+
+		Address: 513 Yeongdong-daero, Gangnam-gu, Seoul Address: 159 Samseong-dong
+
+		Opening Hours: Daily 10:00-18:00 Remarks (different times for event end)
+	
+		Asia's Mecca of Global Business with
 		Transportation, Communications and Advanced Business Infrastructure It
 		is the largest general exhibition hall in Korea, opened in March 1979
 		with the aim of providing a place for international trade and cultural
@@ -700,7 +726,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		addition, it has a role to increase trade, and there is an aquarium in
 		COEX, so not only Korean tourists but also foreign tourists Enjoy the
 		aquarium on a large scale.</p>
-	<p id="texttext5">Changdeokgung Palace is a palace of Joseon
+	<p id="texttext5">Tel : 02-3668-2300
+
+		Address: 99 Yulgok-ro, Jongno-gu, Seoul Address: 2-71 Waryong-dong
+
+		Opening Hours: Daily 09:00-18:00 (February-May, September-October), daily 09:00-18:30 (June-August), daily 09:00-16:30 ( November to January)
+		Closed on Monday
+	
+		Changdeokgung Palace is a palace of Joseon
 		Dynasty located in Jongno-gu, Seoul. Comprehensive blend of
 		architecture and landscape It is an example of environmental design
 		and an important cultural heritage to read Korean spatial atmosphere.
@@ -713,8 +746,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		brothers, built a new palace and saw his office. Changdeokgung Palace.
 		It is a palace that represents Korea, which represents Chosun with a
 		special history as it has a painful history.</p>
-	<p id="texttext6">Bongeunsa is full of people who always pray and
-		worship without weekdays and holidays. A little strange It is a place
+	<p id="texttext6">Tel : 02-3218-4800
+
+		Address: Bongeunsa-ro 531, Bongeunsa-ro, Gangnam-gu, Seoul
+		
+		Bongeunsa is full of people who always pray and	worship without weekdays and holidays. A little strange It is a place
 		where religion meets daily life, but it is not so good for those who
 		want to calmly visit the temple. It is also true. It is a place where
 		many people always pray, so facilities and space need to be increased.
@@ -725,7 +761,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		it is also located in the center of the most floating population in
 		Seoul called Gangnam. Conveniently, many foreign religious people also
 		visited Korea once, making it a representative temple.</p>
-	<p id="texttext7">The 63 building, the tallest building in Korea
+	<p id="texttext7">Tel: 1833-7001
+
+		Address: Hanwha Financial Center 50, 63-ro, Yeongdeungpo-gu, Seoul_63 Address: Hanwha Financial Center 60, Yeouido-dong_63
+
+		Opening Hours: Daily 10:00-22:00
+
+		Fee: 63 art _ adult (over 20 years old): 20,000 won 63 art _ child (under 13 years old): 16,000 won
+
+		63 Art_Youth (14-19 years old): 18,000 won 63 Art Couple ticket (63 art 2 persons / Americano 2 glasses): 43,000 won
+
+		Aqua Planet 63 (over 20 years old): 25,000 won
+	
+		The 63 building, the tallest building in Korea
 		that represents Seoul until the Lotte Tower was completed, Korean
 		company Hanwha has become a landmark of Seoul, completed in 1985. At
 		the time, there was no skyscraper in Korea. The company built for the
@@ -738,7 +786,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		said to be one of the landmarks in Seoul that still attracts many
 		tourists because you can see all of Seoul from the highest observation
 		deck in the center.</p>
-	<p id="texttext8">On June 25, 1950, everyone fell asleep before
+	<p id="texttext8">Tel: 02-709-3139
+
+		Address: War Memorial, 29 Itaewon-ro, Yongsan-gu, Seoul
+
+		Opening Hours: 09:30-18:00 daily
+
+		Closed on Mondays (Closed on the following day of the holiday during holidays that include Mondays)
+	
+		On June 25, 1950, everyone fell asleep before
 		dawn. Gunfire on a peaceful Korean peninsula Resonated. The Korean War
 		began when the North Koreans invaded the 38th parallel, which was the
 		inter-Korean military demarcation line. The war between Koreans
@@ -754,7 +810,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		are familiar with the situation on the Korean peninsula, which is
 		divided into North and South. War memorial I think it's a good way to
 		feel the history of war that we have forgotten through.</p>
-	<p id="texttext9">Hanok Preservation Area is located at the foot of
+	<p id="texttext9">Tel: 02-2133-1372
+
+		Address: 37 Gyedong-gil, Jongno-gu, Seoul Address: 105 Bukchon Cultural Center, Gye-dong
+		
+		Hanok Preservation Area is located at the foot of
 		Bukaksan between Gyeongbokgung Palace, Changdeokgung Palace and
 		Geumwon (Biwon). It is also called Bukchon, meaning Upper Town.
 		Bukchon is a high-quality househouse where high-ranking masterpieces,
@@ -774,7 +834,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		downhill alleys 5 Bukchon-dong, Through the uphill alleys of
 		Gahoe-dong, 6 Bukchon, 31 Gahoe-dong 31, Bukchon 7, and Samcheong-dong
 		Stone Steps, 8 Bukchon?</p>
-	<p id="texttext10">Precious artifacts of our history have found a
+	<p id="texttext10">Tel: 02-2077-9000
+
+		Address: 137 Seobinggo-ro, Yongsan-gu, Seoul Address: 168-6, Yongsan-dong 6-ga
+
+		Opening Hours: Mon, Tue, Thu, Fri 10:00-18:00, Wed, Sat 10:00-21:00, (Sunday, National Holidays) 10:00-19:00
+
+		Closed: January 1, New Year's Day, Chuseok Day / Permanent Exhibition Hall Closed: 1st Monday of April and November
+
+		Admission Fee: Free
+	
+		Precious artifacts of our history have found a
 		wonderful new home. Opened in October 2005 The National Museum of
 		Korea is a world-scale museum that houses and exhibits 300,000
 		artifacts (as of January 2012) in a vast space of 300,000㎡. It is a
@@ -819,70 +889,100 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script type="text/javascript">
 		var text = document.querySelector('#texttext');
 		var popimgs = document.getElementById('popimg0');
-		var test1 = document.querySelector('#texttext1').textContent;
-		var test2 = document.querySelector('#texttext2').textContent;
-		var test3 = document.querySelector('#texttext3').textContent;
-		var test4 = document.querySelector('#texttext4').textContent;
-		var test5 = document.querySelector('#texttext5').textContent;
-		var test6 = document.querySelector('#texttext6').textContent;
-		var test7 = document.querySelector('#texttext7').textContent;
-		var test8 = document.querySelector('#texttext8').textContent;
-		var test9 = document.querySelector('#texttext9').textContent;
-		var test10 = document.querySelector('#texttext10').textContent;
+		var test1 = document.querySelector('#texttext1')
+		test1.setAttribute('style', 'white-space: pre-line;');
+		test1.textContent;
+		var test2 = document.querySelector('#texttext2');
+		test2.setAttribute('style', 'white-space: pre-line;');
+		test2.textContent;
+		var test3 = document.querySelector('#texttext3');
+		test3.setAttribute('style', 'white-space: pre-line;');
+		test3.textContent;
+		var test4 = document.querySelector('#texttext4');
+		test4.setAttribute('style', 'white-space: pre-line;');
+		test4.textContent;
+		var test5 = document.querySelector('#texttext5');
+		test5.setAttribute('style', 'white-space: pre-line;');
+		test5.textContent;
+		var test6 = document.querySelector('#texttext6');
+		test6.setAttribute('style', 'white-space: pre-line;');
+		test6.textContent;
+		var test7 = document.querySelector('#texttext7');
+		test7.setAttribute('style', 'white-space: pre-line;');
+		test7.textContent;
+		var test8 = document.querySelector('#texttext8');
+		test8.setAttribute('style', 'white-space: pre-line;');
+		test8.textContent;
+		var test9 = document.querySelector('#texttext9');
+		test9.setAttribute('style', 'white-space: pre-line;');
+		test9.textContent;
+		var test10 = document.querySelector('#texttext10');
+		test10.setAttribute('style', 'white-space: pre-line;');
+		test10.textContent;
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k2.PNG');
+
+			$('#popimg0').attr('src', 'img/place1.PNG');
 			$('#texttext').html(test1);
 		});
+
 		// 버튼2
 		$('#ko2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k3.PNG');
+			$('#popimg0').attr('src', 'img/place2.PNG');
 			$('#texttext').html(test2);
 		});
 		// 버튼3
 		$('#ko3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k4.PNG');
+			$('#popimg0').attr('src', 'img/place3.PNG');
 			$('#texttext').html(test3);
 		});
 		// 버튼4
 		$('#ko4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/place4.PNG');
 			$('#texttext').html(test4);
 		});
 		// 버튼5
 		$('#ko5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/place5.PNG');
 			$('#texttext').html(test5);
 		});
 		// 버튼6
 		$('#ko6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k7.PNG');
+			$('#popimg0').attr('src', 'img/place6.PNG');
 			$('#texttext').html(test6);
 		});
 		// 버튼7
 		$('#ko7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k8.jpg');
+			$('#popimg0').attr('src', 'img/place7.PNG');
 			$('#texttext').html(test7);
 		});
 		// 버튼8
 		$('#ko8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k9.PNG');
+			$('#popimg0').attr('src', 'img/place8.PNG');
 			$('#texttext').html(test8);
 		});
 		// 버튼9
 		$('#ko9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k10.PNG');
+			$('#popimg0').attr('src', 'img/place9.PNG');
 			$('#texttext').html(test9);
 		});
 		// 버튼10
 		$('#ko10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k11.PNG');
+			$('#popimg0').attr('src', 'img/place10.PNG');
 			$('#texttext').html(test10);
 		});
 	</script>
+	<p id="texttext11">Gyeongbokgung Palace opened at night
 
+		Period: End of April to early November of each year
 
-	<p id="texttext11">1번</p>
+		Place: Gyeongbokgung
+
+		Organizer: Cultural Heritage Administration
+
+		Fare: Public: 3,000 won
+        Seniors aged 65, foreigners: 3,000 won
+        Hanbok wearer: Free</p>
 	<p id="texttext22">2번</p>
 	<p id="texttext33">3번</p>
 	<p id="texttext44">4번</p>
@@ -897,7 +997,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<div id="bg"></div>
 	<script type="text/javascript">
 		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg1');
+		var popimgs = document.getElementById('popimg0');
 		var test11 = document.querySelector('#texttext11').textContent;
 		var test22 = document.querySelector('#texttext22').textContent;
 		var test33 = document.querySelector('#texttext33').textContent;
@@ -909,49 +1009,77 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
 		$('#k1:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn1.PNG');
+			$('#popimg1').attr('src', 'img/night1.PNG');
 			$('#texttext').html(test11);
 		});
 		// 버튼2
 		$('#k2:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn2.PNG');
+			$('#popimg1').attr('src', 'img/night2.PNG');
 			$('#texttext').html(test22);
 		});
 		// 버튼3
 		$('#k3:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#popimg1').attr('src', 'img/night3.PNG');
 			$('#texttext').html(test33);
 		});
 		// 버튼4
 		$('#k4:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#popimg1').attr('src', 'img/night4.PNG');
 			$('#texttext').html(test44);
 		});
 		// 버튼5
 		$('#k5:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k6.PNG');
+			$('#popimg1').attr('src', 'img/night5.PNG');
 			$('#texttext').html(test55);
 		});
 		// 버튼6
 		$('#k6:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k7.PNG');
+			$('#popimg1').attr('src', 'img/night6.PNG');
 			$('#texttext').html(test66);
 		});
 		// 버튼7
 		$('#k7:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k8.jpg');
+			$('#popimg1').attr('src', 'img/night7.PNG');
 			$('#texttext').html(test77);
 		});
 		// 버튼8
 		$('#k8:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k9.PNG');
+			$('#popimg1').attr('src', 'img/night8.PNG');
 			$('#texttext').html(test88);
 		});
 		// 버튼9
 		$('#k9:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k10.PNG');
+			$('#popimg1').attr('src', 'img/night9.jpg');
 			$('#texttext').html(test99);
 		});
 	</script>
+	<script type="text/javascript">
+			
+			$('#btn').on('click',play);
+			
+      function play(){
+         var id = $('#search').val();
+         console.log(id);
+         
+         $.ajax({
+            url : "IdCheckService.do",
+            type : "POST",
+            dataType : "json",
+            data : 'id='+id,
+            success : function(result){
+            	if(result == true)
+            		alert("아이디가 중복되었습니다.");
+            	else
+            		alert("사용가능한 아이디입니다.");
+            },
+            error : function(){
+            	console.log(2);
+            }
+         });
+      }
+   
+            
+   </script>
+
 </body>
 </html>
