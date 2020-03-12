@@ -224,7 +224,7 @@ table tbody tr {
 
 			<!-- Login -->
 			<article id="Login">
-				<form action="LoginService" method="post">
+				<form action="LoginService.do" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -246,7 +246,7 @@ table tbody tr {
 
 			<!-- Join -->
 			<article id="Join">
-				<form action="JoinService" method="post">
+				<form action="JoinService.do" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -953,5 +953,33 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 			$('#texttext').html(test99);
 		});
 	</script>
+	
+	<script type="text/javascript">
+			
+			$('#btn').on('click',play);
+			
+      function play(){
+         var id = $('#search').val();
+         console.log(id);
+         
+         $.ajax({
+            url : "IdCheckService.do",
+            type : "POST",
+            dataType : "json",
+            data : 'id='+id,
+            success : function(result){
+            	if(result == true)
+            		alert("아이디가 중복되었습니다.");
+            	else
+            		alert("사용가능한 아이디입니다.");
+            },
+            error : function(){
+            	console.log(2);
+            }
+         });
+      }
+   
+            
+   </script>
 </body>
 </html>

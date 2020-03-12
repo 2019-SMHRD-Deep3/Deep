@@ -127,7 +127,7 @@ table tbody tr {
 	box-sizing: content-box;
 }
 
-.inTag a{
+.inTag a {
 	color: white !important;
 }
 </style>
@@ -136,7 +136,7 @@ table tbody tr {
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -154,24 +154,24 @@ table tbody tr {
 
 		<table id="lan" style="position: absolute; right: 0px;" border="0px;">
 			<%
-						if (info == null) {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login">Login</a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Join">Join </a></td>
-					<%
-						} else {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login"><%=info.getId()%> </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="LogoutService.do">로그아웃 </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="update.jsp"> 회원정보수정 </a></td>
-					<%
-						}
-					%>
+				if (info == null) {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login">Login</a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Join">Join </a></td>
+			<%
+				} else {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login"><%=info.getId()%> </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="LogoutService.do">로그아웃 </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="update.jsp"> 회원정보수정 </a></td>
+			<%
+				}
+			%>
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -191,12 +191,12 @@ table tbody tr {
 						id="dropdownMenuButton" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a class="dropdown-item" href="Korea.html">한국어</a> <a
-							class="dropdown-item" href="English.html">English</a> <a
-							class="dropdown-item" href="China.html">简体中文</a> <a
-							class="dropdown-item" href="Japan.html">日本語</a> <a
-							class="dropdown-item" href="Spain.html">Español</a><a
-							class="dropdown-item" href="Frecnh.html">Français</a>
+						<a class="dropdown-item" href="Korea.jsp">한국어</a> <a
+							class="dropdown-item" href="English.jsp">English</a> <a
+							class="dropdown-item" href="China.jsp">简体中文</a> <a
+							class="dropdown-item" href="Japan.jsp">日本語</a> <a
+							class="dropdown-item" href="Spain.jsp">Español</a> <a
+							class="dropdown-item" href="French.jsp">Français</a>
 					</div>
 				</div>
 			</td>
@@ -207,7 +207,7 @@ table tbody tr {
 		<ul id="mem">
 			<table class="incom" bgcolor="#5b6471">
 				<tr>
-					
+
 				</tr>
 			</table>
 
@@ -215,10 +215,13 @@ table tbody tr {
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor" href="#intro">서비스</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#intro">서비스</a></li>
 					<li><a style="font-size: 20px;" class="linkcolor" href="#work">랜드마크</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#about">코스 목록</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">코스 추천</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#about">코스 목록</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="K-survey.jsp">코스 추천</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -232,7 +235,7 @@ table tbody tr {
 
 			<!-- Login -->
 			<article id="Login">
-				<form action="LoginService" method="post">
+				<form action="LoginService.do" method="post">
 					<table>
 						<tr>
 							<td>아이디</td>
@@ -653,11 +656,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	</div>
 
-	<p id="texttext1">경복궁은 대한민국을 대표하는 가장 큰 궁궐로 조선왕조의 번영에 큰 도움을 주었다.
-		경복궁의 크기는 방이 약 750개정도로 왕이 집무를 보는 공간의 의미를 넘어 국가와 왕실의 크기를 상징적으로 보여주는
-		곳이었다고 한다. 조선의 건국부터 마지막까지 왕이 집무를 보는 경복궁은 지금도 보존이 잘 되어 있어, 외국인 뿐만 아니라
-		한국인에게 지금까지 사랑받는 조선이라는 나라를 대표하는 건축물 중 하나가 되었다. 경복궁은 정문 광화문을 따라 흥례문
-		,근정문을 지나 오면 조선왕조를 대표하는 건축물이라는 것을 한번에 알 수 있는 조선의 색을 담은 건물이라고 할수 있다.</p>
+	<p id="texttext1">
+		<p>경복궁은 대한민국을 대표하는 가장 큰 궁궐로 조선왕조의 번영에 큰 도움을 주었다.</p>
+	<p>	경복궁의 크기는 방이 약 750개정도로 왕이 집무를 보는 공간의 의미를 넘어 국가와 왕실의 크기를 상징적으로 보여주는 곳이었다고 한다.</p>
+		<p>조선의 건국부터 마지막까지 왕이 집무를 보는 경복궁은 지금도 보존이 잘 되어 있어, 외국인 뿐만 아니라 한국인에게 지금까지 사랑받는
+		조선이라는 나라를 대표하는 건축물 중 하나가 되었다.</p>
+		<p>경복궁은 정문 광화문을 따라 흥례문 ,근정문을 지나 오면 조선왕조를 대표하는 건축물이라는 것을 한번에 알 수 있는 조선의 색을 담은 건물이라고 할수 있다.</p></p>
+	</p>
 	<p id="texttext2">대한민국에서 가장 비싼 땅인 명동은 서울특별시를 상징하는 번화가이다. 조선 시대에는
 		주택가였으나 일제강점기 충무로가 상업지역으로 발전하며 인접지역인 명동도 상가형태로 변하게 되어 대한민국 최고의 번화가로 발돋움
 		하게 되었다. 명동은 유행의 선도자라고 불릴 정도로 거대한 쇼핑 문화가 형성되어 잇는데, 국내 유명 백화점은 물론 명품,브랜드
@@ -878,6 +883,34 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 			$('#texttext').html(test99);
 		});
 	</script>
+	
+	<script type="text/javascript">
+			
+			$('#btn').on('click',play);
+			
+      function play(){
+         var id = $('#search').val();
+         console.log(id);
+         
+         $.ajax({
+            url : "IdCheckService.do",
+            type : "POST",
+            dataType : "json",
+            data : 'id='+id,
+            success : function(result){
+            	if(result == true)
+            		alert("아이디가 중복되었습니다.");
+            	else
+            		alert("사용가능한 아이디입니다.");
+            },
+            error : function(){
+            	console.log(2);
+            }
+         });
+      }
+   
+            
+   </script>
 
 </body>
 </html>
