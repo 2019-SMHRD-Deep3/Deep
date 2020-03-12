@@ -50,6 +50,7 @@ body .backgroundTransition .image-top {
 	background-color: rgba(0, 0, 0, .15);
 	color: #ffffff;
 	display: table;
+	border-spacing: 7px;
 	table-layout: fixed;
 }
 
@@ -74,8 +75,8 @@ body .backgroundTransition .image-top {
 .conCle{
 	width: 70px;
 	height: 70px;
-	border-radius: 35px;
-	font-size: 18px;
+	border-radius: 30px;
+	font-size: 17px;
 	text-align: center;
 	vertical-align: middle;
 	display:table-cell;
@@ -130,24 +131,29 @@ body .backgroundTransition .image-top {
 					<a href="Korea.html"><img id="Korea" class="flag" src='img/Korea.png'></a>
 				</div>
 				
-				<div class="conCle conCle1">
-					<div id="usaCall" class="spin">영어</div>
+				<div class="conCle conCle1"> <!-- 영어 -->
+					<div id="usaCall" class="spin">English</div>
 					<a href="English.html"><img id="USA" class="flag" src='img/Usa.png'></a>
 				</div>
 				
-				<div class="conCle conCle2">
-					<div id="japanCall" class="spin">일어</div>
+				<div class="conCle conCle2"> <!-- 일어 -->
+					<div id="japanCall" class="spin">日本語</div>
 					<a href="Japan.html"><img id="Japan" class="flag" src='img/Japan.png'></a>
 				</div>
 				
-				<div class="conCle conCle3">
-					<div id="chinaCall" class="spin">중국어</div>
+				<div class="conCle conCle3"> <!-- 중국어 -->
+					<div id="chinaCall" class="spin">中国文</div>
 					<a href="#"><img id="China" class="flag" src='img/China.png'></a>
 				</div>
 				
-				<div class="conCle conCle4">
-					<div id="spainCall" class="spin">스페인어</div>
+				<div class="conCle conCle4"> <!-- 스페인어 -->
+					<div id="spainCall" class="spin">Español</div>
 					<a href="Spain.html"><img id="Spain" class="flag" src='img/Spain.png'></a>
+				</div>
+				
+				<div class="conCle conCle5"> <!-- 프랑스어 -->
+					<div id="FranceCall" class="spin">Français</div>
+					<a href="Frech.html"><img id="France" class="flag" src='img/France.png'></a>
 				</div>
 			</div>	
 		</div>
@@ -157,7 +163,7 @@ body .backgroundTransition .image-top {
 			<p style="align-content: center; text-align: center;">사용 언어 선택</p>
 				<div class="conChina"><a href="China.html"><img id="China" src='img/China.png'></a></div>
 				<div class="conChina"><a href="#"><img id="China" src='img/China.png'></a></div>
-				<p style="width: 100px; display:inline; margin:5%;">중국(간체)</p>
+				<p style="width: 100px; display:inline; margin:5%;">简体中文</p> <!-- 간체중문 -->
 				<p style="width: 100px; display:inline; margin:2%;">중국(광둥)</p>
 		</div>
 		
@@ -220,6 +226,15 @@ body .backgroundTransition .image-top {
 				$('#spainCall').css({display:'table-cell'}),
 				$('#Spain').css({display:'none'}),
 				$('.conCle4').css({backgroundColor:'#ffffff'});
+			});
+		$(".conCle5").hover(function(){
+				$('#FranceCall').css({display:'none'}),
+				$('#France').css({display:'block'}),
+				$('.conCle5').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#FranceCall').css({display:'table-cell'}),
+				$('#France').css({display:'none'}),
+				$('.conCle5').css({backgroundColor:'#ffffff'});
 			});
 		
 
