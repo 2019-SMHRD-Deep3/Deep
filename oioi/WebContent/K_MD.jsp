@@ -43,9 +43,9 @@
 			<% String act = (String)request.getParameter("act"); %>
 			<%= act %> <br>
 			<% String url_1 = "url('img/course/MD_b1.PNG');"; %>
-			<% if(act.equals("고궁,역사유적지방문")){
+<%-- 			<% if(act.equals("고궁,역사유적지방문")){
 				
-			}  %> 
+			}  %>  --%>
 				
 
 			
