@@ -1,0 +1,876 @@
+<%@page import="com.model.MemberDAO"%>
+<%@page import="com.model.MemberDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+<title>Dimension by HTML5 UP</title>
+<script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+
+</noscript>
+<style>
+img#img {
+	width: 200px;
+	height: 200px;
+}
+
+#popimg0 { /* 반응형 웹 -> 이미지 조절 법 */
+	max-width: 100%;
+	height: auto !important;
+}
+
+#popimg1 { /* 반응형 웹 -> 이미지 조절 법 */
+	max-width: 100%;
+	height: auto !important;
+}
+
+#mem {
+	position: absolute !important;
+	top: 30px !important;
+	right: 35px !important;
+	display: inline !important;
+	float: right !important;
+}
+
+#mem li {
+	float: right !important;
+}
+
+#wrapper {
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+#videobcg {
+	top: 0px;
+	left: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1000;
+	overflow: hidden;
+}
+
+#day {
+	display: inline;
+}
+
+.a1:hover {
+	color: red;
+}
+
+.a2:hover {
+	color: blue;
+}
+
+#lan {
+	top: 0px;
+	/* left: 10; */
+	min-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+#lan td {
+	width: 50px;
+}
+
+#dropdownMenuButton {
+	width: auto;
+	height: 40px;
+	font-size: 15px;
+}
+
+p#texttext {
+	color: white;
+}
+
+.intSE {
+	color: white;
+}
+
+article#Join {
+	color: white;
+}
+
+article#login {
+	color: white;
+}
+
+.linkcolor {
+	color: white !important;
+	font-weight: bold;
+}
+
+table tbody tr {
+	border: solid 0px #ffffff;
+	border-left: 0;
+	border-right: 0;
+}
+
+.cont li a {
+	box-sizing: content-box;
+}
+.inTag a{
+	color: white !important;
+}
+</style>
+
+
+</head>
+<body class="is-preload">
+<%
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+	%>
+	<!-- Wrapper -->
+
+	<div id="wrapper" position=relative;>
+		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
+			style="position: fixed;">
+			<source src="video/seoul.mp4" type="video/mp4">
+
+		</video>
+
+		<!--         <script>
+				document.getElementById("videobcg").play();
+			</script> -->
+
+		<!-- Header -->
+
+		<table id="lan" style="position: absolute; right: 0px;">
+			<%
+						if (info == null) {
+					%>
+					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+						href="#Login">Login</a></td>
+					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+						href="#Join">Join </a></td>
+					<%
+						} else {
+					%>
+					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+						href="#Login"><%=info.getId()%> </a></td>
+					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+						href="LogoutService.do">로그아웃 </a></td>
+					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+						href="update.jsp"> 회원정보수정 </a></td>
+					<%
+						}
+					%>
+			<td>
+				<link rel="stylesheet"
+					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+					integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+					crossorigin="anonymous"> <script
+					src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+					crossorigin="anonymous"></script> <script
+					src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous"></script> <script
+					src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous"></script>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button"
+						id="dropdownMenuButton" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a class="dropdown-item" href="Korea.jsp">한국어</a> <a
+							class="dropdown-item" href="English.jsp">English</a> <a
+							class="dropdown-item" href="China.jsp">简体中文</a> <a
+							class="dropdown-item" href="Japan.jsp">日本語</a> <a
+							class="dropdown-item" href="Spain.jsp">Español</a> <a
+							class="dropdown-item" href="French.jsp">Français</a>
+					</div>
+				</div>
+			</td>
+
+
+		</table>
+		<header id="header">
+			<nav>
+				<ul class="cont">
+					<li><a style = "font-size : 20px;" class="linkcolor"  href="#intro">サービス</a></li>
+					<li><a style = "font-size : 20px;" class="linkcolor"  href="#work">ランドマーク</a></li>
+					<li><a style = "font-size : 20px;" class="linkcolor"  href="#about">コースリスト</a></li>
+					<li><a style = "font-size: 20px;" class="linkcolor" href="K-survey.jsp"> コースおすすめ</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+
+		<!-- Main -->
+		<div id="main">
+
+
+			<!-- Login -->
+			<article id="Login">
+				<form action="LoginService" method="post">
+					<table>
+						<tr>
+							<td>ID</td>
+							<td><input placeholder="enter ID" type="text" name=id></td>
+						</tr>
+						<tr>
+							<td>PW</td>
+							<td><input placeholder="enter PW" type="password" name=pw></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type=submit value="LOGIN"> <input
+								type=reset value="RESET"></td>
+						</tr>
+					</table>
+				</form>
+			</article>
+
+
+			<!-- Join -->
+			<article id="Join">
+				<form action="JoinService" method="post">
+					<table>
+						<tr>
+							<td>ID</td>
+							<td><input placeholder="enter ID" type="text" name=id>
+							</td>
+							<td><input type="button" value="Confirm Overlap"></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td colspan=2><input placeholder="at least 6 characters"
+								type="password" name=pw></td>
+						</tr>
+						<tr>
+							<td>Confirm Password</td>
+							<td colspan=2><input placeholder="re-enter pw"
+								type="password" name=pw></td>
+						</tr>
+						<tr>
+							<td>NAME</td>
+							<td colspan=2><input placeholder="enter name" type="text"
+								name=name></td>
+						</tr>
+						
+						<tr>
+							<td>E-MAIL</td>
+							<td colspan=2><input placeholder="enter email" type="text"
+								name=email></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan=2><input type=submit value="JOIN"> <input
+								type=reset value="RESET"></td>
+						</tr>
+					</table>
+				</form>
+			</article>
+
+
+			<!-- Intro -->
+			<article id="intro" class="intSE">
+				<h2 class="major">ソウルは、新たに導入します。</h2>
+				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<br /> <br />
+				<p align="center">お客様の大切な情報を受けて、</p>
+				<p align="center">
+					韓国観光公社が提供する<b>最新の年度別外来観光客実態調査データ</b>をもとに
+				</p>
+				<p align="center">独自のモデルを使用した分析結果を算出して</p>
+				<p align="center">
+					あなたの快適さと魅力的な<b>ソウル旅行</b>を準備するようにお手伝いいたします。
+				</p>
+
+			</article>
+
+			<!-- Work -->
+
+			<article id="work">
+
+
+				<h1>ソウル10代のスポット</h1>
+				<h2 class="major1" href="#" style="display: inline;">
+					<div id="day" class="a1">週間</div>
+				</h2>
+				<h2 class="major2" href="#" style="display: inline;">
+					<div id="day" class="a2">夜間</div>
+				</h2>
+				<div class='display'>
+					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
+					<button class="ten" id="ko1">景福宮</button>
+					<button class="ten" id="ko2">明洞</button>
+					<button class="ten" id="ko3">仁寺洞</button>
+					<button class="ten" id="ko4">COEX</button>
+					<button class="ten" id="ko5">昌徳宮</button>
+					<button class="ten" id="ko6">奉恩寺</button>
+					<button class="ten" id="ko7">63ビル</button>
+					<button class="ten" id="ko8">戦争記念館</button>
+					<button class="ten" id="ko9">北村韓屋村</button>
+					<button class="ten" id="ko10">国立中央博物館</button>
+				</div>
+
+				<div id='g'>
+					<span><img id="popimg1" src="img/k1.PNG" alt="" /></span>
+					<button class="next" id="k1">景福宮</button>
+					<button class="next" id="k2">弘大</button>
+					<button class="next" id="k3">酪酸公園</button>
+					<button class="next" id="k4">ソウルNタワー</button>
+					<button class="next" id="k5">江南駅</button>
+					<button class="next" id="k6">清渓川</button>
+					<button class="next" id="k7">並木道</button>
+					<button class="next" id="k8">汝矣島漢江公園</button>
+					<button class="next" id="k9">ロッテワールド</button>
+
+				</div>
+
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+					});
+					var btn1 = document.querySelector('.major1');
+
+					btn1.addEventListener('click', function() {
+						$('#g').hide();
+						$('.display').show();
+					});
+
+					var btn2 = document.querySelector('.major2');
+					btn2.addEventListener('click', function() {
+
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('#g').show(); //클릭 시 두 번째 요소 표시
+
+					});
+				</script>
+				<p id="texttext"></p>
+
+			</article>
+
+
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">베스트 테마</h2>
+				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<p>하위~</p>
+			</article>
+
+			<!-- Contact -->
+			<article id="contact"></article>
+
+			<!-- Elements -->
+			<article id="elements">
+				<h2 class="major">Elements</h2>
+
+				<section>
+					<h3 class="major">Text</h3>
+					<p>
+						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
+						and this is <em>emphasized</em>. This is <sup>superscript</sup>
+						text and this is <sub>subscript</sub> and this is code:
+						<code>for (;;) { ... }</code>
+						. Finally, <a href="#">this is a link</a>.
+					</p>
+					<hr />
+					<h2>Heading Level 2</h2>
+					<h3>Heading Level 3</h3>
+					<h4>Heading Level 4</h4>
+					<h5>Heading Level 5</h5>
+					<h6>Heading Level 6</h6>
+					<hr />
+					<h4>Blockquote</h4>
+					<blockquote>Fringilla nisl. Donec accumsan interdum
+						nisi, quis tincidunt felis sagittis eget tempus euismod.
+						Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
+						adipiscing eu felis iaculis volutpat ac adipiscing accumsan
+						faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum
+						dolor sit amet nullam adipiscing eu felis.</blockquote>
+					<h4>Preformatted</h4>
+					<pre>
+						<code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code>
+					</pre>
+				</section>
+
+				<section>
+					<h3 class="major">Lists</h3>
+
+					<h4>Unordered</h4>
+					<ul>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
+
+					<h4>Alternate</h4>
+					<ul class="alt">
+						<li>Dolor pulvinar etiam.</li>
+						<li>Sagittis adipiscing.</li>
+						<li>Felis enim feugiat.</li>
+					</ul>
+
+					<h4>Ordered</h4>
+					<ol>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis viverra.</li>
+						<li>Felis enim feugiat.</li>
+						<li>Dolor pulvinar etiam.</li>
+						<li>Etiam vel felis lorem.</li>
+						<li>Felis enim et feugiat.</li>
+					</ol>
+					<h4>Icons</h4>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span
+								class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span
+								class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span
+								class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span
+								class="label">Github</span></a></li>
+					</ul>
+
+					<h4>Actions</h4>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="#" class="button primary">Default</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="major">Table</h3>
+					<h4>Default</h4>
+					<div class="table-wrapper">
+						<table>
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td>Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+
+					<h4>Alternate</h4>
+					<div class="table-wrapper">
+						<table class="alt">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Item One</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Two</td>
+									<td>Vis ac commodo adipiscing arcu aliquet.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Three</td>
+									<td>Morbi faucibus arcu accumsan lorem.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>Item Four</td>
+									<td>Vitae integer tempus condimentum.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>Item Five</td>
+									<td>Ante turpis integer aliquet porttitor.</td>
+									<td>29.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="2"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</section>
+
+				<section>
+					<h3 class="major">Buttons</h3>
+					<ul class="actions">
+						<li><a href="#" class="button primary">Primary</a></li>
+						<li><a href="#" class="button">Default</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button">Default</a></li>
+						<li><a href="#" class="button small">Small</a></li>
+					</ul>
+					<ul class="actions">
+						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+					</ul>
+					<ul class="actions">
+						<li><span class="button primary disabled">Disabled</span></li>
+						<li><span class="button disabled">Disabled</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3 class="major">Form</h3>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="demo-name">Name</label> <input type="text"
+									name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+							</div>
+							<div class="field half">
+								<label for="demo-email">Email</label> <input type="email"
+									name="demo-email" id="demo-email" value=""
+									placeholder="jane@untitled.tld" />
+							</div>
+							<div class="field">
+								<label for="demo-category">Category</label> <select
+									name="demo-category" id="demo-category">
+									<option value="">-</option>
+									<option value="1">Manufacturing</option>
+									<option value="1">Shipping</option>
+									<option value="1">Administration</option>
+									<option value="1">Human Resources</option>
+								</select>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-low" name="demo-priority"
+									checked> <label for="demo-priority-low">Low</label>
+							</div>
+							<div class="field half">
+								<input type="radio" id="demo-priority-high" name="demo-priority">
+								<label for="demo-priority-high">High</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-copy" name="demo-copy">
+								<label for="demo-copy">Email me a copy</label>
+							</div>
+							<div class="field half">
+								<input type="checkbox" id="demo-human" name="demo-human" checked>
+								<label for="demo-human">Not a robot</label>
+							</div>
+							<div class="field">
+								<label for="demo-message">Message</label>
+								<textarea name="demo-message" id="demo-message"
+									placeholder="Enter your message" rows="6"></textarea>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><input type="submit" value="Send Message"
+								class="primary" /></li>
+							<li><input type="reset" value="Reset" /></li>
+						</ul>
+					</form>
+				</section>
+
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">
+				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+			</p>
+		</footer>
+
+	</div>
+
+	<p id="texttext1">景福宮は大韓民国を代表する最大の宮殿で、朝鮮王朝の繁​​栄に大きな助けを与えた。
+		景福宮の大きさは部屋約750個程度の王が執務を見る空間の意味を越えて国と王室のサイズを象徴的に示す
+		場所だったという。朝鮮の建国から最後まで王が執務を見る景福宮は今でも保存がよくなっており、外国人だけでなく、
+		韓国人に今まで愛される朝鮮という国を代表する建築物の一つとなった。景福宮は正門光化門に沿って興礼門
+		、勤政門を過ぎてくると、朝鮮王朝を代表する建築物であることを一度に知ることができる朝鮮の色を入れた建物とすることができる。</p>
+	<p id="texttext2">大韓民国で最も高価な地である明洞はソウル特別市を象徴する繁華街である。朝鮮時代には
+		住宅街だったが、日本植民地時代忠武路（チュンムロ）が商業地域として発展し、隣接地域である明洞にも商店街の形で変わるれ、大韓民国最高の繁華街で背伸び
+		になった。明洞は流行の先導者と呼ばれるほどの巨大なショッピング文化が形成されてイトヌンデ、国内有名デパートはもちろん、高級、ブランド
+		店頭だけでなく、結合店まで、様々な店があり、ショッピングに最適化されていると言うことができる。また、明洞にはショッピングと一緒に
+		食べ物、楽しむ街などがあり、韓国人だけでなく、外国人も韓国で楽しむことができる最適の空間と呼ばれることができる。</p>
+	<p id="texttext3">仁寺洞サムジギルは、ソウル市鍾路区仁寺洞にある建物をいう。サムジと「ポケット」を
+		意味する純私たちだ。サムジギルは「サムジ「後ろ」の道」を付けて仁寺洞の路地に複数の文化的楽しみの要素を加えるという意味を持っている。サムジギルは
+		ガアデ建築研究所チェムンギュ建築家が（株）サムジの勧めで作られた建物である。サムジギルは工芸品の専門店として仁寺洞観光名所となって
+		ている。延べ面積4,066.01m²（1,200坪）のスパイラルビルに韓国の伝統工芸品や韓国の趣が漂う様々なデザインの
+		70以上の工芸品店、文化商品とお土産店、ギャラリー、レストランが集まっており、観光客に様々な楽しみ方を提供する。
+		建物に「道」がついたのは、4階全体が一つの路地に接続されたからである。菱形の庭をめぐる「チコ」字型である。各フロアは
+		緩やかな傾斜につながってあちこちの店を見て歩いていると屋上の空の庭に至る</p>
+	<p id="texttext4">交通通信、先端ビジネスインフラを備えたグローバルビジネスのメッカであり、アジア最高の
+		展示・文化・観光の名所としては、国際貿易と文化交流の場を設けることを目的として、1979年3月にオープンした韓国最大の総合展示館である。
+		1万1000坪（延べ床面積13万坪）規模で、地上4階、地下4階で構成されており、12個の専門展示室と7000人を
+		同時に収容できるコンベンションホールをはじめ、61室の会議室を備えている。また、国際的なビジネスのための総合的な支援体制を整えて
+		年間150回以上の専門展示会、各種国際会議やイベントを開催する一方、海外有数のバイヤーと国内の輸出入業者を直接
+		接続させるなど、交易の増大役割もする。また、コエックス私水族館があり韓国人観光客だけでなく、外国人観光客も都心の中で
+		大規模に水族館を見物することができる。</p>
+	<p id="texttext5">昌徳宮はソウル市鍾路区に位置する朝鮮時代の宮殿である。建築と造園がよく調和した総合
+		環境デザイン事例であると同時に、韓国的な空間の雰囲気を読ませる重要な文化遺産である。建築士において朝鮮時代の宮廷の典型を
+		示し、後援の景色は韓国の代表的な王室の庭園としての価値が高い昌徳宮は不幸な歴史の中で誕生した朝鮮の宮殿と
+		呼ばれること、朝鮮を建国した李成桂の息子たちと臣下たちの間でグォンリョ争いが起って王位争いをしていたの王になった第五の息子が
+		王になったが、兄弟たちを殺した景福宮に入ることを嫌うした太宗は、新しい宮殿を建て執務を見て、その宮殿は
+		昌徳宮ある。病気の歴史を持つだけ特別なボールが多く、朝鮮を代表する大韓民国を代表する宮殿である。</p>
+	<p id="texttext6">奉恩寺は平日と休日がなく、常に祈り、参拝する人々で溢れ、いつも節同じように
+		少し見慣れない。宗教が日常と密接に会うシーンとすることができるがじっくり節を戻ってみようとする人にはあまり良くない
+		のも事実である。常に多くの人々が祈りの場所だから施設やスペースが増えなければして、常に奉恩寺は工事中だという。
+		奉恩寺は、新羅オノ聖王時創建した節中宗の王妃正弦皇后の墓が生じ朝鮮王室の関心を受けて発電する寺院になる
+		開始した。よく私たちが知っている節は、人々が住んでいない山や一般市民の生活の半径の外にあることが多い奉恩寺は、ソウル
+		真ん中、それも江南というソウルで一番流動人口が多いの中央に位置し、宗教人たちの往来が多いのはもちろんのこと、交通のアクセスが
+		便利多くの外国人の宗教にも一度は立ち寄って行く大韓民国を代表する寺院となった。</p>
+	<p id="texttext7">ロッテタワーが完成するまで、ソウルを代表する韓国で最も高い建物だった63ビルは
+		大韓民国企業」ハンファ」が1985年に完成したソウルを代表するランドマーク位置した。当時、高層ビルがなかった韓国にハンファという
+		企業収益の目的ではなく、会社の建物を目的とし、建築したが、大韓民国のランドマークというタイトルまで二匹のウサギを一度にキャッチ
+		ケースにもなった。ロッテタワーとは異なるハンファと他の企業のオフィスなどがあり、様々な付帯施設と展望台、地下には水族館
+		まで超高層建物の利点を上述に用いた観光のスペースを設けた点が特徴である。汝矣島の63ビルは、展望台を介してソウル
+		真ん中の一番高い展望台からソウルを完全に探索することができ、まだ多くの観光客が訪れるソウルのランドマークの一箇所とする。</p>
+	<p id="texttext8">1950年6月25日、まだ夜明け前のすべてが眠っ夜明け。平和な朝鮮半島に銃声が
+		鳴り響いた。北朝鮮軍が南北軍事境界線だった38度線を越えて南侵し始まった6・25戦争。血を分けた韓民族同士の戦争は
+		米国・ソ連・中国の介入で1953年7月休戦協定まで数多くの死傷者を出し続けた。日本植民地時代から外れ喜びをまま
+		享受も前だった。半世紀前、この地で起きた歴史を記録した龍山の戦争記念館を紹介する。戦争記念館は1階戦争歴史室
+		2階6.25戦争室を観覧することになる。常に一日に2回文化解説の同行観覧を通して、私たちがよく知らなかった歴史について
+		もう少し詳しく、鮮やかに説明を聞くことができる長所がある。また、戦争歴史室でこれまでの韓半島の戦争の歴史を一度に
+		確認することができる。戦争記念館は南北に分かれている韓半島の状況をよく知っているドイツ人に人気だという。戦争記念館を
+		を通して私たちが忘れていた戦争の歴史をもう一度感じてみるのも良い方法だと思う。</p>
+	<p id="texttext9">景福宮と昌徳宮、金源（悲願）の間北岳山の麓にある韓屋保存地区に清渓川と鍾路の
+		ウィトドンネという意味で北村とも呼ばれている。北村は高官と王族、士大夫たちが集まって居住してきた高度な暮らし家の跡地に韓屋はすべて
+		朝鮮時代の瓦の家である。元この地域には湧く大門がある家数軒と30号の韓屋だけがあったが、日帝強占期末から韓屋が
+		多く建てられ、1992年に嘉会洞の韓屋保存地区から解放され、1994年に高度制限が解けて、一般の建物がたくさん入った。総
+		2,297棟の建物があり、このうち1,408棟の韓屋であり、残りは一般的な建物である。北村通りに北村両班の生活文化展示館と
+		北村ハンオクチョン象徴造形物が設置されており、昔の先祖の生活の様子を見ることができる嘉会洞伝統的な村祭りが開かれる。周辺に
+		景福宮・昌徳宮・徳寿宮・金源・三清公園などの観光地があります。昌徳宮の景色がよく見える北村1ごろ、ウォンソドン工房道北村2ごろ
+		嘉会洞11番地一帯は北村3頃、嘉会洞31番地丘が4ごろ、韓屋がよく保存されている嘉会洞下り坂路地が北村5頃、
+		嘉会洞上り坂路地が北村6ごろ、嘉会洞31番地が北村7ごろ、三清洞石段長北村8景を介して大韓民国の先祖たちの住居形態を
+		感じてみてはどうだろうか？</p>
+	<p id="texttext10">私たちの歴史の貴重な遺物が素晴らしい新しい巣を訪れた。 2005年10月に開館した
+		国立中央博物館は30万㎡の広大なスペースに30万点（2012年1月時点）の遺物を保管、展示する世界的規模の
+		博物館である。龍山の旧在韓米軍部隊桁の場所は、自然と人工の調和を大切にした先祖の知恵を受け継いで、湖と
+		庭園が調和れるように設計をし南山と漢江が囲む「ベサンイムス（背山臨水）」の場所に位置した。地下1階、地上6階の
+		博物館の建物は二つの建物が一つ接続されたように続く外観に展示スペースと遺物の保管スペース、研究スペースと各種付帯施設が
+		集まっている。建物の内部に入ると、敬天寺シプチュン石塔とゴダルサペア獅子石灯が位置中央通路である「歴史の道」を中心に
+		6つの常設展示館が運営されている。三階左右にプレゼント・ゴデグァン、中・近税関、寄贈館、西花冠、アジア観、彫刻・工芸館で
+		分かれ15,000余点の遺物が展示されている。全体の遺物を入念に探ると、約一週間の時間がかかる膨大な規模だ 博物館が選定した
+		'重要遺物100選」などのコースを選択したり、時間をかけて分けて観覧するコツが必要である。展示館の単位で
+		運営されている解説者の案内時間を利用したり、自動案内器を使用するのも良い方法である。遺物の展示は、既存の一覧式方法で
+		抜け出し、各遺物の価値を引き立てる先端の照明や特殊効果などが使用され、さらに興味深い。また、これまで見られなかった多くの
+		外国遺物を常設展示し、アジアの中心博物館としての地位を高めている。常設展示に加えて企画展示館、子供展示館、
+		屋外展示館が見所をよりし専門公演会場と図書館まで桁総合文化空間である。博物館のあちこちに位置するダイニングエリアも
+		特色を持った食べ物を準備している。ホームページなどを通じて、事前に情報を準備すれば、より充実した時間旅行を残すことができる。</p>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+
+	<!-- BG -->
+	<div id="bg"></div>
+	<script type="text/javascript">
+		var text = document.querySelector('#texttext');
+		var popimgs = document.getElementById('popimg0');
+		var test1 = document.querySelector('#texttext1').textContent;
+		var test2 = document.querySelector('#texttext2').textContent;
+		var test3 = document.querySelector('#texttext3').textContent;
+		var test4 = document.querySelector('#texttext4').textContent;
+		var test5 = document.querySelector('#texttext5').textContent;
+		var test6 = document.querySelector('#texttext6').textContent;
+		var test7 = document.querySelector('#texttext7').textContent;
+		var test8 = document.querySelector('#texttext8').textContent;
+		var test9 = document.querySelector('#texttext9').textContent;
+		var test10 = document.querySelector('#texttext10').textContent;
+		// 버튼 1
+		$('#ko1:button').on('click', function() {
+
+			$('#popimg0').attr('src', 'img/k2.PNG');
+			$('#texttext').html(test1);
+		});
+		// 버튼2
+		$('#ko2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k3.PNG');
+			$('#texttext').html(test2);
+		});
+		// 버튼3
+		$('#ko3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k4.PNG');
+			$('#texttext').html(test3);
+		});
+		// 버튼4
+		$('#ko4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#texttext').html(test4);
+		});
+		// 버튼5
+		$('#ko5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#texttext').html(test5);
+		});
+		// 버튼6
+		$('#ko6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k7.PNG');
+			$('#texttext').html(test6);
+		});
+		// 버튼7
+		$('#ko7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k8.jpg');
+			$('#texttext').html(test7);
+		});
+		// 버튼8
+		$('#ko8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k9.PNG');
+			$('#texttext').html(test8);
+		});
+		// 버튼9
+		$('#ko9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k10.PNG');
+			$('#texttext').html(test9);
+		});
+		// 버튼10
+		$('#ko10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/k11.PNG');
+			$('#texttext').html(test10);
+		});
+	</script>
+
+
+	<p id="texttext11">1번</p>
+	<p id="texttext22">2번</p>
+	<p id="texttext33">3번</p>
+	<p id="texttext44">4번</p>
+	<p id="texttext55">5번</p>
+	<p id="texttext66">6번</p>
+	<p id="texttext77">7번</p>
+	<p id="texttext88">8번</p>
+	<p id="texttext99">9번</p>
+
+
+
+	<div id="bg"></div>
+	<script type="text/javascript">
+		var text = document.querySelector('#texttext');
+		var popimgs = document.getElementById('popimg0');
+		var test11 = document.querySelector('#texttext11').textContent;
+		var test22 = document.querySelector('#texttext22').textContent;
+		var test33 = document.querySelector('#texttext33').textContent;
+		var test44 = document.querySelector('#texttext44').textContent;
+		var test55 = document.querySelector('#texttext55').textContent;
+		var test66 = document.querySelector('#texttext66').textContent;
+		var test77 = document.querySelector('#texttext77').textContent;
+		var test88 = document.querySelector('#texttext88').textContent;
+		var test99 = document.querySelector('#texttext99').textContent;
+		// 버튼 1
+		$('#k1:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/kn1.PNG');
+			$('#texttext').html(test11);
+		});
+		// 버튼2
+		$('#k2:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/kn2.PNG');
+			$('#texttext').html(test22);
+		});
+		// 버튼3
+		$('#k3:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#texttext').html(test33);
+		});
+		// 버튼4
+		$('#k4:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#texttext').html(test44);
+		});
+		// 버튼5
+		$('#k5:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/k6.PNG');
+			$('#texttext').html(test55);
+		});
+		// 버튼6
+		$('#k6:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/k7.PNG');
+			$('#texttext').html(test66);
+		});
+		// 버튼7
+		$('#k7:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/k8.jpg');
+			$('#texttext').html(test77);
+		});
+		// 버튼8
+		$('#k8:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/k9.PNG');
+			$('#texttext').html(test88);
+		});
+		// 버튼9
+		$('#k9:button').on('click', function() {
+			$('#popimg1').attr('src', 'img/k10.PNG');
+			$('#texttext').html(test99);
+		});
+	</script>
+
+</body>
+</html>

@@ -43,59 +43,37 @@ body .backgroundTransition .image-top {
 }
 
 .content {
-	margin-top: 38%;
-	width: 540px;
-	margin-left: 120px;
+	position: center;
+	width: 64%;
+	height: 480px;
+	margin: auto;
+	margin-top: 17%;
 	padding: 20px;
 	background-color: rgba(0, 0, 0, .15);
 	color: #ffffff;
+	font-size: 20px;
 	display: table;
-	border-spacing: 7px;
 	table-layout: fixed;
+	border-spacing: 10px;
 }
 
-.selChina{
-	display: none;
-	z-index: 5;
-	width: 200px;
-	margin-top: 25%;
-	margin-right: 40%;
-	margin-left: 40%;
-	padding: 3%;
-	background-color : rgba(0, 0, 0, .15);
-	color: #ffffff;
-	}
 
-.conChina{
-	display: inline;
-	margin-left: 6%;
-	margin-right: 6%;
-}
-
-.conCle{
-	width: 70px;
-	height: 70px;
-	border-radius: 30px;
-	font-size: 17px;
+.content .conCle{
+	width: 140px;
+	height: 140px;
+	border-radius: 70px;
+	font-size: 20px;
 	text-align: center;
 	vertical-align: middle;
-	display:table-cell;
 	background-color : #ffffff;
 	color: #000000;
+	margin: 0px;
+	display: table-cell;
 }
 
 .spin{
-	display:table-cell;
 	text-align: center;
 	vertical-align: middle;
-}
-
-.flag{
-	display:none;
-}
-#koreaCall{
-	width:100%;
-	height:100%;
 }
 
 </style>
@@ -123,53 +101,62 @@ body .backgroundTransition .image-top {
  
 	<!-- 아이콘 클릭 시 이동하는 JQ -->
 	<div class="backgroundTransition">
+
 		<div class="content">
-			<h1>BackgroundTransition</h1><br>
+			<div id="langSelect" style="margin-left: 21%; margin-right: 21%;">
+			<h1>언어선택 / Language Select</h1></div>
+			<br>
+				<!-- 라인잡기용(사용하는거 아님) -->
+				<div id="none" class="none" style="margin-top:5%;margin-bottom: 5%"></div>
+			<br>
+			
+			<!-- 국가별 태그 -->
 			<div>
 				<div class="conCle conCle0">
+					<a href="Korea.jsp"><img id="Korea" class="flag" src='img/Korea.png'></a>
 					<div id="koreaCall" class="spin">한국어</div>
-					<a href="Korea.html"><img id="Korea" class="flag" src='img/Korea.png'></a>
 				</div>
 				
 				<div class="conCle conCle1"> <!-- 영어 -->
+					<a href="English.jsp"><img id="USA" class="flag" src='img/Usa.png'></a>
 					<div id="usaCall" class="spin">English</div>
-					<a href="English.html"><img id="USA" class="flag" src='img/Usa.png'></a>
 				</div>
-				
+
 				<div class="conCle conCle2"> <!-- 일어 -->
+					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/Japan.png'></a>
 					<div id="japanCall" class="spin">日本語</div>
-					<a href="Japan.html"><img id="Japan" class="flag" src='img/Japan.png'></a>
 				</div>
 				
 				<div class="conCle conCle3"> <!-- 중국어 -->
+					<a href="China.jsp"><img id="China" class="flag" src='img/China.png'></a>
 					<div id="chinaCall" class="spin">中国文</div>
-					<a href="#"><img id="China" class="flag" src='img/China.png'></a>
 				</div>
-				
+
 				<div class="conCle conCle4"> <!-- 스페인어 -->
+					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/Spain.png'></a>
 					<div id="spainCall" class="spin">Español</div>
-					<a href="Spain.html"><img id="Spain" class="flag" src='img/Spain.png'></a>
 				</div>
 				
 				<div class="conCle conCle5"> <!-- 프랑스어 -->
-					<div id="FranceCall" class="spin">Français</div>
-					<a href="Frech.html"><img id="France" class="flag" src='img/France.png'></a>
+					<a href="Frech.jsp"><img id="France" class="flag" src='img/France.png'></a>
+					<div id="FranceCall" class="spin">French</div>
 				</div>
 			</div>	
+
 		</div>
 		
-		<div class="selChina">
+<!-- 		<div class="selChina">
 			<button id="close" style="font-size: 5px; position: absolute; margin-top:-10px; margin-left: 190px;">X</button>
 			<p style="align-content: center; text-align: center;">사용 언어 선택</p>
-				<div class="conChina"><a href="China.html"><img id="China" src='img/China.png'></a></div>
+				<div class="conChina"><a href="China.jsp"><img id="China" src='img/China.png'></a></div>
 				<div class="conChina"><a href="#"><img id="China" src='img/China.png'></a></div>
-				<p style="width: 100px; display:inline; margin:5%;">简体中文</p> <!-- 간체중문 -->
+				<p style="width: 100px; display:inline; margin:5%;">简体中文</p> 간체중문
 				<p style="width: 100px; display:inline; margin:2%;">중국(광둥)</p>
-		</div>
+		</div> -->
 		
 	</div>
 
-	<script>
+<!-- 	<script>
 		// 중국 아이콘 선택시 언어 선택화면 전환 
 		$('#China').on('click',function(){
 			$('.content').css({display:'none'}),
@@ -238,7 +225,7 @@ body .backgroundTransition .image-top {
 			});
 		
 
-	</script>
+	</script> -->
 	
 </body>
 </html>
