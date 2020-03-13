@@ -6,13 +6,49 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
+<style type="text/css">
+.iii{
+	width: 125% !important;
+}
+.content{
+	margin-left: 10% !important;
+	max-width: 39rem !important; 
+}
+#content{
+	margin-left: 3% !important;
+	max-width: 39rem !important; 
+}
+
+#img1{
+	background-size: 100% 100%;
+}
+#img2{
+	background-image: url("img/course/MD_b2.PNG");
+	background-size: 100% 100%;
+}
+#img3{
+	background-image: url("img/course/MD_h1.PNG");
+	background-size: 100% 100%;
+	margin-left: -25% !important;
+}
+
+
+</style>
 
 </head>
 <body>
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
+			<% String act = (String)request.getParameter("act"); %>
+			<%= act %> <br>
+			<% String url_1 = "url('img/course/MD_b1.PNG');"; %>
+			<% if(act.equals("고궁,역사유적지방문")){
+				
+			}  %> 
+				
 
+			
 				<!-- One -->
 					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
@@ -23,7 +59,8 @@
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/banner.jpg" alt="" />
+							<!-- <img id= "img1" alt="" style = "background-image: url('img/course/MD_b1.PNG');" /> -->
+							<img id= "img1" alt="" style = "background-image: <%= url_1 %> "/>
 						</div>
 					</section>
 
@@ -33,29 +70,35 @@
 							<h2>Magna etiam feugiat</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">Get Started</a></li>
 							</ul>
+							<!-- <ul class="actions stacked">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul> -->
 						</div>
 						<div class="image">
-							<img src="images/spotlight01.jpg" alt="" />
+							<img  class = "iii" id= "img2" alt="" />
 						</div>
 					</section>
 
 				<!-- Three -->
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in"  id="two" >
+						<div class="content" id="content">
 							<h2>Tempus adipiscing</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Get Started</a></li>
 							</ul>
+
 						</div>
 						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
+							<img class = "iii"  id= "img3" alt="" />
 						</div>
 					</section>
+					
+					
 
-				<!-- Four -->
+<!-- 				Four
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Pharetra etiam nulla</h2>
@@ -69,12 +112,17 @@
 						</div>
 					</section>
 
-				<!-- Five -->
+				Five
 					<section class="wrapper style1 align-center">
 						<div class="inner">
 							<h2>Massa sed condimentum</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
 						</div>
+ -->
+
+
+
+
 
 
 
@@ -84,9 +132,12 @@
 							<h2>Gallery</h2>
 							<p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p>
 						</div>
+						<ul class="actions stacked">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
 
 						<!-- Gallery -->
-							<div class="gallery style2 medium lightbox onscroll-fade-in">
+							<div class="gallery style2 medium lightbox onscroll-fade-in" id = "gallery">
 							<article>
 									<a href="img/gallery/fulls/01.jpg" class="image">
 										<img src="img/gallery/thumbs/01.jpg" alt="" />
@@ -100,8 +151,8 @@
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/02.jpg" class="image">
-										<img src="img/gallery/thumbs/02.jpg" alt="" />
+									<a href="img/gallery/fulls/MD_b2.jpg" class="image">
+										<img src="img/gallery/thumbs/MD_b2.jpg" alt="" />
 									</a>
 									<div class="caption">
 										<h3>Title</h3>
@@ -113,8 +164,8 @@
 								</article>
 								
 								<article>
-									<a href="img/k2.PNG" class="image">
-										<img src="img/k2.PNG" alt="" />
+									<a href="img/gallery/fulls/MD_d1.jpg" class="image">
+										<img src="img/gallery/thumbs/MD_d1.jpg" alt="" />
 									</a>
 									<div class="caption">
 										<h3>Title</h3>
@@ -268,7 +319,7 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min_course.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main_course.js"></script>
+			<script src="assets/js/main_course.js"></script> 
 
 
 </body>
