@@ -23,11 +23,11 @@
 	background-size: 100% 100%;
 }
 #img2{
-	background-image: url("img/course/MD_b2.PNG");
+	background-image: url("img/course/MD_b2.jpg");
 	background-size: 100% 100%;
 }
 #img3{
-	background-image: url("img/course/MD_h1.PNG");
+	background-image: url("img/course/MD_h1.jpg");
 	background-size: 100% 100%;
 	margin-left: -25% !important;
 }
@@ -42,7 +42,7 @@
 			<div id="wrapper" class="divided">
 			<% String act = (String)request.getParameter("act"); %>
 			<%= act %> <br>
-			<% String url_1 = "url('img/course/MD_b1.PNG');"; %>
+			<% String url_1 = "url('img/course/MD_b1.jpg');"; %>
 <%-- 			<% if(act.equals("고궁,역사유적지방문")){
 				
 			}  %>  --%>
