@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
-
 </noscript>
 <style>
 img#img {
@@ -130,6 +129,23 @@ table tbody tr {
 .inTag a {
 	color: white !important;
 }
+/* menubar example css style */
+#nav{
+	position:absolute;
+	top:0;
+	right:0;
+	padding:0;
+	margin:0;
+	list-style-type: none;
+	width:100%;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 1.0);;
+}
+#nav .item{
+	float:right;
+	color:black;
+}
+
 </style>
 
 
@@ -151,14 +167,29 @@ table tbody tr {
 			</script> -->
 
 		<!-- Header -->
+		<!-- menubar example -->
+		<ul id="nav">
+			<li class="item"><a href="#Login">Login</a></li>
+			<li class="item">Menu2</li>
+			<li class="item">Menu3</li>
+			<li class="item">Menu1</li>
+			<li class="item">Menu2</li>
+			<li class="item">Menu3</li>
+			<li class="item">Menu1</li>
+			<li class="item">Menu2</li>
+			<li class="item">Menu3</li>
+			<li class="item">Menu1</li>
+			<li class="item">Menu2</li>
+			<li class="item">Menu3</li>
+		</ul>
 
-		<table id="lan" style="position: absolute; right: 0px;" border="0px;">
+		<%-- <table id="lan" style="position: absolute; right: 0px;" border="0px;">
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
@@ -202,7 +233,7 @@ table tbody tr {
 			</td>
 
 
-		</table>
+		</table> --%>
 
 		<ul id="mem">
 			<table class="incom" bgcolor="#5b6471">
@@ -807,9 +838,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
+	<!-- <script src="assets/js/util.js"></script> -->
 	<script src="assets/js/main.js"></script>
-	<script src="assets/js/jquery-3.4.1.min.js"></script>
+<!-- 	<script src="assets/js/jquery-3.4.1.min.js"></script> -->
 
 	<!-- BG -->
 	<div id="bg"></div>
