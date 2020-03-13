@@ -304,68 +304,68 @@
              crossDomain : true,
              success : function(rs) {
             	console.log('성공')
-                if (rs.result == "DMC,월드컵경기장") {
-                   $('#result').text('DMC, 월드컵경기장');
-                   $('#result').attr('href', 'K_DMC.jsp');
-                   
-                } else if (rs.result == "가로수길") {
-                   $('#result').text('가로수길');
-                   $('#result').attr('href', 'Main.html');
-                   
-                } else if (rs.result == "강남역") {
-                   $('#result').text('강남역');
-                   $('#result').attr('href', 'Main.html');
-                   
-                } else if (rs.result == "광화문광장") {
-                   $('#result').text('광화문 광장');
-                   $('#result').attr('href', 'Main.html');
-                   
-                } else if (rs.result == "동대문패션타운") {
-                   $('#result').text('동대문 패션타운');
-                   $('#result').attr('href', 'Main.html');
-                   
-                } else if (rs.result == "명동,남대문,북창") {
-                   $('#result').text('명동,남대문,북창');
-                   $('#result').attr('href', 'K_MD.jsp');
+            	if (rs.result == "DMC,월드컵경기장") {
+                    $('#result').text('DMC, 월드컵경기장');
+                    $('#result').attr('href', 'K_DMC.jsp?act='+act);
+                    
+                 } else if (rs.result == "가로수길") {
+                    $('#result').text('가로수길');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                    
+                 } else if (rs.result == "강남역") {
+                    $('#result').text('강남역');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                    
+                 } else if (rs.result == "광화문광장") {
+                    $('#result').text('광화문 광장');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                    
+                 } else if (rs.result == "동대문패션타운") {
+                    $('#result').text('동대문 패션타운');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                    
+                 } else if (rs.result == "명동,남대문,북창") {
+                    $('#result').text('명동,남대문,북창');
+                    $('#result').attr('href', 'K_MD.jsp?act='+act);
 
-                } else if (rs.result == "신촌,홍대주변") {
-                   $('#result').text('신촌, 홍대주변');
-                   $('#result').attr('href', 'Main.html');
+                 } else if (rs.result == "신촌,홍대주변") {
+                    $('#result').text('신촌, 홍대주변');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                 
+                 } else if (rs.result == "여의도(63빌딩)") {
+                    $('#result').text('여의도 (63빌딩)');
+                    $('#result').attr('href', 'Main.html?act='+act);
                 
-                } else if (rs.result == "여의도(63빌딩)") {
-                   $('#result').text('여의도 (63빌딩)');
-                   $('#result').attr('href', 'Main.html');
-               
-                } else if (rs.result == "이태원(이태원 세계 음식거리,한남동)") {
-                   $('#result').text('이태원 (이태원 세계 음식거리, 한남동)');
-                   $('#result').attr('href', 'Main.html');
-             
-                } else if (rs.result == "잠실") {
-                   $('#result').text('잠실');
-                   $('#result').attr('href', 'Main.html');
-               
-                } else if (rs.result == "종로,청계") {
-                   $('#result').text('종로, 청계');
-                   $('#result').attr('href', 'Main.html');
-             
-                } else if (rs.result == "청담동,압구정동") {
-                   $('#result').text('청담동, 압구정동');
-                   $('#result').attr('href', 'Main.html');
-               
-                } else if (rs.result == "코엑스") {
-                   $('#result').text('코엑스');
-                   $('#result').attr('href', 'Main.html');
+                 } else if (rs.result == "이태원(이태원 세계 음식거리,한남동)") {
+                    $('#result').text('이태원 (이태원 세계 음식거리, 한남동)');
+                    $('#result').attr('href', 'Main.html?act='+act);
               
-                } else if (rs.result == "한강,유람선") {
-                   $('#result').text('한강, 유람선');
-                   $('#result').attr('href', 'Main.html');
+                 } else if (rs.result == "잠실") {
+                    $('#result').text('잠실');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                
+                 } else if (rs.result == "종로,청계") {
+                    $('#result').text('종로, 청계');
+                    $('#result').attr('href', 'Main.html?act='+act);
+              
+                 } else if (rs.result == "청담동,압구정동") {
+                    $('#result').text('청담동, 압구정동');
+                    $('#result').attr('href', 'Main.html?act='+act);
+                
+                 } else if (rs.result == "코엑스") {
+                    $('#result').text('코엑스');
+                    $('#result').attr('href', 'Main.html?act='+act);
                
-                } else{
-                   $('#result').text('연결 오류발생');
+                 } else if (rs.result == "한강,유람선") {
+                    $('#result').text('한강, 유람선');
+                    $('#result').attr('href', 'Main.html?act='+act);
                 
-                }
-                
-             }
+                 } else{
+                    $('#result').text('연결 오류발생');
+                 
+                 }
+                 
+              }
        }); 
 		
 		}
