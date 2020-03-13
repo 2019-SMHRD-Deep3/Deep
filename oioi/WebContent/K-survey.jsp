@@ -301,7 +301,9 @@
              url : "http://localhost:9000/re/" + age + "/" + gender + "/" + nation + "/" + month + "/" + trip_type + "/" + item
                    + "/" + stay + "/" + act,
              method : "POST",
+             crossDomain : true,
              success : function(rs) {
+            	console.log('성공')
                 if (rs.result == "DMC,월드컵경기장") {
                    $('#result').text('DMC, 월드컵경기장');
                    $('#result').attr('href', 'K_DMC.jsp');
