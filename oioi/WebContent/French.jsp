@@ -126,7 +126,8 @@ table tbody tr {
 .cont li a {
 	box-sizing: content-box;
 }
-.inTag a{
+
+.inTag a {
 	color: white !important;
 }
 </style>
@@ -134,7 +135,7 @@ table tbody tr {
 
 </head>
 <body class="is-preload">
-<%
+	<%
 		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
 	%>
 	<!-- Wrapper -->
@@ -154,24 +155,24 @@ table tbody tr {
 
 		<table id="lan" style="position: absolute; right: 0px;" border="0px;">
 			<%
-						if (info == null) {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login">Login</a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Join">Join </a></td>
-					<%
-						} else {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login"><%=info.getId()%> </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="LogoutService.do">로그아웃 </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="update.jsp"> 회원정보수정 </a></td>
-					<%
-						}
-					%>
+				if (info == null) {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login">Login</a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Join">Join </a></td>
+			<%
+				} else {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login"><%=info.getId()%> </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="LogoutService.do">로그아웃 </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="update.jsp"> 회원정보수정 </a></td>
+			<%
+				}
+			%>
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -191,7 +192,7 @@ table tbody tr {
 						id="dropdownMenuButton" data-toggle="dropdown"
 						aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a class="dropdown-item" href="Korea.jsp">한국어</a> <a
+						<a class="dropdown-item" href="Korea.jsp">한국어</a> <a
 							class="dropdown-item" href="English.jsp">English</a> <a
 							class="dropdown-item" href="China.jsp">简体中文</a> <a
 							class="dropdown-item" href="Japan.jsp">日本語</a> <a
@@ -206,10 +207,13 @@ table tbody tr {
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor" href="#intro">Service</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#intro">Service</a></li>
 					<li><a style="font-size: 20px;" class="linkcolor" href="#work">Repère</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#about"> Exemple</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">MakeCourse</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#about"> Exemple</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="K-survey.jsp">MakeCourse</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -221,7 +225,7 @@ table tbody tr {
 		<div id="main">
 
 
-		<!-- Login -->
+			<!-- Login -->
 			<article id="Login">
 				<form action="LoginService.do" method="post">
 					<table>
@@ -268,7 +272,7 @@ table tbody tr {
 							<td colspan=2><input placeholder="enter name" type="text"
 								name=name></td>
 						</tr>
-						
+
 						<tr>
 							<td>E-MAIL</td>
 							<td colspan=2><input placeholder="enter email" type="text"
@@ -655,7 +659,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	</div>
 
-	<p id="texttext1">Gyeongbokgung était le plus grand palais
+	<p id="texttext1">Tél: 02-3700-3900
+
+		Adresse: 161, Sajik-ro, Jongno-gu, Seoul Gyeongbokgung District Adresse: 1-91 Sejong-ro
+
+		Heures d'ouverture: tous les jours de 9h00 à 18h00 (dernière entrée à 17h00) fermé le mardi
+
+		Adulte (25 à 64 ans): 3000 won
+
+		Adolescents de moins de 24 ans: gratuit handicapé, mérite: gratuit
+
+		Plus de 65 ans: ceux qui portent un hanbok gratuit: gratuit
+	
+		Gyeongbokgung était le plus grand palais
 		représentant la République de Corée et a contribué à la prospérité de
 		la dynastie Joseon. La taille du palais de Gyeongbokgung est d'environ
 		750 chambres, ce qui symbolise la taille du pays et de la famille
@@ -667,7 +683,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		Gyeongbokgung est Heungryemun le long de la porte Gwanghwamun Si vous
 		passez devant le Geunjeongmun, on peut dire que c'est le bâtiment qui
 		représente la dynastie Joseon.</p>
-	<p id="texttext2">Myeong-dong, la terre la plus chère de Corée, est
+	<p id="texttext2">Adresse: Myeong-dong, Jung-gu, Séoul
+	
+		Myeong-dong, la terre la plus chère de Corée, est
 		un symbole de Séoul. Sous la dynastie Joseon Bien que ce soit un
 		quartier résidentiel, Chungmuro ​​est devenu une zone commerciale
 		pendant la période coloniale japonaise et est devenu un quartier
@@ -678,7 +696,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		douane. Aussi à Myeongdong, avec des magasins On dit que c'est le
 		meilleur endroit pour apprécier non seulement les Coréens mais aussi
 		les étrangers en Corée.</p>
-	<p id="texttext3">Insa-dong Ssamji-gil est un bâtiment à Insa-dong,
+	<p id="texttext3">Adresse: Insa-dong, Jongno-gu, Séoul
+	
+		Insa-dong Ssamji-gil est un bâtiment à Insa-dong,
 		Jongno-gu, Séoul. Ssamji est une poche Cela signifie pur coréen.
 		Ssamji-gil signifie ajouter divers éléments culturels amusants à la
 		ruelle Insa-dong en ajoutant «gil» après «ssam-ji». Institut
@@ -694,7 +714,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		entourant la cour du losange. Chaque étage Il mène à une pente douce
 		et se promène dans les magasins pour atteindre le jardin du ciel sur
 		le toit.</p>
-	<p id="texttext4">La Mecque du commerce mondial en Asie avec les
+	<p id="texttext4">Tél: 02-6000-0114
+
+		Adresse: 513 Yeongdong-daero, Gangnam-gu, Séoul Adresse: 159 Samseong-dong
+
+		Heures d'ouverture: tous les jours 10: 00-18: 00 Remarques (heures différentes pour la fin de l'événement)
+		
+		La Mecque du commerce mondial en Asie avec les
 		transports, les communications et l'infrastructure commerciale avancée
 		C'est la plus grande salle d'exposition générale de Corée, ouverte en
 		mars 1979 dans le but de fournir un lieu de commerce international et
@@ -710,7 +736,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		pour rôle d'augmenter le commerce, et il y a un aquarium au COEX, donc
 		non seulement les touristes coréens mais aussi les touristes étrangers
 		Profitez de l'aquarium à grande échelle.</p>
-	<p id="texttext5">Le palais de Changdeokgung est un palais de la
+	<p id="texttext5">Tél: 02-3668-2300
+
+		Adresse: 99 Yulgok-ro, Jongno-gu, Séoul Adresse: 2-71 Waryong-dong
+
+		Heures d'ouverture: tous les jours de 9h00 à 18h00 (février-mai, septembre-octobre), tous les jours de 9h00 à 18h30 (juin-août), tous les jours de 9h00 à 16h30 ( Novembre à janvier)
+		Fermé le lundi
+	
+		Le palais de Changdeokgung est un palais de la
 		dynastie Joseon situé à Jongno-gu, à Séoul. Mélange complet
 		d'architecture et de paysage C'est un exemple de conception
 		environnementale et un patrimoine culturel important pour lire
@@ -725,7 +758,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		Changdeokgung. Comme il a une histoire douloureuse, c'est un palais
 		qui représente la Corée, qui représente la Corée avec beaucoup de
 		choses spéciales à voir.</p>
-	<p id="texttext6">Bongeunsa regorge de gens qui prient et adorent
+	<p id="texttext6">Tél: 02-3218-4800
+
+		Adresse: Bongeunsa-ro 531, Bongeunsa-ro, Gangnam-gu, Séoul
+	
+		Bongeunsa regorge de gens qui prient et adorent
 		toujours sans les jours de semaine et les jours fériés. Un peu étrange
 		C'est un endroit où la religion rencontre la vie quotidienne, mais ce
 		n'est pas si bon pour ceux qui veulent visiter calmement le temple.
@@ -737,7 +774,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		milieu, il est également situé au centre de la population la plus
 		flottante de Séoul appelée Gangnam. Idéalement, de nombreux religieux
 		étrangers ont également visité la Corée une fois.</p>
-	<p id="texttext7">63 Building, le plus haut bâtiment de Corée qui
+	<p id="texttext7">Tél: 1833-7001
+
+		Adresse: Hanwha Financial Center 50, 63-ro, Yeongdeungpo-gu, Seoul_63 Adresse: Hanwha Financial Center 60, Yeouido-dong_63
+	
+		Heures d'ouverture: tous les jours de 10h00 à 22h00
+
+		arif: 63 art _ adulte (plus de 20 ans): 20 000 won 63 art _ enfant (moins de 13 ans): 16 000 won
+
+		63 Art_ Youth (14-19 ans): 18 000 won 63 Billet Art Couple (63 art 2 personnes / verres Americano 2): 43 000 won
+
+		Aqua Planet 63 (plus de 20 ans): 25 000 won
+	
+		63 Building, le plus haut bâtiment de Corée qui
 		représente Séoul jusqu'à l'achèvement de la tour Lotte, La société
 		coréenne Hanwha est devenue un point de repère de Séoul, achevée en
 		1985. À l'époque, il n'y avait pas de gratte-ciel en Corée.
@@ -751,7 +800,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		On dit qu'il est l'un des monuments de Séoul, qui attire toujours de
 		nombreux touristes car il peut être vu partout dans Séoul depuis la
 		terrasse d'observation la plus élevée du centre.</p>
-	<p id="texttext8">Le 25 juin 1950, tout le monde s'est endormi
+	<p id="texttext8">Tél: 02-709-3139
+
+		Adresse: War Memorial, 29 Itaewon-ro, Yongsan-gu, Séoul Adresse: War Memorial, Yongsan-dong 1-ga
+
+		Heures d'ouverture: 09: 30-18: 00 tous les jours
+
+		Fermé le lundi (Fermé le jour suivant des vacances pendant les jours fériés qui incluent le lundi)
+	
+		Le 25 juin 1950, tout le monde s'est endormi
 		avant l'aube. Tirs sur une paisible péninsule coréenne Résonné. La
 		guerre de Corée a commencé lorsque les Nord-Coréens ont envahi le 38e
 		parallèle, qui était la ligne de démarcation militaire intercoréenne.
@@ -769,7 +826,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		connaissent la situation dans la péninsule coréenne, divisée en nord
 		et sud. Monument aux morts Je pense que c'est une bonne façon de
 		ressentir l'histoire de la guerre que nous avons oubliée.</p>
-	<p id="texttext9">La zone de préservation de Hanok est située au
+	<p id="texttext9">Tél: 02-2133-1372
+
+		Adresse: 37 Gyedong-gil, Jongno-gu, Séoul Adresse: 105 Bukchon Cultural Center, Gye-dong
+	
+		La zone de préservation de Hanok est située au
 		pied de Bukaksan entre le palais de Gyeongbokgung, le palais de
 		Changdeokgung et Geumwon (Biwon). Il est également appelé Bukchon, ce
 		qui signifie la haute ville. Bukchon est une maison d'habitation de
@@ -791,7 +852,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		Bukchon-dong, À travers les ruelles montantes de Gahoe-dong, 6
 		Bukchon, 31 Gahoe-dong 31, Bukchon 7 et Samcheong-dong Stone Steps, 8
 		Bukchon Comment vous sentez-vous?</p>
-	<p id="texttext10">De précieux objets de notre histoire ont trouvé
+	<p id="texttext10">Tél: 02-2077-9000
+
+		Adresse: 137 Seobinggo-ro, Yongsan-gu, Séoul Adresse: 168-6, Yongsan-dong 6-ga
+
+		Heures d'ouverture: lun, mar, jeu, ven 10: 00-18: 00, mer, sam 10: 00-21: 00, (dimanche, jours fériés) 10: 00-19: 00
+
+		Fermé: 1er janvier, jour de l'an, jour Chuseok / salle d'exposition permanente Fermé: 1er lundi d'avril et novembre
+
+		Frais d'entrée: gratuit
+	
+		De précieux objets de notre histoire ont trouvé
 		une merveilleuse nouvelle maison. Ouvert en octobre 2005 Le Musée
 		national de Corée est un musée d'envergure mondiale qui abrite et
 		expose 300 000 artefacts (en janvier 2012) dans un vaste espace de 300
@@ -825,71 +896,100 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script type="text/javascript">
 		var text = document.querySelector('#texttext');
 		var popimgs = document.getElementById('popimg0');
-		var test1 = document.querySelector('#texttext1').textContent;
-		var test2 = document.querySelector('#texttext2').textContent;
-		var test3 = document.querySelector('#texttext3').textContent;
-		var test4 = document.querySelector('#texttext4').textContent;
-		var test5 = document.querySelector('#texttext5').textContent;
-		var test6 = document.querySelector('#texttext6').textContent;
-		var test7 = document.querySelector('#texttext7').textContent;
-		var test8 = document.querySelector('#texttext8').textContent;
-		var test9 = document.querySelector('#texttext9').textContent;
-		var test10 = document.querySelector('#texttext10').textContent;
+		var test1 = document.querySelector('#texttext1')
+		test1.setAttribute('style', 'white-space: pre-line;');
+		test1.textContent;
+		var test2 = document.querySelector('#texttext2');
+		test2.setAttribute('style', 'white-space: pre-line;');
+		test2.textContent;
+		var test3 = document.querySelector('#texttext3');
+		test3.setAttribute('style', 'white-space: pre-line;');
+		test3.textContent;
+		var test4 = document.querySelector('#texttext4');
+		test4.setAttribute('style', 'white-space: pre-line;');
+		test4.textContent;
+		var test5 = document.querySelector('#texttext5');
+		test5.setAttribute('style', 'white-space: pre-line;');
+		test5.textContent;
+		var test6 = document.querySelector('#texttext6');
+		test6.setAttribute('style', 'white-space: pre-line;');
+		test6.textContent;
+		var test7 = document.querySelector('#texttext7');
+		test7.setAttribute('style', 'white-space: pre-line;');
+		test7.textContent;
+		var test8 = document.querySelector('#texttext8');
+		test8.setAttribute('style', 'white-space: pre-line;');
+		test8.textContent;
+		var test9 = document.querySelector('#texttext9');
+		test9.setAttribute('style', 'white-space: pre-line;');
+		test9.textContent;
+		var test10 = document.querySelector('#texttext10');
+		test10.setAttribute('style', 'white-space: pre-line;');
+		test10.textContent;
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
 
-			$('#popimg0').attr('src', 'img/k2.PNG');
+			$('#popimg0').attr('src', 'img/place1.PNG');
 			$('#texttext').html(test1);
 		});
+
 		// 버튼2
 		$('#ko2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k3.PNG');
+			$('#popimg0').attr('src', 'img/place2.PNG');
 			$('#texttext').html(test2);
 		});
 		// 버튼3
 		$('#ko3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k4.PNG');
+			$('#popimg0').attr('src', 'img/place3.PNG');
 			$('#texttext').html(test3);
 		});
 		// 버튼4
 		$('#ko4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/place4.PNG');
 			$('#texttext').html(test4);
 		});
 		// 버튼5
 		$('#ko5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/place5.PNG');
 			$('#texttext').html(test5);
 		});
 		// 버튼6
 		$('#ko6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k7.PNG');
+			$('#popimg0').attr('src', 'img/place6.PNG');
 			$('#texttext').html(test6);
 		});
 		// 버튼7
 		$('#ko7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k8.jpg');
+			$('#popimg0').attr('src', 'img/place7.PNG');
 			$('#texttext').html(test7);
 		});
 		// 버튼8
 		$('#ko8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k9.PNG');
+			$('#popimg0').attr('src', 'img/place8.PNG');
 			$('#texttext').html(test8);
 		});
 		// 버튼9
 		$('#ko9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k10.PNG');
+			$('#popimg0').attr('src', 'img/place9.PNG');
 			$('#texttext').html(test9);
 		});
 		// 버튼10
 		$('#ko10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k11.PNG');
+			$('#popimg0').attr('src', 'img/place10.PNG');
 			$('#texttext').html(test10);
 		});
 	</script>
+	<p id="texttext11">Le palais de Gyeongbokgung ouvert la nuit
 
+		Période: de fin avril à début novembre de chaque année
 
-	<p id="texttext11">1번</p>
+		Lieu: Gyeongbokgung
+
+		Organisateur: Administration du patrimoine culturel
+
+		Tarif: Public: 3000 wons
+        Aînés de 65 ans, étrangers: 3000 won
+        Porteur de Hanbok: gratuit</p>
 	<p id="texttext22">2번</p>
 	<p id="texttext33">3번</p>
 	<p id="texttext44">4번</p>
@@ -916,51 +1016,50 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
 		$('#k1:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn1.PNG');
+			$('#popimg1').attr('src', 'img/night1.PNG');
 			$('#texttext').html(test11);
 		});
 		// 버튼2
 		$('#k2:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn2.PNG');
+			$('#popimg1').attr('src', 'img/night2.PNG');
 			$('#texttext').html(test22);
 		});
 		// 버튼3
 		$('#k3:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#popimg1').attr('src', 'img/night3.PNG');
 			$('#texttext').html(test33);
 		});
 		// 버튼4
 		$('#k4:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#popimg1').attr('src', 'img/night4.PNG');
 			$('#texttext').html(test44);
 		});
 		// 버튼5
 		$('#k5:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k6.PNG');
+			$('#popimg1').attr('src', 'img/night5.PNG');
 			$('#texttext').html(test55);
 		});
 		// 버튼6
 		$('#k6:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k7.PNG');
+			$('#popimg1').attr('src', 'img/night6.PNG');
 			$('#texttext').html(test66);
 		});
 		// 버튼7
 		$('#k7:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k8.jpg');
+			$('#popimg1').attr('src', 'img/night7.PNG');
 			$('#texttext').html(test77);
 		});
 		// 버튼8
 		$('#k8:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k9.PNG');
+			$('#popimg1').attr('src', 'img/night8.PNG');
 			$('#texttext').html(test88);
 		});
 		// 버튼9
 		$('#k9:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k10.PNG');
+			$('#popimg1').attr('src', 'img/night9.jpg');
 			$('#texttext').html(test99);
 		});
 	</script>
-
 	<script type="text/javascript">
 			
 			$('#btn').on('click',play);
@@ -988,5 +1087,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
    
             
    </script>
+
+
 </body>
 </html>

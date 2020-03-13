@@ -122,10 +122,12 @@ table tbody tr {
 	border-left: 0;
 	border-right: 0;
 }
+
 .cont li a {
 	box-sizing: content-box;
 }
-.inTag a{
+
+.inTag a {
 	color: white !important;
 }
 </style>
@@ -133,7 +135,7 @@ table tbody tr {
 
 </head>
 <body class="is-preload">
-<%
+	<%
 		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
 	%>
 	<!-- Wrapper -->
@@ -153,24 +155,24 @@ table tbody tr {
 
 		<table id="lan" style="position: absolute; right: 0px;">
 			<%
-						if (info == null) {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login">Login</a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Join">Join </a></td>
-					<%
-						} else {
-					%>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="#Login"><%=info.getId()%> </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="LogoutService.do">로그아웃 </a></td>
-					<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-						href="update.jsp"> 회원정보수정 </a></td>
-					<%
-						}
-					%>
+				if (info == null) {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login">Login</a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Join">Join </a></td>
+			<%
+				} else {
+			%>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="#Login"><%=info.getId()%> </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="LogoutService.do">로그아웃 </a></td>
+			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+				href="update.jsp"> 회원정보수정 </a></td>
+			<%
+				}
+			%>
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -206,10 +208,13 @@ table tbody tr {
 		<header id="header">
 			<nav>
 				<ul class="cont">
-					<li><a style = "font-size : 20px;" class="linkcolor" href="#intro"> Servicio</a></li>
-					<li><a style = "font-size : 20px;" class="linkcolor"  href="#work">LandMarks</a></li>
-					<li><a style = "font-size : 20px;" class="linkcolor"  href="#about"> Ejemplo</a></li>
-				<li><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">MakeCourse</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#intro"> Servicio</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor" href="#work">LandMarks</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#about"> Ejemplo</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="K-survey.jsp">MakeCourse</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
 				</ul>
 			</nav>
@@ -650,7 +655,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	</div>
 
-	<p id="texttext1">Gyeongbokgung fue el palacio más grande que
+	<p id="texttext1">Teléfono: 02-3700-3900
+
+		Dirección: 161, Sajik-ro, Jongno-gu, Seoul Gyeongbokgung District Dirección: 1-91 Sejong-ro
+
+		Horario de apertura: todos los días 09: 00-18: 00 (última admisión 17:00) Cerrado los martes
+
+		Adulto (25 a 64 años): 3.000 wones
+
+		Adolescentes menores de 24 años: gratis discapacitados, mérito: gratis
+
+		Mayores de 65 años: los que usan hanbok gratis: gratis
+	
+		Gyeongbokgung fue el palacio más grande que
 		representa a la República de Corea y ayudó a la prosperidad de la
 		dinastía Joseon. El tamaño del Palacio Gyeongbokgung es de
 		aproximadamente 750 habitaciones, lo que simboliza el tamaño del país
@@ -662,7 +679,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		Gyeongbokgung es Heungryemun a lo largo de la Puerta Gwanghwamun Si
 		pasa el Geunjeongmun, puede ver que es un edificio que representa a la
 		dinastía Joseon.</p>
-	<p id="texttext2">Myeong-dong, la tierra más cara de Corea, es un
+	<p id="texttext2">Dirección: Myeong-dong, Jung-gu, Seúl
+	
+		Myeong-dong, la tierra más cara de Corea, es un
 		símbolo de Seúl. En la dinastía Joseon Aunque era un área residencial,
 		Chungmuro ​​se convirtió en un área comercial durante el período
 		colonial japonés, y se convirtió en un distrito comercial de
@@ -672,7 +691,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		sino también tiendas vinculadas. También en Myeongdong, con tiendas Se
 		dice que es el mejor lugar para disfrutar no solo de los coreanos sino
 		también de los extranjeros en Corea.</p>
-	<p id="texttext3">Insa-dong Ssamji-gil es un edificio en Insa-dong,
+	<p id="texttext3">Dirección: Insa-dong, Jongno-gu, Seúl
+		
+		Insa-dong Ssamji-gil es un edificio en Insa-dong,
 		Jongno-gu, Seúl. Ssamji es un bolsillo Significa puro coreano.
 		Ssamji-gil significa agregar varios elementos culturales divertidos al
 		callejón Insa-dong agregando 'gil' después de 'ssam-ji'. Gaa Institute
@@ -687,7 +708,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		callejón. Es una forma de "ㅁ" que rodea el patio de la pastilla. Cada
 		piso Conduce a una suave pendiente y camina a través de las tiendas
 		para llegar al jardín del cielo en la azotea.</p>
-	<p id="texttext4">La meca de los negocios globales de Asia con
+	<p id="texttext4">Teléfono: 02-6000-0114
+
+		Dirección: 513 Yeongdong-daero, Gangnam-gu, Seúl Dirección: 159 Samseong-dong
+
+		Horario de apertura: todos los días 10: 00-18: 00 Observaciones (diferentes horarios para el final del evento)
+	
+		La meca de los negocios globales de Asia con
 		transporte, comunicaciones e infraestructura empresarial avanzada Es
 		la sala de exposiciones generales más grande de Corea, inaugurada en
 		marzo de 1979 con el objetivo de proporcionar un lugar para el
@@ -704,7 +731,14 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		comercio, y hay un acuario en COEX, por lo que no solo los turistas
 		coreanos sino también los turistas extranjeros Puedes ver el acuario a
 		gran escala.</p>
-	<p id="texttext5">El Palacio Changdeokgung es un palacio de la
+	<p id="texttext5">Teléfono: 02-3668-2300
+
+		Dirección: 99 Yulgok-ro, Jongno-gu, Seúl Dirección: 2-71 Waryong-dong
+
+		Horario de apertura: todos los días 09: 00-18: 00 (febrero-mayo, septiembre-octubre), todos los días 09: 00-18: 30 (junio-agosto), todos los días 09: 00-16: 30 ( Noviembre a enero)
+		Cerrado los lunes
+	
+		El Palacio Changdeokgung es un palacio de la
 		dinastía Joseon ubicado en Jongno-gu, Seúl. Mezcla integral de
 		arquitectura y paisaje. Es un ejemplo de diseño ambiental y un
 		importante patrimonio cultural para leer la atmósfera espacial
@@ -718,7 +752,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		construyó un nuevo palacio y vio su oficina. Palacio Changdeokgung.
 		Como tiene una historia dolorosa, es un palacio que representa a
 		Corea, que representa a Corea con muchas cosas especiales para ver.</p>
-	<p id="texttext6">Bongeunsa está repleta de personas que siempre
+	<p id="texttext6">Teléfono: 02-3218-4800
+
+		Dirección: Bongeunsa-ro 531, Bongeunsa-ro, Gangnam-gu, Seúl
+	
+		Bongeunsa está repleta de personas que siempre
 		rezan y adoran sin días laborables ni feriados. Un poco extraño Es un
 		lugar donde la religión se encuentra con la vida cotidiana, pero no es
 		tan bueno para aquellos que desean visitar el templo con calma. Es
@@ -732,7 +770,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		donde hay muchas personas religiosas entrando y saliendo.
 		Convenientemente, muchas personas religiosas extranjeras también
 		visitaron Corea una vez.</p>
-	<p id="texttext7">Edificio 63, el edificio más alto de Corea que
+	<p id="texttext7">Teléfono: 1833-7001
+
+		Dirección: Hanwha Financial Center 50, 63-ro, Yeongdeungpo-gu, Seúl_63 Dirección: Hanwha Financial Center 60, Yeouido-dong_63
+
+		Horario de apertura: todos los días 10: 00-22: 00
+
+		Tarifa: 63 arte _ adulto (más de 20 años): 20,000 wones 63 arte _ niño (menor de 13 años): 16,000 wones
+
+		63 Art_Youth (14-19 años): 18,000 won 63 Boleto Art Couple (63 art 2 personas / Americano 2 gafas): 43,000 won
+
+		Aqua Planet 63 (más de 20 años): 25,000 wones
+	
+		Edificio 63, el edificio más alto de Corea que
 		representa a Seúl hasta que se completó la Torre Lotte, La compañía
 		coreana Hanwha se ha convertido en un hito de Seúl, completada en
 		1985. En ese momento, no había rascacielos en Corea. La compañía
@@ -746,7 +796,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		los puntos de referencia en Seúl que todavía atrae a muchos turistas
 		porque se puede ver todo Seúl desde la plataforma de observación más
 		alta del centro.</p>
-	<p id="texttext8">25 de junio de 1950, amanecer antes de que todos
+	<p id="texttext8">Teléfono: 02-709-3139
+
+		Dirección: War Memorial, 29 Itaewon-ro, Yongsan-gu, Seoul Dirección: War Memorial, Yongsan-dong 1-ga
+
+		Horario de apertura: 09: 30-18: 00 todos los días
+	
+		Cerrado los lunes (cerrado el día siguiente de las vacaciones durante los días festivos que incluyen los lunes)
+	
+		25 de junio de 1950, amanecer antes de que todos
 		estuvieran dormidos al amanecer. Disparos en una pacífica península
 		coreana Resuena La guerra de Corea comenzó cuando los norcoreanos
 		invadieron el paralelo 38, la línea de demarcación militar
@@ -758,7 +816,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		sucede con el comentarista cultural de Nivel 2 por día. Explique un
 		poco más conveniente y vívidamente. Además, la historia de la guerra
 		de la península de Corea Sin embargo, el memorial de guerra puede ser.</p>
-	<p id="texttext9">El Área de Preservación de Hanok se encuentra al
+	<p id="texttext9">Teléfono: 02-2133-1372
+
+		Dirección: 37 Gyedong-gil, Jongno-gu, Seúl Dirección: 105 Bukchon Cultural Center, Gye-dong
+
+		El Área de Preservación de Hanok se encuentra al
 		pie de Bukaksan, entre el Palacio Gyeongbokgung, el Palacio
 		Changdeokgung y Geumwon (Biwon). También se llama Bukchon, que
 		significa Upper Town. Bukchon es una casa de alta calidad donde se
@@ -780,7 +842,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		de los callejones cuesta arriba de Gahoe-dong, 6 Bukchon, 31
 		Gahoe-dong 31, Bukchon 7, y Samcheong-dong Stone Steps, 8 Bukchon Como
 		te sientes</p>
-	<p id="texttext10">Los artefactos preciosos de nuestra historia han
+	<p id="texttext10">Teléfono: 02-2077-9000
+
+		Dirección: 137 Seobinggo-ro, Yongsan-gu, Seúl Dirección: 168-6, Yongsan-dong 6-ga
+
+		Horario de apertura: lunes, martes, jueves, viernes 10: 00-18: 00, miércoles, sábado 10: 00-21: 00, (domingo, feriados nacionales) 10: 00-19: 00
+
+		Cerrado: 1 de enero, Año Nuevo, Día de Chuseok / Sala de exposiciones permanentes Cerrado: 1er lunes de abril y noviembre
+
+		Tarifa de admisión: gratis
+	
+		Los artefactos preciosos de nuestra historia han
 		encontrado un nuevo hogar maravilloso. Inaugurado en octubre de 2005
 		El Museo Nacional de Corea es un museo de escala mundial que alberga y
 		exhibe 300,000 artefactos (a partir de enero de 2012) en un vasto
@@ -829,71 +901,100 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script type="text/javascript">
 		var text = document.querySelector('#texttext');
 		var popimgs = document.getElementById('popimg0');
-		var test1 = document.querySelector('#texttext1').textContent;
-		var test2 = document.querySelector('#texttext2').textContent;
-		var test3 = document.querySelector('#texttext3').textContent;
-		var test4 = document.querySelector('#texttext4').textContent;
-		var test5 = document.querySelector('#texttext5').textContent;
-		var test6 = document.querySelector('#texttext6').textContent;
-		var test7 = document.querySelector('#texttext7').textContent;
-		var test8 = document.querySelector('#texttext8').textContent;
-		var test9 = document.querySelector('#texttext9').textContent;
-		var test10 = document.querySelector('#texttext10').textContent;
+		var test1 = document.querySelector('#texttext1')
+		test1.setAttribute('style', 'white-space: pre-line;');
+		test1.textContent;
+		var test2 = document.querySelector('#texttext2');
+		test2.setAttribute('style', 'white-space: pre-line;');
+		test2.textContent;
+		var test3 = document.querySelector('#texttext3');
+		test3.setAttribute('style', 'white-space: pre-line;');
+		test3.textContent;
+		var test4 = document.querySelector('#texttext4');
+		test4.setAttribute('style', 'white-space: pre-line;');
+		test4.textContent;
+		var test5 = document.querySelector('#texttext5');
+		test5.setAttribute('style', 'white-space: pre-line;');
+		test5.textContent;
+		var test6 = document.querySelector('#texttext6');
+		test6.setAttribute('style', 'white-space: pre-line;');
+		test6.textContent;
+		var test7 = document.querySelector('#texttext7');
+		test7.setAttribute('style', 'white-space: pre-line;');
+		test7.textContent;
+		var test8 = document.querySelector('#texttext8');
+		test8.setAttribute('style', 'white-space: pre-line;');
+		test8.textContent;
+		var test9 = document.querySelector('#texttext9');
+		test9.setAttribute('style', 'white-space: pre-line;');
+		test9.textContent;
+		var test10 = document.querySelector('#texttext10');
+		test10.setAttribute('style', 'white-space: pre-line;');
+		test10.textContent;
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
 
-			$('#popimg0').attr('src', 'img/k2.PNG');
+			$('#popimg0').attr('src', 'img/place1.PNG');
 			$('#texttext').html(test1);
 		});
+
 		// 버튼2
 		$('#ko2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k3.PNG');
+			$('#popimg0').attr('src', 'img/place2.PNG');
 			$('#texttext').html(test2);
 		});
 		// 버튼3
 		$('#ko3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k4.PNG');
+			$('#popimg0').attr('src', 'img/place3.PNG');
 			$('#texttext').html(test3);
 		});
 		// 버튼4
 		$('#ko4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/place4.PNG');
 			$('#texttext').html(test4);
 		});
 		// 버튼5
 		$('#ko5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k6.PNG');
+			$('#popimg0').attr('src', 'img/place5.PNG');
 			$('#texttext').html(test5);
 		});
 		// 버튼6
 		$('#ko6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k7.PNG');
+			$('#popimg0').attr('src', 'img/place6.PNG');
 			$('#texttext').html(test6);
 		});
 		// 버튼7
 		$('#ko7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k8.jpg');
+			$('#popimg0').attr('src', 'img/place7.PNG');
 			$('#texttext').html(test7);
 		});
 		// 버튼8
 		$('#ko8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k9.PNG');
+			$('#popimg0').attr('src', 'img/place8.PNG');
 			$('#texttext').html(test8);
 		});
 		// 버튼9
 		$('#ko9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k10.PNG');
+			$('#popimg0').attr('src', 'img/place9.PNG');
 			$('#texttext').html(test9);
 		});
 		// 버튼10
 		$('#ko10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/k11.PNG');
+			$('#popimg0').attr('src', 'img/place10.PNG');
 			$('#texttext').html(test10);
 		});
 	</script>
+	<p id="texttext11">Palacio Gyeongbokgung abierto por la noche
 
+		Período: finales de abril a principios de noviembre de cada año
 
-	<p id="texttext11">1번</p>
+		Lugar: Gyeongbokgung
+
+		Organizador: Administración del Patrimonio Cultural
+
+		Tarifa: Público: 3.000 wones
+        Mayores de 65 años, extranjeros: 3.000 wones
+        Usuario de Hanbok: Gratis</p>
 	<p id="texttext22">2번</p>
 	<p id="texttext33">3번</p>
 	<p id="texttext44">4번</p>
@@ -920,50 +1021,51 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		var test99 = document.querySelector('#texttext99').textContent;
 		// 버튼 1
 		$('#k1:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn1.PNG');
+			$('#popimg1').attr('src', 'img/night1.PNG');
 			$('#texttext').html(test11);
 		});
 		// 버튼2
 		$('#k2:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn2.PNG');
+			$('#popimg1').attr('src', 'img/night2.PNG');
 			$('#texttext').html(test22);
 		});
 		// 버튼3
 		$('#k3:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#popimg1').attr('src', 'img/night3.PNG');
 			$('#texttext').html(test33);
 		});
 		// 버튼4
 		$('#k4:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/kn3.PNG');
+			$('#popimg1').attr('src', 'img/night4.PNG');
 			$('#texttext').html(test44);
 		});
 		// 버튼5
 		$('#k5:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k6.PNG');
+			$('#popimg1').attr('src', 'img/night5.PNG');
 			$('#texttext').html(test55);
 		});
 		// 버튼6
 		$('#k6:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k7.PNG');
+			$('#popimg1').attr('src', 'img/night6.PNG');
 			$('#texttext').html(test66);
 		});
 		// 버튼7
 		$('#k7:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k8.jpg');
+			$('#popimg1').attr('src', 'img/night7.PNG');
 			$('#texttext').html(test77);
 		});
 		// 버튼8
 		$('#k8:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k9.PNG');
+			$('#popimg1').attr('src', 'img/night8.PNG');
 			$('#texttext').html(test88);
 		});
 		// 버튼9
 		$('#k9:button').on('click', function() {
-			$('#popimg1').attr('src', 'img/k10.PNG');
+			$('#popimg1').attr('src', 'img/night9.jpg');
 			$('#texttext').html(test99);
 		});
 	</script>
+
 
 	<script type="text/javascript">
 			
