@@ -342,7 +342,7 @@
                
                 } else if (rs.result == "종로,청계") {
                    $('#result').text('종로, 청계');
-                   $('#result').attr('href', 'Main.html?act='+act);
+                   $('#result').attr('href', 'K_Jong-ro.jsp?act='+act);
              
                 } else if (rs.result == "청담동,압구정동") {
                    $('#result').text('청담동, 압구정동');
