@@ -43,58 +43,58 @@ body .backgroundTransition .image-top {
 }
 
 .content {
-	margin-top: 38%;
-	width: 540px;
-	margin-left: 120px;
-	padding: 20px;
+	position: center;
+	width: 50.5%;
+	height: 450px;
+	margin: auto;
+	margin-top: 18%;
+	padding: 25px;
 	background-color: rgba(0, 0, 0, .15);
 	color: #ffffff;
-	display: table;
+	font-size: 20px;
+/* 	display: table;
 	table-layout: fixed;
+	cellpadding: 0px 10px;
+	border-spacing: 10px; */
 }
 
-.selChina{
-	display: none;
-	z-index: 5;
-	width: 200px;
-	margin-top: 25%;
-	margin-right: 40%;
-	margin-left: 40%;
-	padding: 3%;
-	background-color : rgba(0, 0, 0, .15);
-	color: #ffffff;
-	}
-
-.conChina{
-	display: inline;
-	margin-left: 6%;
-	margin-right: 6%;
+#conBox{
+	display: grid;
+	grid-template-rows: repeat(auto-fit,141px);
+	grid-template-columns: repeat(auto-fit,141px);
+	place-items: center center;
+	gap: 0px 10px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	
+	/* display: table;
+	table-layout: fixed;
+	border-spacing: auto 5px;*/
 }
 
-.conCle{
-	width: 70px;
-	height: 70px;
-	border-radius: 35px;
-	font-size: 18px;
+#conBox .conCle{
+	width: 140px;
+	height: 140px;
+	border-radius: 70px;
+	font-size: 20px;
 	text-align: center;
 	vertical-align: middle;
-	display:table-cell;
 	background-color : #ffffff;
 	color: #000000;
+	margin: 0px;
+	/* display: table-cell; */
 }
 
 .spin{
-	display:table-cell;
 	text-align: center;
 	vertical-align: middle;
 }
 
 .flag{
-	display:none;
-}
-#koreaCall{
-	width:100%;
-	height:100%;
+	width: 140px;
+	height: 140px;
 }
 
 </style>
@@ -124,48 +124,53 @@ body .backgroundTransition .image-top {
 	<div class="backgroundTransition">
 
 		<div class="content">
-			<h1>BackgroundTransition</h1><br>
-			<div>
-				<div class="conCle conCle0">
-					<div id="koreaCall" class="spin">한국어</div>
-					<a href="Korea.jsp"><img id="Korea" class="flag" src='img/Korea.png'></a>
-				</div>
+			<div id="langSelect" style="margin-left: 21%; margin-right: 21%; text-align: center;">
+			<h1>언어선택 / Language Select</h1></div>
+				<br>
+				<!-- 라인잡기용(사용하는거 아님) -->
+				<div id="none" class="none" style="margin-top:5%;margin-bottom: 5%"></div>
+				<br>
+			<!-- 국가별 태그 -->
+			<div id="conBox">
+				<!-- <div class="conCle conCle0"> --><!-- 한국  -->
+					<a href="Korea.jsp" style="z-index: 45;"><img id="Korea" class="flag" src='img/bgBtn.png'></a>
+
 				
-				<div class="conCle conCle1">
-					<div id="usaCall" class="spin">영어</div>
-					<a href="English.jsp"><img id="USA" class="flag" src='img/Usa.png'></a>
-				</div>
+				<!-- <div class="conCle conCle1"> --> <!-- 영어  English-->
+					<a href="English.jsp"><img id="USA" class="flag" src='img/bgBtn.png'></a>
 				
-				<div class="conCle conCle2">
-					<div id="japanCall" class="spin">일어</div>
-					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/Japan.png'></a>
-				</div>
+
+				<!-- <div class="conCle conCle2"> --> <!-- 일어  日本語-->
+					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/bgBtn.png'></a>
 				
-				<div class="conCle conCle3">
-					<div id="chinaCall" class="spin">중국어</div>
-					<a href="#"><img id="China" class="flag" src='img/China.png'></a>
-				</div>
 				
-				<div class="conCle conCle4">
-					<div id="spainCall" class="spin">스페인어</div>
-					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/Spain.png'></a>
-				</div>
+				<!-- <div class="conCle conCle3"> --> <!-- 중국어  中国文-->
+					<a href="China.jsp"><img id="China" class="flag" src='img/bgBtn.png'></a>
+				
+
+				<!-- <div class="conCle conCle4"> --> <!-- 스페인어  Español-->
+					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/bgBtn.png'></a>
+				
+				
+				<!-- <div class="conCle conCle5"> --> <!-- 프랑스어  French-->
+					<a href="Frech.jsp"><img id="France" class="flag" src='img/bgBtn.png'></a>
+				
 			</div>	
 
 		</div>
 		
-		<div class="selChina">
+<!-- 		<div class="selChina">
 			<button id="close" style="font-size: 5px; position: absolute; margin-top:-10px; margin-left: 190px;">X</button>
 			<p style="align-content: center; text-align: center;">사용 언어 선택</p>
 				<div class="conChina"><a href="China.jsp"><img id="China" src='img/China.png'></a></div>
 				<div class="conChina"><a href="#"><img id="China" src='img/China.png'></a></div>
-				<p style="width: 100px; display:inline; margin:5%;">중국(간체)</p>
+				<p style="width: 100px; display:inline; margin:5%;">简体中文</p> 간체중문
 				<p style="width: 100px; display:inline; margin:2%;">중국(광둥)</p>
-		</div>
+		</div> -->
 		
 	</div>
 
-	<script>
+<!-- 	<script>
 		// 중국 아이콘 선택시 언어 선택화면 전환 
 		$('#China').on('click',function(){
 			$('.content').css({display:'none'}),
@@ -223,9 +228,18 @@ body .backgroundTransition .image-top {
 				$('#Spain').css({display:'none'}),
 				$('.conCle4').css({backgroundColor:'#ffffff'});
 			});
+		$(".conCle5").hover(function(){
+				$('#FranceCall').css({display:'none'}),
+				$('#France').css({display:'block'}),
+				$('.conCle5').css({backgroundColor:'rgba(0,0,0,0)'});
+			},function(){
+				$('#FranceCall').css({display:'table-cell'}),
+				$('#France').css({display:'none'}),
+				$('.conCle5').css({backgroundColor:'#ffffff'});
+			});
 		
 
-	</script>
+	</script> -->
 	
 </body>
 </html>
