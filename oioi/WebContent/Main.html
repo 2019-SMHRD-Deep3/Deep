@@ -44,21 +44,37 @@ body .backgroundTransition .image-top {
 
 .content {
 	position: center;
-	width: 64%;
-	height: 480px;
+	width: 50.5%;
+	height: 450px;
 	margin: auto;
-	margin-top: 17%;
-	padding: 20px;
+	margin-top: 18%;
+	padding: 25px;
 	background-color: rgba(0, 0, 0, .15);
 	color: #ffffff;
 	font-size: 20px;
-	display: table;
+/* 	display: table;
 	table-layout: fixed;
-	border-spacing: 10px;
+	cellpadding: 0px 10px;
+	border-spacing: 10px; */
 }
 
+#conBox{
+	display: grid;
+	grid-template-rows: repeat(auto-fit,141px);
+	grid-template-columns: repeat(auto-fit,141px);
+	place-items: center center;
+	gap: 0px 10px;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	
+	/* display: table;
+	table-layout: fixed;
+	border-spacing: auto 5px;*/
+}
 
-.content .conCle{
+#conBox .conCle{
 	width: 140px;
 	height: 140px;
 	border-radius: 70px;
@@ -68,12 +84,17 @@ body .backgroundTransition .image-top {
 	background-color : #ffffff;
 	color: #000000;
 	margin: 0px;
-	display: table-cell;
+	/* display: table-cell; */
 }
 
 .spin{
 	text-align: center;
 	vertical-align: middle;
+}
+
+.flag{
+	width: 140px;
+	height: 140px;
 }
 
 </style>
@@ -103,44 +124,37 @@ body .backgroundTransition .image-top {
 	<div class="backgroundTransition">
 
 		<div class="content">
-			<div id="langSelect" style="margin-left: 21%; margin-right: 21%;">
+			<div id="langSelect" style="margin-left: 21%; margin-right: 21%; text-align: center;">
 			<h1>언어선택 / Language Select</h1></div>
-			<br>
+				<br>
 				<!-- 라인잡기용(사용하는거 아님) -->
 				<div id="none" class="none" style="margin-top:5%;margin-bottom: 5%"></div>
-			<br>
-			
+				<br>
 			<!-- 국가별 태그 -->
-			<div>
-				<div class="conCle conCle0">
-					<a href="Korea.jsp"><img id="Korea" class="flag" src='img/Korea.png'></a>
-					<div id="koreaCall" class="spin">한국어</div>
-				</div>
-				
-				<div class="conCle conCle1"> <!-- 영어 -->
-					<a href="English.jsp"><img id="USA" class="flag" src='img/Usa.png'></a>
-					<div id="usaCall" class="spin">English</div>
-				</div>
+			<div id="conBox">
+				<!-- <div class="conCle conCle0"> --><!-- 한국  -->
+					<a href="Korea.jsp" style="z-index: 45;"><img id="Korea" class="flag" src='img/bgBtn.png'></a>
 
-				<div class="conCle conCle2"> <!-- 일어 -->
-					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/Japan.png'></a>
-					<div id="japanCall" class="spin">日本語</div>
-				</div>
 				
-				<div class="conCle conCle3"> <!-- 중국어 -->
-					<a href="China.jsp"><img id="China" class="flag" src='img/China.png'></a>
-					<div id="chinaCall" class="spin">中国文</div>
-				</div>
+				<!-- <div class="conCle conCle1"> --> <!-- 영어  English-->
+					<a href="English.jsp"><img id="USA" class="flag" src='img/bgBtn.png'></a>
+				
 
-				<div class="conCle conCle4"> <!-- 스페인어 -->
-					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/Spain.png'></a>
-					<div id="spainCall" class="spin">Español</div>
-				</div>
+				<!-- <div class="conCle conCle2"> --> <!-- 일어  日本語-->
+					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/bgBtn.png'></a>
 				
-				<div class="conCle conCle5"> <!-- 프랑스어 -->
-					<a href="Frech.jsp"><img id="France" class="flag" src='img/France.png'></a>
-					<div id="FranceCall" class="spin">French</div>
-				</div>
+				
+				<!-- <div class="conCle conCle3"> --> <!-- 중국어  中国文-->
+					<a href="China.jsp"><img id="China" class="flag" src='img/bgBtn.png'></a>
+				
+
+				<!-- <div class="conCle conCle4"> --> <!-- 스페인어  Español-->
+					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/bgBtn.png'></a>
+				
+				
+				<!-- <div class="conCle conCle5"> --> <!-- 프랑스어  French-->
+					<a href="Frech.jsp"><img id="France" class="flag" src='img/bgBtn.png'></a>
+				
 			</div>	
 
 		</div>
