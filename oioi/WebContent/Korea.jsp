@@ -82,7 +82,7 @@ img#img {
 	top: 0px;
 	/* left: 10; */
 	min-height: 100%;
-	width: auto;
+	width: 100%;
 	height: auto;
 }
 
@@ -108,7 +108,7 @@ article#Join {
 	color: white;
 }
 
-article#Login {
+article#login {
 	color: white;
 }
 
@@ -130,6 +130,17 @@ table tbody tr {
 .inTag a {
 	color: white !important;
 }
+p#rate{
+	color: white;
+}
+.mainimg {
+     width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
 </style>
 
 
@@ -151,27 +162,27 @@ table tbody tr {
 			</script> -->
 
 		<!-- Header -->
-
-		<table id="lan" style="position: absolute; right: 0px;" border="0px;">
+	<table id="lan" style="position: absolute; right: 0px;">
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="update.jsp"> 회원정보수정 </a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -201,33 +212,27 @@ table tbody tr {
 				</div>
 			</td>
 
-
 		</table>
-
-		<ul id="mem">
-			<table class="incom" bgcolor="#5b6471">
-				<tr>
-
-				</tr>
-			</table>
-
-		</ul>
-		<header id="header">
-			<nav>
-				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#intro">서비스</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#work">랜드마크</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#about">코스 목록</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="K-survey.jsp">코스 추천</a></li>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</ul>
-			</nav>
+		<header>
+			
+				<div>
+				<a style="font-size: 20px;" class="linkcolor" href="#intro"><img class = "mainimg" src="img/img2/korea1.PNG"></a>
+				<a style="font-size: 20px;" class="linkcolor" href="#work"><img class = "mainimg" src="img/img2/korea2.PNG"></a>
+				<a style="font-size: 20px;" class="linkcolor" href="#about"><img class = "mainimg" src="img/img2/korea3.PNG"></a>
+				<%if(info==null){%>
+					<a style="font-size: 20px;" class="linkcolor" ><img class = "mainimg" src="img/img2/korea4.PNG"></a>
+					<%}
+				else{%>
+					<a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp"><img class = "mainimg" src="img/img2/korea4.PNG"></a>
+				<%}%>
+				
+					
+			
+				
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+					</div>
 		</header>
-
-
 
 		<!-- Main -->
 		<div id="main">
@@ -316,12 +321,12 @@ table tbody tr {
 
 			<article id="work">
 				<h1>서울 10대 랜드마크</h1>
-				<h2 class="major1" href="#" style="display: inline;">
+				<h3 class="major1" href="#" style="display: inline;">
 					<div id="day" class="a1">주간</div>
-				</h2>
-				<h2 class="major2" href="#" style="display: inline;">
+				</h3>
+				<h3 class="major2" href="#" style="display: inline;">
 					<div id="day" class="a2">야간</div>
-				</h2>
+				</h3>
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
 					<button class="ten" id="ko1">#경복궁</button>
@@ -377,8 +382,39 @@ table tbody tr {
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">베스트 테마</h2>
+				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p>하위~</p>
+					<button class = "country" id = "c1">미국</button>
+					<button class = "country" id = "c2">중국</button>
+					<button class = "country" id = "c3">일본</button>
+					<button class = "country" id = "c4">독일</button>
+					<button class = "country" id = "c5">프랑스</button>
+					<button class = "country" id = "c6">영국</button>
+					<button class = "country" id = "c7">러시아</button>
+					<button class = "country" id = "c8">베트남</button>
+					<button class = "country" id = "c9">홍콩</button>
+					<button class = "country" id = "c10">중동</button>
+				</div>
+				
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+					});
+					var btn1 = document.querySelector('.major1');
+
+					btn1.addEventListener('click', function() {
+						$('#g').hide();
+						$('.display').show();
+					});
+
+					var btn2 = document.querySelector('.major2');
+					btn2.addEventListener('click', function() {
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('#g').show(); //클릭 시 두 번째 요소 표시
+					});
+				</script>
+				<p id="rate"></p>
 			</article>
 
 			<!-- Contact -->
@@ -386,264 +422,7 @@ table tbody tr {
 
 
 			<!-- Elements -->
-			<article id="elements">
-				<h2 class="major">Elements</h2>
-
-				<section>
-					<h3 class="major">Text</h3>
-					<p>
-						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
-						and this is <em>emphasized</em>. This is <sup>superscript</sup>
-						text and this is <sub>subscript</sub> and this is code:
-						<code>for (;;) { ... }</code>
-						. Finally, <a href="#">this is a link</a>.
-					</p>
-					<hr />
-					<h2>Heading Level 2</h2>
-					<h3>Heading Level 3</h3>
-					<h4>Heading Level 4</h4>
-					<h5>Heading Level 5</h5>
-					<h6>Heading Level 6</h6>
-					<hr />
-					<h4>Blockquote</h4>
-					<blockquote>Fringilla nisl. Donec accumsan interdum
-						nisi, quis tincidunt felis sagittis eget tempus euismod.
-						Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
-						adipiscing eu felis iaculis volutpat ac adipiscing accumsan
-						faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum
-						dolor sit amet nullam adipiscing eu felis.</blockquote>
-					<h4>Preformatted</h4>
-					<pre>
-						<code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code>
-					</pre>
-				</section>
-
-				<section>
-					<h3 class="major">Lists</h3>
-
-					<h4>Unordered</h4>
-					<ul>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Alternate</h4>
-					<ul class="alt">
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Ordered</h4>
-					<ol>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis viverra.</li>
-						<li>Felis enim feugiat.</li>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis lorem.</li>
-						<li>Felis enim et feugiat.</li>
-					</ol>
-					<h4>Icons</h4>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span
-								class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span
-								class="label">Github</span></a></li>
-					</ul>
-
-					<h4>Actions</h4>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions stacked">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Table</h3>
-					<h4>Default</h4>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-
-					<h4>Alternate</h4>
-					<div class="table-wrapper">
-						<table class="alt">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-
-				<section>
-					<h3 class="major">Buttons</h3>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Primary</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button">Default</a></li>
-						<li><a href="#" class="button small">Small</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-					</ul>
-					<ul class="actions">
-						<li><span class="button primary disabled">Disabled</span></li>
-						<li><span class="button disabled">Disabled</span></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Form</h3>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="demo-name">Name</label> <input type="text"
-									name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-							</div>
-							<div class="field half">
-								<label for="demo-email">Email</label> <input type="email"
-									name="demo-email" id="demo-email" value=""
-									placeholder="jane@untitled.tld" />
-							</div>
-							<div class="field">
-								<label for="demo-category">Category</label> <select
-									name="demo-category" id="demo-category">
-									<option value="">-</option>
-									<option value="1">Manufacturing</option>
-									<option value="1">Shipping</option>
-									<option value="1">Administration</option>
-									<option value="1">Human Resources</option>
-								</select>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-low" name="demo-priority"
-									checked> <label for="demo-priority-low">Low</label>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-high" name="demo-priority">
-								<label for="demo-priority-high">High</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-copy" name="demo-copy">
-								<label for="demo-copy">Email me a copy</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-human" name="demo-human" checked>
-								<label for="demo-human">Not a robot</label>
-							</div>
-							<div class="field">
-								<label for="demo-message">Message</label>
-								<textarea name="demo-message" id="demo-message"
-									placeholder="Enter your message" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message"
-								class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-				</section>
-
-			</article>
+		
 
 		</div>
 
@@ -655,6 +434,157 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		</footer>
 
 	</div>
+	
+		<p id = "rate1">1.명동/남대문/북창
+					2.종로/청계
+					3.강남역
+					4.이태원
+					5.동대문 패션타운
+	</p>
+	<p id = "rate2">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.신촌/홍대
+					4.잠실(롯데월드)
+					5.종로/청계
+	</p>
+	<p id = "rate3">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.신촌/홍대
+					4.종로/청계
+					5.강남역
+	</p>
+	<p id = "rate4">1.명동/남대문/북창
+					2.종로/총계
+					3.강남역
+					4.이태원
+					5.신촌/홍대
+	</p>
+	<p id = "rate5">1.명동/남대문/북창
+					2.종로/총계
+					3.강남역
+					4.신촌/홍대
+					5.동대문 패션타운
+	</p>
+	<p id = "rate6">1.명동/남대문/북창
+					2.종로/총계
+					3.강남역
+					4.동대문 패션타운
+					5.신촌/홍대
+	</p>
+	<p id = "rate7">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.종로/청계
+					4.강남역
+					5.이태원
+	</p>
+	<p id = "rate8">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.종로/청계
+					4.강남역
+					5.이태원</p>
+	<p id = "rate9">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.신촌/홍대
+					4.종로/청계
+					5.강남역</p>
+	<p id = "rate10">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.종로/청계
+					4.강남역
+					5.이태원</p>
+	
+	<script type="text/javascript">
+		
+		var text = document.querySelector('#rate');
+		var popimgs = document.getElementById('popimg0');
+		var rate1 = document.querySelector('#rate1')
+		rate1.setAttribute('style', 'white-space: pre-line;');
+		rate1.textContent;
+		var rate2 = document.querySelector('#rate2');
+		rate2.setAttribute('style', 'white-space: pre-line;');
+		rate2.textContent;
+		var rate3 = document.querySelector('#rate3');
+		rate3.setAttribute('style', 'white-space: pre-line;');
+		rate3.textContent;
+		var rate4 = document.querySelector('#rate4');
+		rate4.setAttribute('style', 'white-space: pre-line;');
+		rate4.textContent;
+		var rate5 = document.querySelector('#rate5');
+		rate5.setAttribute('style', 'white-space: pre-line;');
+		rate5.textContent;
+		var rate6 = document.querySelector('#rate6');
+		rate6.setAttribute('style', 'white-space: pre-line;');
+		rate6.textContent;
+		var rate7 = document.querySelector('#rate7');
+		rate7.setAttribute('style', 'white-space: pre-line;');
+		rate7.textContent;
+		var rate8 = document.querySelector('#rate8');
+		rate8.setAttribute('style', 'white-space: pre-line;');
+		rate8.textContent;
+		var rate9 = document.querySelector('#rate9');
+		rate9.setAttribute('style', 'white-space: pre-line;');
+		rate9.textContent;
+		var rate10 = document.querySelector('#rate10');
+		rate10.setAttribute('style', 'white-space: pre-line;');
+		rate10.textContent;
+		// 버튼 1
+		$('#c1:button').on('click', function() {
+
+			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#rate').html(rate1);
+		});
+
+		// 버튼2
+		$('#c2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#rate').html(rate2);
+		});
+		// 버튼3
+		$('#c3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#rate').html(rate3);
+		});
+		// 버튼4
+		$('#c4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#rate').html(rate4);
+		});
+		// 버튼5
+		$('#c5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#rate').html(rate5);
+		});
+		// 버튼6
+		$('#c6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#rate').html(rate6);
+		});
+		// 버튼7
+		$('#c7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#rate').html(rate7);
+		});
+		// 버튼8
+		$('#c8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#rate').html(rate8);
+		});
+		// 버튼9
+		$('#c9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#rate').html(rate9);
+		});
+		// 버튼10
+		$('#c10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#rate').html(rate10);
+		});
+	</script>
+	
+	
+	
+	
+	
 
 	<p id="texttext1">전화번호 : 02-3700-3900
 	
@@ -812,7 +742,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script src="assets/js/jquery-3.4.1.min.js"></script>
 
 	<!-- BG -->
-	<div id="bg"></div>
 	<script type="text/javascript">
 		
 		var text = document.querySelector('#texttext');

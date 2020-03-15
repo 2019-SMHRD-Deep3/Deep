@@ -22,6 +22,3 @@ create table user_member(
 
 
 
-
-
-

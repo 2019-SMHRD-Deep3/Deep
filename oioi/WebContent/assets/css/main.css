@@ -741,7 +741,7 @@ input, select, textarea {
 	}
 
 		ul li {
-			padding-left: 0.5em;
+			padding-left: 0em;
 		}
 
 		ul.alt {
@@ -949,7 +949,7 @@ input, select, textarea {
 		} */
 
 			table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(255, 255, 255, 0.075);
+				background-color: rgba(1,1,1,0.6);
 			}
 
 		table td {
@@ -1256,7 +1256,7 @@ input, select, textarea {
 		background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
 		background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
-		background-image: radial-gradient(rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 55%);
+		 background-image: radial-gradient(rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 55%); 
 		max-width: 100%;
 		text-align: center;
 	}
@@ -1657,5 +1657,4 @@ input, select, textarea {
 
 		body.is-preload #footer {
 			opacity: 0;
->>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 		}
