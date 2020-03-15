@@ -320,6 +320,7 @@
 							$modal.trigger('click');
 
 				})
+//				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><table><tr><td><img src="" /></td><td style="vertical-align: top">aaadfeawf</td></tr></table></div></div>') // 이미지 + 글 
 				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
 					.find('img')
 						.on('load', function(event) {

@@ -1,7 +1,7 @@
 <%@page import="com.model.MemberDAO"%>
 <%@page import="com.model.MemberDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
 <!DOCTYPE HTML>
@@ -20,7 +20,6 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
-
 </noscript>
 <style>
 img#img {
@@ -130,6 +129,7 @@ table tbody tr {
 .inTag a {
 	color: white !important;
 }
+
 p#rate{
 	color: white;
 }
@@ -160,9 +160,14 @@ p#rate{
 		<!--         <script>
 				document.getElementById("videobcg").play();
 			</script> -->
-
+s
 		<!-- Header -->
+
 	<table id="lan" style="position: absolute; right: 0px;">
+
+	
+
+		 <table id="lan" style="position: absolute; right: 0px;" border="0px;">
 			<%
 				if (info == null) {
 			%>
@@ -232,6 +237,31 @@ p#rate{
 				<!--<li><a href="#elements">Elements</a></li>-->
 					
 					</div>
+
+
+		</table> --%>
+
+		<ul id="mem">
+			<table class="incom" bgcolor="#5b6471">
+				<tr>
+
+				</tr>
+			</table>
+
+		</ul>
+		<header id="header">
+			<nav>
+				<ul class="cont">
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#intro">서비스</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor" href="#work">랜드마크</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="#about">코스 목록</a></li>
+					<li><a style="font-size: 20px;" class="linkcolor"
+						href="K-survey.jsp">코스 추천</a></li>
+					<!--<li><a href="#elements">Elements</a></li>-->
+				</ul>
+			</nav>
 		</header>
 
 		<!-- Main -->
@@ -737,9 +767,9 @@ p#rate{
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
+	<!-- <script src="assets/js/util.js"></script> -->
 	<script src="assets/js/main.js"></script>
-	<script src="assets/js/jquery-3.4.1.min.js"></script>
+<!-- 	<script src="assets/js/jquery-3.4.1.min.js"></script> -->
 
 	<!-- BG -->
 	<script type="text/javascript">

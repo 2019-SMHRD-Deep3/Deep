@@ -117,19 +117,41 @@ input, select, textarea {
 		font-size: 16pt;
 	}
 
-		@media screen and (max-width: 1680px) {
+ 		@media screen and (max-width: 1680px) {
 
 			html {
 				font-size: 12pt;
 			}
-
+			
+			
 		}
+	  	@media screen and (max-width: 1180px) {
+						
+			div#Q_Age{
+				--auto-grid-min-size: 5rem;
+				  display: grid;
+				  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+				  grid-gap: 0.5rem;
+			}
 
+		} 
+ 
 		@media screen and (max-width: 736px) {
 
 			html {
 				font-size: 11pt;
 			}
+
+		}
+		
+		@media screen and (max-width: 500px) {
+
+			/* div {
+				--auto-grid-min-size: 5rem;
+				  display: grid;
+				  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+				  grid-gap: 0.5rem;
+			} */
 
 		}
 
@@ -1210,7 +1232,7 @@ input, select, textarea {
 			display: block;
 		}
 
-		@media screen and (max-width: 1680px) {
+		 @media screen and (max-width: 1680px) {
 
 			#wrapper {
 				padding: 3rem 2rem;
@@ -1232,7 +1254,7 @@ input, select, textarea {
 				padding: 1rem;
 			}
 
-		}
+		} 
 
 /* Header */
 
