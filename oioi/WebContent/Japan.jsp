@@ -81,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
+	min-height: 8%;
 	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -92,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -133,20 +134,35 @@ table tbody tr {
 p#rate{
 	color: white;
 }
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
 .mainimg {
-     width: 150px;
+    width: 150px;
     height: 150px; 
     border-radius: 70%;
     overflow: hidden;
     object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
+
 </style>
 
 
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -154,7 +170,6 @@ p#rate{
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
 		<!--         <script>
@@ -162,27 +177,29 @@ p#rate{
 			</script> -->
 
 		<!-- Header -->
-
-		<table id="lan" style="position: absolute; right: 0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
+	
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -212,20 +229,25 @@ p#rate{
 				</div>
 			</td>
 
-
 		</table>
+	</div>
 		<header>
-			<div>
-				<a style="font-size: 20px;" class="linkcolor" href="#intro"><img class = "mainimg" src="img/img2/english1.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#work"><img class = "mainimg" src="img/img2/english2.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#about"><img class = "mainimg" src="img/img2/english3.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp"><img class = "mainimg" src="img/img2/english4.PNG"></a>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</div>
 			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">サービス</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">
+アトラクション</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">ランキング</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">メイクコース</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">メイクコース</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
-
 
 		<!-- Main -->
 		<div id="main">
@@ -378,7 +400,7 @@ p#rate{
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">베스트 테마</h2>
+				<h2 class="major">国別上位5位</h2>
 				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 				<button class = "country" id = "c1">U.S.A</button>
@@ -834,8 +856,21 @@ p#rate{
         65歳のお年寄り、外国人：3000ウォン
                             韓服着用者：無料</p>
 	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">住所：ソウル市鍾路区酪酸道41東崇洞酸2-10
+
+首都ソウルを構成する内四山（內四山：北岳山・南山・仁王・酪酸）の一つであり、舟山（主山）である北岳山の左青龍（左靑龍）に対応する酪酸の自然環境や歴史的文化環境を復元することにより、ソウル市民に快適な公園の景観を提供し、自然探訪を通じて歴史と文化教育の場を提供することを目的に造成された。
+総面積は6万1145坪で、1999年12月30日に着工し、2002年7月に完成した。主な施設は、①展示と管理室、売店、トイレ、非武（庇雨堂）、六角精子、老人ホームなどの建築設備5棟②12個のバドミントン枚と1つのバスケットボールコートで行われた運動施設③10個の休憩所と117個の椅子で構成された設備④中央広場・イベント広場および3つの意見広場からなる広場施設⑤その他の案内板のほか、28個の施設などである。そのほかの公園緑化のために松を含め、計40種の8万9670本の木を植えた。</p>
+	<p id="texttext44">住所：ソウル龍山区南山公園道103ソウルタワー
+
+開場時間：毎日11:00  -  20:00
+
+料金：展望台（大人）11,000ウォン展望台（小人）9000ウォン
+
+第1の観光名所南山ソウルタワー
+国内外の観光客が年1,200万人訪れるソウル第1の観光名所である南山ソウルタワー
+最近、韓流の風を運転し、各種芸能、ドラマの撮影地として名前が高まり、観光客の訪問がさらに増える傾向にある。
+ソウルの中心部に位置し、360度全方向にソウル市内の広々見下ろすことができる天恵の立地条件を備えており、世界最大の旅行出版社ロンリープラネットが選定した世界500大観光地に選ばれました。
+最近事務棟を改装してオープンしたソウルタワープラザ円、様々な設備と観光スポット、飲食店を備え、観光客にサービスを提供しています。</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
@@ -846,17 +881,36 @@ p#rate{
 
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
+	var text = document.querySelector('#texttext');
+	var popimgs = document.getElementById('popimg0');
+	var test11 = document.querySelector('#texttext11')
+	test11.setAttribute('style', 'white-space: pre-line;');
+	test11.textContent;
+	var test22 = document.querySelector('#texttext22');
+	test22.setAttribute('style', 'white-space: pre-line;');
+	test22.textContent;
+	var test33 = document.querySelector('#texttext33');
+	test33.setAttribute('style', 'white-space: pre-line;');
+	test33.textContent;
+	var test44 = document.querySelector('#texttext44');
+	test44.setAttribute('style', 'white-space: pre-line;');
+	test44.textContent;
+	var test55 = document.querySelector('#texttext55');
+	test55.setAttribute('style', 'white-space: pre-line;');
+	test55.textContent;
+	var test66 = document.querySelector('#texttext66');
+	test66.setAttribute('style', 'white-space: pre-line;');
+	test66.textContent;
+	var test77 = document.querySelector('#texttext77');
+	test77.setAttribute('style', 'white-space: pre-line;');
+	test77.textContent;
+	var test88 = document.querySelector('#texttext88');
+	test88.setAttribute('style', 'white-space: pre-line;');
+	test88.textContent;
+	var test99 = document.querySelector('#texttext99');
+	test99.setAttribute('style', 'white-space: pre-line;');
+	test99.textContent;
+
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 			$('#popimg1').attr('src', 'img/night1.PNG');

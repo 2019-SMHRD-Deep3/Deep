@@ -81,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
+	min-height: 8%;
 	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -92,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -133,20 +134,35 @@ table tbody tr {
 p#rate{
 	color: white;
 }
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
 .mainimg {
-     width: 150px;
+    width: 150px;
     height: 150px; 
     border-radius: 70%;
     overflow: hidden;
     object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
+
 </style>
 
 
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -154,7 +170,6 @@ p#rate{
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
 		<!--         <script>
@@ -162,27 +177,28 @@ p#rate{
 			</script> -->
 
 		<!-- Header -->
-
-		<table id="lan" style="position: absolute; right: 0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -208,25 +224,27 @@ p#rate{
 							class="dropdown-item" href="Japan.jsp">日本語</a> <a
 							class="dropdown-item" href="Spain.jsp">Español</a> <a
 							class="dropdown-item" href="French.jsp">Français</a>
-
 					</div>
 				</div>
 			</td>
-
-
 		</table>
+	</div>
 		<header>
-			<div>
-				<a style="font-size: 20px;" class="linkcolor" href="#intro"><img class = "mainimg" src="img/img2/english1.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#work"><img class = "mainimg" src="img/img2/english2.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#about"><img class = "mainimg" src="img/img2/english3.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp"><img class = "mainimg" src="img/img2/english4.PNG"></a>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</div>
 			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">Service</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">Attractions</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">Top5</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">Make Course</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">Make Course</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
-
 
 		<!-- Main -->
 		<div id="main">
@@ -382,7 +400,7 @@ p#rate{
 
 			<!-- About -->
 			<article id="about">
-			<h2 class="major">베스트 테마</h2>
+			<h2 class="major">Top5 lugar por país</h2>
 				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 				<button class = "country" id = "c1">U.S.A</button>
@@ -928,29 +946,69 @@ p#rate{
         Mayores de 65 años, extranjeros: 3.000 wones
         Usuario de Hanbok: Gratis</p>
 	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">Dirección: 2-10, Sanseong-dong, 41 Naksan-gil, Jongno-gu, Seúl
+
+Al restaurar el entorno natural y el entorno cultural histórico de Naksan, uno de Naesasan (Bukaksan, Namsan, Inwangsan y Naksan), que constituye la ciudad capital de Seúl, y el dragón azul izquierdo de Bukaksan, la montaña principal Fue creado con el objetivo de proporcionar vistas agradables del parque a los ciudadanos de Seúl y proporcionar un lugar para la educación histórica y cultural a través de la exploración natural.
+El área total era de 6.145 pyeong, y la construcción comenzó el 30 de diciembre de 1999, y se completó en julio de 2002. Las instalaciones principales son: ① Sala de exhibición y administración, quiosco y baño, bidang, pabellón hexagonal, pabellón de ancianos, 5 instalaciones de construcción ② Instalaciones deportivas que consisten en 12 canchas de bádminton y 1 cancha de baloncesto ③ 10 áreas de descanso y 117 sillas Instalaciones de conveniencia que consisten en ④ Plaza central, Plaza de eventos y Instalación de la plaza que consta de tres plazas de observatorio ⑤ Otros paneles informativos y otras 28 instalaciones. Además, para la reverdecimiento del parque, se plantaron 8.670 árboles de 40 especies, incluidos los pinos.</p>
+	<p id="texttext44">Dirección: Torre de Seúl, 103 Namsan Park-gil, Yongsan-gu, Seúl
+
+Horario de apertura: 11: 00-20: 00 todos los días
+
+Tarifa: plataforma de observación (adulto) 11,000 wones Plataforma de observación (niño) 9000 wones
+
+Namsan Seoul Tower, la primera atracción turística
+Namsan Seoul Tower, la primera atracción turística en Seúl, donde 12 millones de personas visitan turistas nacionales y extranjeros al año
+Recientemente, a medida que el nombre de la Ola Coreana ha aumentado y el nombre de varios entretenimientos y dramas ha aumentado, el número de turistas ha aumentado.
+Dado que se encuentra en el centro de Seúl y tiene una excelente ubicación para pasar por alto el centro de Seúl en todas las direcciones, ha sido seleccionado como uno de los 500 principales destinos turísticos del mundo por Lonely Planet, la editorial de viajes más grande del mundo.
+La Plaza de la Torre de Seúl, recientemente remodelada y abierta, ofrece varias instalaciones turísticas, atracciones y tiendas de alimentos y bebidas para brindar servicios a los turistas.</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
 	<p id="texttext88">8번</p>
-	<p id="texttext99">9번</p>
+	<p id="texttext99">Teléfono: 02-1661-2000
+
+		Dirección: 240 Olympic-ro, Songpa-gu, Seúl Dirección: 40-1 Jamsil-dong
+
+		Tarifa: Pase gratis (Adulto: 56,000 wones Juventud: 50,000 wones Niño: 46,000 wones)
+        
+		After4 (Adultos: 45,000 wones Adolescentes 40,000 wones, Niños: 35,000 wones)
+
+		Este es un parque temático establecido y operado por Lotte Group para ayudar a las personas a disfrutar del ocio y atraer turistas extranjeros. Lotte World es un parque temático cubierto con el tema de la aventura y el misterio, Lotte World Adventure, Lake Park Magic Island, centro comercial, museo popular, pista de hielo, hotel, grandes almacenes, etc. para resolver el turismo, el ocio, las compras y la cultura en un solo lugar. Es un espacio habitable complejo a gran escala. En Lotte World Adventure, puede disfrutar de instalaciones de embarque de última generación, fantásticos desfiles, varios sistemas de video, espectáculos de láser, actuaciones y comida de todo el mundo 24/7. Lotte World Adventure es el parque temático cubierto más grande del mundo. En el Museo Folklórico, la historia y la cultura popular de 5000 años de Corea se dividen en salas de exposiciones históricas, pueblos modelo, patios de diversiones y calles de autor, lo que hace que la reproducción sea fácil y divertida. Lotte World Garden Stage es el escenario central de las actuaciones de Lotte World, y varios eventos como espectáculos musicales y transmisiones públicas se llevan a cabo en varias temporadas. Lotte World Star Avenue es una calle de composición de estrellas Hallyu y es una instalación de entretenimiento experimental.</p>
 
 
 
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
+	var text = document.querySelector('#texttext');
+	var popimgs = document.getElementById('popimg0');
+	var test11 = document.querySelector('#texttext11')
+	test11.setAttribute('style', 'white-space: pre-line;');
+	test11.textContent;
+	var test22 = document.querySelector('#texttext22');
+	test22.setAttribute('style', 'white-space: pre-line;');
+	test22.textContent;
+	var test33 = document.querySelector('#texttext33');
+	test33.setAttribute('style', 'white-space: pre-line;');
+	test33.textContent;
+	var test44 = document.querySelector('#texttext44');
+	test44.setAttribute('style', 'white-space: pre-line;');
+	test44.textContent;
+	var test55 = document.querySelector('#texttext55');
+	test55.setAttribute('style', 'white-space: pre-line;');
+	test55.textContent;
+	var test66 = document.querySelector('#texttext66');
+	test66.setAttribute('style', 'white-space: pre-line;');
+	test66.textContent;
+	var test77 = document.querySelector('#texttext77');
+	test77.setAttribute('style', 'white-space: pre-line;');
+	test77.textContent;
+	var test88 = document.querySelector('#texttext88');
+	test88.setAttribute('style', 'white-space: pre-line;');
+	test88.textContent;
+	var test99 = document.querySelector('#texttext99');
+	test99.setAttribute('style', 'white-space: pre-line;');
+	test99.textContent;
+
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 			$('#popimg1').attr('src', 'img/night1.PNG');

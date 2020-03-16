@@ -81,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
+	min-height: 8%;
 	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -92,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -133,22 +134,35 @@ table tbody tr {
 p#rate{
 	color: white;
 }
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
 .mainimg {
-     width: 150px;
+    width: 150px;
     height: 150px; 
     border-radius: 70%;
     overflow: hidden;
     object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
 
 </style>
 
 
-</style>
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -156,7 +170,6 @@ p#rate{
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
 		<!--         <script>
@@ -164,24 +177,25 @@ p#rate{
 			</script> -->
 
 		<!-- Header -->
-
-		<table id="lan" style="position: absolute; right: 0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
+	
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -216,23 +230,23 @@ p#rate{
 			</td>
 
 		</table>
+	</div>
 		<header>
-			<div>
-				<a style="font-size: 20px;" class="linkcolor" href="#intro"><img class = "mainimg" src="img/img2/english1.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#work"><img class = "mainimg" src="img/img2/english2.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#about"><img class = "mainimg" src="img/img2/english3.PNG"></a>
-			<%if(info==null){%>
-					<a style="font-size: 20px;" class="linkcolor"><img class = "mainimg" src="img/img2/english4.PNG"></a>
-					<%}
-				else{%>
-					<a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp"><img class = "mainimg" src="img/img2/english4.PNG"></a>
-				<%}%>
-				
-				</div>
 			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">Service</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">Attractions</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">Top5</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">Make Course</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">Make Course</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
-
 
 		<!-- Main -->
 		<div id="main">
@@ -389,7 +403,7 @@ p#rate{
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">베스트 테마</h2>
+				<h2 class="major">Top5 place by country</h2>
 				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 					<button class = "country" id = "c1">U.S.A</button>
@@ -916,29 +930,70 @@ p#rate{
         Seniors aged 65, foreigners: 3,000 won
         Hanbok wearer: Free</p>
 	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">Address: 2-10, Sanseong-dong, 41 Naksan-gil, Jongno-gu, Seoul
+
+		By restoring the natural environment and historical cultural environment of Naksan, which is one of the Naesan Mountains (Bakaksan, Namsan, Inwangsan, and Naksan) that make up the capital city of Seoul, and the main mountain, the left blue dragon of Bukaksan, the main mountain It was created with the aim of providing pleasant park views to Seoul citizens and providing a place for history and culture education through natural exploration.
+
+		The total area was 6,145 pyeong, and the construction began on December 30, 1999, and was completed in July 2002. The main facilities are: ① Exhibition and management room, kiosk and restroom, bidang, hexagonal pavilion, elderly pavilion, 5 buildings ② Sports facilities consisting of 12 badminton courts and 1 basketball court ③ 10 rest areas and 117 chairs Convenience facilities consisting of ④ Central Plaza, Event Plaza, and Plaza Facility consisting of three observatory squares ⑤ Other information boards and 28 other facilities. In addition, a total of 8,670 trees of 40 species were planted, including pine trees, for greening the park.
+</p>
+	<p id="texttext44">Address: Seoul Tower, 103 Namsan Park-gil, Yongsan-gu, Seoul
+
+		Opening Hours: 11:00-20:00 daily
+
+		Fee: Observation deck (adult) 11,000 won Observation deck (child) 9000 won
+
+		Namsan Seoul Tower, the first tourist attraction in Seoul, where 12 million people visit domestic and foreign tourists a year
+		Recently, as the name of the Korean Wave has increased and the name of various entertainments and dramas has increased, the number of tourists has increased.
+		Since it is located in the center of Seoul and has a great location to overlook downtown Seoul in all directions, it has been selected as one of the top 500 tourist destinations in the world by Lonely Planet, the world's largest travel publisher.
+		The Seoul Tower Plaza, which was recently remodeled and opened, provides various tourist facilities, attractions, and food and beverage stores to provide services to tourists.</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
 	<p id="texttext88">8번</p>
-	<p id="texttext99">9번</p>
+	<p id="texttext99">Tel: 02-1661-2000
+
+		Address: 240 Olympic-ro, Songpa-gu, Seoul Address: 40-1 Jamsil-dong
+
+		Fee: Free pass (Adult: 56,000 won Youth: 50,000 won Child: 46.000 won)
+         
+         After4 (Adults: 45,000 won Teenagers 40.000 won, Children: 35,000 won)
+         
+        This is a theme park established and operated by Lotte Group to help people enjoy leisure and attract foreign tourists. Lotte World is an indoor theme park with the theme of adventure and mystery, Lotte World Adventure, Lake Park Magic Island, shopping mall, folk museum, ice rink, hotel, department store, etc. to solve tourism, leisure, shopping and culture in one place. It is a large-scale complex living space. At Lotte World Adventure, you can enjoy state-of-the-art boarding facilities, fantastic parades, various video systems, laser shows, performances, and food from around the world 24/7. Lotte World Adventure is the world's largest indoor theme park. In the Folk Museum, Korea's 5000-year history and folk culture are divided into historical exhibition halls, model villages, amusement yards, and author streets, making it easy and fun to reproduce. Lotte World Garden Stage is the central stage of Lotte World performances, and various events such as musical shows and public broadcasts are held in various seasons. Lotte World Star Avenue is a Hallyu star-producing street and is an experiential entertainment facility.</p>
 
 
 
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
+	var text = document.querySelector('#texttext');
+	var popimgs = document.getElementById('popimg0');
+	var test11 = document.querySelector('#texttext11')
+	test11.setAttribute('style', 'white-space: pre-line;');
+	test11.textContent;
+	var test22 = document.querySelector('#texttext22');
+	test22.setAttribute('style', 'white-space: pre-line;');
+	test22.textContent;
+	var test33 = document.querySelector('#texttext33');
+	test33.setAttribute('style', 'white-space: pre-line;');
+	test33.textContent;
+	var test44 = document.querySelector('#texttext44');
+	test44.setAttribute('style', 'white-space: pre-line;');
+	test44.textContent;
+	var test55 = document.querySelector('#texttext55');
+	test55.setAttribute('style', 'white-space: pre-line;');
+	test55.textContent;
+	var test66 = document.querySelector('#texttext66');
+	test66.setAttribute('style', 'white-space: pre-line;');
+	test66.textContent;
+	var test77 = document.querySelector('#texttext77');
+	test77.setAttribute('style', 'white-space: pre-line;');
+	test77.textContent;
+	var test88 = document.querySelector('#texttext88');
+	test88.setAttribute('style', 'white-space: pre-line;');
+	test88.textContent;
+	var test99 = document.querySelector('#texttext99');
+	test99.setAttribute('style', 'white-space: pre-line;');
+	test99.textContent;
+
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 			$('#popimg1').attr('src', 'img/night1.PNG');

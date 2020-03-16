@@ -81,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
+	min-height: 8%;
 	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -92,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -133,20 +134,35 @@ table tbody tr {
 p#rate{
 	color: white;
 }
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
 .mainimg {
-     width: 150px;
+    width: 150px;
     height: 150px; 
     border-radius: 70%;
     overflow: hidden;
     object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
+
 </style>
 
 
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -154,7 +170,6 @@ p#rate{
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
 		<!--         <script>
@@ -162,28 +177,29 @@ p#rate{
 			</script> -->
 
 		<!-- Header -->
-
-
-		<table id="lan" style="position: absolute; right: 0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
+	
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -213,19 +229,27 @@ p#rate{
 				</div>
 			</td>
 
-
 		</table>
+	</div>
 		<header>
-			<div>
-				<a style="font-size: 20px;" class="linkcolor" href="#intro"><img class = "mainimg" src="img/img2/english1.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#work"><img class = "mainimg" src="img/img2/english2.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="#about"><img class = "mainimg" src="img/img2/english3.PNG"></a>
-				<a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp"><img class = "mainimg" src="img/img2/english4.PNG"></a>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</div>
 			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">
+服务</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">
+景点</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">
+排行</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">做课程</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">做课程</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
 
 
 		<!-- Main -->
@@ -386,7 +410,7 @@ p#rate{
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">베스트 테마</h2>
+				<h2 class="major">国家排名前5位</h2>
 				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 				<button class = "country" id = "c1">U.S.A</button>
@@ -864,8 +888,22 @@ p#rate{
         65岁老年人，外国人3,000韩元
                             韩服佩戴者：免费</p>
 	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">地址：首尔市钟路区中山街三成洞2-10
+
+通过恢复中山之一的自然环境和历史文化环境，构成首尔首都的内山山之一（北岳山，南山，仁王山和那山），以及主山北岳山的左蓝龙旨在为首尔市民提供宜人的公园景观，并通过自然探索为历史文化教育提供场所。
+总面积为6,145坪，始建于1999年12月30日，并于2002年7月完成。主要设施有：①展览和管理室，售货亭和洗手间，比堂，六角亭，长亭，5个建筑设施②体育设施，包括12个羽毛球场和1个篮球场③10个休息区和117把椅子便利设施包括④中央广场，活动广场和包括3个观察广场的广场设施⑤其他信息委员会和28个设施。此外，总共种植了包括松树在内的40种8670棵树木，以绿化公园。</p>
+	<p id="texttext44">
+地址：首尔市龙山区南山公园街103号首尔塔
+
+营业时间：每天11：00-20：00
+
+费用：观景台（成人）11,000韩元观景台（儿童）9000韩元
+
+南山首尔塔，第一个旅游胜地
+南山首尔塔，首尔首个旅游胜地，每年有1200万人次访问国内外游客
+近来，随着韩流浪潮的名称增加以及各种娱乐和戏剧的名称增加，游客人数也增加了。
+由于它位于首尔市中心，地理位置优越，可以全方位俯瞰首尔市中心，因此，它已被全球最大的旅游出版商孤独星球（Lonely Planet）选为世界500强旅游胜地之一。
+首尔塔广场最近进行了改建和开业，提供各种旅游设施，景点以及餐饮店，为游客提供服务。</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
@@ -876,17 +914,36 @@ p#rate{
 
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
+	var text = document.querySelector('#texttext');
+	var popimgs = document.getElementById('popimg0');
+	var test11 = document.querySelector('#texttext11')
+	test11.setAttribute('style', 'white-space: pre-line;');
+	test11.textContent;
+	var test22 = document.querySelector('#texttext22');
+	test22.setAttribute('style', 'white-space: pre-line;');
+	test22.textContent;
+	var test33 = document.querySelector('#texttext33');
+	test33.setAttribute('style', 'white-space: pre-line;');
+	test33.textContent;
+	var test44 = document.querySelector('#texttext44');
+	test44.setAttribute('style', 'white-space: pre-line;');
+	test44.textContent;
+	var test55 = document.querySelector('#texttext55');
+	test55.setAttribute('style', 'white-space: pre-line;');
+	test55.textContent;
+	var test66 = document.querySelector('#texttext66');
+	test66.setAttribute('style', 'white-space: pre-line;');
+	test66.textContent;
+	var test77 = document.querySelector('#texttext77');
+	test77.setAttribute('style', 'white-space: pre-line;');
+	test77.textContent;
+	var test88 = document.querySelector('#texttext88');
+	test88.setAttribute('style', 'white-space: pre-line;');
+	test88.textContent;
+	var test99 = document.querySelector('#texttext99');
+	test99.setAttribute('style', 'white-space: pre-line;');
+	test99.textContent;
+
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 			$('#popimg1').attr('src', 'img/night1.PNG');
