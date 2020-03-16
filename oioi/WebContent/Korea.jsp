@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 <noscript>
 	<link rel="stylesheet" href="assets/css/noscript.css" />
+
 </noscript>
 <style>
 img#img {
@@ -80,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
-	width: auto;
+	min-height: 8%;
+	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -91,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -107,7 +109,7 @@ article#Join {
 	color: white;
 }
 
-article#Login {
+article#login {
 	color: white;
 }
 
@@ -129,21 +131,30 @@ table tbody tr {
 .inTag a {
 	color: white !important;
 }
-/* menubar example css style */
-#nav{
-	position:absolute;
-	top:0;
-	right:0;
-	padding:0;
-	margin:0;
-	list-style-type: none;
-	width:100%;
-	height: 50px;
-	background-color: rgba(255, 255, 255, 1.0);;
+p#rate{
+	color: white;
 }
-#nav .item{
-	float:right;
-	color:black;
+
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
+.mainimg {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
 }
 
 </style>
@@ -167,23 +178,9 @@ table tbody tr {
 			</script> -->
 
 		<!-- Header -->
-		<!-- menubar example -->
-		<ul id="nav">
-			<li class="item"><a href="#Login">Login</a></li>
-			<li class="item">Menu2</li>
-			<li class="item">Menu3</li>
-			<li class="item">Menu1</li>
-			<li class="item">Menu2</li>
-			<li class="item">Menu3</li>
-			<li class="item">Menu1</li>
-			<li class="item">Menu2</li>
-			<li class="item">Menu3</li>
-			<li class="item">Menu1</li>
-			<li class="item">Menu2</li>
-			<li class="item">Menu3</li>
-		</ul>
-
-		<%-- <table id="lan" style="position: absolute; right: 0px;" border="0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
+	
 			<%
 				if (info == null) {
 			%>
@@ -194,15 +191,16 @@ table tbody tr {
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -232,33 +230,24 @@ table tbody tr {
 				</div>
 			</td>
 
-
-		</table> --%>
-
-		<ul id="mem">
-			<table class="incom" bgcolor="#5b6471">
-				<tr>
-
-				</tr>
-			</table>
-
-		</ul>
-		<header id="header">
-			<nav>
-				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#intro">서비스</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#work">랜드마크</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#about">코스 목록</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="K-survey.jsp">코스 추천</a></li>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</ul>
-			</nav>
+		</table>
+	</div>
+		<header>
+			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">서비스</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">관광명소</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">랭킹</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">코스추천</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">넷</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
-
 
 		<!-- Main -->
 		<div id="main">
@@ -347,12 +336,12 @@ table tbody tr {
 
 			<article id="work">
 				<h1>서울 10대 랜드마크</h1>
-				<h2 class="major1" href="#" style="display: inline;">
+				<h3 class="major1" href="#" style="display: inline;">
 					<div id="day" class="a1">주간</div>
-				</h2>
-				<h2 class="major2" href="#" style="display: inline;">
+				</h3>
+				<h3 class="major2" href="#" style="display: inline;">
 					<div id="day" class="a2">야간</div>
-				</h2>
+				</h3>
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
 					<button class="ten" id="ko1">#경복궁</button>
@@ -407,9 +396,40 @@ table tbody tr {
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">베스트 테마</h2>
+				<h2 class="major">국가별 선호 여행지</h2>
+				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p>하위~</p>
+					<button class = "country" id = "c1">미국</button>
+					<button class = "country" id = "c2">중국</button>
+					<button class = "country" id = "c3">일본</button>
+					<button class = "country" id = "c4">독일</button>
+					<button class = "country" id = "c5">프랑스</button>
+					<button class = "country" id = "c6">영국</button>
+					<button class = "country" id = "c7">러시아</button>
+					<button class = "country" id = "c8">베트남</button>
+					<button class = "country" id = "c9">홍콩</button>
+					<button class = "country" id = "c10">중동</button>
+				</div>
+				
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+					});
+					var btn1 = document.querySelector('.major1');
+
+					btn1.addEventListener('click', function() {
+						$('#g').hide();
+						$('.display').show();
+					});
+
+					var btn2 = document.querySelector('.major2');
+					btn2.addEventListener('click', function() {
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('#g').show(); //클릭 시 두 번째 요소 표시
+					});
+				</script>
+				<p id="rate"></p>
 			</article>
 
 			<!-- Contact -->
@@ -417,264 +437,7 @@ table tbody tr {
 
 
 			<!-- Elements -->
-			<article id="elements">
-				<h2 class="major">Elements</h2>
-
-				<section>
-					<h3 class="major">Text</h3>
-					<p>
-						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
-						and this is <em>emphasized</em>. This is <sup>superscript</sup>
-						text and this is <sub>subscript</sub> and this is code:
-						<code>for (;;) { ... }</code>
-						. Finally, <a href="#">this is a link</a>.
-					</p>
-					<hr />
-					<h2>Heading Level 2</h2>
-					<h3>Heading Level 3</h3>
-					<h4>Heading Level 4</h4>
-					<h5>Heading Level 5</h5>
-					<h6>Heading Level 6</h6>
-					<hr />
-					<h4>Blockquote</h4>
-					<blockquote>Fringilla nisl. Donec accumsan interdum
-						nisi, quis tincidunt felis sagittis eget tempus euismod.
-						Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
-						adipiscing eu felis iaculis volutpat ac adipiscing accumsan
-						faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum
-						dolor sit amet nullam adipiscing eu felis.</blockquote>
-					<h4>Preformatted</h4>
-					<pre>
-						<code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code>
-					</pre>
-				</section>
-
-				<section>
-					<h3 class="major">Lists</h3>
-
-					<h4>Unordered</h4>
-					<ul>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Alternate</h4>
-					<ul class="alt">
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Ordered</h4>
-					<ol>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis viverra.</li>
-						<li>Felis enim feugiat.</li>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis lorem.</li>
-						<li>Felis enim et feugiat.</li>
-					</ol>
-					<h4>Icons</h4>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span
-								class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span
-								class="label">Github</span></a></li>
-					</ul>
-
-					<h4>Actions</h4>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions stacked">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Table</h3>
-					<h4>Default</h4>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-
-					<h4>Alternate</h4>
-					<div class="table-wrapper">
-						<table class="alt">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-
-				<section>
-					<h3 class="major">Buttons</h3>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Primary</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button">Default</a></li>
-						<li><a href="#" class="button small">Small</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-					</ul>
-					<ul class="actions">
-						<li><span class="button primary disabled">Disabled</span></li>
-						<li><span class="button disabled">Disabled</span></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Form</h3>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="demo-name">Name</label> <input type="text"
-									name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-							</div>
-							<div class="field half">
-								<label for="demo-email">Email</label> <input type="email"
-									name="demo-email" id="demo-email" value=""
-									placeholder="jane@untitled.tld" />
-							</div>
-							<div class="field">
-								<label for="demo-category">Category</label> <select
-									name="demo-category" id="demo-category">
-									<option value="">-</option>
-									<option value="1">Manufacturing</option>
-									<option value="1">Shipping</option>
-									<option value="1">Administration</option>
-									<option value="1">Human Resources</option>
-								</select>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-low" name="demo-priority"
-									checked> <label for="demo-priority-low">Low</label>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-high" name="demo-priority">
-								<label for="demo-priority-high">High</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-copy" name="demo-copy">
-								<label for="demo-copy">Email me a copy</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-human" name="demo-human" checked>
-								<label for="demo-human">Not a robot</label>
-							</div>
-							<div class="field">
-								<label for="demo-message">Message</label>
-								<textarea name="demo-message" id="demo-message"
-									placeholder="Enter your message" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message"
-								class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-				</section>
-
-			</article>
+		
 
 		</div>
 
@@ -686,6 +449,157 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		</footer>
 
 	</div>
+	
+		<p id = "rate1">1.명동/남대문/북창
+					2.종로/청계
+					3.강남역
+					4.이태원
+					5.동대문 패션타운
+	</p>
+	<p id = "rate2">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.신촌/홍대
+					4.잠실(롯데월드)
+					5.종로/청계
+	</p>
+	<p id = "rate3">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.신촌/홍대
+					4.종로/청계
+					5.강남역
+	</p>
+	<p id = "rate4">1.명동/남대문/북창
+					2.종로/총계
+					3.강남역
+					4.이태원
+					5.신촌/홍대
+	</p>
+	<p id = "rate5">1.명동/남대문/북창
+					2.종로/총계
+					3.강남역
+					4.신촌/홍대
+					5.동대문 패션타운
+	</p>
+	<p id = "rate6">1.명동/남대문/북창
+					2.종로/총계
+					3.강남역
+					4.동대문 패션타운
+					5.신촌/홍대
+	</p>
+	<p id = "rate7">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.종로/청계
+					4.강남역
+					5.이태원
+	</p>
+	<p id = "rate8">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.종로/청계
+					4.강남역
+					5.이태원</p>
+	<p id = "rate9">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.신촌/홍대
+					4.종로/청계
+					5.강남역</p>
+	<p id = "rate10">1.명동/남대문/북창
+					2.동대문 패션타운
+					3.종로/청계
+					4.강남역
+					5.이태원</p>
+	
+	<script type="text/javascript">
+		
+		var text = document.querySelector('#rate');
+		var popimgs = document.getElementById('popimg0');
+		var rate1 = document.querySelector('#rate1')
+		rate1.setAttribute('style', 'white-space: pre-line;');
+		rate1.textContent;
+		var rate2 = document.querySelector('#rate2');
+		rate2.setAttribute('style', 'white-space: pre-line;');
+		rate2.textContent;
+		var rate3 = document.querySelector('#rate3');
+		rate3.setAttribute('style', 'white-space: pre-line;');
+		rate3.textContent;
+		var rate4 = document.querySelector('#rate4');
+		rate4.setAttribute('style', 'white-space: pre-line;');
+		rate4.textContent;
+		var rate5 = document.querySelector('#rate5');
+		rate5.setAttribute('style', 'white-space: pre-line;');
+		rate5.textContent;
+		var rate6 = document.querySelector('#rate6');
+		rate6.setAttribute('style', 'white-space: pre-line;');
+		rate6.textContent;
+		var rate7 = document.querySelector('#rate7');
+		rate7.setAttribute('style', 'white-space: pre-line;');
+		rate7.textContent;
+		var rate8 = document.querySelector('#rate8');
+		rate8.setAttribute('style', 'white-space: pre-line;');
+		rate8.textContent;
+		var rate9 = document.querySelector('#rate9');
+		rate9.setAttribute('style', 'white-space: pre-line;');
+		rate9.textContent;
+		var rate10 = document.querySelector('#rate10');
+		rate10.setAttribute('style', 'white-space: pre-line;');
+		rate10.textContent;
+		// 버튼 1
+		$('#c1:button').on('click', function() {
+
+			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#rate').html(rate1);
+		});
+
+		// 버튼2
+		$('#c2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#rate').html(rate2);
+		});
+		// 버튼3
+		$('#c3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#rate').html(rate3);
+		});
+		// 버튼4
+		$('#c4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#rate').html(rate4);
+		});
+		// 버튼5
+		$('#c5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#rate').html(rate5);
+		});
+		// 버튼6
+		$('#c6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#rate').html(rate6);
+		});
+		// 버튼7
+		$('#c7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#rate').html(rate7);
+		});
+		// 버튼8
+		$('#c8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#rate').html(rate8);
+		});
+		// 버튼9
+		$('#c9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#rate').html(rate9);
+		});
+		// 버튼10
+		$('#c10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#rate').html(rate10);
+		});
+	</script>
+	
+	
+	
+	
+	
 
 	<p id="texttext1">전화번호 : 02-3700-3900
 	
@@ -838,12 +752,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
-	<!-- <script src="assets/js/util.js"></script> -->
+	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-<!-- 	<script src="assets/js/jquery-3.4.1.min.js"></script> -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
 
 	<!-- BG -->
-	<div id="bg"></div>
 	<script type="text/javascript">
 		
 		var text = document.querySelector('#texttext');
@@ -948,13 +861,38 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 홍대앞 예술시장 프리마켓 / 홍대앞 희망시장 : 홍익대 정문 앞 홍익어린이 공원에서는 매년 3월부터 11월까지 매주 토요일은 홍대앞 예술시장 프리마켓이, 매주 일요일은 홍대앞 희망시장이 열린다.각각의 예술시장에서는 일반 시민작가들의 참여와 손으로 직접 만든 수공예품 판매,생활창작 아티스트들의 작품전시 및 판매가 이루어진다.
 
 </p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">주소 : 서울 종로구 낙산길 41 동숭동 산2-10
+
+수도 서울을 구성하는 내사산(內四山:북악산·남산·인왕산·낙산)의 하나이자 주산(主山)인 북악산의 좌청룡(左靑龍)에 해당하는 낙산의 자연환경과 역사적 문화환경을 복원함으로써 서울시민들에게 쾌적한 공원 경관을 제공하고, 자연 탐방을 통해 역사와 문화 교육의 장을 제공할 목적으로 조성되었다.
+총면적은 6만 1145평으로, 1999년 12월 30일 착공해 2002년 7월 완공하였다. 주요 시설은 ① 전시 및 관리실, 매점 및 화장실, 비우당(庇雨堂), 육각 정자, 노인정 등 건축시설 5동 ② 12개의 배드민턴장과 1개의 농구장으로 이루어진 운동시설 ③ 10개의 휴게소와 117개의 의자로 구성된 편의시설 ④ 중앙광장·이벤트광장 및 3개의 전망광장으로 이루어진 광장시설 ⑤ 기타 안내판 외 28개 시설 등이다. 그 외에 공원 녹지화를 위해 소나무를 포함해 총 40종 8만 9670그루의 나무를 심었다.
+주변 유적으로는 서울 동대문(東大門:보물 1), 서울성곽(사적 10), 이화장(梨花莊:서울기념물 6) 등이 있다. 그 밖에 마을 전체가 온통 붉은 열매를 맺는 나무로만 둘러싸여 있다 해서 이름 붙여진 홍수동(紅樹洞:홍숫골), 단종이 영월(寧越) 청령포(淸泠浦)에서 귀양살이할 때 왕비가 저고리깃·댕기 등에 자줏빛 물을 들이기 위해 사용했다는 자지동천(紫芝洞泉:자주동천·자주우물), 《지봉유설(芝峰類說)》의 저자 이수광(李晬光)이 외조부의 집을 손질하며 겨우 비만 가릴 수 있는 집이라는 뜻으로 당호를 붙인 비우당, 우물이 나란히 5개가 있어 이름 붙여진 오형제 우물터, 오부학당 가운데 하나인 동부학당 터 등이 있다.</p>
+	<p id="texttext44">주소 : 서울 용산구 남산공원길 103 서울타워
+
+개장 시간 : 매일 11:00 - 20:00
+
+요금 : 전망대 (대인) 11,000원 전망대(소인) 9000원
+
+제1의 관광명소 남산서울타워
+국내외 관광객들이 년 1,200만 명 방문하는 서울 제1의 관광명소인 남산서울타워
+최근 한류 바람을 몰고 각종 예능, 드라마의 촬영지로 이름이 높아지면서 관광객 방문이 더욱 늘어나는 추세입니다. 
+서울 중심부에 위치해 360도 전방향으로 서울 시내를 훤히 내려다볼 수 있는 천혜의 입지 조건을 갖추고 있어, 세계 최대의 여행 출판사인 론리 플래닛이 선정한 세계 500대 관광지에 뽑히기도 했습니다.
+최근 사무동을 리모델링해 오픈한 서울타워플라자엔 다양한 편의시설과 볼거리, 식음료 매장을 갖춰 관광객에게 서비스를 제공합니다.
+
+	</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
 	<p id="texttext88">8번</p>
-	<p id="texttext99">9번</p>
+	<p id="texttext99">전화번호 : 02-1661-2000
+
+		주소 : 서울 송파구 올림픽로 240 지번 : 잠실동 40-1
+
+		요금 : 자유이용권(성인 : 56,000원 청소년 : 50,000원 어린이 : 46.000원)
+        
+        After4(성인 : 45,000원 청소년 40.000원, 어린이 : 35,000원)
+
+		롯데그룹이 국민들의 여가 선용과 외국인 관광객 유치를 위해 설립하고 운영하고 있는 테마파크이다. 롯데월드는 모험과 신비를 주제로 한 실내 주제공원인 롯데월드 어드벤처, 호수공원인 매직아일랜드, 쇼핑몰, 민속박물관, 아이스링크, 호텔, 백화점 등으로 구성되어 관광, 레저, 쇼핑, 문화를 한곳에서 해결할 수 있는 대단위 복합생활공간이다. 롯데월드 어드벤처에서는 최첨단 탑승시설을 비롯하여, 환상적인 퍼레이드, 각종 영상 시스템, 레이져쇼, 공연, 각국의 음식을 연중무휴로 즐길 수 있다. 롯데월드 어드벤처는 세계에서 가장 큰 실내 테마파크이다. 민속박물관에는 한국의 오천년 역사와 민속 문화가 역사전시관, 모형촌, 놀이마당, 저자거리로 나누어져 쉽고 재미있게 재현되어 있다. 롯데월드 가든스테이지는 롯데월드 공연의 중심무대로 각종 시즌 뮤지컬 쇼, 공개방송 등의 다양한 이벤트가 진행된다. 롯데월드 스타에비뉴는 한류스타 조성거리로 체험형 엔터테인먼트 시설이다.
+</p>
 
 
 

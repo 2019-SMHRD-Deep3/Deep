@@ -81,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
-	width: auto;
+	min-height: 8%;
+	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -92,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -130,13 +131,38 @@ table tbody tr {
 .inTag a {
 	color: white !important;
 }
+p#rate{
+	color: white;
+}
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
+.mainimg {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
 </style>
 
 
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -144,7 +170,6 @@ table tbody tr {
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
 		<!--         <script>
@@ -152,27 +177,28 @@ table tbody tr {
 			</script> -->
 
 		<!-- Header -->
-
-		<table id="lan" style="position: absolute; right: 0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -198,29 +224,27 @@ table tbody tr {
 							class="dropdown-item" href="Japan.jsp">日本語</a> <a
 							class="dropdown-item" href="Spain.jsp">Español</a> <a
 							class="dropdown-item" href="French.jsp">Français</a>
-
 					</div>
 				</div>
 			</td>
-
-
 		</table>
-		<header id="header">
-			<nav>
-				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#intro"> Servicio</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#work">LandMarks</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#about"> Ejemplo</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="K-survey.jsp">MakeCourse</a></li>
-					<!--<li><a href="#elements">Elements</a></li>-->
-				</ul>
-			</nav>
+	</div>
+		<header>
+			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">Service</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">Attractions</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">Top5</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">Make Course</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">Make Course</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
-
 
 		<!-- Main -->
 		<div id="main">
@@ -313,12 +337,12 @@ table tbody tr {
 
 			<article id="work">
 				<h1>Top 10 LandMarks</h1>
-				<h2 class="major1" href="#" style="display: inline;">
+				<h3 class="major1" href="#" style="display: inline;">
 					<div id="day" class="a1">Semanal</div>
-				</h2>
-				<h2 class="major2" href="#" style="display: inline;">
+				</h3>
+				<h3 class="major2" href="#" style="display: inline;">
 					<div id="day" class="a2">Noche</div>
-				</h2>
+				</h3>
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
 					<button class="ten" id="ko1">#Palacio Gyeongbokgung</button>
@@ -376,273 +400,48 @@ table tbody tr {
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">베스트 테마</h2>
+			<h2 class="major">Top5 lugar por país</h2>
+				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p>하위~</p>
+				<button class = "country" id = "c1">U.S.A</button>
+					<button class = "country" id = "c2">CHINA</button>
+					<button class = "country" id = "c3">JAPAN</button>
+					<button class = "country" id = "c4">FRENCE</button>
+					<button class = "country" id = "c5">GERMANY</button>
+					<button class = "country" id = "c6">U.K</button>
+					<button class = "country" id = "c7">RUSSIA</button>
+					<button class = "country" id = "c8">VIETNAM</button>
+					<button class = "country" id = "c9">HONGKONG</button>
+					<button class = "country" id = "c10">U.A.E</button>
+				</div>
+				
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+					});
+					var btn1 = document.querySelector('.major1');
+
+					btn1.addEventListener('click', function() {
+						$('#g').hide();
+						$('.display').show();
+					});
+
+					var btn2 = document.querySelector('.major2');
+					btn2.addEventListener('click', function() {
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('#g').show(); //클릭 시 두 번째 요소 표시
+					});
+				</script>
+				<p id="rate"></p>
 			</article>
+
 
 			<!-- Contact -->
 			<article id="contact"></article>
 
 			<!-- Elements -->
-			<article id="elements">
-				<h2 class="major">Elements</h2>
-
-				<section>
-					<h3 class="major">Text</h3>
-					<p>
-						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
-						and this is <em>emphasized</em>. This is <sup>superscript</sup>
-						text and this is <sub>subscript</sub> and this is code:
-						<code>for (;;) { ... }</code>
-						. Finally, <a href="#">this is a link</a>.
-					</p>
-					<hr />
-					<h2>Heading Level 2</h2>
-					<h3>Heading Level 3</h3>
-					<h4>Heading Level 4</h4>
-					<h5>Heading Level 5</h5>
-					<h6>Heading Level 6</h6>
-					<hr />
-					<h4>Blockquote</h4>
-					<blockquote>Fringilla nisl. Donec accumsan interdum
-						nisi, quis tincidunt felis sagittis eget tempus euismod.
-						Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
-						adipiscing eu felis iaculis volutpat ac adipiscing accumsan
-						faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum
-						dolor sit amet nullam adipiscing eu felis.</blockquote>
-					<h4>Preformatted</h4>
-					<pre>
-						<code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code>
-					</pre>
-				</section>
-
-				<section>
-					<h3 class="major">Lists</h3>
-
-					<h4>Unordered</h4>
-					<ul>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Alternate</h4>
-					<ul class="alt">
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Ordered</h4>
-					<ol>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis viverra.</li>
-						<li>Felis enim feugiat.</li>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis lorem.</li>
-						<li>Felis enim et feugiat.</li>
-					</ol>
-					<h4>Icons</h4>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span
-								class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span
-								class="label">Github</span></a></li>
-					</ul>
-
-					<h4>Actions</h4>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions stacked">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Table</h3>
-					<h4>Default</h4>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-
-					<h4>Alternate</h4>
-					<div class="table-wrapper">
-						<table class="alt">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-
-				<section>
-					<h3 class="major">Buttons</h3>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Primary</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button">Default</a></li>
-						<li><a href="#" class="button small">Small</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-					</ul>
-					<ul class="actions">
-						<li><span class="button primary disabled">Disabled</span></li>
-						<li><span class="button disabled">Disabled</span></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Form</h3>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="demo-name">Name</label> <input type="text"
-									name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-							</div>
-							<div class="field half">
-								<label for="demo-email">Email</label> <input type="email"
-									name="demo-email" id="demo-email" value=""
-									placeholder="jane@untitled.tld" />
-							</div>
-							<div class="field">
-								<label for="demo-category">Category</label> <select
-									name="demo-category" id="demo-category">
-									<option value="">-</option>
-									<option value="1">Manufacturing</option>
-									<option value="1">Shipping</option>
-									<option value="1">Administration</option>
-									<option value="1">Human Resources</option>
-								</select>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-low" name="demo-priority"
-									checked> <label for="demo-priority-low">Low</label>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-high" name="demo-priority">
-								<label for="demo-priority-high">High</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-copy" name="demo-copy">
-								<label for="demo-copy">Email me a copy</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-human" name="demo-human" checked>
-								<label for="demo-human">Not a robot</label>
-							</div>
-							<div class="field">
-								<label for="demo-message">Message</label>
-								<textarea name="demo-message" id="demo-message"
-									placeholder="Enter your message" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message"
-								class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-				</section>
-
-			</article>
+			
 
 		</div>
 
@@ -654,6 +453,157 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		</footer>
 
 	</div>
+
+<p id = "rate1">명동12431</p>
+		<p id = "rate1">1.Myeongdong / Namdaemun / Bukchang
+					2.Jonglo / Cheonggye
+					3.Gangnam Station
+					4.Itaewon
+					5.Dongdaemun Fashion Town
+	</p>
+	<p id = "rate2">1.Myeongdong / Namdaemun / Bukchang
+					2.Dongdaemun Fashion Town
+					3.Sinchon / Hongdae
+					4.Jamsil (Lotte World)
+					5.Jonglo / Cheonggye
+	</p>
+	<p id = "rate3">1.Myeongdong / Namdaemun / Bukchang
+					2.Dongdaemun Fashion Town
+					3.Sinchon / Hongdae
+					4.Jonglo / Cheonggye
+					5.Gangnam Station
+	</p>
+	<p id = "rate4">1.Myeongdong / Namdaemun / Bukchang
+					2.Jonglo / Cheonggye
+					3.Gangnam Station
+					4.Itaewon
+					5.Sinchon / Hongdae
+	</p>
+	<p id = "rate5">1.Myeongdong / Namdaemun / Bukchang
+					2.Jonglo / Cheonggye
+					3.Gangnam Station
+					4.Sinchon / Hongdae
+					5.Dongdaemun Fashion Town
+	</p>
+	<p id = "rate6">1.Myeongdong / Namdaemun / Bukchang
+					2.Jonglo / Cheonggye
+					3.Gangnam Station
+					4.Dongdaemun Fashion Town
+					5.Sinchon / Hongdae
+	</p>
+	<p id = "rate7">1.Myeongdong / Namdaemun / Bukchang
+					2.Dongdaemun Fashion Town
+					3.Jonglo / Cheonggye
+					4.Gangnam Station
+					5.Itaewon
+	</p>
+	<p id = "rate8">1.Myeongdong / Namdaemun / Bukchang
+					2.Dongdaemun Fashion Town
+					3.Jonglo / Cheonggye
+					4.Gangnam Station
+					5.Itaewon
+	</p>
+	<p id = "rate9">1.Myeongdong / Namdaemun / Bukchang
+					2.Dongdaemun Fashion Town
+					3.Sinchon / Hongdae
+					4.Jonglo / Cheonggye
+					5.Gangnam Station
+	</p>
+	<p id = "rate10">1.Myeongdong / Namdaemun / Bukchang
+					2.Dongdaemun Fashion Town
+					3.Jonglo / Cheonggye
+					4.Gangnam Station
+					5.Itaewon
+	</p>
+	
+	<script type="text/javascript">
+		
+		var text = document.querySelector('#rate');
+		var popimgs = document.getElementById('popimg0');
+		var rate1 = document.querySelector('#rate1')
+		rate1.setAttribute('style', 'white-space: pre-line;');
+		rate1.textContent;
+		var rate2 = document.querySelector('#rate2');
+		rate2.setAttribute('style', 'white-space: pre-line;');
+		rate2.textContent;
+		var rate3 = document.querySelector('#rate3');
+		rate3.setAttribute('style', 'white-space: pre-line;');
+		rate3.textContent;
+		var rate4 = document.querySelector('#rate4');
+		rate4.setAttribute('style', 'white-space: pre-line;');
+		rate4.textContent;
+		var rate5 = document.querySelector('#rate5');
+		rate5.setAttribute('style', 'white-space: pre-line;');
+		rate5.textContent;
+		var rate6 = document.querySelector('#rate6');
+		rate6.setAttribute('style', 'white-space: pre-line;');
+		rate6.textContent;
+		var rate7 = document.querySelector('#rate7');
+		rate7.setAttribute('style', 'white-space: pre-line;');
+		rate7.textContent;
+		var rate8 = document.querySelector('#rate8');
+		rate8.setAttribute('style', 'white-space: pre-line;');
+		rate8.textContent;
+		var rate9 = document.querySelector('#rate9');
+		rate9.setAttribute('style', 'white-space: pre-line;');
+		rate9.textContent;
+		var rate10 = document.querySelector('#rate10');
+		rate10.setAttribute('style', 'white-space: pre-line;');
+		rate10.textContent;
+		// 버튼 1
+		$('#c1:button').on('click', function() {
+
+			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#rate').html(rate1);
+		});
+
+		// 버튼2
+		$('#c2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#rate').html(rate2);
+		});
+		// 버튼3
+		$('#c3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#rate').html(rate3);
+		});
+		// 버튼4
+		$('#c4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#rate').html(rate4);
+		});
+		// 버튼5
+		$('#c5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#rate').html(rate5);
+		});
+		// 버튼6
+		$('#c6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#rate').html(rate6);
+		});
+		// 버튼7
+		$('#c7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#rate').html(rate7);
+		});
+		// 버튼8
+		$('#c8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#rate').html(rate8);
+		});
+		// 버튼9
+		$('#c9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#rate').html(rate9);
+		});
+		// 버튼10
+		$('#c10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#rate').html(rate10);
+		});
+	</script>
+
 
 	<p id="texttext1">Teléfono: 02-3700-3900
 
@@ -996,29 +946,69 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
         Mayores de 65 años, extranjeros: 3.000 wones
         Usuario de Hanbok: Gratis</p>
 	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">Dirección: 2-10, Sanseong-dong, 41 Naksan-gil, Jongno-gu, Seúl
+
+Al restaurar el entorno natural y el entorno cultural histórico de Naksan, uno de Naesasan (Bukaksan, Namsan, Inwangsan y Naksan), que constituye la ciudad capital de Seúl, y el dragón azul izquierdo de Bukaksan, la montaña principal Fue creado con el objetivo de proporcionar vistas agradables del parque a los ciudadanos de Seúl y proporcionar un lugar para la educación histórica y cultural a través de la exploración natural.
+El área total era de 6.145 pyeong, y la construcción comenzó el 30 de diciembre de 1999, y se completó en julio de 2002. Las instalaciones principales son: ① Sala de exhibición y administración, quiosco y baño, bidang, pabellón hexagonal, pabellón de ancianos, 5 instalaciones de construcción ② Instalaciones deportivas que consisten en 12 canchas de bádminton y 1 cancha de baloncesto ③ 10 áreas de descanso y 117 sillas Instalaciones de conveniencia que consisten en ④ Plaza central, Plaza de eventos y Instalación de la plaza que consta de tres plazas de observatorio ⑤ Otros paneles informativos y otras 28 instalaciones. Además, para la reverdecimiento del parque, se plantaron 8.670 árboles de 40 especies, incluidos los pinos.</p>
+	<p id="texttext44">Dirección: Torre de Seúl, 103 Namsan Park-gil, Yongsan-gu, Seúl
+
+Horario de apertura: 11: 00-20: 00 todos los días
+
+Tarifa: plataforma de observación (adulto) 11,000 wones Plataforma de observación (niño) 9000 wones
+
+Namsan Seoul Tower, la primera atracción turística
+Namsan Seoul Tower, la primera atracción turística en Seúl, donde 12 millones de personas visitan turistas nacionales y extranjeros al año
+Recientemente, a medida que el nombre de la Ola Coreana ha aumentado y el nombre de varios entretenimientos y dramas ha aumentado, el número de turistas ha aumentado.
+Dado que se encuentra en el centro de Seúl y tiene una excelente ubicación para pasar por alto el centro de Seúl en todas las direcciones, ha sido seleccionado como uno de los 500 principales destinos turísticos del mundo por Lonely Planet, la editorial de viajes más grande del mundo.
+La Plaza de la Torre de Seúl, recientemente remodelada y abierta, ofrece varias instalaciones turísticas, atracciones y tiendas de alimentos y bebidas para brindar servicios a los turistas.</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
 	<p id="texttext88">8번</p>
-	<p id="texttext99">9번</p>
+	<p id="texttext99">Teléfono: 02-1661-2000
+
+		Dirección: 240 Olympic-ro, Songpa-gu, Seúl Dirección: 40-1 Jamsil-dong
+
+		Tarifa: Pase gratis (Adulto: 56,000 wones Juventud: 50,000 wones Niño: 46,000 wones)
+        
+		After4 (Adultos: 45,000 wones Adolescentes 40,000 wones, Niños: 35,000 wones)
+
+		Este es un parque temático establecido y operado por Lotte Group para ayudar a las personas a disfrutar del ocio y atraer turistas extranjeros. Lotte World es un parque temático cubierto con el tema de la aventura y el misterio, Lotte World Adventure, Lake Park Magic Island, centro comercial, museo popular, pista de hielo, hotel, grandes almacenes, etc. para resolver el turismo, el ocio, las compras y la cultura en un solo lugar. Es un espacio habitable complejo a gran escala. En Lotte World Adventure, puede disfrutar de instalaciones de embarque de última generación, fantásticos desfiles, varios sistemas de video, espectáculos de láser, actuaciones y comida de todo el mundo 24/7. Lotte World Adventure es el parque temático cubierto más grande del mundo. En el Museo Folklórico, la historia y la cultura popular de 5000 años de Corea se dividen en salas de exposiciones históricas, pueblos modelo, patios de diversiones y calles de autor, lo que hace que la reproducción sea fácil y divertida. Lotte World Garden Stage es el escenario central de las actuaciones de Lotte World, y varios eventos como espectáculos musicales y transmisiones públicas se llevan a cabo en varias temporadas. Lotte World Star Avenue es una calle de composición de estrellas Hallyu y es una instalación de entretenimiento experimental.</p>
 
 
 
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
+	var text = document.querySelector('#texttext');
+	var popimgs = document.getElementById('popimg0');
+	var test11 = document.querySelector('#texttext11')
+	test11.setAttribute('style', 'white-space: pre-line;');
+	test11.textContent;
+	var test22 = document.querySelector('#texttext22');
+	test22.setAttribute('style', 'white-space: pre-line;');
+	test22.textContent;
+	var test33 = document.querySelector('#texttext33');
+	test33.setAttribute('style', 'white-space: pre-line;');
+	test33.textContent;
+	var test44 = document.querySelector('#texttext44');
+	test44.setAttribute('style', 'white-space: pre-line;');
+	test44.textContent;
+	var test55 = document.querySelector('#texttext55');
+	test55.setAttribute('style', 'white-space: pre-line;');
+	test55.textContent;
+	var test66 = document.querySelector('#texttext66');
+	test66.setAttribute('style', 'white-space: pre-line;');
+	test66.textContent;
+	var test77 = document.querySelector('#texttext77');
+	test77.setAttribute('style', 'white-space: pre-line;');
+	test77.textContent;
+	var test88 = document.querySelector('#texttext88');
+	test88.setAttribute('style', 'white-space: pre-line;');
+	test88.textContent;
+	var test99 = document.querySelector('#texttext99');
+	test99.setAttribute('style', 'white-space: pre-line;');
+	test99.textContent;
+
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 			$('#popimg1').attr('src', 'img/night1.PNG');

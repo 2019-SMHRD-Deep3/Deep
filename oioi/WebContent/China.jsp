@@ -81,9 +81,10 @@ img#img {
 #lan {
 	top: 0px;
 	/* left: 10; */
-	min-height: 100%;
-	width: auto;
+	min-height: 8%;
+	width: 100%;
 	height: auto;
+	background-color: rgba(1, 1, 1, 0.6);
 }
 
 #lan td {
@@ -92,7 +93,7 @@ img#img {
 
 #dropdownMenuButton {
 	width: auto;
-	height: 40px;
+	height: 42px;
 	font-size: 15px;
 }
 
@@ -130,13 +131,38 @@ table tbody tr {
 .inTag a {
 	color: white !important;
 }
+p#rate{
+	color: white;
+}
+#headers{
+	display:table;
+	table-layout: fixed;
+	border-spacing: 0px 20px;
+/* 	display:grid;
+	grid-template-rows: repeat(auto-fit,175px);
+	grid-template-columns: repeat(auto-fit,175px);
+	place-items: center center;
+	gap: 0px 10px; */
+}
+.mainimg {
+    width: 150px;
+    height: 150px; 
+    border-radius: 70%;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: rgba(1,1,1,0.6);
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
 </style>
 
 
 </head>
 <body class="is-preload">
 	<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info"); //
+		MemberDTO info = (MemberDTO) session.getAttribute("info"); 
 	%>
 	<!-- Wrapper -->
 
@@ -144,7 +170,6 @@ table tbody tr {
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
-
 		</video>
 
 		<!--         <script>
@@ -152,28 +177,29 @@ table tbody tr {
 			</script> -->
 
 		<!-- Header -->
-
-
-		<table id="lan" style="position: absolute; right: 0px;">
+	<div  id="lan" style="position: absolute; right: 0px;">
+	<table style="width:20% ;position: absolute; right: 0px;" >
+	
 			<%
 				if (info == null) {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login">Login</a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Join">Join </a></td>
 			<%
 				} else {
 			%>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
+			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="LogoutService.do">로그아웃 </a></td>
-			<td class="inTag" style="color: rgba(255, 255, 255, 1.0);"><a
-				href="update.jsp"> 회원정보수정 </a></td>
+			<td class="inTag"><a
+				href="LogoutService.do">Logout </a></td>
+			<td class="inTag"><a
+				href="update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
+
 			<td>
 				<link rel="stylesheet"
 					href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -203,23 +229,27 @@ table tbody tr {
 				</div>
 			</td>
 
-
 		</table>
-		<header id="header">
-			<nav>
-				<ul class="cont">
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#intro">服务专区</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor" href="#work">地标</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="#about">课程清单</a></li>
-					<li><a style="font-size: 20px;" class="linkcolor"
-						href="K-survey.jsp">课程推荐</a></li>
-
-				</ul>
-			</nav>
+	</div>
+		<header>
+			
+				<div id="headers">
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">
+服务</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">
+景点</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">
+排行</a></div>&nbsp;&nbsp;
+					<%if(info==null){%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">做课程</a></div>
+						<%}
+					else{%>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">做课程</a></div>
+					<%}%>	
+				<!--<li><a href="#elements">Elements</a></li>-->
+					
+				</div>
 		</header>
-
 
 
 		<!-- Main -->
@@ -316,38 +346,38 @@ table tbody tr {
 
 			<article id="work">
 				<h1>首尔十大景点</h1>
-				<h2 class="major1" href="#" style="display: inline;">
+				<h3 class="major1" href="#" style="display: inline;">
 					<div id="day" class="a1">每周一次</div>
-				</h2>
-				<h2 class="major2" href="#" style="display: inline;">
+				</h3>
+				<h3 class="major2" href="#" style="display: inline;">
 					<div id="day" class="a2">晚上</div>
-				</h2>
+				</h3>
 
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
-					<button class="ten" id="ko1">景福宫</button>
-					<button class="ten" id="ko2">明洞</button>
-					<button class="ten" id="ko3">仁寺洞</button>
-					<button class="ten" id="ko4">COEX</button>
-					<button class="ten" id="ko5">昌德宫</button>
-					<button class="ten" id="ko6">奉恩寺</button>
-					<button class="ten" id="ko7">63大楼</button>
-					<button class="ten" id="ko8">战争纪念馆</button>
-					<button class="ten" id="ko9">北村韩屋村</button>
-					<button class="ten" id="ko10">韩国国家博物馆</button>
+					<button class="ten" id="ko1">#景福宫</button>
+					<button class="ten" id="ko2">#明洞</button>
+					<button class="ten" id="ko3">#仁寺洞</button>
+					<button class="ten" id="ko4">#COEX</button>
+					<button class="ten" id="ko5">#昌德宫</button>
+					<button class="ten" id="ko6">#奉恩寺</button>
+					<button class="ten" id="ko7">#63大楼</button>
+					<button class="ten" id="ko8">#战争纪念馆</button>
+					<button class="ten" id="ko9">#北村韩屋村</button>
+					<button class="ten" id="ko10">#韩国国家博物馆</button>
 				</div>
 
 				<div id='g'>
 					<span><img id="popimg1" src="img/k1.PNG" alt="" /></span>
-					<button class="next" id="k1">景福宫</button>
-					<button class="next" id="k2">弘大</button>
-					<button class="next" id="k3">中山公园</button>
-					<button class="next" id="k4">首尔N塔</button>
-					<button class="next" id="k5">江南站</button>
-					<button class="next" id="k6">清溪川</button>
-					<button class="next" id="k7">加罗苏吉尔</button>
-					<button class="next" id="k8">汝ou岛汉江公园</button>
-					<button class="next" id="k9">乐天世界</button>
+					<button class="next" id="k1">#景福宫</button>
+					<button class="next" id="k2">#弘大</button>
+					<button class="next" id="k3">#中山公园</button>
+					<button class="next" id="k4">#首尔N塔</button>
+					<button class="next" id="k5">#江南站</button>
+					<button class="next" id="k6">#清溪川</button>
+					<button class="next" id="k7">#加罗苏吉尔</button>
+					<button class="next" id="k8">#汝ou岛汉江公园</button>
+					<button class="next" id="k9">#乐天世界</button>
 
 				</div>
 
@@ -380,10 +410,42 @@ table tbody tr {
 
 			<!-- About -->
 			<article id="about">
-				<h2 class="major">베스트 테마</h2>
+				<h2 class="major">国家排名前5位</h2>
+				<div class = "">
 				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-				<p>하위~</p>
+				<button class = "country" id = "c1">U.S.A</button>
+					<button class = "country" id = "c2">CHINA</button>
+					<button class = "country" id = "c3">JAPAN</button>
+					<button class = "country" id = "c4">FRENCE</button>
+					<button class = "country" id = "c5">GERMANY</button>
+					<button class = "country" id = "c6">U.K</button>
+					<button class = "country" id = "c7">RUSSIA</button>
+					<button class = "country" id = "c8">VIETNAM</button>
+					<button class = "country" id = "c9">HONGKONG</button>
+					<button class = "country" id = "c10">U.A.E</button>
+				</div>
+				
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+					});
+					var btn1 = document.querySelector('.major1');
+
+					btn1.addEventListener('click', function() {
+						$('#g').hide();
+						$('.display').show();
+					});
+
+					var btn2 = document.querySelector('.major2');
+					btn2.addEventListener('click', function() {
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('#g').show(); //클릭 시 두 번째 요소 표시
+					});
+				</script>
+				<p id="rate"></p>
 			</article>
+
 
 			<!-- Contact -->
 			<article id="contact">
@@ -448,264 +510,7 @@ table tbody tr {
 			</article>
 
 			<!-- Elements -->
-			<article id="elements">
-				<h2 class="major">Elements</h2>
-
-				<section>
-					<h3 class="major">Text</h3>
-					<p>
-						This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i>
-						and this is <em>emphasized</em>. This is <sup>superscript</sup>
-						text and this is <sub>subscript</sub> and this is code:
-						<code>for (;;) { ... }</code>
-						. Finally, <a href="#">this is a link</a>.
-					</p>
-					<hr />
-					<h2>Heading Level 2</h2>
-					<h3>Heading Level 3</h3>
-					<h4>Heading Level 4</h4>
-					<h5>Heading Level 5</h5>
-					<h6>Heading Level 6</h6>
-					<hr />
-					<h4>Blockquote</h4>
-					<blockquote>Fringilla nisl. Donec accumsan interdum
-						nisi, quis tincidunt felis sagittis eget tempus euismod.
-						Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
-						adipiscing eu felis iaculis volutpat ac adipiscing accumsan
-						faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum
-						dolor sit amet nullam adipiscing eu felis.</blockquote>
-					<h4>Preformatted</h4>
-					<pre>
-						<code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code>
-					</pre>
-				</section>
-
-				<section>
-					<h3 class="major">Lists</h3>
-
-					<h4>Unordered</h4>
-					<ul>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Alternate</h4>
-					<ul class="alt">
-						<li>Dolor pulvinar etiam.</li>
-						<li>Sagittis adipiscing.</li>
-						<li>Felis enim feugiat.</li>
-					</ul>
-
-					<h4>Ordered</h4>
-					<ol>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis viverra.</li>
-						<li>Felis enim feugiat.</li>
-						<li>Dolor pulvinar etiam.</li>
-						<li>Etiam vel felis lorem.</li>
-						<li>Felis enim et feugiat.</li>
-					</ol>
-					<h4>Icons</h4>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span
-								class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span
-								class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span
-								class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span
-								class="label">Github</span></a></li>
-					</ul>
-
-					<h4>Actions</h4>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions stacked">
-						<li><a href="#" class="button primary">Default</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Table</h3>
-					<h4>Default</h4>
-					<div class="table-wrapper">
-						<table>
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-
-					<h4>Alternate</h4>
-					<div class="table-wrapper">
-						<table class="alt">
-							<thead>
-								<tr>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Item One</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Two</td>
-									<td>Vis ac commodo adipiscing arcu aliquet.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Three</td>
-									<td>Morbi faucibus arcu accumsan lorem.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>Item Four</td>
-									<td>Vitae integer tempus condimentum.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>Item Five</td>
-									<td>Ante turpis integer aliquet porttitor.</td>
-									<td>29.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="2"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-
-				<section>
-					<h3 class="major">Buttons</h3>
-					<ul class="actions">
-						<li><a href="#" class="button primary">Primary</a></li>
-						<li><a href="#" class="button">Default</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button">Default</a></li>
-						<li><a href="#" class="button small">Small</a></li>
-					</ul>
-					<ul class="actions">
-						<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-						<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-					</ul>
-					<ul class="actions">
-						<li><span class="button primary disabled">Disabled</span></li>
-						<li><span class="button disabled">Disabled</span></li>
-					</ul>
-				</section>
-
-				<section>
-					<h3 class="major">Form</h3>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="demo-name">Name</label> <input type="text"
-									name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-							</div>
-							<div class="field half">
-								<label for="demo-email">Email</label> <input type="email"
-									name="demo-email" id="demo-email" value=""
-									placeholder="jane@untitled.tld" />
-							</div>
-							<div class="field">
-								<label for="demo-category">Category</label> <select
-									name="demo-category" id="demo-category">
-									<option value="">-</option>
-									<option value="1">Manufacturing</option>
-									<option value="1">Shipping</option>
-									<option value="1">Administration</option>
-									<option value="1">Human Resources</option>
-								</select>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-low" name="demo-priority"
-									checked> <label for="demo-priority-low">Low</label>
-							</div>
-							<div class="field half">
-								<input type="radio" id="demo-priority-high" name="demo-priority">
-								<label for="demo-priority-high">High</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-copy" name="demo-copy">
-								<label for="demo-copy">Email me a copy</label>
-							</div>
-							<div class="field half">
-								<input type="checkbox" id="demo-human" name="demo-human" checked>
-								<label for="demo-human">Not a robot</label>
-							</div>
-							<div class="field">
-								<label for="demo-message">Message</label>
-								<textarea name="demo-message" id="demo-message"
-									placeholder="Enter your message" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message"
-								class="primary" /></li>
-							<li><input type="reset" value="Reset" /></li>
-						</ul>
-					</form>
-				</section>
-
-			</article>
+			
 
 		</div>
 
@@ -717,6 +522,157 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 		</footer>
 
 	</div>
+
+<p id = "rate1">명동12431</p>
+	<p id = "rate1">1.明洞/南大门/北昌
+					2.钟路/清溪
+					3.江南站
+					4.梨泰院
+					5.东大门时尚小镇
+	</p>
+	<p id = "rate2">1.明洞/南大门/北昌
+					2.东大门时尚小镇
+					3.新村/弘大
+					4.蚕室（乐天世界）
+					5.钟路/清溪
+	</p>
+	<p id = "rate3">1.明洞/南大门/北昌
+					2.东大门时尚小镇
+					3.新村/弘大
+					4.钟路/清溪
+					5.江南站
+	</p>
+	<p id = "rate4">1.明洞/南大门/北昌
+					2.钟路/总计
+					3.江南站
+					4.梨泰院
+					5.新村/弘大
+	</p>
+	<p id = "rate5">1.明洞/南大门/北昌
+					2.钟路/总计
+					3.江南站
+					4.新村/弘大
+					5.东大门时尚小镇
+	</p>
+	<p id = "rate6">1.明洞/南大门/北昌
+					2.钟路/总计
+					3.江南站
+					4.东大门时尚小镇
+					5.新村/弘大
+	</p>
+	<p id = "rate7">1.明洞/南大门/北昌
+					2.东大门时尚小镇
+					3.钟路/清溪
+					4.江南站
+					5.梨泰院
+	</p>
+	<p id = "rate8">1.明洞/南大门/北昌
+					2.东大门时尚小镇
+					3.钟路/清溪
+					4.江南站
+					5.梨泰院
+	</p>
+	<p id = "rate9">1.明洞/南大门/北昌
+					2.东大门时尚小镇
+					3.新村/弘大
+					4，钟路/清溪
+					5.江南站
+	</p>
+					
+	<p id = "rate10">1.明洞/南大门/北昌
+					2.东大门时尚小镇
+					3.钟路/清溪
+					4.江南站
+					5.梨泰院
+	</p>
+	<script type="text/javascript">
+		
+		var text = document.querySelector('#rate');
+		var popimgs = document.getElementById('popimg0');
+		var rate1 = document.querySelector('#rate1')
+		rate1.setAttribute('style', 'white-space: pre-line;');
+		rate1.textContent;
+		var rate2 = document.querySelector('#rate2');
+		rate2.setAttribute('style', 'white-space: pre-line;');
+		rate2.textContent;
+		var rate3 = document.querySelector('#rate3');
+		rate3.setAttribute('style', 'white-space: pre-line;');
+		rate3.textContent;
+		var rate4 = document.querySelector('#rate4');
+		rate4.setAttribute('style', 'white-space: pre-line;');
+		rate4.textContent;
+		var rate5 = document.querySelector('#rate5');
+		rate5.setAttribute('style', 'white-space: pre-line;');
+		rate5.textContent;
+		var rate6 = document.querySelector('#rate6');
+		rate6.setAttribute('style', 'white-space: pre-line;');
+		rate6.textContent;
+		var rate7 = document.querySelector('#rate7');
+		rate7.setAttribute('style', 'white-space: pre-line;');
+		rate7.textContent;
+		var rate8 = document.querySelector('#rate8');
+		rate8.setAttribute('style', 'white-space: pre-line;');
+		rate8.textContent;
+		var rate9 = document.querySelector('#rate9');
+		rate9.setAttribute('style', 'white-space: pre-line;');
+		rate9.textContent;
+		var rate10 = document.querySelector('#rate10');
+		rate10.setAttribute('style', 'white-space: pre-line;');
+		rate10.textContent;
+		// 버튼 1
+		$('#c1:button').on('click', function() {
+
+			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#rate').html(rate1);
+		});
+
+		// 버튼2
+		$('#c2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#rate').html(rate2);
+		});
+		// 버튼3
+		$('#c3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#rate').html(rate3);
+		});
+		// 버튼4
+		$('#c4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#rate').html(rate4);
+		});
+		// 버튼5
+		$('#c5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#rate').html(rate5);
+		});
+		// 버튼6
+		$('#c6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#rate').html(rate6);
+		});
+		// 버튼7
+		$('#c7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#rate').html(rate7);
+		});
+		// 버튼8
+		$('#c8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#rate').html(rate8);
+		});
+		// 버튼9
+		$('#c9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#rate').html(rate9);
+		});
+		// 버튼10
+		$('#c10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#rate').html(rate10);
+		});
+	</script>
+
 
 	<p id="texttext1">电话：02-3700-3900
 
@@ -932,8 +888,22 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
         65岁老年人，外国人3,000韩元
                             韩服佩戴者：免费</p>
 	<p id="texttext22">2번</p>
-	<p id="texttext33">3번</p>
-	<p id="texttext44">4번</p>
+	<p id="texttext33">地址：首尔市钟路区中山街三成洞2-10
+
+通过恢复中山之一的自然环境和历史文化环境，构成首尔首都的内山山之一（北岳山，南山，仁王山和那山），以及主山北岳山的左蓝龙旨在为首尔市民提供宜人的公园景观，并通过自然探索为历史文化教育提供场所。
+总面积为6,145坪，始建于1999年12月30日，并于2002年7月完成。主要设施有：①展览和管理室，售货亭和洗手间，比堂，六角亭，长亭，5个建筑设施②体育设施，包括12个羽毛球场和1个篮球场③10个休息区和117把椅子便利设施包括④中央广场，活动广场和包括3个观察广场的广场设施⑤其他信息委员会和28个设施。此外，总共种植了包括松树在内的40种8670棵树木，以绿化公园。</p>
+	<p id="texttext44">
+地址：首尔市龙山区南山公园街103号首尔塔
+
+营业时间：每天11：00-20：00
+
+费用：观景台（成人）11,000韩元观景台（儿童）9000韩元
+
+南山首尔塔，第一个旅游胜地
+南山首尔塔，首尔首个旅游胜地，每年有1200万人次访问国内外游客
+近来，随着韩流浪潮的名称增加以及各种娱乐和戏剧的名称增加，游客人数也增加了。
+由于它位于首尔市中心，地理位置优越，可以全方位俯瞰首尔市中心，因此，它已被全球最大的旅游出版商孤独星球（Lonely Planet）选为世界500强旅游胜地之一。
+首尔塔广场最近进行了改建和开业，提供各种旅游设施，景点以及餐饮店，为游客提供服务。</p>
 	<p id="texttext55">5번</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
@@ -944,17 +914,36 @@ print 'It took ' + i + ' iterations to sort the deck.';</code>
 
 	<div id="bg"></div>
 	<script type="text/javascript">
-		var text = document.querySelector('#texttext');
-		var popimgs = document.getElementById('popimg0');
-		var test11 = document.querySelector('#texttext11').textContent;
-		var test22 = document.querySelector('#texttext22').textContent;
-		var test33 = document.querySelector('#texttext33').textContent;
-		var test44 = document.querySelector('#texttext44').textContent;
-		var test55 = document.querySelector('#texttext55').textContent;
-		var test66 = document.querySelector('#texttext66').textContent;
-		var test77 = document.querySelector('#texttext77').textContent;
-		var test88 = document.querySelector('#texttext88').textContent;
-		var test99 = document.querySelector('#texttext99').textContent;
+	var text = document.querySelector('#texttext');
+	var popimgs = document.getElementById('popimg0');
+	var test11 = document.querySelector('#texttext11')
+	test11.setAttribute('style', 'white-space: pre-line;');
+	test11.textContent;
+	var test22 = document.querySelector('#texttext22');
+	test22.setAttribute('style', 'white-space: pre-line;');
+	test22.textContent;
+	var test33 = document.querySelector('#texttext33');
+	test33.setAttribute('style', 'white-space: pre-line;');
+	test33.textContent;
+	var test44 = document.querySelector('#texttext44');
+	test44.setAttribute('style', 'white-space: pre-line;');
+	test44.textContent;
+	var test55 = document.querySelector('#texttext55');
+	test55.setAttribute('style', 'white-space: pre-line;');
+	test55.textContent;
+	var test66 = document.querySelector('#texttext66');
+	test66.setAttribute('style', 'white-space: pre-line;');
+	test66.textContent;
+	var test77 = document.querySelector('#texttext77');
+	test77.setAttribute('style', 'white-space: pre-line;');
+	test77.textContent;
+	var test88 = document.querySelector('#texttext88');
+	test88.setAttribute('style', 'white-space: pre-line;');
+	test88.textContent;
+	var test99 = document.querySelector('#texttext99');
+	test99.setAttribute('style', 'white-space: pre-line;');
+	test99.textContent;
+
 		// 버튼 1
 		$('#k1:button').on('click', function() {
 			$('#popimg1').attr('src', 'img/night1.PNG');
