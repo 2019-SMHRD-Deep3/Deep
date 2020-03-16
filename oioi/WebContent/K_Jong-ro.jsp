@@ -72,174 +72,174 @@ h1{
 			    // 추천 코스에 대한 설명문 
 	  	    	String content_1 = "";  String content_2 = "";  String content_3 = "";
 			   
-			   if(act.equals("고궁,역사유적지방문")){
-				   url_1 = "background-image: url('img/course/MD_a1.jpg');";
-				   url_2 = "background-image: url('img/course/MD_a2.jpg');";
-				   url_3 = "background-image: url('img/course/MD_a3.jpg');";
+			   if(act.equals("활동성향_고궁,역사유적지방문")|| act.equals("활동성향_전통문화체험")){
+				   url_1 = "background-image: url('img/course/jr_a1.JPG');";
+				   url_2 = "background-image: url('img/course/jr_a2.JPG');";
+				   url_3 = "background-image: url('img/course/jr_a3.JPG');";
 				   
-				   head_1 = "명동 성당";
-				   head_2 = "남대문(숭례문)";
-				   head_3 = "북촌 한옥마을";
+				   head_1 = "창덕궁";
+				   head_2 = "경복궁";
+				   head_3 = "인사동거리";
 				   
-				   content_1 = "우리나라 최초의 본당이며 한국 천주교회의 상징이다." +"<br>" + 
-						      "무지개 형상의 궁륭 천장으로 되어 있고, "+ "<br>" +" 외부는 고딕장식을 통해 웅장함을 드러내고 있다." + "<br>" + 
-				    		  "빼놓지 말고 들러 봐야 할 곳은 제단 아래쪽에 있는 지하성당으로" +"<br>" + "19세기 천주교 박해로 희생당한 성인 유해 5위와  "+ "<br>" +"일반 순교자 유해 4위를 봉안하고 있다." ;
-				   content_2 = "조선시대 건국과 함께 수도를 서울로 천도하면서 "+ "<br>" +"건립된 남문으로 오래된 한국의 건축물." + "<br>" + 
-						 	  "한강으로부터 도성을 최단거리로 이어주는 대문으로  "+ "<br>" +"사람과 물자의 통행이 가장 많은 성문이었다."+ "<br>" + 
-						 	  "1899년 전차가 개통되자 더이상 성문의 구실을 못하였고  "+ "<br>" +"현재 숭례문 구간에는 일부 성벽만 남아있다.";
-				   content_3 = "서울의 옛 흔적."  + "<br>" +
-						   		"한국의 전통가옥(한옥)을 볼 수 있는 곳으로 일부 주택은 "+ "<br>" +" 숙박객을 위한 한옥 스테이, 전통 찻집으로 활용되고 있다." + "<br>" +
-						   		"걸어서 둘러보는 데 약 3시간 소요된다." ;
+				   content_1 = "창덕궁은 대한민국 서울특별시에 있는 조선 시대 궁궐로 동쪽으로 창경궁과 맞닿아 있다."+"<br>"+
+							   "경복궁의 동쪽에 있어서 조선 시대에는 창경궁과 더불어 동궐이라 불렀다." ;
+				   content_2 = "도성의 북쪽에 있다고 하여 북궐(北闕)이라고도 불리었다. " +"<br>" + 
+							   "조선왕조의 건립에 따라 창건되어 초기에 정궁으로 사용되었으나 임진왜란 때 전소된 후 " +"<br>" + 
+							   "오랫동안 폐허로 남아 있다가 조선 말기 고종 때 중건되어 잠시 궁궐로 이용되었다.";
+				   content_3 = "세상이 급변하는 와중에도 한국 고유의 멋을 간직하고 계승하려는 거리가 있다. " +"<br>" + 
+							   "한국의 많은 예술품을 볼 수 있고 전통차는 물론 사찰 음식까지, " +"<br>" + 
+							   "'한국' 하면 떠오르는 많은 것들이 인사동 거리에 있다. " +"<br>" + 
+							   "한국에서 관광객이 가장 많이 몰리는 곳 중 하나이다. " ;
 					
-				}else if (act.equals("공연,민속,행사,축제 관람및참가")){
+				}else if (act.equals("활동성향_공연,민속,행사,축제 관람및참가")|| act.equals("활동성향_박물관,전시관방문")){
 					
-					url_1 = "background-image: url('img/course/MD_b1.jpg');";
-					url_2 = "background-image: url('img/course/MD_b2.jpg');";
-					url_3 = "background-image: url('img/course/MD_b3.jpg');";
+					url_1 = "background-image: url('img/course/jr_b1.JPG');";
+					url_2 = "background-image: url('img/course/jr_b2.JPG');";
+					url_3 = "background-image: url('img/course/jr_b3.JPG');";
 					
-					head_1 = "명동예술극장";
-					head_2 = "난타공연";
-					head_3 = "명동 버스킹";
+					head_1 = "광화문 아트홀";
+					head_2 = "세종 충무공이야기";
+					head_3 = "공평도시 유적전시관";
 					   
-					content_1 = "을지로입구역과 명동역 사이에 있는 명동예술극장은 지하 1층, 지상 5층 규모의 중극장이다." +"<br>" + 
-								"정통연극, 실험극, 무언 퍼포먼스, 뮤지컬 등을 비롯해 연극제, 공연예술제 등의 특별한 행사도 진행하고 있다." +"<br>" + 
-								"객석과 무대가 가까워 보다 생동감 넘치는 공연을 감상할 수 있다.";
-					content_2 = "난타는 한국의 전통 가락인 사물놀이 리듬을 바탕으로 하여 주방에서 일어나는 일들을 코믹하게 드라마화한 비언어극이다." +"<br>" + 
-								"연간 38만명의 외국 관광객이 난타공연장을 찾는다. " +"<br>" + 
-								"주방의 모든 것을 활용한 타악 연주 사이사이 한국의 전통 춤과 관객 참여가 어우러져 흥겨운 축제 한 마당이 벌어진다." ;
-					content_3 = "명동 밀리오레 앞에서 다양한 공연이 열리기도 한다."+ "<br>" +
-								"많은 인기 아이돌그룹이나 연예인들이 팬들과 소통하는 공간이다."+ "<br>" +
-								"가까이서 스타를 볼 수 있는 기회를 잡을 수 있다." ;
+					content_1 = "광화문 아트홀은 종로구 시설관리공단 종로문화체육센터 내부에 자리잡고 있다."+"<br>"+
+								"야외정원, 레스토랑, 문화교실, 수영장, 핼스장, 스포츠클라이밍장 등 종로문화체육센터 내에 있는 "+"<br>"+
+								"다양한 부대시설을 이용할 수 있어 더욱 편리하다.";
+					content_2 = "세종 이야기·충무공 이야기는 세종문화회관 지하 2층에 위치한 세종대왕과 이순신 장군에 관련한전시회이다. "+"<br>"+
+								"전시를 비롯해 유치원생부터 초등학생까지 어린이의 나이별로 제작된 한복을 입고 "+"<br>"+
+								"전통문화를 체험할 수 있는 프로그램도 제공하고 있다. " ;
+					content_3 = "공평도시유적전시관은 공평1·2·4지구 도심 재개발 과정에서 출토된 조선시대 16세기 건물지와 길을 "+"<br>"+
+								"그대로 보존하여 전시한 도시박물관이다.  "+"<br>"+
+								"공평도시유적전시관에서 조선시대 한양 사람들의 생활과 삶의 모습을 살펴볼 수 있다. " ;
 					
-				}else if (act.equals("놀이공원,테마파크")){
+				}else if (act.equals("활동성향_놀이공원,테마파크")){
 					
-					url_1 = "background-image: url('img/course/MD_c1.jpg');";
-					url_2 = "background-image: url('img/course/MD_c2.jpg');";
-					url_3 = "background-image: url('img/course/MD_c3.jpg');";
+					url_1 = "background-image: url('img/course/jr_c1.JPG');";
+					url_2 = "background-image: url('img/course/jr_c2.JPG');";
+					url_3 = "background-image: url('img/course/jr_c3.jpg');";
 					
-					head_1 = "라인프렌즈샵";
-					head_2 = "헬로키티 카페";
-					head_3 = "허니버터 아몬드";
+					head_1 = "런닝맨 체험관";
+					head_2 = "테지움 테디베어 테마파크";
+					head_3 = "쌈지길 체험공방";
 					   
-					content_1 = "명동 사보이호텔 바로 앞에 있으며, 라인프렌즈 플레그십 스토어." +"<br>" + 
-								"커다란 브라운 인형이 문앞에 있어서 멀리서도 쉽게 찾을 수 있다." +"<br>" + 
-								"다양한 캐릭터인형, 학용품과 사무용품, 액세서리 등을 구매하면서 둘러볼 수 있는 곳이다.";
-					content_2 = "헬로키티를 좋아하는 사람들이 친구와 방문하면 배경과 조명이 예뻐서 포토존에서 추억을 쌓을 수 있다." +"<br>" + 
-								"음료를 주문하면 예쁜 헬로키티 아트라떼를 구경할 수 있고, 선물용 각종 팬시용품을 구매할 수 있는 곳이다." +"<br>" + 
-								"쇼핑하다 쉴 곳이 필요할 때 들러볼만 하다." ;
-					content_3 = "허니버터아몬드와 다양한 맛의 아몬드를 사는 곳으로 요즘 핫한 인기코스" +"<br>" + 
-								"명동역 6-7번 출구 하이헤리엇 지하에 위치하고 있으며, 다양한 아몬드를 직접 종류별로 시식도 가능하다." +"<br>" + 
-								"포토존까지 준비되어 있어 인생샷을 건질 수 있다." ;
+					content_1 = "TV 프로그램 속 주인공이 되는 신개념 콘텐츠!!"+"<br>"+
+								"직접 런닝맨이 되어 숨겨진 R 포인트를 찾고, 획득한 포인트에 따라 다양한 런닝맨 배지와 인증서를 받으세요.";
+					content_2 = "서울 종로구에 위치한 테지움 서울은 테디베어 테마파크이다. "+"<br>"+
+								"테디베어를 직접 만지고 안아보는 오픈형 이색체험전시 공간으로 테디베어의 어원과 유래, 역사를 알 수 있다."+"<br>"+
+								"서울 테마 존에서는 옛 시절 서울부터 현재 서울까지를 테디베어로 소개하고 있다." ;
+					content_3 = "쌈지길 체험공방에서는 향연·김유국 해학 목공예학교·세라위크·글라스본 등의 체험프로그램을 진행한다. "+"<br>"+
+								"향연에서는 향초·비누·화장품 등을 만들 수 있다. "+"<br>"+
+								"김유국 해학 목공예학교에서는 솟대를, 세라위크에서는 핸드페인팅 도자기를, "+"<br>"+
+								"글라스본에서는 유리병공예를 체험할 수 있다." ;
 					
 					
-				}else if (act.equals("드라마,영화찰영지방문")){
+				}else if (act.equals("활동성향_드라마,영화찰영지방문")){
 					
-					url_1 = "background-image: url('img/course/MD_d1.jpg');";
-					url_2 = "background-image: url('img/course/MD_d2.jpg');";
-					url_3 = "background-image: url('img/course/MD_d3.jpg');";
+					url_1 = "background-image: url('img/course/jr_d1.JPG');";
+					url_2 = "background-image: url('img/course/jr_d2.JPG');";
+					url_3 = "background-image: url('img/course/jr_d3.JPG');";
 					
-					head_1 = "시카고 타자기";
-					head_2 = "명동골목 (검은사제들)";
-					head_3 = "북촌 한옥마을 (사랑의 온도)";
+					head_1 = "돌담길/ 중앙고 (도깨비)";
+					head_2 = "마이 포에트리 (여우각시별)";
+					head_3 = "서울 성곽길(옥탑방 왕세자)";
 					   
-					content_1 = "1930년대를 치열하게 살았던 청춘 문인들의 이야기를 그린 드라마의 배경으로" +"<br>" +  
-								"1930년대의 서울인 경성의 모습을 그대로 느낄 수 있다." +"<br>" + 
-								"근현대적인 서울을 느껴보고 싶을 때 방문하면 좋다.";
-					content_2 = "하이 앵글로 촬영된 검은 사제들 명동 번화가 촬영지는 올리브영 명동중앙점 맞은편 골목으로" +"<br>" + 
-								"명동성당에서 도보 6분거리의 여행코스이다." +"<br>" + 
-								"영화는 한국영화에서 보기드문 주제인 엑소시즘물로 주 배경이 명동이다. " +"<br>" + 
-								"영화 장면과 실제 방문지의 느낌을 비교해 보는 재미가 있을 것이다." ;
-					content_3 = "북촌 한옥마을을 배경으로 한 한국 드라마." +"<br>" + 
-								"계동길을 배경으로 등장하고, 한국의 아름다운 전통가옥 사이를 걸으면서 구경할 수 있다." ;
+					content_1 = "돌담길 : 드라마 도깨비 촬영지 덕성여고와 풍문여고 사이 골목에서 지은탁(김고은)이 출발하여 덕성여고에서 풍문여고 가는 "+"<br>"+
+								"방향의 돌담길은 사진 촬영하기 좋은 가볼만한 곳이다."+"<br>"+
+								"중앙고: 지은탁(김고은)이 다니는 고등학교 촬영지이다.";
+					content_2 = " 여우각시별은 비밀을 가진 의문의 신입과 애틋한 사연을 가진 사고뭉치 1년차가 인천공항 내 사람들과 부딪히면서"+"<br>"+
+								"서로의 결핍과 상처를 보듬는 휴먼 멜로 드라마이다."+"<br>"+
+								"종로구 익선동 한옥거리에 마이 포에트리가 바로 이 드라마의 촬영지이다. " ;
+					content_3 = "옥탑방 왕세자는300년 세월을 거슬러 오르며 펼쳐지는 타임 슬립 드라마다."+"<br>"+
+								"등장인물들이 걷던 길, 뛰어오르던 계단길, 아름드리 단풍나무 아래로 펼쳐지는 서울의 풍광 등 주변에는 "+"<br>"+
+								"드라마의 흔적이 곳곳에 남아 있다."+"<br>"+
+								"또 역사와 문화가 살아 숨 쉬는 교남동 골목길과 600여 년 한양의 역사가 켜켜이 쌓인 서울성곽길이 "+"<br>"+
+								"드라마 촬영지를 곱게 품고 있다." ;
 					
 					
-				}else if (act.equals("박물관,전시관방문")){
+				}else if (act.equals("활동성향_뷰티관광")|| act.equals("활동성향_쇼핑")){
 					
-					url_1 = "background-image: url('img/course/MD_e1.jpg');";
-					url_2 = "background-image: url('img/course/MD_e2.jpg');";
-					url_3 = "background-image: url('img/course/MD_e3.jpg');";
+					url_1 = "background-image: url('img/course/jr_f1.JPG');";
+					url_2 = "background-image: url('img/course/jr_f2.JPG');";
+					url_3 = "background-image: url('img/course/jr_f3.JPG');";
 					
-					head_1 = "3D 블랙아트 박물관";
-					head_2 = "서울 역사 박물관";
-					head_3 = "재미로 거리";
+					head_1 = "인사동거리";
+					head_2 = "동화면세점";
+					head_3 = "종로 귀금속 거리";
 					   
-					content_1 = "아이들부터 성인까지 재미난 3D 착시를 체험하며 입체그림 속에 들어가 사진촬영을 할 수 있는 착시체험 테마파크." +"<br>" + 
-								"5분 마다 변하는 3D 아트는 관람자의 환호성이 절로 나오는 곳이다." +"<br>" +  
-								"신비한 빛의 착시 기법으로 전세계에 하나뿐인 3D BLACKART MUSEUM.";
-					content_2 = "선사시대부터 현대까지 서울특별시의 역사와 문화를 정리하여 보여주는 도시역사 박물관." +"<br>" + 
-								"조선 중기 이후부터 20세기말까지의 자료와 전시물로 구성되어 있다." +"<br>" + 
-								"박물관 간행물을 비롯하여 다양하고 특색있는 문화상품 판매하고 있다." ;
-					content_3 = "남산공원 방향으로 숭의여대와 리라초등학교로 향하는 고바위 언덕길 만화예술거리." +"<br>" + 
-								"언덕길을 오를 때 애니메이션 캐릭터가 전시되어 있어서 눈요기를 하면서 오를 수 있다." +"<br>" + 
-								"서울 애니메이션 센터가 최종목적지이다." ;
+					content_1 = " 세상이 급변하는 와중에도 한국 고유의 멋을 간직하고 계승하려는 거리가 있다."+"<br>"+
+								"한국의 많은 예술품을 볼 수 있고 전통차는 물론 사찰 음식까지,"+"<br>"+
+								"'한국' 하면 떠오르는 많은 것들이 인사동 거리에 있다."+"<br>"+
+								"한국에서 관광객이 가장 많이 몰리는 곳 중 하나이다.";
+					content_2 = "종로 광화문빌딩 지하 1층에 위치한 동화 면세점은 1973년 문을 연 서울에서 가장 오래된 면세점이다."+"<br>"+
+								"에르메스, 루이뷔통, 구찌, 불가리 등 250여 개의 세계 최고 유명 브랜드가 입점되어 있으며 30만 개가 넘는  "+"<br>"+
+								"다양한 수입상품이 전시, 판매되고 있다. " ;
+					content_3 = "종로 귀금속 거리는 40년 전통의 귀금속 상가다. "+"<br>"+
+								"지금도 전국 주얼리 물동량의 70%를 차지할 만큼 활발한 거래가 이루어지고 있다. "+"<br>"+
+								"서비스나 인테리어 또한 업그레이드되어 혼수품만 아니라 단순 쇼핑을 즐기는 젊은층의 발길도 잦다."+"<br>"+
+								"또한 외국인들의 쇼핑 코스로도 인기를 끌고 있다." ;
 					
 					
-				}else if (act.equals("뷰티관광")){
+				}else if (act.equals("활동성향_스포츠활동")|| act.equals("활동성향_레포츠활동")){
 					
-					url_1 = "background-image: url('img/course/MD_f1.jpg');";
-					url_2 = "background-image: url('img/course/MD_f2.jpg');";
-					url_3 = "background-image: url('img/course/MD_f3.jpg');";
+					url_1 = "background-image: url('img/course/jr_h1.JPG');";
+					url_2 = "background-image: url('img/course/jr_h2.JPG');";
+					url_3 = "background-image: url('img/course/jr_h3.JPG');";
 					
-					head_1 = "스타일난다 핑크호텔";
-					head_2 = "";
-					head_3 = "시코르";
+					head_1 = "롤파크(LoL Park)";
+					head_2 = "TCC 더코아클라이밍";
+					head_3 = "런닝맨 체험관";
 					   
-					content_1 = "호텔을 모티브로 한 플래그십 스토어. " +"<br>" + 
-								"빌딩전체가 핑크색으로 꾸며져 있으며, 객실 룸, 스파 등 호텔을 연상케하는 테마로 구성 ";
-					content_2 = "1, 2층은 스타일난다의 화장품 브랜드인 3CE 코스메틱, " +"<br>" + 
-								"3층은 스타일난다의 자체 제작 상품, " +"<br>" + 
-								"4층과 5층에는 온라인 쇼핑몰 의류 상품으로 채웠다. " +"<br>" + 
-								"5층에는 스타일난다가 직접 개발한 음료를 판매하는 카페도 마련돼 있다." ;
-					content_3 = "꿈의 화장대를 연상시키는 메이크업 셀프 바 ‘BEAUTY SPACE’" +"<br>" + 
-								"여기에서는 직접 고른 메이크업 브랜드들과 뷰티 디바이스, 뷰티 툴 등을" +"<br>" + 
-								"스텝들의 도움 없이도 자유롭게 경험하고 테스팅 할 수 있다." ;
+					content_1 = "서울 중심부 종로(종각역)에 ‘리그 오브 레전드(롤)’ 경기장이 있다."+"<br>"+
+								"‘롤 파크(LoL PARK)’로 명명된 이번 e스포츠 전용 경기장은 라이엇 게임즈의 대표 게임인 ‘리그 오브 레전드’ 경기를 "+"<br>"+
+								"더욱 쾌적한 환경에서 관람할 수 있는 특별한 공간으로 구성된 것이 특징이다.";
+					content_2 = "스포츠 클라이밍은 근력운동은 물론 다이어트에도 매우 효과적이다. "+"<br>"+
+								"클라이밍은 무엇보다도 팔의 힘과 악력이 가장 중요하며, 일단 벽에 붙으면 다음 스텝을 고민하고 몸의 움직임에"+"<br>"+
+								"집중하기 때문에 다른 생각 없이 현재엘 몰입할 수 있는 운동이다. " ;
+					content_3 = "TV 프로그램 속 주인공이 되는 신개념 콘텐츠!!"+"<br>"+
+								"직접 런닝맨이 되어 숨겨진 R 포인트를 찾고, 획득한 포인트에 따라 다양한 런닝맨 배지와 인증서를 받으세요." ;	
+				
+				
+				}else if (act.equals("활동성향_식도락관광")){
 					
+					url_1 = "background-image: url('img/course/jr_i1.JPG');";
+					url_2 = "background-image: url('img/course/jr_i2.JPG');";
+					url_3 = "background-image: url('img/course/jr_i3.JPG');";
 					
-				}else if (act.equals("쇼핑")){
-					
-					url_1 = "background-image: url('img/course/MD_g1.jpg');";
-					url_2 = "background-image: url('img/course/MD_g2.jpg');";
-					url_3 = "background-image: url('img/course/MD_g3.jpg');";
-					
-					head_1 = "명동 쇼핑 거리";
-					head_2 = "";
-					head_3 = "에이랜드";
+					head_1 = "효자동목고기";
+					head_2 = "뚝배기집";
+					head_3 = "순희네 빈대떡";
 					   
-					content_1 = "고급브랜드부터 SPA브랜드, 보세매장까지 다양하게 쇼핑을 즐길 수 있다." +"<br>" + 
-								"가장 인기 있는 쇼핑 매장은 단연 뷰티 매장. 명동 쇼핑거리에는 많은 뷰티브랜드 매장들이 있다. ";
-					content_2 = "신발, 옷에서 액세서리까지 대중적인 가격대의 매장들이 밀집되어 있어 쇼핑을 즐기기에 부담이 없다. " +"<br>" + 
-								"길을 따라 들어선 노점들도 명동의 쇼핑을 한층 더 재미나게 만드는 요소다." ;
-					content_3 = "옷과 다양한 소품들하고 가방 화장품 등등 판매하는 곳." +"<br>" + 
-								"종류가 다양해서 구경하기 좋고, 2층까지는 새옷, 3,4층은 빈티지한 느낌의 쇼핑공간이다." ;
+					content_1 = "경북궁역 근처에 목살과 가브리살이 인기가 많은 돼지 고깃집"+"<br>"+
+								"목고기와 오겹살, 가브리살을 위주로 파는 동그란 탁자에 둘러앉아 식사하기에 좋다.";
+					content_2 = "종로3가, 종각 주변의 뚝배기집은 굉장히 유명한 식당이다."+"<br>"+
+								"뚝배기집에서 가장 대표적인 메뉴는 우렁된장입니다."+"<br>"+
+								"이 식당은 외국인 관광객들에게도 굉장히 유명한 식당이어서, 일본어, 영어로 식당이름이 적혀있다." ;
+					content_3 = "빈대떡은 한국의 부침요리이다."+"<br>"+
+								"기본적으로 녹두를 간 것을 베이스로, 나물이나 고기 등을 섞어서 기름에 지져 만드는 일종의 녹두전병에 속한다." ;	
+				
 					
+				}else if (act.equals("활동성향_자연경관감상")|| act.equals("활동성향_휴양,휴식")){
 					
-				}else if (act.equals("스포츠활동")|| act.equals("레포츠활동")){
+					url_1 = "background-image: url('img/course/jr_j1.jpg');";
+					url_2 = "background-image: url('img/course/jr_j2.JPG');";
+					url_3 = "background-image: url('img/course/jr_j3.JPG');";
 					
-					url_1 = "background-image: url('img/course/MD_h1.jpg');";
-					url_2 = "background-image: url('img/course/MD_h2.jpg');";
-					url_3 = "background-image: url('img/course/MD_h3.jpg');";
-					
-					head_1 = "코끼리 볼링장";
-					head_2 = "스마일 멀티방";
-					head_3 = "레전드 히어로즈";
+					head_1 = "청계천";
+					head_2 = "북촌 한옥마을";
+					head_3 = "무계원";
 					   
-					content_1 = "쉼터와 스낵바가 있으며, 방탄소년단 달려라 방탄 촬영장소로 유명하다.";
-					content_2 = "다양한 테마로 편하게 룸에서 지인과 함께 놀 수 있는 곳." +"<br>" +
-								"스낵바 이용가능하고, 영화감상이나 의상 소품과 각종 보드게임으로 시간을 보낼 수 있다." +"<br>" +
-								"각종 이벤트 아이템도 같이 있어서 추억을 남기기에 좋다." ;
-					content_3 = "다양한 테마로 편하게 룸에서 지인과 함께 놀 수 있는 곳."+ "<br>" +
-								"스낵바 이용가능하고, 영화감상이나 의상 소품과 각종 보드게임으로 시간을 보낼 수 있다." +"<br>" +
-								"각종 이벤트 아이템도 같이 있어서 추억을 남기기에 좋다." ;
-					
-					
+					content_1 = "서울의 한복판인 종로구와 중구와의 경계를 흐르는 하천."+"<br>"+
+								"서울 분지의 모든 물이 여기에 모여 중랑천(中浪川)과 합쳐져  한강으로 빠진다."+"<br>"+
+								"분수 야경이 멋진 곳으로, 산책하기 좋은 곳이다.";
+					content_2 = "서울의 옛 흔적."+"<br>"+
+								"한국의 전통가옥(한옥)을 볼 수 있는 곳으로 일부 주택은 숙박객을 위한 한옥 스테이, 전통 찻집으로 활용되고 있다."+"<br>"+
+								"걸어서 둘러보는 데 약 3시간 소요됨." ;
+					content_3 = "무계원은 종로구 부암동에 개원한 도심 속 전통문화 공간이다. "+"<br>"+
+								"고즈넉한 풍광 속에서 한옥을 체험하며, 전통과 문화를 통해 한국의 아름다움을 느낄 수 있는 특별한 공간이다. "+"<br>"+
+								"무계원의 안채와 사랑채, 행랑채는 세미나, 강연, 회의실 등으로 사용 가능하며, 안채 마루, 안마당과 뒷마당 등 "+"<br>"+
+								"부대시설에서는 다양한 전통문화 행사도 진행한다." ;	
 				}
 				
-				
-				
-				
-				
-				
-				
+
 				else {
 					out.print("실패");
 					
@@ -316,8 +316,8 @@ h1{
 						<!-- Gallery -->
 							<div class="gallery style2 medium lightbox onscroll-fade-in" id = "gallery">
 							<article>
-									<a href="img/gallery/fulls/MD_a1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_a1.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/jr_a1.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_a1.JPG" height="450px" /></a>
 									<div class="caption">
 										<h3>명동성당</h3>
 										<p>우리나라 최초의 본당 <br> 한국 천주교회의 상징</p>
@@ -325,8 +325,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_a2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_a2.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/jr_a2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_a2.JPG" height="450px" /></a>
 									<div class="caption">
 										<h3>남대문(숭례문)</h3>
 										<p>조선시대 건국과 함께 수도를 서울로 천도하면서 건립된 남문으로 오래된 한국의 건축물.</p>
@@ -335,8 +335,8 @@ h1{
 								</article>
 								
 								<article>
-									<a href="img/gallery/fulls/MD_a3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_a3.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/jr_a3.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_a3.JPG" height="450px" /></a>
 									<div class="caption">
 										<h3>북촌 한옥마을</h3>
 										<p>한국의 전통가옥(한옥)을 볼 수 있는 곳</p>
@@ -344,8 +344,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_b1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_b1.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/jr_b1.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_b1.JPG" height="450px" /></a>
 									<div class="caption">
 										<h3>명동예술극장</h3>
 										<p>정통연극, 실험극, 무언 퍼포먼스, 뮤지컬 등을 비롯해 연극제, 공연예술제 등의  <br> 특별한 행사도 진행</p>
@@ -355,8 +355,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_b2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_b2.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_b2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_b2.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>난타공연</h3>
@@ -367,8 +367,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_c1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_c1.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_b3.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_b3.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>라인프렌즈샵</h3>
@@ -379,8 +379,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_c2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_c2.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_c1.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_c1.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>헬로키티 카페</h3>
@@ -391,8 +391,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_c3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_c3.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_c2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_c2.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>허니버터 아몬드</h3>
@@ -403,8 +403,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_d2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_d2.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_c3.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_c3.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>명동골목</h3>
@@ -415,8 +415,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_d3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_d3.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_d1.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_d1.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>북촌 한옥마을</h3>
@@ -427,8 +427,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_e1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_e1.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_d2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_d2.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>3D 블랙아트 박물관</h3>
@@ -439,8 +439,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_e2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_e2.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_d3.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_d3.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>서울 역사 박물관</h3>
@@ -451,20 +451,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_e3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_e3.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>명동 재미로 거리</h3>
-										<p>고바위 언덕길 만화예술거리.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_f1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_f1.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_f2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_f2.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>스타일난다 핑크호텔</h3>
@@ -475,20 +463,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_f3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_f3.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>시코르</h3>
-										<p>꿈의 화장대를 연상시키는 메이크업 셀프 바 <br> ‘BEAUTY SPACE’</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_g1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_g1.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_h1.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_h1.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>명동 쇼핑 거리</h3>
@@ -499,8 +475,8 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_g3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_g3.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_h2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_h2.JPG" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>에이랜드</h3>
@@ -511,12 +487,36 @@ h1{
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_h2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_h2.jpg" height="450px" />
+									<a href="img/gallery/fulls/jr_j1.jpg" class="image">
+										<img src="img/gallery/thumbs/jr_j1.jpg" height="450px" />
 									</a>
 									<div class="caption">
 										<h3>스마일 멀티방</h3>
 										<p>다양한 테마로 편하게 룸에서 <br>지인과 함께 놀 수 있는 곳.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/jr_j2.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_j2.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>시코르</h3>
+										<p>꿈의 화장대를 연상시키는 메이크업 셀프 바 <br> ‘BEAUTY SPACE’</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/jr_j3.JPG" class="image">
+										<img src="img/gallery/thumbs/jr_j3.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>시코르</h3>
+										<p>꿈의 화장대를 연상시키는 메이크업 셀프 바 <br> ‘BEAUTY SPACE’</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
