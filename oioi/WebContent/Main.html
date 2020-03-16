@@ -109,10 +109,10 @@ body .backgroundTransition .image-top {
   $(document).ready(function(){
 	  $('.backgroundTransition').backgroundTransition({
 		  backgrounds:[
-			  { src: 'img/spring_.jpg' },
-			  { src: 'img/forest_.jpg' },
-			  { src: 'img/autumn_.jpg' },
-			  { src: 'img/winter_.jpg' }
+			  { src: 'img/html_bg/spring_.jpg' },
+			  { src: 'img/html_bg/forest_.jpg' },
+			  { src: 'img/html_bg/autumn_.jpg' },
+			  { src: 'img/html_bg/winter_.jpg' }
 		  ],
 		  transitionDelay: 1,
 		  animationSpeed: 6200
@@ -126,38 +126,73 @@ body .backgroundTransition .image-top {
 		<div class="content">
 			<div id="langSelect" style="margin-left: 21%; margin-right: 21%; text-align: center;">
 			<h1>언어선택 / Language Select</h1></div>
-				<br>
-				<!-- 라인잡기용(사용하는거 아님) -->
-				<div id="none" class="none" style="margin-top:5%;margin-bottom: 5%"></div>
-				<br>
+
 			<!-- 국가별 태그 -->
 			<div id="conBox">
 				<!-- <div class="conCle conCle0"> --><!-- 한국  -->
-					<a href="Korea.jsp" style="z-index: 45;"><img id="Korea" class="flag" src='img/bgBtn.png'></a>
+					<a href="Korea.jsp"><img id="Korea" class="flag" src='img/html_bg/Kr_Btn2.png'></a>
 
 				
 				<!-- <div class="conCle conCle1"> --> <!-- 영어  English-->
-					<a href="English.jsp"><img id="USA" class="flag" src='img/bgBtn.png'></a>
+					<a href="English.jsp"><img id="USA" class="flag" src='img/html_bg/En_Btn2.png'></a>
 				
 
 				<!-- <div class="conCle conCle2"> --> <!-- 일어  日本語-->
-					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/bgBtn.png'></a>
+					<a href="Japan.jsp"><img id="Japan" class="flag" src='img/html_bg/Jp_Btn2.png'></a>
 				
 				
 				<!-- <div class="conCle conCle3"> --> <!-- 중국어  中国文-->
-					<a href="China.jsp"><img id="China" class="flag" src='img/bgBtn.png'></a>
+					<a href="China.jsp"><img id="China" class="flag" src='img/html_bg/Ch_Btn2.png'></a>
 				
 
 				<!-- <div class="conCle conCle4"> --> <!-- 스페인어  Español-->
-					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/bgBtn.png'></a>
+					<a href="Spain.jsp"><img id="Spain" class="flag" src='img/html_bg/Sp_Btn2.png'></a>
 				
 				
 				<!-- <div class="conCle conCle5"> --> <!-- 프랑스어  French-->
-					<a href="Frech.jsp"><img id="France" class="flag" src='img/bgBtn.png'></a>
+					<a href="Frech.jsp"><img id="France" class="flag" src='img/html_bg/Fr_Btn2.png'></a>
 				
 			</div>	
 
 		</div>
+		
+		<script>
+			$('#Korea').hover(function(){
+				$('#Korea').attr('src','img/html_bg/Kr_Btn.png');
+			},function(){
+				$('#Korea').attr('src','img/html_bg/Kr_Btn2.png');
+			});
+			
+			$('#USA').hover(function(){
+				$('#USA').attr('src','img/html_bg/En_Btn.png');
+			},function(){
+				$('#USA').attr('src','img/html_bg/En_Btn2.png');
+			});
+			
+			$('#Japan').hover(function(){
+				$('#Japan').attr('src','img/html_bg/Jp_Btn.png');
+			},function(){
+				$('#Japan').attr('src','img/html_bg/Jp_Btn2.png');
+			});
+			
+			$('#China').hover(function(){
+				$('#China').attr('src','img/html_bg/Ch_Btn.png');
+			},function(){
+				$('#China').attr('src','img/html_bg/Ch_Btn2.png');
+			});
+			
+			$('#Spain').hover(function(){
+				$('#Spain').attr('src','img/html_bg/Sp_Btn.png');
+			},function(){
+				$('#Spain').attr('src','img/html_bg/Sp_Btn2.png');
+			});
+			
+			$('#France').hover(function(){
+				$('#France').attr('src','img/html_bg/Fr_Btn.png');
+			},function(){
+				$('#France').attr('src','img/html_bg/Fr_Btn2.png');
+			});
+		</script>
 		
 <!-- 		<div class="selChina">
 			<button id="close" style="font-size: 5px; position: absolute; margin-top:-10px; margin-left: 190px;">X</button>
