@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>명동</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
