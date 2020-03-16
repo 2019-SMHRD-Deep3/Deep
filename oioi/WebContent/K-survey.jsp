@@ -81,7 +81,7 @@ span {
 </head>
 <body>
 	<!-- 설문조사 -->
-	<form action="K_subvey_result" method="post" id='myForm'>
+
 		<div id="QnA">
 			<!-- 나이 -->
 			<br>
@@ -272,21 +272,37 @@ span {
 				</div>
 			</div>
 			<br><br>
-			<div id="submit">
+			<div id = "submit">
 				<input type="button" value="전송" onclick="mySub()">
 			</div>
-			 <div>당신이 바라던 서울 : <a id='result' href='#'></a></div>
-		</div>	 			 
+			 <div id = seoul style="display:none; ">당신이 바라던 서울 : 
+			 	<!-- <a id='result' href='#'></a> -->
+				<button id="result1" style ="display:none" ></button>
+				<button id="result2" style ="display:none"></button>
+				<button id="result3" style ="display:none"></button>
+				<button id="result4" style ="display:none"></button>
+				<button id="result5" style ="display:none"></button>
+				<button id="result6" style ="display:none"></button>
+				<button id="result7" style ="display:none"></button>
+				<button id="result8" style ="display:none"></button>
+				<button id="result9" style ="display:none"></button>
+				<button id="result10" style ="display:none"></button>
+				<button id="result11" style ="display:none"></button>
+				<button id="result12" style ="display:none"></button>
+				<button id="result13" style ="display:none"></button>
+				<button id="result14" style ="display:none"></button>
+			 
+			 </div>
+			 <br><br>
 	</div>
 
-		<input type="hidden" id='age_check' name='age'> 
+		<!-- <input type="hidden" id='age_check' name='age'> 
 		<input type="hidden" id='gender_check' name='gender'> 
 		<input type="hidden" id='month_check' name='month'> 
 		<input type="hidden" id='trip_check' name='trip'> 
 		<input type="hidden" id='month_check' name='month'> 
-		<!-- <input type="button" value="전송" onclick="mySub()"> -->
+		<input type="button" value="전송" onclick="mySub()"> -->
 
-	</form>
 
 <script>
 	var age;
@@ -297,28 +313,28 @@ span {
 	$('.ageBtn').on('click', function() {
 		$('.ageBtn').css('background-color', '');
 		$(this).css('background-color', 'yellow');
-		age = $(this).attr('val');
+		age = "연령대_" + $(this).attr('val');
 		$(this).css('value', age);
 	});
 
 	$('.genderBtn').on('click', function() {
 		$('.genderBtn').css('background-color', '');
 		$(this).css('background-color', 'yellow');
-		gender = $(this).attr('val');
+		gender = "성별_" + $(this).attr('val');
 		$(this).css('value', gender);
 	});
 
 	$('.monBtn').on('click', function() {
 		$('.monBtn').css('background-color', '');
 		$(this).css('background-color', 'yellow');
-		month = $(this).attr('val');
+		month = "달_" + $(this).attr('val');
 		$(this).css('value', month);
 	});
 
 	$('.tripBtn').on('click', function() {
 		$('.tripBtn').css('background-color', '');
 		$(this).css('background-color', 'yellow');
-		trip_type = $(this).attr('val');
+		trip_type = "여행형태_" + $(this).attr('val');
 		$(this).css('value', trip_type);
 	});
 
@@ -328,10 +344,10 @@ span {
 		console.log(month);
 		console.log(trip_type);
 
-		var nation = $('#nation').val();
-		var item = $('#item').val();
-		var stay = $('#stay').val();
-		var act = $('#act').val();
+		var nation = "국가_" + $('#nation').val();
+		var item = "쇼핑품목_" + $('#item').val();
+		var stay = "숙박시설_" + $('#stay').val();
+		var act = "활동성향_" + $('#act').val();
 
 		console.log(nation);
 		console.log(item);
@@ -344,71 +360,100 @@ span {
              url : "http://localhost:9000/re/" + age + "/" + gender + "/" + nation + "/" + month + "/" + trip_type + "/" + item
                    + "/" + stay + "/" + act,
              method : "POST",
-             crossDomain : true,
              success : function(rs) {
-            	console.log('성공')
-            	if (rs.result == "DMC,월드컵경기장") {
-                    $('#result').text('DMC, 월드컵경기장');
-                    $('#result').attr('href', 'K_DMC.jsp?act='+act);
-                    
-                 } else if (rs.result == "가로수길") {
-                    $('#result').text('가로수길');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                    
-                 } else if (rs.result == "강남역") {
-                    $('#result').text('강남역');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                    
-                 } else if (rs.result == "광화문광장") {
-                    $('#result').text('광화문 광장');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                    
-                 } else if (rs.result == "동대문패션타운") {
-                    $('#result').text('동대문 패션타운');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                    
-                 } else if (rs.result == "명동,남대문,북창") {
-                    $('#result').text('명동,남대문,북창');
-                    $('#result').attr('href', 'K_MD.jsp?act='+act);
+            	 //alert('success'+JSON.strify(rs))
+            	 
+            	 $('#submit').attr('style', "display:none");
+            	 $('#seoul').attr('style', "display:inline");
+            	
+            
+            	 if (rs.result1 == 1){
+	  					$('#result1').text('#명동, 남대문, 북창');
+	  					$('#result1').attr('style', "display:inline");
+	  					var url1 = 'K_MD.jsp?act='+act;
+	  					$('#result1').attr('onclick', "location='"+url1+ "'" );
+	  				}
+	  				if (rs.result2 == 1){
+	  					$('#result2').text('#이태원(이태원세계음식거리, 한남동)');
+	  					$('#result2').attr('style', "display:inline");
+	  					var url2 = 'Main.html?act='+act;
+	  					$('#result2').attr('onclick', "location='"+url2+ "'" );
+	  				}
+	  				if (rs.result3 == 1){
+	  					$('#result3').text('#동대문 패션타운');
+	  					$('#result3').attr('style', "display:inline");
+	  					var url3 = 'Main.html?act='+act;
+	  					$('#result3').attr('onclick', "location='"+url3+ "'" );
+	  				}
+	  				if (rs.result4 == 1){
+	  					$('#result4').text('#종로, 청계');
+	  					$('#result4').attr('style', "display:inline");
+	  					var url4 = 'K_Jong-ro.jsp?act='+act;
+	  					$('#result4').attr('onclick', "location='"+url4+ "'" );
+	  				}
+	  				if (rs.result5 == 1){
+	  					$('#result5').text('#잠실');
+	  					$('#result5').attr('style', "display:inline");
+	  					var url5 = 'Main.html?act='+act;
+	  					$('#result5').attr('onclick', "location='"+url5+ "'" );
+	  				}
+	  				if (rs.result6 == 1){
+	  					$('#result6').text('#코엑스');
+	  					$('#result6').attr('style', "display:inline");
+	  					var url6 = 'Main.html?act='+act
+	  					$('#result6').attr('onclick', "location='"+url6+ "'" );
+	  				}
+	  				if (rs.result7 == 1){
+	  					$('#result7').text('#여의도(63빌딩)');
+	  					$('#result7').attr('style', "display:inline");
+	  					var url7 = 'Main.html?act='+act
+	  					$('#result7').attr('onclick', "location='"+url7+ "'" );
+	  				}
+	  				if (rs.result8 == 1){
+	  					$('#result8').text('#한강, 유람선');
+	  					$('#result8').attr('style', "display:inline");
+	  					var url8 = 'Main.html?act='+act
+	  					$('#result8').attr('onclick', "location='"+url8+ "'" );
+	  				}
+	  				if (rs.result9 == 1){
+	  					$('#result9').text('#광화문 광장');
+	  					$('#result9').attr('style', "display:inline");
+	  					var url9 = 'Main.html?act='+act
+	  					$('#result9').attr('onclick', "location='"+url9+ "'" );
+	  				}
+	  				if (rs.result10 == 1){
+	  					$('#result10').text('#신촌, 홍대주변');
+	  					$('#result10').attr('style', "display:inline");
+	  					var url10 = 'Main.html?act='+act
+	  					$('#result10').attr('onclick', "location='"+url10+ "'" );
+	  				}
+	  				if (rs.result11 == 1){
+	  					$('#result11').text('#DMC, 월드컵경기장');
+	  					$('#result11').attr('style', "display:inline");
+	  					var url11 = 'Main.html?act='+act
+	  					$('#result11').attr('onclick', "location='"+url11+ "'" );
+	  				}
+	  				if (rs.result12 == 1){
+	  					$('#result12').text('#청담동, 압구정동');
+	  					$('#result12').attr('style', "display:inline");
+	  					var url12 = 'Main.html?act='+act
+	  					$('#result12').attr('onclick', "location='"+url12+ "'" );
+	  				}
+	  				if (rs.result13 == 1){
+	  					$('#result13').text('#가로수길');
+	  					$('#result13').attr('style', "display:inline");
+	  					var url13 = 'Main.html?act='+act
+	  					$('#result13').attr('onclick', "location='"+url13+ "'" );
+	  				}
+	  				if (rs.result14 == 1){
+	  					$('#result14').text('#강남역');
+	  					$('#result14').attr('style', "display:inline");
+	  					var url14 = 'Main.html?act='+act
+	  					$('#result14').attr('onclick', "location='"+url14+ "'" );
+	  				}
 
-                 } else if (rs.result == "신촌,홍대주변") {
-                    $('#result').text('신촌, 홍대주변');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                 
-                 } else if (rs.result == "여의도(63빌딩)") {
-                    $('#result').text('여의도 (63빌딩)');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                
-                 } else if (rs.result == "이태원(이태원 세계 음식거리,한남동)") {
-                    $('#result').text('이태원 (이태원 세계 음식거리, 한남동)');
-                    $('#result').attr('href', 'Main.html?act='+act);
-              
-                 } else if (rs.result == "잠실") {
-                    $('#result').text('잠실');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                
-                 } else if (rs.result == "종로,청계") {
-                    $('#result').text('종로, 청계');
-                    $('#result').attr('href', 'Main.html?act='+act);
-              
-                 } else if (rs.result == "청담동,압구정동") {
-                    $('#result').text('청담동, 압구정동');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                
-                 } else if (rs.result == "코엑스") {
-                    $('#result').text('코엑스');
-                    $('#result').attr('href', 'Main.html?act='+act);
-               
-                 } else if (rs.result == "한강,유람선") {
-                    $('#result').text('한강, 유람선');
-                    $('#result').attr('href', 'Main.html?act='+act);
-                
-                 } else{
-                    $('#result').text('연결 오류발생');
-                 
-                 }
-                 
-              }
+	  				 $('#seoul').attr('style', "margin: auto; text-align: center;");
+             }
        }); 
 		
 		}
