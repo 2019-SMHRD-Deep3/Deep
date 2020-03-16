@@ -20,8 +20,7 @@
 </noscript>
 
 <style type="text/css">
-
-.ageBtn, .genderBtn, .myBtn, .tripBtn   {
+.ageBtn, .genderBtn, .myBtn, .tripBtn {
 	padding: 0px !important;
 	width: 30px !important;
 	height: 30px !important;
@@ -30,11 +29,11 @@
 
 span {
 	display: inline-block;
-	width: 60px;
+	width: 75px;
 	font-size: 18px;
 }
 
-#QnA{
+#QnA {
 	border: 1px solid #ffffff;
 	margin-top: 3%;
 	margin-left: 20%;
@@ -46,24 +45,37 @@ span {
 	padding-bottom: 2.1%;
 }
 
-#Q_Age{
-	display: table;
-	table-layout: fixed;
-	border-spacing: 25px 0px;
-	margin-left: 12.5%;
-	margin-right: 12.5%;
-}
-
-.age{
-	width: 69px;
-	display: table-cell;
-	vertical-align: middle;
+#Q_Age, #Q_Gender, #Q_type {
+	display: grid;
+	grid-template-rows: repeat(auto-fit, 100px);
+	grid-template-columns: repeat(auto-fit, 100px);
+	place-items: center center;
 	text-align: center;
-	padding-left: 3%;
-	padding-right: 3%;
+	/* margin-left: 10.5%;
+	margin-right: 10.5%; */
 }
 
+#Q_Age {
+	margin-left: 10.5%;
+	margin-right: 10.5%;
+	gap: 0px 3%;
+}
+#Q_Gender{
+	margin-left: 30%;
+	margin-right: 30%;
+	gap: 0px 15%;
+}
 
+#Q_type{
+	margin-left: 20%;
+	margin-right: 20%;
+	gap: 0px 5%;
+}
+
+#A_val, .month, .bught, .base, .activite{
+	margin-left: 15%;
+	margin-right: 15%;
+}
 </style>
 
 </head>
