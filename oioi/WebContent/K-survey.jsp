@@ -63,8 +63,8 @@ span {
 </style>
 
 </head>
-<!-- <body style="background-image: url(img/survey_bg.png); background-size: cover;"> -->
-<body>
+<!-- <body style="background-image: url(img/fabio-oyXis2kALVg-unsplash.jpg); max-width: 100%; height: 100%;">  -->
+
 	<!-- 설문조사 -->
 
 		<div id="QnA">
@@ -387,85 +387,85 @@ span {
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url1, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url1, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage2(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url2, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url2, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage3(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url3, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");	
+			 myWindow = window.open(url3, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");	
 		}
 		function popupPage4(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url4, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");	
+			 myWindow = window.open(url4, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");	
 		}
 		function popupPage5(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url5, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url5, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage6(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url6, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url6, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage7(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url7, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url7, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage8(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url8, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url8, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage9(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url9, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url9, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage10(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url10, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url10, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPag11(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url11, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url11, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage12(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url12, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url12, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage13(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url13, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url13, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 		function popupPage14(){
 			if(play != true)
 				myWindow.close();
 			play = false;
-			 myWindow = window.open(url14, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=825px");
+			 myWindow = window.open(url14, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
 		}
 	
 	
