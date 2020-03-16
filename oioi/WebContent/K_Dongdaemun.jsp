@@ -59,8 +59,8 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<%-- <% String act = (String)request.getParameter("act"); %> --%>
-			<% String act = "활동성향_자연경관감상"; %>
+			 <% String act = (String)request.getParameter("act"); %> 
+			
 			<%= act %> <br>
 
 			<% 
@@ -220,9 +220,9 @@ h1{
 					
 				}else if (act.equals("활동성향_자연경관감상")|| act.equals("활동성향_휴양,휴식")){
 					
-					url_1 = "background-image: url('img/course/MD_j1.jpg');";
-					url_2 = "background-image: url('img/course/MD_j2.jpg');";
-					url_3 = "background-image: url('img/course/MD_j3.jpg');";
+					url_1 = "background-image: url('img/course/DDP_j1.jpg');";
+					url_2 = "background-image: url('img/course/DDP_j2.jpg');";
+					url_3 = "background-image: url('img/course/DDP_j3.jpg');";
 					
 					head_1 = "낙산공원";
 					head_2 = "동대문 성곽공원";
@@ -240,12 +240,12 @@ h1{
 					
 				}else {
 					url_1 = "background-image: url('img/course/DDP_a1.jpg');";
-					url_2 = "background-image: url('img/course/DDP_g1.jpg');";
-					url_3 = "background-image: url('img/course/DDP_g3.jpg');";
+					url_2 = "background-image: url('img/course/DDP_c1.JPG');";
+					url_3 = "background-image: url('img/course/DDP_j1.JPG');";
 					
-					head_1 = "명동 성당";
-					head_2 = "명동 쇼핑 거리";
-					head_3 = "에이랜드";
+					head_1 = "동대문 역사문화공원";
+					head_2 = "아트랙티브 테마파크 " + "<br>" + "‘라뜰리에’";
+					head_3 = "낙산공원";
 					
 					content_1 = "우리나라 최초의 본당이며 한국 천주교회의 상징이다." +"<br>" + 
 						      "무지개 형상의 궁륭 천장으로 되어 있고, "+ "<br>" +" 외부는 고딕장식을 통해 웅장함을 드러내고 있다." + "<br>" + 
@@ -327,207 +327,207 @@ h1{
 						<!-- Gallery -->
 							<div class="gallery style2 medium lightbox onscroll-fade-in" id = "gallery">
 							<article>
-									<a href="img/gallery/fulls/MD_a1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_a1.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/DDP_a1.jpg" class="image">
+										<img src="img/gallery/thumbs/DDP_a1.jpg" height="450px" /></a>
 									<div class="caption">
-										<h3>명동성당</h3>
-										<p>우리나라 최초의 본당 <br> 한국 천주교회의 상징</p>
+										<h3>동대문 역사문화공원</h3>
+										<p>옛 동대문운동장 부지<br> 서울의 역사를 보여주는 공원</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_a2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_a2.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/DDP_a2.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_a2.JPG" height="450px" /></a>
 									<div class="caption">
-										<h3>남대문(숭례문)</h3>
-										<p>조선시대 건국과 함께 수도를 서울로 천도하면서 건립된 남문으로 오래된 한국의 건축물.</p>
+										<h3>흥인지문(동대문)</h3>
+										<p>조선의 수도인 한양의 4대문(大門) 중의 하나</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								
 								<article>
-									<a href="img/gallery/fulls/MD_a3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_a3.jpg" height="450px" /></a>
+									<a href="img/gallery/fulls/DDP_b1.jpg" class="image">
+										<img src="img/gallery/thumbs/DDP_b1.jpg" height="450px" /></a>
 									<div class="caption">
-										<h3>북촌 한옥마을</h3>
-										<p>한국의 전통가옥(한옥)을 볼 수 있는 곳</p>
+										<h3>동대문 밀리오레</h3>
+										<p>젊은층에게 사랑받는 쇼핑 공간</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_b1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_b1.jpg" height="450px" /></a>
-									<div class="caption">
-										<h3>명동예술극장</h3>
-										<p>정통연극, 실험극, 무언 퍼포먼스, 뮤지컬 등을 비롯해 연극제, 공연예술제 등의  <br> 특별한 행사도 진행</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_b2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_b2.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>난타공연</h3>
-										<p>주방의 모든 것을 활용한 타악 연주 사이사이 <br> 한국의 전통 춤과 관객 참여가 어우러져  <br> 흥겨운 축제 한 마당</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_c1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_c1.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>라인프렌즈샵</h3>
-										<p>명동 사보이호텔 바로 앞  <br> 라인프렌즈 플레그십 스토어</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_c2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_c2.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>헬로키티 카페</h3>
-										<p>예쁜 헬로키티 아트라떼를 구경할 수 있고, <br> 선물용 각종 팬시용품을 구매할 수 있는 곳</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_c3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_c3.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>허니버터 아몬드</h3>
-										<p>허니버터아몬드와 다양한 맛의 아몬드를 <br> 사는 곳으로 요즘 핫한 인기코스</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_d2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_d2.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>명동골목</h3>
-										<p>검은사제들 영화 촬영지 <br> 엑소시즘물로 주 배경이 명동</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_d3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_d3.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>북촌 한옥마을</h3>
-										<p>사랑의 온도 드라마 촬영지 <br> 북촌 한옥마을을 배경으로 한 한국 드라마. <br> 한국의 아름다운 전통가옥 사이를  <br> 걸으면서 구경</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_e1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_e1.jpg" height="450px" />
-									</a>
-									<div class="caption">
-										<h3>3D 블랙아트 박물관</h3>
-										<p>신비한 빛의 착시 기법으로 전세계에 하나뿐인 3D BLACKART MUSEUM.</p>
-										<ul class="actions fixed">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="img/gallery/fulls/MD_e2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_e2.jpg" height="450px" />
-									</a>
+									<a href="img/gallery/fulls/DDP_b2.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_b2.JPG" height="450px" /></a>
 									<div class="caption">
 										<h3>서울 역사 박물관</h3>
-										<p>선사시대부터 현대까지 <br>서울특별시의 역사와 문화를 <br> 정리하여 보여주는 도시역사 박물관.</p>
+										<p>서울의 문화를 느끼고 체험할 기회를 제공  <br>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_e3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_e3.jpg" height="450px" />
+									<a href="img/gallery/fulls/DDP_b3.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_b3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>명동 재미로 거리</h3>
-										<p>고바위 언덕길 만화예술거리.</p>
+										<h3>한양도성박물관</h3>
+										<p>도성 따라 듣는 옛날이야기도 재미있고, <br> 미니어처로 만들어진 성곽 모형도   <br> 관람하는 묘미가 있다.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_f1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_f1.jpg" height="450px" />
+									<a href="img/gallery/fulls/DDP_c1.jpg" class="image">
+										<img src="img/gallery/thumbs/DDP_c1.jpg" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>스타일난다 핑크호텔</h3>
-										<p>호텔을 모티브로 한 플래그십 스토어.</p>
+										<h3>동대문 판타VR테마파크</h3>
+										<p>신나고 스릴있는 VR체험  <br>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_f3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_f3.jpg" height="450px" />
+									<a href="img/gallery/fulls/DDP_c2.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_c2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>시코르</h3>
-										<p>꿈의 화장대를 연상시키는 메이크업 셀프 바 <br> ‘BEAUTY SPACE’</p>
+										<h3>아트랙티브 테마파크 ‘라뜰리에’</h3>
+										<p>인상주의 작품시대의 공간속으로  <br> 여행을 떠날 수 있는 체험형 테마파크</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_g1.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_g1.jpg" height="450px" />
+									<a href="img/gallery/fulls/DDP_c3.jpg" class="image">
+										<img src="img/gallery/thumbs/DDP_c3.jpg" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>명동 쇼핑 거리</h3>
-										<p>고급브랜드부터 SPA브랜드, 보세매장까지  <br> 다양하게 쇼핑을 즐길 수 있다.</p>
+										<h3>일루션 월드</h3>
+										<p>동대문 시장 중심 37가지 VR체험 존 <br> 
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_g3.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_g3.jpg" height="450px" />
+									<a href="img/gallery/fulls/DDP_d1.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_d1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>에이랜드</h3>
-										<p>옷과 다양한 소품들하고 가방 화장품 등 판매</p>
+										<h3>이화동 벽화마을</h3>
+										<p>그녀는 예뻤다 드라마 촬영지 <br> 유머, 로맨스에 어울리는 배경</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
 								<article>
-									<a href="img/gallery/fulls/MD_h2.jpg" class="image">
-										<img src="img/gallery/thumbs/MD_h2.jpg" height="450px" />
+									<a href="img/gallery/fulls/DDP_f1.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_f1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>스마일 멀티방</h3>
-										<p>다양한 테마로 편하게 룸에서 <br>지인과 함께 놀 수 있는 곳.</p>
+										<h3>현대시티아울렛</h3>
+										<p>베이킹 제품 판매와 <br> 피나포레 베이킹 스튜디오를 같이 운영 <br> </p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_f2.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_f2.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>서울약령시장</h3>
+										<p>국내 최대의 한의약 종합 단지</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_f3.jpg" class="image">
+										<img src="img/gallery/thumbs/DDP_f3.jpg" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>한방진흥센터</h3>
+										<p>한의약박물관, 한방체험시설, <br>한방상품홍보관, 한방카페가 있는 곳.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_h2.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_h2.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>노보텔 앰배서더</h3>
+										<p>흥인지문의 처마를 모티브로 한 <br>5성 규모의 호텔.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_i1.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_i1.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>동해해물탕</h3>
+										<p> 다양한 해산물의 맛을 느낄 수 있는 곳.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_j1.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_j1.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>낙산공원</h3>
+										<p>고즈넉한 분위기의 산책길 </p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_i3.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_i3.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>동대문 큰집보쌈</h3>
+										<p>사골육수로 맛을 낸 불고기</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_j2.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_j2.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>동대문 성곽공원</h3>
+										<p>흥인지문 건너편 성곽길</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="img/gallery/fulls/DDP_j3.JPG" class="image">
+										<img src="img/gallery/thumbs/DDP_j3.JPG" height="450px" />
+									</a>
+									<div class="caption">
+										<h3>이화동벽화마을</h3>
+										<p>다양한 테마의 벽화가 그려진 예쁜 마을길 </p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
