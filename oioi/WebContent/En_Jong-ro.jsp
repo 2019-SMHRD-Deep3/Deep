@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Jong-ro</title>
+<title>종로</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -59,7 +59,8 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<% String act = (String)request.getParameter("act"); %> 
+			<%-- <% String act = (String)request.getParameter("act"); %> --%>
+			<% String act = "활동성향_자연경관감상"; %>
 			<%= act %> <br>
 
 			<% 
@@ -77,19 +78,21 @@ h1{
 				   url_2 = "background-image: url('img/course/jr_a2.JPG');";
 				   url_3 = "background-image: url('img/course/jr_a3.JPG');";
 				   
-				   head_1 = "창덕궁";
-				   head_2 = "경복궁";
-				   head_3 = "인사동거리";
+				   head_1 = "Changdeokgung Palace";
+				   head_2 = "Gyeongbokgung";
+				   head_3 = "Insadong Street";
 				   
-				   content_1 = "창덕궁은 대한민국 서울특별시에 있는 조선 시대 궁궐로 "+"<br>"+"동쪽으로 창경궁과 맞닿아 있다."+"<br>"+
-							   "경복궁의 동쪽에 있어서 조선 시대에는 "+"<br>"+"창경궁과 더불어 동궐이라 불렀다." ;
-				   content_2 = "도성의 북쪽에 있다고 하여 북궐(北闕)이라고도 불리었다. " +"<br>" + 
-							   "조선왕조의 건립에 따라 창건되어 초기에 정궁으로 사용되었으나 "+"<br>"+"임진왜란 때 전소된 후 오랫동안 폐허로 남아 있다가 "+"<br>"+
-						   	   "조선 말기 고종 때 중건되어 잠시 궁궐로 이용되었다.";
-				   content_3 = "세상이 급변하는 와중에도 한국 고유의 멋을 간직하고 계승하려는 거리가 있다. " +"<br>" + 
-							   "한국의 많은 예술품을 볼 수 있고 전통차는 물론 사찰 음식까지, " +"<br>" + 
-							   "'한국' 하면 떠오르는 많은 것들이 인사동 거리에 있다. " +"<br>" + 
-							   "한국에서 관광객이 가장 많이 몰리는 곳 중 하나이다. " ;
+				   content_1 = "Changdeokgung Palace is a Joseon Dynasty palace located in Seoul, South Korea,"+"<br>"+
+						   "facing Changgyeonggung in the east." + "<br>"+
+						   "In the east of Gyeongbokgung"+"<br>"+
+						   "Palace, it was called Donggung along with Changgyeonggung in the Joseon Dynasty." ;
+				   content_2 = "It was also called Bukgyeol because it was located in the north of Doseong."+"<br>"+
+						   "It was founded in accordance with the establishment of the Joseon Dynasty and was initially used as a palace,"+"<br>"+
+						   "but after being burned down during the Imjin War, it remained in ruins for a long time";
+				   content_3 = "In the midst of the rapidly changing world, there is a street to preserve and inherit the unique style of Korea."+"<br>"+
+						   "You can see a lot of Korean art, and traditional cars as well as temple food, and"+"<br>"+
+						   "many things that come to mind when you say 'Korea' are in Insadong."+"<br>"+
+						   "It is one of the most popular tourist destinations in Korea." ;
 					
 				}else if (act.equals("활동성향_공연,민속,행사,축제 관람및참가")|| act.equals("활동성향_박물관,전시관방문")){
 					
@@ -97,38 +100,46 @@ h1{
 					url_2 = "background-image: url('img/course/jr_b2.JPG');";
 					url_3 = "background-image: url('img/course/jr_b3.JPG');";
 					
-					head_1 = "광화문 아트홀";
-					head_2 = "세종 충무공이야기";
-					head_3 = "공평도시 유적전시관";
+					head_1 = "Gwanghwamun Art Hall";
+					head_2 = "Sejong Chungmugong Story";
+					head_3 = "Gongpyeong City Ruins Exhibition Hall";
 					   
-					content_1 = "광화문 아트홀은 종로구 시설관리공단 "+"<br>"+"종로문화체육센터 내부에 자리잡고 있다."+"<br>"+
-								"야외정원, 레스토랑, 문화교실, 수영장, 헬스장, "+"<br>"+"스포츠클라이밍장 등 종로문화체육센터 내에 있는 "+"<br>"+
-								"다양한 부대시설을 이용할 수 있어 더욱 편리하다.";
-					content_2 = "세종 이야기·충무공 이야기는 세종문화회관 지하 2층에 위치한"+"<br>"+" 세종대왕과 이순신 장군에 관련한전시회이다. "+"<br>"+
-								"전시를 비롯해 유치원생부터 초등학생까지 어린이의 나이별로 "+"<br>"+"제작된 한복을 입고 전통문화를 체험할 수 있는 "+"<br>"+"프로그램도 제공하고 있다. " ;
-					content_3 = "공평도시유적전시관은 공평1·2·4지구 도심 재개발 과정에서 "+"<br>"+"출토된 조선시대 16세기 건물지와 길을 "+"<br>"+
-								"그대로 보존하여 전시한 도시박물관이다.  "+"<br>"+
-								"공평도시유적전시관에서 조선시대 한양 사람들의 "+"<br>"+"생활과 삶의 모습을 살펴볼 수 있다. " ;
+					content_1 = "Gwanghwamun Art Hall is"+"<br>"+
+							"located inside Jongno Culture and Sports Center in Jongno- gu Facility Management Corporation ."+"<br>"+
+							"The outdoor garden, restaurant, cultural classroom, swimming pool, fitness center,"+"<br>"+
+							"sports climbing field, etc."+"<br>"+
+							"are available in a variety of facilities within Jongno Cultural Sports Center, making it more convenient.";
+					content_2 = "The story of Sejong and Chungmugong"+"<br>"+
+							"is an exhibition related to King Sejong the Great and Admiral Yi Sun-Sin located on the second floor of the Sejong Center for the Performing Arts ."+"<br>"+
+							"In addition to exhibitions,"+"<br>"+
+							"we also offer programs that allow you to experience traditional culture by wearing hanbok made by children's ages, from kindergarten students to elementary school students ." ;
+					content_3 = "Gongpyeong Urban Heritage Exhibition is a city museum that preserves and displays the"+"<br>"+
+							"16th century buildings and roads of the Joseon Dynasty excavated during the redevelopment process of downtown Gongpyeong 1, 2, and 4 districts."+"<br>"+
+							"In the Gongpyeong City Heritage Exhibition Hall,"+"<br>"+
+							"you can see the life and life of the Hanyang people during the Joseon Dynasty";
 					
 				}else if (act.equals("활동성향_놀이공원,테마파크")){
 					
 					url_1 = "background-image: url('img/course/jr_c1.JPG');";
 					url_2 = "background-image: url('img/course/jr_c2.JPG');";
-					url_3 = "background-image: url('img/course/jr_c3.jpg');";
+					url_3 = "background-image: url('img/course/jr_c3.JPG');";
 					
-					head_1 = "런닝맨 체험관";
-					head_2 = "테지움 테디베어 테마파크";
-					head_3 = "쌈지길 체험공방";
+					head_1 = "Running Man Experience Hall";
+					head_2 = "Tezium Teddy Bear Theme Park";
+					head_3 = "Ssamji-gil Experience Workshop";
 					   
-					content_1 = "TV 프로그램 속 주인공이 되는 신개념 콘텐츠!!"+"<br>"+
-								"직접 런닝맨이 되어 숨겨진 R 포인트를 찾고, "+"<br>"+"획득한 포인트에 따라 다양한 런닝맨 배지와 인증서를 받으세요.";
-					content_2 = "서울 종로구에 위치한 테지움 서울은 테디베어 테마파크이다. "+"<br>"+
-								"테디베어를 직접 만지고 안아보는 오픈형 이색체험전시 공간으로 "+"<br>"+"테디베어의 어원과 유래, 역사를 알 수 있다."+"<br>"+
-								"서울 테마 존에서는 옛 시절 서울부터 현재 서울까지를 테디베어로 소개하고 있다." ;
-					content_3 = "쌈지길 체험공방에서는 향연·김유국 해학 목공예학교·세라위크·"+"<br>"+"글라스본 등의 체험프로그램을 진행한다. "+"<br>"+
-								"향연에서는 향초·비누·화장품 등을 만들 수 있다. "+"<br>"+
-								"김유국 해학 목공예학교에서는 솟대를, "+"<br>"+"세라위크에서는 핸드페인팅 도자기를, "+"<br>"+
-								"글라스본에서는 유리병공예를 체험할 수 있다." ;
+					content_1 = "New concept content to be the main character in TV programs !!"+"<br>"+
+							"Become a running man yourself, find hidden R points, and"+"<br>"+
+							"earn various running man badges and certificates depending on the points you earn.";
+					content_2 = "Tezium Seoul, located in Jongno-gu, Seoul, is a teddy bear theme park."+"<br>"+
+							"This is an open space type exhibition space where you can touch and hug the teddy bear. You can see"+"<br>"+
+							"the origin, origin and history of the teddy bear."+"<br>"+
+							"The Seoul Theme Zone introduces Seoul as a teddy bear from the old days to Seoul.";
+					content_3 = "In the Ssamji-gil Experience Workshop,"+"<br>"+
+							"experience programs such as Hyangyeon, Kim Yu-guk Hakhak Woodcraft School, Serra Week, and Glassborn are held."+"<br>"+
+							"At the feast, you can make incense, soap, and cosmetics."+"<br>"+
+							"You can experience Kim Soo-guk Hakhak Woodwork School,Hand Painted Ceramics at Serra Week,"+"<br>"+
+							"and Glass Bottle Crafts at Glassborn." ;
 					
 					
 				}else if (act.equals("활동성향_드라마,영화찰영지방문")){
@@ -137,19 +148,20 @@ h1{
 					url_2 = "background-image: url('img/course/jr_d2.JPG');";
 					url_3 = "background-image: url('img/course/jr_d3.JPG');";
 					
-					head_1 = "돌담길(도깨비)";
-					head_2 = "마이 포에트리 (여우각시별)";
-					head_3 = "서울 성곽길(옥탑방 왕세자)";
+					head_1 = "Stone Wall Road (Goblin)";
+					head_2 = "My Poetry (by fox hour)";
+					head_3 = "Seonggwak-gil, Seoul";
 					   
-					content_1 = "드라마 도깨비 촬영지 덕성여고와 풍문여고 사이 골목에서 "+"<br>"+"지은탁(김고은)이 출발하여 덕성여고에서 풍문여고 가는 "+"<br>"+
-								"방향의 돌담길은 사진 촬영하기 좋은 가볼만한 곳이다.";
+					content_1 = "Dukseong Girls 'High School and Pungmun Girls' High School in the alley between"+"<br>"+
+							"Jieun Tak (Kim Go-eun) departed from Dukseong Girls 'High School to go to Pungmun Girls' High School";
 								
-					content_2 = " 여우각시별은 비밀을 가진 의문의 신입과 애틋한 사연을 가진 "+"<br>"+"사고뭉치 1년차가 인천공항 내 사람들과 부딪히면서"+"<br>"+
-								"서로의 결핍과 상처를 보듬는 휴먼 멜로 드라마이다."+"<br>"+
-								"종로구 익선동 한옥거리에 마이 포에트리가 바로 이 드라마의 촬영지이다. " ;
-					content_3 = "옥탑방 왕세자는300년 세월을 거슬러 오르며 펼쳐지는 타임 슬립 드라마다."+"<br>"+
-								"등장인물들이 걷던 길, 뛰어오르던 계단길, 아름드리 단풍나무 "+"<br>"+"아래로 펼쳐지는 서울의 풍광 등 주변에는 "+"<br>"+
-								"드라마의 흔적이 곳곳에 남아 있다.";
+					content_2 = "The Fox Star is a human melodramatic drama in which the"+"<br>"+
+							"first year of an accident bundle with a mysterious new story and a mysterious story"+"<br>"+
+							"collides with people in Incheon Airport to remedy each other's deficiencies and scars."+"<br>"+
+							"My Poetry is the location of this drama in Hanok Street, Iksun-dong, Jongno-gu." ;
+					content_3 = "The Prince of Rooftop Room is a time slip drama that goes back 300 years. There are traces of the drama around the"+"<br>"+
+							"streets where the characters walked, the stairs that jumped, and"+"<br>"+
+							"the scenery of Seoul spreading under the beautiful maple trees";
 						
 					
 				}else if (act.equals("활동성향_뷰티관광")|| act.equals("활동성향_쇼핑")){
@@ -158,21 +170,25 @@ h1{
 					url_2 = "background-image: url('img/course/jr_f2.JPG');";
 					url_3 = "background-image: url('img/course/jr_f3.JPG');";
 					
-					head_1 = "인사동거리";
-					head_2 = "동화면세점";
-					head_3 = "종로 귀금속 거리";
+					head_1 = "Insadong Street";
+					head_2 = "Dongwha Duty Free";
+					head_3 = "Jongno Precious Metal Street";
 					   
-					content_1 = "세상이 급변하는 와중에도 한국 고유의 멋을"+"<br>"+" 간직하고 계승하려는 거리가 있다. " +"<br>" + 
-							   "한국의 많은 예술품을 볼 수 있고 전통차는 물론 사찰 음식까지, " +"<br>" + 
-							   "'한국' 하면 떠오르는 많은 것들이 인사동 거리에 있다. " +"<br>" + 
-							   "한국에서 관광객이 가장 많이 몰리는 곳 중 하나이다. " ;
-					content_2 = "종로 광화문빌딩 지하 1층에 위치한 동화 면세점은 "+"<br>"+"1973년 문을 연 서울에서 가장 오래된 면세점이다."+"<br>"+
-								"에르메스, 루이뷔통, 구찌, 불가리 등 250여 개의 "+"<br>"+"세계 최고 유명 브랜드가 입점되어 있으며 30만 개가 넘는  "+"<br>"+
-								"다양한 수입상품이 전시, 판매되고 있다. " ;
-					content_3 = "종로 귀금속 거리는 40년 전통의 귀금속 상가다. "+"<br>"+
-								"지금도 전국 주얼리 물동량의 70%를 차지할 만큼"+"<br>"+" 활발한 거래가 이루어지고 있다. "+"<br>"+
-								"서비스나 인테리어 또한 업그레이드되어 혼수품만 아니라 "+"<br>"+" 단순 쇼핑을 즐기는 젊은층의 발길도 잦다."+"<br>"+
-								"또한 외국인들의 쇼핑 코스로도 인기를 끌고 있다." ;
+					content_1 = "In the midst of the rapidly changing world, there"+"<br>"+
+							"is a street to preserve and inherit the unique Korean style ."+"<br>"+
+							"You can see a lot of Korean art, and traditional cars as well as temple food,and "+"<br>"+ 
+							"many things that come to mind when you say 'Korea' are in Insadong."+"<br>"+
+							"It is one of the most popular tourist destinations in Korea." ;
+					content_2 = "Donghwa Duty Free is located in the basement of Gwanghwamun Building in Jongno,"+"<br>"+
+							"and is the oldest duty free shop in Seoul that opened in 1973."+"<br>"+
+							"More than 250"+"<br>"+
+							"world-famous brands including Hermes, Louis Vuitton, Gucci and Bulgari are in store, and more than 300,000 "+"<br>"+
+							"imported products are displayed and sold." ;
+					content_3 = "ongno Precious Metal Street is a 40-year-old precious metal shopping street."+"<br>"+
+							"Even now, there are active trades that account for 70% of the nation's jewelry trade ."+"<br>"+
+							"Services and interiors have also been upgraded, and"+"<br>"+
+							"young people who enjoy simple shopping as well as coma are frequent."+"<br>"+
+							"It is also popular as a shopping course for foreigners." ;
 					
 					
 				}else if (act.equals("활동성향_스포츠활동")|| act.equals("활동성향_레포츠활동")){
@@ -181,18 +197,21 @@ h1{
 					url_2 = "background-image: url('img/course/jr_h2.JPG');";
 					url_3 = "background-image: url('img/course/jr_h3.JPG');";
 					
-					head_1 = "롤파크(LoL Park)";
-					head_2 = "TCC 더코아클라이밍";
-					head_3 = "런닝맨 체험관";
+					head_1 = "LoL Park";
+					head_2 = "TCC The Core Climbing";
+					head_3 = "Running Man Experience Hall";
 					   
-					content_1 = "서울 중심부 종로(종각역)에 ‘리그 오브 레전드(롤)’ 경기장이 있다."+"<br>"+
-								"‘롤 파크(LoL PARK)’로 명명된 이번 e스포츠 전용 경기장은 "+"<br>"+" 라이엇 게임즈의 대표 게임인 ‘리그 오브 레전드’ 경기를 "+"<br>"+
-								"더욱 쾌적한 환경에서 관람할 수 있는 "+"<br>"+" 특별한 공간으로 구성된 것이 특징이다.";
-					content_2 = "스포츠 클라이밍은 근력운동은 물론 다이어트에도 매우 효과적이다. "+"<br>"+
-								"클라이밍은 무엇보다도 팔의 힘과 악력이 가장 중요하며,"+"<br>"+" 일단 벽에 붙으면 다음 스텝을 고민하고 몸의 움직임에"+"<br>"+
-								"집중하기 때문에 다른 생각 없이 현재엘 몰입할 수 있는 운동이다. " ;
-					content_3 = "TV 프로그램 속 주인공이 되는 신개념 콘텐츠!!"+"<br>"+
-								"직접 런닝맨이 되어 숨겨진 R 포인트를 찾고, "+"<br>"+" 획득한 포인트에 따라 다양한 런닝맨 배지와 인증서를 받으세요." ;	
+					content_1 = "There is a 'League of Legends (Roll)' stadium in Jongno (Jonggak Station) in central Seoul."+"<br>"+
+							"Named 'LoL PARK', this e-sports-only stadium is characterized by a special space where you can watch the"+"<br>"+
+							"League of Legends, the representative game of Riot Games, in a"+"<br>"+
+							"more comfortable environment";
+					content_2 = "Sports climbing is very effective for strength training and diet."+"<br>"+
+							"Climbing is the most important of all, the strength and grip of the arm, and"+"<br>"+
+							"once attached to the wall,"+"<br>"+
+							"it is an exercise that allows you to immerse yourself in the present elbow without any other thoughts, since you are contemplating the next step and focusing on your body movements" ;
+					content_3 = "New concept content to be the main character in TV programs !!"+"<br>"+
+							"Become a running man yourself, find hidden R points, and"+"<br>"+
+							"earn various running man badges and certificates depending on the points you earn.";	
 				
 				
 				}else if (act.equals("활동성향_식도락관광")){
@@ -201,17 +220,19 @@ h1{
 					url_2 = "background-image: url('img/course/jr_i2.JPG');";
 					url_3 = "background-image: url('img/course/jr_i3.JPG');";
 					
-					head_1 = "효자동목고기";
-					head_2 = "뚝배기집";
-					head_3 = "순희네 빈대떡";
+					head_1 = "Hyoja Auto Meat";
+					head_2 = "Earthenware house";
+					head_3 = "Soonhee's Bindae Tteok";
 					   
-					content_1 = "경북궁역 근처에 목살과 가브리살이 인기가 많은 돼지 고깃집"+"<br>"+
-								"목고기와 오겹살, 가브리살을 위주로 파는 "+"<br>"+"동그란 탁자에 둘러앉아 식사하기에 좋다.";
-					content_2 = "종로3가, 종각 주변의 뚝배기집은 굉장히 유명한 식당이다."+"<br>"+
-								"뚝배기집에서 가장 대표적인 메뉴는 우렁된장입니다."+"<br>"+
-								"이 식당은 외국인 관광객들에게도 굉장히 유명한 식당이어서, "+"<br>"+"일본어, 영어로 식당이름이 적혀있다." ;
-					content_3 = "빈대떡은 한국의 부침요리이다."+"<br>"+
-								"기본적으로 녹두를 간 것을 베이스로, 나물이나 고기 등을 섞어서 "+"<br>"+"기름에 지져 만드는 일종의 녹두전병에 속한다." ;	
+					content_1 = "It is a good place to sit and eat on a round table"+"<br>"+
+							"selling pork meat, pork belly , and meat, which are popular pork meat and meat, near the Gyeongbukgung Station";
+					content_2 = "Jongno 3-ga and Dukbaegi restaurants around Jonggak are very famous restaurants."+"<br>"+
+							"The most representative menu in Ttukbaegi restaurant is Wooryong miso."+"<br>"+
+							"This restaurant is also very popular among foreign tourists, so the"+"<br>"+
+							"name of the restaurant is written in Japanese and English." ;
+					content_3 = "Bindaetteok is a Korean side dish."+"<br>"+
+							"Basically, it is a kind of mung bean stalk made by mixing green beans"+"<br>"+
+							"with a base and mixing them with herbs or meat ." ;	
 				
 					
 				}else if (act.equals("활동성향_자연경관감상")|| act.equals("활동성향_휴양,휴식")){
@@ -220,38 +241,43 @@ h1{
 					url_2 = "background-image: url('img/course/jr_j2.JPG');";
 					url_3 = "background-image: url('img/course/jr_j3.JPG');";
 					
-					head_1 = "청계천";
-					head_2 = "북촌 한옥마을";
-					head_3 = "무계원";
+					head_1 = "Cheonggyecheon";
+					head_2 = "Bukchon Hanok Village";
+					head_3 = "Mugyewon";
 					   
-					content_1 = "서울의 한복판인 종로구와 중구와의 경계를 흐르는 하천."+"<br>"+
-								"서울 분지의 모든 물이 여기에 모여 "+"<br>"+"중랑천(中浪川)과 합쳐져  한강으로 빠진다."+"<br>"+
-								"분수 야경이 멋진 곳으로, 산책하기 좋은 곳이다.";
-					content_2 = "서울의 옛 흔적."+"<br>"+
-								"한국의 전통가옥(한옥)을 볼 수 있는 곳으로 "+"<br>"+"일부 주택은 숙박객을 위한 한옥 스테이, 전통 찻집으로 활용되고 있다."+"<br>"+
-								"걸어서 둘러보는 데 약 3시간 소요됨." ;
-					content_3 = "무계원은 종로구 부암동에 개원한 도심 속 전통문화 공간이다. "+"<br>"+
-								"고즈넉한 풍광 속에서 한옥을 체험하며,"+"<br>"+"전통과 문화를 통해 한국의 아름다움을 느낄 수 있는 특별한 공간이다. "+"<br>"+
-								"무계원의 안채와 사랑채, 행랑채는 세미나, 강연, 회의실 등으로 "+"<br>"+"사용 가능하며, 안채 마루, 안마당과 뒷마당 등 "+"<br>"+
-								"부대시설에서는 다양한 전통문화 행사도 진행한다." ;	
+					content_1 = "A stream flowing through the boundary between Jongno-gu and Jung-gu, in the middle of Seoul."+"<br>"+
+							"All the water in the Seoul Basin gathers here,"+"<br>"+
+							"merges with Jungnangcheon and falls into the Han River."+"<br>"+
+							"The fountain's night view is great and it's a great place for a walk.";
+					content_2 = "Old traces of Seoul."+"<br>"+
+							"It is a place where you can see Korean traditional houses (Hanok), and"+"<br>"+
+							"some houses are used as hanok stays and traditional tea houses for guests."+"<br>"+
+							"It takes about 3 hours to walk around." ;
+					content_3 = "Mugyewon is a traditional cultural space in the city that opened in Buam-dong, Jongno-gu."+"<br>"+
+							"It is a special space where you can experience Hanok in a quiet scenery and feel the beauty of Korea through tradition and culture."+"<br>"+
+							"Muchaewon's Anchae, Sarangchae, and Haengrangchae"+"<br>"+
+							"can be used for seminars, lectures, conference rooms, etc., and"+"<br>"+
+							"various traditional cultural events are also held at additional facilities such as Anchae floor, courtyard and backyard ." ;	
 				}else {
 					url_1 = "background-image: url('img/course/jr_a3.JPG');";
 					url_2 = "background-image: url('img/course/jr_b2.JPG');";
 					url_3 = "background-image: url('img/course/jr_h3.JPG');";
 					
-					head_1 = "인사동 거리";
-					head_2 = "세종 충무공이야기";
-					head_3 = "런닝맨 체험관";
+					head_1 = "Insadong Street";
+					head_2 = "Sejong Chungmugong Story";
+					head_3 = "Running Man Experience Hall";
 					   
-					content_1 = "세상이 급변하는 와중에도 한국 고유의 멋을"+"<br>"+" 간직하고 계승하려는 거리가 있다. " +"<br>" + 
-							   "한국의 많은 예술품을 볼 수 있고 전통차는 물론 사찰 음식까지, " +"<br>" + 
-							   "'한국' 하면 떠오르는 많은 것들이 인사동 거리에 있다. " +"<br>" + 
-							   "한국에서 관광객이 가장 많이 몰리는 곳 중 하나이다. " ;
-					content_2 = "세종 이야기·충무공 이야기는 세종문화회관 지하 2층에 위치한"+"<br>"+" 세종대왕과 이순신 장군에 관련한전시회이다. "+"<br>"+
-								"전시를 비롯해 유치원생부터 초등학생까지 어린이의 나이별로 "+"<br>"+"제작된 한복을 입고 전통문화를 체험할 수 있는 "+"<br>"+"프로그램도 제공하고 있다. " ;
-					content_3 = "TV 프로그램 속 주인공이 되는 신개념 콘텐츠!!"+"<br>"+
-								"직접 런닝맨이 되어 숨겨진 R 포인트를 찾고, "+"<br>"+" 획득한 포인트에 따라 다양한 런닝맨 배지와 인증서를 받으세요." ;	
-					
+					content_1 = "In the midst of the rapidly changing world, there is a street to preserve and inherit the unique style of Korea."+"<br>"+
+							   "You can see a lot of Korean art, and traditional cars as well as temple food, and"+"<br>"+
+							   "many things that come to mind when you say 'Korea' are in Insadong."+"<br>"+
+							   "It is one of the most popular tourist destinations in Korea." ;
+					content_2 = "The story of Sejong and Chungmugong"+"<br>"+
+							"is an exhibition related to King Sejong the Great and Admiral Yi Sun-Sin located on the second floor of the Sejong Center for the Performing Arts ."+"<br>"+
+							"In addition to exhibitions,"+"<br>"+
+							"we also offer programs that allow you to experience traditional culture by wearing hanbok made by children's ages, from kindergarten students to elementary school students ." ;
+					content_3 = "New concept content to be the main character in TV programs !!"+"<br>"+
+							"Become a running man yourself, find hidden R points, and"+"<br>"+
+							"earn various running man badges and certificates depending on the points you earn.";
 				}
 				
 				
@@ -328,8 +354,8 @@ h1{
 									<a href="img/gallery/fulls/jr_a1.JPG" class="image">
 										<img src="img/gallery/thumbs/jr_a1.JPG" height="450px" /></a>
 									<div class="caption">
-										<h3>창덕궁</h3>
-										<p>대한민국 서울특별시에 있는 <br>조선 시대 궁궐</p>
+										<h3>Changdeokgung Palace</h3>
+								<p>The Joseon Dynasty place<br>in Seoul, South Korea</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
@@ -337,8 +363,8 @@ h1{
 									<a href="img/gallery/fulls/jr_a3.JPG" class="image">
 										<img src="img/gallery/thumbs/jr_a3.JPG" height="450px" /></a>
 									<div class="caption">
-										<h3>인사동거리</h3>
-										<p>한국 고유의 멋을 간직하고 <br>계승하려는 거리</p>
+										<h3>Insadong Street</h3>
+										<p>A street that preserves Korean style<br> and is intended to be inherited.</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
@@ -346,8 +372,8 @@ h1{
 									<a href="img/gallery/fulls/jr_b1.JPG" class="image">
 										<img src="img/gallery/thumbs/jr_b1.JPG" height="450px" /></a>
 									<div class="caption">
-										<h3>광화문 아트홀</h3>
-										<p>야외정원, 레스토랑, 문화교실, <br>수영장, 헬스장, 스포츠클라이밍장 등</p>
+										<h3>Gwanghwamun ArtHall</h3>
+										<p>Outdoor garden, restaurant, cultural classroom,<br>swimming pool, gym, sports climbing field, etc.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -358,8 +384,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_b2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>세종 충무공이야기</h3>
-										<p>세종문화회관 지하 2층에 위치한 <br>세종대왕과 이순신 장군에 관련한전시회</p>
+										<h3>Sejong Chungmugong Story</h3>
+										<p>Located on the 2nd basement level of Sejong Center <br>Exhibitions related to King Sejong and General Yi Sun-sin</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -370,8 +396,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_b3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>공평도시 유적전시관</h3>
-										<p>조선시대 16세기 건물지와 길을 <br>그대로 보존하여 전시한 도시박물관</p>
+										<h3>Gongpyeong City Ruins Exhibition Hall</h3>
+										<p>Buildings and roads in the 16th century during the Joseon Dynasty <br>Urban museum preserved and displayed as it is</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -382,8 +408,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_c1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>런닝맨 체험관</h3>
-										<p>TV 프로그램 속 주인공이 되는 <br> 신개념 콘텐츠!!</p>
+										<h3>Running Man Experience Hall</h3>
+										<p>To be the main character in a TV show <br> New concept content !!</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -394,8 +420,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_c2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>테지움 테디베어 테마파크</h3>
-										<p>테디베어의 어원과 유래, 역사</p>
+										<h3>Tezium Teddy Bear Theme Park</h3>
+										<p>The origin and origin of teddy bears, history</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -406,8 +432,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_c3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>쌈지길 체험공방</h3>
-										<p>향연·김유국 해학 목공예학교·<br>세라위크·글라스본 등의 체험프로그램을 진행</p>
+										<h3>Ssamji-gil Experience Workshop</h3>
+										<p>Hyangyeon · Kim Yoo-guk Hakmok Woodwork School<br>Experience programs such as Serra Week and Glassborn</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -418,8 +444,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_d1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>돌담길(도깨비)</h3>
-										<p>드라마 도깨비 촬영지 </p>
+										<h3>Stone Wall Road (Goblin)</h3>
+										<p>Drama Goblin location</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -430,8 +456,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_d2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>마이 포에트리 (여우각시별)</h3>
-										<p>드라마 여우 각시별 촬영지</p>
+										<h3>My Poetry (by fox hour)</h3>
+										<p>Drama Fox Filming Location</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -442,8 +468,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_f2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>동화면세점</h3>
-										<p>250여 개의 세계 최고 유명 브랜드가 입점</p>
+										<h3>Dongwha Duty Free</h3>
+										<p>Over 250 world-famous brands launched</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -454,8 +480,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_h1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>롤파크(LoL Park)</h3>
-										<p>‘리그 오브 레전드(롤)’ 경기장</p>
+										<h3>LoL Park</h3>
+										<p>'League of Legends (LOL)' Stadium</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -466,8 +492,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_h2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>TCC 더코아클라이밍</h3>
-										<p>근력운동은 물론 다이어트에도 매우 효과적</p>
+										<h3>TCC The Core Climbing</h3>
+										<p>Very effective for diet as well as strength training</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -478,8 +504,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_j1.jpg" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>청계천</h3>
-										<p>서울의 한복판인 <br>종로구와 중구와의 경계를 흐르는 하천.</p>
+										<h3>Cheonggyecheon</h3>
+										<p>The heart of Seoul<br>A river flowing through the boundary between Jongno-gu and Jung-gu.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -490,8 +516,8 @@ h1{
 										<img src="img/gallery/thumbs/jr_j2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>북촌 한옥마을</h3>
-										<p>서울의 옛 흔적. <br>한국의 전통가옥(한옥)을 볼 수 있는 곳</p>
+										<h3>Bukchon Hanok Village</h3>
+										<p>Old traces of Seoul. <br> A place to see Korean traditional houses (Hanok)</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -502,8 +528,9 @@ h1{
 										<img src="img/gallery/thumbs/jr_j3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>무계원</h3>
-										<p>고즈넉한 풍광 속에서 한옥을 체험하며, <br>전통과 문화를 통해 <br>한국의 아름다움을 느낄 수 있는 특별한 공간</p>
+										<h3>Mugyewon</h3>
+										<p>Experience Hanok in a quiet scenery,<br>Through tradition and culture <br>
+A special space where you can feel the beauty of Korea</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>

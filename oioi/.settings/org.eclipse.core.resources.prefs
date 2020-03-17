@@ -1,3 +1,8 @@
 eclipse.preferences.version=1
+<<<<<<< HEAD
+encoding//WebContent/Ch_Jong-ro.jsp=UTF-8
+=======
+encoding//WebContent/En_Dongdaemun.jsp=UTF-8
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 encoding//WebContent/Korea.jsp=UTF-8
 encoding//WebContent/Main.html=UTF-8

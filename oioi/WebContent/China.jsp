@@ -237,7 +237,7 @@ p#rate{
 						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">做课程</a></div>
 						<%}
 					else{%>
-						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">做课程</a></div>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="Ch-survey.jsp" style="position : absolute;">做课程</a></div>
 					<%}%>	
 				<!--<li><a href="#elements">Elements</a></li>-->
 					
