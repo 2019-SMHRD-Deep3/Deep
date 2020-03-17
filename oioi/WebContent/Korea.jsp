@@ -191,7 +191,6 @@ table tbody tr {
 					<%
 				} else {
 			%>
-			
 			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
 			<td class="inTag"><a
@@ -334,7 +333,6 @@ table tbody tr {
 			<article id="intro" class="intSE conPage">
 
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-
 				<span><img src="img/sese.PNG"/></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
