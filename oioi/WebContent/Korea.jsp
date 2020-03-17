@@ -372,19 +372,16 @@ p#rate{
 
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$('.display').show(); //페이지를 로드할 때 표시할 요소
-						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+						$('#g').show(); //페이지를 로드할 때 표시할 요소
 					});
 					var btn1 = document.querySelector('.major1');
 
 					btn1.addEventListener('click', function() {
 						$('#g').hide();
-						$('.display').show();
 					});
 
 					var btn2 = document.querySelector('.major2');
 					btn2.addEventListener('click', function() {
-						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
 						$('#g').show(); //클릭 시 두 번째 요소 표시
 					});
 				</script>
@@ -397,8 +394,8 @@ p#rate{
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">국가별 선호 여행지</h2>
-				<div class = "">
-				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<div class = "g">
+				<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
 					<button class = "country" id = "c1">미국</button>
 					<button class = "country" id = "c2">중국</button>
 					<button class = "country" id = "c3">일본</button>
@@ -444,13 +441,13 @@ p#rate{
 		<!-- Footer -->
 		<footer id="footer">
 			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
 			</p>
 		</footer>
 
 	</div>
 	
-		<p id = "rate1">1.명동/남대문/북창
+	<p id = "rate1">1.명동/남대문/북창
 					2.종로/청계
 					3.강남역
 					4.이태원
@@ -510,92 +507,90 @@ p#rate{
 	
 	<script type="text/javascript">
 		
-		var text = document.querySelector('#rate');
-		var popimgs = document.getElementById('popimg0');
-		var rate1 = document.querySelector('#rate1')
-		rate1.setAttribute('style', 'white-space: pre-line;');
-		rate1.textContent;
-		var rate2 = document.querySelector('#rate2');
-		rate2.setAttribute('style', 'white-space: pre-line;');
-		rate2.textContent;
-		var rate3 = document.querySelector('#rate3');
-		rate3.setAttribute('style', 'white-space: pre-line;');
-		rate3.textContent;
-		var rate4 = document.querySelector('#rate4');
-		rate4.setAttribute('style', 'white-space: pre-line;');
-		rate4.textContent;
-		var rate5 = document.querySelector('#rate5');
-		rate5.setAttribute('style', 'white-space: pre-line;');
-		rate5.textContent;
-		var rate6 = document.querySelector('#rate6');
-		rate6.setAttribute('style', 'white-space: pre-line;');
-		rate6.textContent;
-		var rate7 = document.querySelector('#rate7');
-		rate7.setAttribute('style', 'white-space: pre-line;');
-		rate7.textContent;
-		var rate8 = document.querySelector('#rate8');
-		rate8.setAttribute('style', 'white-space: pre-line;');
-		rate8.textContent;
-		var rate9 = document.querySelector('#rate9');
-		rate9.setAttribute('style', 'white-space: pre-line;');
-		rate9.textContent;
-		var rate10 = document.querySelector('#rate10');
-		rate10.setAttribute('style', 'white-space: pre-line;');
-		rate10.textContent;
-		// 버튼 1
-		$('#c1:button').on('click', function() {
+	var text = document.querySelector('#rate');
+	var popimgs = document.getElementById('popimg2');
+	var rate1 = document.querySelector('#rate1')
+	rate1.setAttribute('style', 'white-space: pre-line;');
+	rate1.textContent;
+	var rate2 = document.querySelector('#rate2');
+	rate2.setAttribute('style', 'white-space: pre-line;');
+	rate2.textContent;
+	var rate3 = document.querySelector('#rate3');
+	rate3.setAttribute('style', 'white-space: pre-line;');
+	rate3.textContent;
+	var rate4 = document.querySelector('#rate4');
+	rate4.setAttribute('style', 'white-space: pre-line;');
+	rate4.textContent;
+	var rate5 = document.querySelector('#rate5');
+	rate5.setAttribute('style', 'white-space: pre-line;');
+	rate5.textContent;
+	var rate6 = document.querySelector('#rate6');
+	rate6.setAttribute('style', 'white-space: pre-line;');
+	rate6.textContent;
+	var rate7 = document.querySelector('#rate7');
+	rate7.setAttribute('style', 'white-space: pre-line;');
+	rate7.textContent;
+	var rate8 = document.querySelector('#rate8');
+	rate8.setAttribute('style', 'white-space: pre-line;');
+	rate8.textContent;
+	var rate9 = document.querySelector('#rate9');
+	rate9.setAttribute('style', 'white-space: pre-line;');
+	rate9.textContent;
+	var rate10 = document.querySelector('#rate10');
+	rate10.setAttribute('style', 'white-space: pre-line;');
+	rate10.textContent;
+	// 버튼 1
+	$('#c1:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place1.PNG');
+		$('#rate').html(rate1);
+	});
 
-			$('#popimg0').attr('src', 'img/place1.PNG');
-			$('#rate').html(rate1);
-		});
-
-		// 버튼2
-		$('#c2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place2.PNG');
-			$('#rate').html(rate2);
-		});
-		// 버튼3
-		$('#c3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place3.PNG');
-			$('#rate').html(rate3);
-		});
-		// 버튼4
-		$('#c4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place4.PNG');
-			$('#rate').html(rate4);
-		});
-		// 버튼5
-		$('#c5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place5.PNG');
-			$('#rate').html(rate5);
-		});
-		// 버튼6
-		$('#c6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place6.PNG');
-			$('#rate').html(rate6);
-		});
-		// 버튼7
-		$('#c7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place7.PNG');
-			$('#rate').html(rate7);
-		});
-		// 버튼8
-		$('#c8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place8.PNG');
-			$('#rate').html(rate8);
-		});
-		// 버튼9
-		$('#c9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place9.PNG');
-			$('#rate').html(rate9);
-		});
-		// 버튼10
-		$('#c10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place10.PNG');
-			$('#rate').html(rate10);
-		});
-	</script>
-	
+	// 버튼2
+	$('#c2:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place2.PNG');
+		$('#rate').html(rate2);
+	});
+	// 버튼3
+	$('#c3:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place3.PNG');
+		$('#rate').html(rate3);
+	});
+	// 버튼4
+	$('#c4:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place4.PNG');
+		$('#rate').html(rate4);
+	});
+	// 버튼5
+	$('#c5:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place5.PNG');
+		$('#rate').html(rate5);
+	});
+	// 버튼6
+	$('#c6:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place6.PNG');
+		$('#rate').html(rate6);
+	});
+	// 버튼7
+	$('#c7:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place7.PNG');
+		$('#rate').html(rate7);
+	});
+	// 버튼8
+	$('#c8:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place8.PNG');
+		$('#rate').html(rate8);
+	});
+	// 버튼9
+	$('#c9:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place9.PNG');
+		$('#rate').html(rate9);
+	});
+	// 버튼10
+	$('#c10:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place10.PNG');
+		$('#rate').html(rate10);
+	});
+</script>
 	
 	
 	
@@ -793,7 +788,6 @@ p#rate{
 		test10.textContent;
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
-
 			$('#popimg0').attr('src', 'img/place1.PNG');
 			$('#texttext').html(test1);
 		});
@@ -856,27 +850,30 @@ p#rate{
          만 65세 어르신, 외국인 : 3000원
          한복착용자 : 무료</p>
 	<p id="texttext22">홍대거리에는 이색카페들, 소규모 갤러리와 화랑, 소품점과 패션숍, 라이브카페와 클럽, 예술시장, 각종 맛집 등은 홍대거리를 더욱 자유스럽게 만든다. 다양한 행사와 거리공연, 축제 등의 문화요소를 간직하고 있어 홍대주변은 항상 많은 사람들로 북적거린다. 또한, 홍대주변을 구성하는 미술학원거리, 피카소거리, 클럽거리, 걷고 싶은거리 등 이색거리가 홍대거리로의 발걸음을 즐겁게 한다.
-홍대 걷고싶은거리 : 홍대 걷고싶은거리는 홍대를 대표하는 곳으로 야외 무대 공연장을 설치해 인디밴드의 거리공연과 젊은이들의 역동적인 모습을 느낄 수 있는 곳이다.
-홍대 벽화거리 : 홍대 벽화거리는 홍익대학교 후문에 위치한 카네마야 제면소부터 포시즌하우스까지 이어지는 와우산로 22길에 펼쳐져 있다.낙서 같은 그림도 많으나 디자인 예술에 가까운 벽화도 많아 피카소 거리라고 불리며, 연인들의 데이트 코스로 널리 알려져있다.
-홍대앞 예술시장 프리마켓 / 홍대앞 희망시장 : 홍익대 정문 앞 홍익어린이 공원에서는 매년 3월부터 11월까지 매주 토요일은 홍대앞 예술시장 프리마켓이, 매주 일요일은 홍대앞 희망시장이 열린다.각각의 예술시장에서는 일반 시민작가들의 참여와 손으로 직접 만든 수공예품 판매,생활창작 아티스트들의 작품전시 및 판매가 이루어진다.
+		
+		홍대 걷고싶은거리 : 홍대 걷고싶은거리는 홍대를 대표하는 곳으로 야외 무대 공연장을 설치해 인디밴드의 거리공연과 젊은이들의 역동적인 모습을 느낄 수 있는 곳이다.
+		
+		홍대 벽화거리 : 홍대 벽화거리는 홍익대학교 후문에 위치한 카네마야 제면소부터 포시즌하우스까지 이어지는 와우산로 22길에 펼쳐져 있다.낙서 같은 그림도 많으나 디자인 예술에 가까운 벽화도 많아 피카소 거리라고 불리며, 연인들의 데이트 코스로 널리 알려져있다.
+		
+		홍대앞 예술시장 프리마켓 / 홍대앞 희망시장 : 홍익대 정문 앞 홍익어린이 공원에서는 매년 3월부터 11월까지 매주 토요일은 홍대앞 예술시장 프리마켓이, 매주 일요일은 홍대앞 희망시장이 열린다.각각의 예술시장에서는 일반 시민작가들의 참여와 손으로 직접 만든 수공예품 판매,생활창작 아티스트들의 작품전시 및 판매가 이루어진다.
 
 </p>
 	<p id="texttext33">주소 : 서울 종로구 낙산길 41 동숭동 산2-10
 
-수도 서울을 구성하는 내사산(內四山:북악산·남산·인왕산·낙산)의 하나이자 주산(主山)인 북악산의 좌청룡(左靑龍)에 해당하는 낙산의 자연환경과 역사적 문화환경을 복원함으로써 서울시민들에게 쾌적한 공원 경관을 제공하고, 자연 탐방을 통해 역사와 문화 교육의 장을 제공할 목적으로 조성되었다.
-총면적은 6만 1145평으로, 1999년 12월 30일 착공해 2002년 7월 완공하였다. 주요 시설은 ① 전시 및 관리실, 매점 및 화장실, 비우당(庇雨堂), 육각 정자, 노인정 등 건축시설 5동 ② 12개의 배드민턴장과 1개의 농구장으로 이루어진 운동시설 ③ 10개의 휴게소와 117개의 의자로 구성된 편의시설 ④ 중앙광장·이벤트광장 및 3개의 전망광장으로 이루어진 광장시설 ⑤ 기타 안내판 외 28개 시설 등이다. 그 외에 공원 녹지화를 위해 소나무를 포함해 총 40종 8만 9670그루의 나무를 심었다.
-주변 유적으로는 서울 동대문(東大門:보물 1), 서울성곽(사적 10), 이화장(梨花莊:서울기념물 6) 등이 있다. 그 밖에 마을 전체가 온통 붉은 열매를 맺는 나무로만 둘러싸여 있다 해서 이름 붙여진 홍수동(紅樹洞:홍숫골), 단종이 영월(寧越) 청령포(淸泠浦)에서 귀양살이할 때 왕비가 저고리깃·댕기 등에 자줏빛 물을 들이기 위해 사용했다는 자지동천(紫芝洞泉:자주동천·자주우물), 《지봉유설(芝峰類說)》의 저자 이수광(李晬光)이 외조부의 집을 손질하며 겨우 비만 가릴 수 있는 집이라는 뜻으로 당호를 붙인 비우당, 우물이 나란히 5개가 있어 이름 붙여진 오형제 우물터, 오부학당 가운데 하나인 동부학당 터 등이 있다.</p>
+		수도 서울을 구성하는 내사산(內四山:북악산·남산·인왕산·낙산)의 하나이자 주산(主山)인 북악산의 좌청룡(左靑龍)에 해당하는 낙산의 자연환경과 역사적 문화환경을 복원함으로써 서울시민들에게 쾌적한 공원 경관을 제공하고, 자연 탐방을 통해 역사와 문화 교육의 장을 제공할 목적으로 조성되었다.
+		총면적은 6만 1145평으로, 1999년 12월 30일 착공해 2002년 7월 완공하였다. 주요 시설은 ① 전시 및 관리실, 매점 및 화장실, 비우당(庇雨堂), 육각 정자, 노인정 등 건축시설 5동 ② 12개의 배드민턴장과 1개의 농구장으로 이루어진 운동시설 ③ 10개의 휴게소와 117개의 의자로 구성된 편의시설 ④ 중앙광장·이벤트광장 및 3개의 전망광장으로 이루어진 광장시설 ⑤ 기타 안내판 외 28개 시설 등이다. 그 외에 공원 녹지화를 위해 소나무를 포함해 총 40종 8만 9670그루의 나무를 심었다.
+		주변 유적으로는 서울 동대문(東大門:보물 1), 서울성곽(사적 10), 이화장(梨花莊:서울기념물 6) 등이 있다. 그 밖에 마을 전체가 온통 붉은 열매를 맺는 나무로만 둘러싸여 있다 해서 이름 붙여진 홍수동(紅樹洞:홍숫골), 단종이 영월(寧越) 청령포(淸泠浦)에서 귀양살이할 때 왕비가 저고리깃·댕기 등에 자줏빛 물을 들이기 위해 사용했다는 자지동천(紫芝洞泉:자주동천·자주우물), 《지봉유설(芝峰類說)》의 저자 이수광(李晬光)이 외조부의 집을 손질하며 겨우 비만 가릴 수 있는 집이라는 뜻으로 당호를 붙인 비우당, 우물이 나란히 5개가 있어 이름 붙여진 오형제 우물터, 오부학당 가운데 하나인 동부학당 터 등이 있다.</p>
 	<p id="texttext44">주소 : 서울 용산구 남산공원길 103 서울타워
 
-개장 시간 : 매일 11:00 - 20:00
+		개장 시간 : 매일 11:00 - 20:00
 
-요금 : 전망대 (대인) 11,000원 전망대(소인) 9000원
+		요금 : 전망대 (대인) 11,000원 전망대(소인) 9000원
 
-제1의 관광명소 남산서울타워
-국내외 관광객들이 년 1,200만 명 방문하는 서울 제1의 관광명소인 남산서울타워
-최근 한류 바람을 몰고 각종 예능, 드라마의 촬영지로 이름이 높아지면서 관광객 방문이 더욱 늘어나는 추세입니다. 
-서울 중심부에 위치해 360도 전방향으로 서울 시내를 훤히 내려다볼 수 있는 천혜의 입지 조건을 갖추고 있어, 세계 최대의 여행 출판사인 론리 플래닛이 선정한 세계 500대 관광지에 뽑히기도 했습니다.
-최근 사무동을 리모델링해 오픈한 서울타워플라자엔 다양한 편의시설과 볼거리, 식음료 매장을 갖춰 관광객에게 서비스를 제공합니다.
+		제1의 관광명소 남산서울타워
+		국내외 관광객들이 년 1,200만 명 방문하는 서울 제1의 관광명소인 남산서울타워
+		최근 한류 바람을 몰고 각종 예능, 드라마의 촬영지로 이름이 높아지면서 관광객 방문이 더욱 늘어나는 추세입니다. 
+		서울 중심부에 위치해 360도 전방향으로 서울 시내를 훤히 내려다볼 수 있는 천혜의 입지 조건을 갖추고 있어, 세계 최대의 여행 출판사인 론리 플래닛이 선정한 세계 500대 관광지에 뽑히기도 했습니다.
+		최근 사무동을 리모델링해 오픈한 서울타워플라자엔 다양한 편의시설과 볼거리, 식음료 매장을 갖춰 관광객에게 서비스를 제공합니다.
 
 	</p>
 	<p id="texttext55">5번</p>

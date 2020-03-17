@@ -454,14 +454,19 @@ p#rate{
 		<!-- Footer -->
 		<footer id="footer">
 			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
+				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
 			</p>
 		</footer>
 
 	</div>
 
-<p id = "rate1">명동12431</p>
-		<p id = "rate1">1.Myeongdong / Namdaemun / Bukchang
+	<p id = "rate1">1.Myeongdong / Namdaemun / Bukchang
+					2.Jonglo / Cheonggye
+					3.Gangnam Station
+					4.Itaewon
+					5.Dongdaemun Fashion Town
+	</p>
+	<p id = "rate1">1.Myeongdong / Namdaemun / Bukchang
 					2.Jonglo / Cheonggye
 					3.Gangnam Station
 					4.Itaewon
@@ -521,91 +526,90 @@ p#rate{
 	
 	<script type="text/javascript">
 		
-		var text = document.querySelector('#rate');
-		var popimgs = document.getElementById('popimg0');
-		var rate1 = document.querySelector('#rate1')
-		rate1.setAttribute('style', 'white-space: pre-line;');
-		rate1.textContent;
-		var rate2 = document.querySelector('#rate2');
-		rate2.setAttribute('style', 'white-space: pre-line;');
-		rate2.textContent;
-		var rate3 = document.querySelector('#rate3');
-		rate3.setAttribute('style', 'white-space: pre-line;');
-		rate3.textContent;
-		var rate4 = document.querySelector('#rate4');
-		rate4.setAttribute('style', 'white-space: pre-line;');
-		rate4.textContent;
-		var rate5 = document.querySelector('#rate5');
-		rate5.setAttribute('style', 'white-space: pre-line;');
-		rate5.textContent;
-		var rate6 = document.querySelector('#rate6');
-		rate6.setAttribute('style', 'white-space: pre-line;');
-		rate6.textContent;
-		var rate7 = document.querySelector('#rate7');
-		rate7.setAttribute('style', 'white-space: pre-line;');
-		rate7.textContent;
-		var rate8 = document.querySelector('#rate8');
-		rate8.setAttribute('style', 'white-space: pre-line;');
-		rate8.textContent;
-		var rate9 = document.querySelector('#rate9');
-		rate9.setAttribute('style', 'white-space: pre-line;');
-		rate9.textContent;
-		var rate10 = document.querySelector('#rate10');
-		rate10.setAttribute('style', 'white-space: pre-line;');
-		rate10.textContent;
-		// 버튼 1
-		$('#c1:button').on('click', function() {
+	var text = document.querySelector('#rate');
+	var popimgs = document.getElementById('popimg2');
+	var rate1 = document.querySelector('#rate1')
+	rate1.setAttribute('style', 'white-space: pre-line;');
+	rate1.textContent;
+	var rate2 = document.querySelector('#rate2');
+	rate2.setAttribute('style', 'white-space: pre-line;');
+	rate2.textContent;
+	var rate3 = document.querySelector('#rate3');
+	rate3.setAttribute('style', 'white-space: pre-line;');
+	rate3.textContent;
+	var rate4 = document.querySelector('#rate4');
+	rate4.setAttribute('style', 'white-space: pre-line;');
+	rate4.textContent;
+	var rate5 = document.querySelector('#rate5');
+	rate5.setAttribute('style', 'white-space: pre-line;');
+	rate5.textContent;
+	var rate6 = document.querySelector('#rate6');
+	rate6.setAttribute('style', 'white-space: pre-line;');
+	rate6.textContent;
+	var rate7 = document.querySelector('#rate7');
+	rate7.setAttribute('style', 'white-space: pre-line;');
+	rate7.textContent;
+	var rate8 = document.querySelector('#rate8');
+	rate8.setAttribute('style', 'white-space: pre-line;');
+	rate8.textContent;
+	var rate9 = document.querySelector('#rate9');
+	rate9.setAttribute('style', 'white-space: pre-line;');
+	rate9.textContent;
+	var rate10 = document.querySelector('#rate10');
+	rate10.setAttribute('style', 'white-space: pre-line;');
+	rate10.textContent;
+	// 버튼 1
+	$('#c1:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place1.PNG');
+		$('#rate').html(rate1);
+	});
 
-			$('#popimg0').attr('src', 'img/place1.PNG');
-			$('#rate').html(rate1);
-		});
-
-		// 버튼2
-		$('#c2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place2.PNG');
-			$('#rate').html(rate2);
-		});
-		// 버튼3
-		$('#c3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place3.PNG');
-			$('#rate').html(rate3);
-		});
-		// 버튼4
-		$('#c4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place4.PNG');
-			$('#rate').html(rate4);
-		});
-		// 버튼5
-		$('#c5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place5.PNG');
-			$('#rate').html(rate5);
-		});
-		// 버튼6
-		$('#c6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place6.PNG');
-			$('#rate').html(rate6);
-		});
-		// 버튼7
-		$('#c7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place7.PNG');
-			$('#rate').html(rate7);
-		});
-		// 버튼8
-		$('#c8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place8.PNG');
-			$('#rate').html(rate8);
-		});
-		// 버튼9
-		$('#c9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place9.PNG');
-			$('#rate').html(rate9);
-		});
-		// 버튼10
-		$('#c10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place10.PNG');
-			$('#rate').html(rate10);
-		});
-	</script>
+	// 버튼2
+	$('#c2:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place2.PNG');
+		$('#rate').html(rate2);
+	});
+	// 버튼3
+	$('#c3:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place3.PNG');
+		$('#rate').html(rate3);
+	});
+	// 버튼4
+	$('#c4:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place4.PNG');
+		$('#rate').html(rate4);
+	});
+	// 버튼5
+	$('#c5:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place5.PNG');
+		$('#rate').html(rate5);
+	});
+	// 버튼6
+	$('#c6:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place6.PNG');
+		$('#rate').html(rate6);
+	});
+	// 버튼7
+	$('#c7:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place7.PNG');
+		$('#rate').html(rate7);
+	});
+	// 버튼8
+	$('#c8:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place8.PNG');
+		$('#rate').html(rate8);
+	});
+	// 버튼9
+	$('#c9:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place9.PNG');
+		$('#rate').html(rate9);
+	});
+	// 버튼10
+	$('#c10:button').on('click', function() {
+		$('#popimg2').attr('src', 'img/place10.PNG');
+		$('#rate').html(rate10);
+	});
+</script>
 
 	<p id="texttext1">Tél: 02-3700-3900
 
