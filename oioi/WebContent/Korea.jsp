@@ -146,7 +146,7 @@ table tbody tr {
 }
 #OnTopMenu{
 	width: 18%;
-	left: 48%;
+	left: 40%;
 }
 #OffTopMenu{
 	width: 18%;
@@ -198,7 +198,7 @@ table tbody tr {
 					<div class="tMenu"><a class="tag" href="#about">랭킹</a></div>
 				</div>
 			<% } %>
-			<table style="width: 20%; position: absolute; right: 0px;display:inline-block;">
+			<table style="width: 20%; position: absolute; right: 6%;display:inline-block;">
 				<tr>
 					<%
 				if (info == null) {
