@@ -190,7 +190,7 @@ p#rate{
 			<td class="inTag"><a
 				href="LogoutService.do?num=2">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="Ja_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>

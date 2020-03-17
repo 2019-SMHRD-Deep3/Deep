@@ -196,7 +196,7 @@ table tbody tr {
 			<td class="inTag"><a
 				href="LogoutService.do?num=1">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="K_update.jsp">ChangeInfo</a></td>
 			<% } %>
 
 					<td>

@@ -41,7 +41,7 @@ display:table-cell; vertical-align: middle; text-align: center;
 		<div id= "outer">
 				<div id = "repair"> 
 					<h5>회원정보수정</h5>
-					<form action="updateService.do" method="post">
+					<form action="updateService.do?num=1" method="post">
 						<%
 							MemberDTO info = (MemberDTO) session.getAttribute("info");
 						%>
