@@ -145,13 +145,13 @@ public class MemberDAO {
 		int cnt = 0;
 		try {
 			getConnection(); // 연결
-			String sql = "update user_member set pw = ?, name = ? where email = ?";
+			String sql = "update user_member set pw = ?, name = ?, email = ? where id = ?";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, dto.getPw()); // 물음표값 채워주기. 순서 지킬 것. 이상하게 들어가니까
 			psmt.setString(2, dto.getName());
 			psmt.setString(3, dto.getEmail()); // 이런 이메일을 가진 사람의 정보를 변경시킬것이기 때문에 써줘야 함.
-			
+			psmt.setString(4, dto.getId());
 			cnt = psmt.executeUpdate();
 			
 		} catch (SQLException e) {

@@ -306,7 +306,7 @@ span {
 	  				if (rs.result3 == 1){
 	  					$('#result3').text('#동대문 패션타운');
 	  					$('#result3').attr('style', "display:inline");
-	  					url3 = 'Main.html?act='+act;
+	  					url3 = 'K_Dongdaemun.jsp?act='+act;
 	  					$('#result3').on('click',popupPage3);
 	  				}
 	  				if (rs.result4 == 1){
