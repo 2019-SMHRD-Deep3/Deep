@@ -13,6 +13,7 @@ public class UpdateCon implements ICommand {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+		String num = request.getParameter("num");
 		String moveURL = null;
 
 		HttpSession session = request.getSession();
@@ -31,9 +32,42 @@ public class UpdateCon implements ICommand {
 
 		if (cnt > 0) {
 			session.setAttribute("info", dto);
+			if(num.equals("1")) {
+				moveURL = "Korea.jsp";
+				
+			}else if(num.equals("2")) {
+				moveURL = "Japan.jsp";
+				
+			}else if(num.equals("3")) {
+				moveURL = "China.jsp";
+				
+			}else if(num.equals("4")) {
+				moveURL = "English.jsp";
+				
+			}else if(num.equals("5")) {
+				moveURL = "French.jsp";
+				
+			}else if(num.equals("6")) {
+				moveURL = "Spain.jsp";
+			}
+		}else {
+			if(num.equals("1")) {
+				moveURL = "Korea.jsp";
+			}else if(num.equals("2")) {
+				moveURL = "Japan.jsp";
+			}else if(num.equals("3")) {
+				moveURL = "China.jsp";
+			}else if(num.equals("4")) {
+				moveURL = "English.jsp";
+			}else if(num.equals("5")) {
+				moveURL = "French.jsp";
+			}else if(num.equals("6")) {
+				moveURL = "Spain.jsp";
+			}
+			
+			
 		}
 
-		moveURL = "Korea.jsp";
 		return moveURL;
 	}
 

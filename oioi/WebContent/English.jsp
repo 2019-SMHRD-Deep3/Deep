@@ -189,9 +189,9 @@ p#rate{
 			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
 			<td class="inTag"><a
-				href="LogoutService.do">Logout </a></td>
+				href="LogoutService.do?num=4">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="En_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -250,7 +250,7 @@ p#rate{
 
 			<!-- Login -->
 			<article id="Login">
-				<form action="LoginService.do" method="post">
+				<form action="LoginService.do?num=4" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -272,7 +272,7 @@ p#rate{
 
 			<!-- Join -->
 			<article id="Join">
-				<form action="JoinService.do" method="post">
+				<form action="JoinService.do?num=4" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -444,9 +444,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>

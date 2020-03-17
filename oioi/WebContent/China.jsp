@@ -151,7 +151,6 @@ p#rate{
 	text-align: center;
 	vertical-align: middle;
 }
-
 </style>
 
 
@@ -189,9 +188,9 @@ p#rate{
 			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
 			<td class="inTag"><a
-				href="LogoutService.do">Logout </a></td>
+				href="LogoutService.do?num=3">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="Ch_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -251,7 +250,7 @@ p#rate{
 
 			<!-- Login -->
 			<article id="Login">
-				<form action="LoginService.do" method="post">
+				<form action="LoginService.do?num=3" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -273,7 +272,7 @@ p#rate{
 
 			<!-- Join -->
 			<article id="Join">
-				<form action="JoinService.do" method="post">
+				<form action="JoinService.do?num=3" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -458,9 +457,6 @@ p#rate{
 				<textarea name="message" id="message" rows="4"></textarea> -->
 
 					</table>
-					<input type="hidden" id='month_check' name='month'> <input
-						type="hidden" id='gender_check' name='gender'> <input
-						type="button" value="전송" onclick="mySub()">
 
 				</form>
 
@@ -478,9 +474,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>
