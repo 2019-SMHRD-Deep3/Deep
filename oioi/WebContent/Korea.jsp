@@ -192,7 +192,7 @@ p#rate{
 			<td class="inTag"><a
 				href="LogoutService.do">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="K_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -238,7 +238,7 @@ p#rate{
 						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor">코스추천</a></div>
 						<%}
 					else{%>
-						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">넷</a></div>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">코스추천</a></div>
 					<%}%>	
 				<!--<li><a href="#elements">Elements</a></li>-->
 					
@@ -439,9 +439,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>
