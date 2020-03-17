@@ -25,15 +25,13 @@ public class LoginService extends HttpServlet {
 		
 		MemberDTO dto = new MemberDTO(id, pw);
 		MemberDAO dao = new MemberDAO();
-		MemberDTO info = dao.login(dto);   
+		MemberDTO info = dao.login(dto);  
 		
 		if(info != null) {
 			HttpSession session = request.getSession();   // 정보를 세션에 저장 (개인정보이니까 서버에서 보관)
 			session.setAttribute("info", info);
 		}
-		
-		response.sendRedirect("Korea.html");
-		
+
 	}
 
 }

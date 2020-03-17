@@ -189,7 +189,7 @@ p#rate{
 			<td class="inTag"><a
 				href="#Login"><%=info.getId()%> </a></td>
 			<td class="inTag"><a
-				href="LogoutService.do">Logout </a></td>
+				href="LogoutService.do?num=2">Logout </a></td>
 			<td class="inTag"><a
 				href="update.jsp">ChangeInfo</a></td>
 			<%
@@ -250,7 +250,7 @@ p#rate{
 
 			<!-- Login -->
 			<article id="Login">
-				<form action="LoginService.do" method="post">
+				<form action="LoginService.do?num=2" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
@@ -266,13 +266,14 @@ p#rate{
 								type=reset value="RESET"></td>
 						</tr>
 					</table>
+					
 				</form>
 			</article>
 
 
 			<!-- Join -->
 			<article id="Join">
-				<form action="JoinService.do" method="post">
+				<form action="JoinService.do?num=2" method="post">
 					<table>
 						<tr>
 							<td>ID</td>
