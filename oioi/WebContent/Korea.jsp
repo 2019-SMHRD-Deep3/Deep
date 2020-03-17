@@ -137,15 +137,33 @@ table tbody tr {
 	font-size: 20px;
 }
 
-#OnTopMenu, #OffTopMenu{
+#OnTopMenu,#OffTopMenu{
 	display: inline;
-	width: 20%;
-	height: 50px;
 	position: absolute;
-	left: 50%;
-	top: 25px;
+	top: 17px;
 	font-size: 20px;
+	height: 50px;
 }
+#OnTopMenu{
+	width: 18%;
+	left: 48%;
+}
+#OffTopMenu{
+	width: 18%;
+	left: 44%;
+}
+.tMenu{
+	display:inline;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 7px;
+	margin-right: 7px;
+}
+.tag{
+	color:#ffffff;
+	text-decoration: none;
+}
+
 </style>
 
 
@@ -168,16 +186,16 @@ table tbody tr {
 		<div id="lan" style="z-index: 9999;">
 			<%if(info!=null){%>
 				<div id="OnTopMenu" class="topMenu" style="display:none;">
-					<a class="" href="#intro">서비스</a>
-					<a class="" href="#work">관광명소</a>
-					<a class="" href="#about">랭킹</a>
-					<a class="" href="K-survey.jsp">코스추천</a>
+					<div class="tMenu"><a class="tag" href="#intro">서비스</a></div>
+					<div class="tMenu"><a class="tag" href="#work">관광명소</a></div>
+					<div class="tMenu"><a class="tag" href="#about">랭킹</a></div>
+					<div class="tMenu"><a class="tag" href="K-survey.jsp">코스추천</a></div>
 				</div>
 			<%} else{ %>
 				<div id="OffTopMenu" class="topMenu" style="display:none;">
-					<a class="" href="#intro">서비스</a>
-					<a class="" href="#work">관광명소</a>
-					<a class="" href="#about">랭킹</a>
+					<div class="tMenu"><a class="tag" href="#intro">서비스</a></div>
+					<div class="tMenu"><a class="tag" href="#work">관광명소</a></div>
+					<div class="tMenu"><a class="tag" href="#about">랭킹</a></div>
 				</div>
 			<% } %>
 			<table style="width: 20%; position: absolute; right: 0px;display:inline-block;">
