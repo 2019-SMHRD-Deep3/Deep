@@ -80,11 +80,10 @@ img#img {
 
 #lan {
 	top: 0px;
-	/* left: 10; */
-	min-height: 8%;
 	width: 100%;
-	height: auto;
+	height: 75px;
 	background-color: rgba(1, 1, 1, 0.6);
+	position: absolute;
 }
 
 #lan td {
@@ -138,12 +137,8 @@ p#rate{
 #headers{
 	display:table;
 	table-layout: fixed;
-	border-spacing: 0px 20px;
-/* 	display:grid;
-	grid-template-rows: repeat(auto-fit,175px);
-	grid-template-columns: repeat(auto-fit,175px);
-	place-items: center center;
-	gap: 0px 10px; */
+	border-spacing: 55px 20px;
+
 }
 .mainimg {
     width: 150px;
@@ -167,7 +162,8 @@ p#rate{
 	%>
 	<!-- Wrapper -->
 
-	<div id="wrapper" position=relative;>
+<div id="wrapper" position=relative;>
+	
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
@@ -178,8 +174,8 @@ p#rate{
 			</script> -->
 
 		<!-- Header -->
-	<div  id="lan" style="position: absolute; right: 0px;">
-	<table style="width:20% ;position: absolute; right: 0px;" >
+	<div  id="lan">
+	<table style="width:20%; position: absolute; right: 0px;" >
 	
 			<%
 				if (info == null) {
@@ -235,14 +231,14 @@ p#rate{
 		<header>
 			
 				<div id="headers">
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">서비스</a></div>&nbsp;&nbsp;
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">관광명소</a></div>&nbsp;&nbsp;
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">랭킹</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">서비스</a></div>
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">관광명소</a></div>
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">랭킹</a></div>
 					<%if(info==null){%>
-						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">코스추천</a></div>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor">코스추천</a></div>
 						<%}
 					else{%>
-						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">넷</a></div>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">넷</a></div>
 					<%}%>	
 				<!--<li><a href="#elements">Elements</a></li>-->
 					
@@ -319,7 +315,7 @@ p#rate{
 			<!-- Intro -->
 			<article id="intro" class="intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<span class="image main"><img src="img/night9.jpg" alt="서울" /></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
 				<p align="center">
