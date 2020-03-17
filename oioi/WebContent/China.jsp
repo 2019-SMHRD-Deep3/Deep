@@ -80,11 +80,10 @@ img#img {
 
 #lan {
 	top: 0px;
-	/* left: 10; */
-	min-height: 8%;
 	width: 100%;
-	height: auto;
+	height: 75px;
 	background-color: rgba(1, 1, 1, 0.6);
+	position: absolute;
 }
 
 #lan td {
@@ -110,7 +109,7 @@ article#Join {
 }
 
 article#login {
-	color: white;
+	color: white !important;
 }
 
 .linkcolor {
@@ -134,15 +133,12 @@ table tbody tr {
 p#rate{
 	color: white;
 }
+
 #headers{
 	display:table;
 	table-layout: fixed;
-	border-spacing: 0px 20px;
-/* 	display:grid;
-	grid-template-rows: repeat(auto-fit,175px);
-	grid-template-columns: repeat(auto-fit,175px);
-	place-items: center center;
-	gap: 0px 10px; */
+	border-spacing: 55px 20px;
+
 }
 .mainimg {
     width: 150px;
@@ -234,12 +230,9 @@ p#rate{
 		<header>
 			
 				<div id="headers">
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">
-服务</a></div>&nbsp;&nbsp;
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">
-景点</a></div>&nbsp;&nbsp;
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">
-排行</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">服务</a></div>
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">景点</a></div>
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">排行</a></div>
 					<%if(info==null){%>
 						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">做课程</a></div>
 						<%}
@@ -324,7 +317,7 @@ p#rate{
 			<!-- Intro -->
 			<article id="intro" class="intSE">
 				<h2 class="major">首尔，新的介绍。</h2>
-				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<span ><img src="img/sese.PNG"/></span>
 				<br /> <br />
 				<p align="center">收到您的宝贵信息，</p>
 				<p align="center">
@@ -412,7 +405,7 @@ p#rate{
 			<article id="about">
 				<h2 class="major">国家排名前5位</h2>
 				<div class = "">
-				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<span><img id="popimg2" src="images/pic03.jpg" alt=""></span>
 				<button class = "country" id = "c1">U.S.A</button>
 					<button class = "country" id = "c2">CHINA</button>
 					<button class = "country" id = "c3">JAPAN</button>
@@ -448,41 +441,10 @@ p#rate{
 
 
 			<!-- Contact -->
-			<article id="contact">
+			
 
 
-				<form action="K_subvey_result" method="post" id='myForm'>
-					<table>
-						<tr>
-							<td>방문예정월</td>
-						</tr>
-						<tr>
-							<td>1월 <input type="button" class="monBtn" values="jan"></td>
-							<td>2월 <input type="button" class="monBtn" values="2월"></td>
-							<td>3월 <input type="button" class="monBtn" values="3월"></td>
-							<td>4월 <input type="button" class="monBtn" values="4월"></td>
-							<td>5월 <input type="button" class="monBtn" values="5월"></td>
-							<td>6월 <input type="button" class="monBtn" values="6월"></td>
-							<td>7월 <input type="button" class="monBtn" values="7월"></td>
-							<td>8월 <input type="button" class="monBtn" values="8월"></td>
-							<td>9월 <input type="button" class="monBtn" values="9월"></td>
-							<td>10월 <input type="button" class="monBtn" values="10월"></td>
-							<td>11월 <input type="button" class="monBtn" values="11월"></td>
-							<td>12월 <input type="button" class="monBtn" values="12월"></td>
-						</tr>
-						<tr>
-							<td>방문예정월</td>
-						</tr>
-						<tr>
-							<td>남 <input type="button" class=genderBtn name="gender"></td>
-							<td>여 <input type="button" class="genderBtn" name="gender"></td>
-						</tr>
-						<tr>
-							<td>방문예정월</td>
-						</tr>
-						<tr>
-							<td>방문예정월</td>
-						</tr>
+				
 
 
 						<!-- <label for="mon">방문예정월</label> 
@@ -626,55 +588,56 @@ p#rate{
 	rate10.textContent;
 	// 버튼 1
 	$('#c1:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place1.PNG');
-		$('#rate').html(rate1);
-	});
 
-	// 버튼2
-	$('#c2:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place2.PNG');
-		$('#rate').html(rate2);
-	});
-	// 버튼3
-	$('#c3:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place3.PNG');
-		$('#rate').html(rate3);
-	});
-	// 버튼4
-	$('#c4:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place4.PNG');
-		$('#rate').html(rate4);
-	});
-	// 버튼5
-	$('#c5:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place5.PNG');
-		$('#rate').html(rate5);
-	});
-	// 버튼6
-	$('#c6:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place6.PNG');
-		$('#rate').html(rate6);
-	});
-	// 버튼7
-	$('#c7:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place7.PNG');
-		$('#rate').html(rate7);
-	});
-	// 버튼8
-	$('#c8:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place8.PNG');
-		$('#rate').html(rate8);
-	});
-	// 버튼9
-	$('#c9:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place9.PNG');
-		$('#rate').html(rate9);
-	});
-	// 버튼10
-	$('#c10:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place10.PNG');
-		$('#rate').html(rate10);
-	});
+			$('#popimg2').attr('src', 'img/pie/ch1.PNG');
+			$('#rate').html(rate1);
+		});
+
+		// 버튼2
+		$('#c2:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch2.PNG');
+			$('#rate').html(rate2);
+		});
+		// 버튼3
+		$('#c3:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch3.PNG');
+			$('#rate').html(rate3);
+		});
+		// 버튼4
+		$('#c4:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch4.PNG');
+			$('#rate').html(rate4);
+		});
+		// 버튼5
+		$('#c5:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch5.PNG');
+			$('#rate').html(rate5);
+		});
+		// 버튼6
+		$('#c6:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch6.PNG');
+			$('#rate').html(rate6);
+		});
+		// 버튼7
+		$('#c7:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch7.PNG');
+			$('#rate').html(rate7);
+		});
+		// 버튼8
+		$('#c8:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch8.PNG');
+			$('#rate').html(rate8);
+		});
+		// 버튼9
+		$('#c9:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch9.PNG');
+			$('#rate').html(rate9);
+		});
+		// 버튼10
+		$('#c10:button').on('click', function() {
+			$('#popimg2').attr('src', 'img/pie/ch10.PNG');
+			$('#rate').html(rate10);
+		});
 </script>
 
 

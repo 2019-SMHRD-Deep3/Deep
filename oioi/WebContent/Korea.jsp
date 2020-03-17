@@ -109,7 +109,7 @@ article#Join {
 }
 
 article#login {
-	color: white;
+	color: white !important;
 }
 
 .linkcolor {
@@ -315,7 +315,7 @@ p#rate{
 			<!-- Intro -->
 			<article id="intro" class="intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span class="image main"><img src="img/night9.jpg" alt="서울" /></span>
+				<span><img src="img/sese.PNG"/></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
 				<p align="center">
@@ -394,7 +394,7 @@ p#rate{
 			<article id="about">
 				<h2 class="major">국가별 선호 여행지</h2>
 				<div class = "">
-				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+				<span><img id="popimg2" src="img/k1.PNG" alt="" /></span>
 					<button class = "country" id = "c1">미국</button>
 					<button class = "country" id = "c2">중국</button>
 					<button class = "country" id = "c3">일본</button>
@@ -507,7 +507,7 @@ p#rate{
 	<script type="text/javascript">
 		
 		var text = document.querySelector('#rate');
-		var popimgs = document.getElementById('popimg0');
+		var popimgs = document.getElementById('popimg2');
 		var rate1 = document.querySelector('#rate1')
 		rate1.setAttribute('style', 'white-space: pre-line;');
 		rate1.textContent;
@@ -541,53 +541,53 @@ p#rate{
 		// 버튼 1
 		$('#c1:button').on('click', function() {
 
-			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp1.PNG');
 			$('#rate').html(rate1);
 		});
 
 		// 버튼2
 		$('#c2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp2.PNG');
 			$('#rate').html(rate2);
 		});
 		// 버튼3
 		$('#c3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp3.PNG');
 			$('#rate').html(rate3);
 		});
 		// 버튼4
 		$('#c4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp4.PNG');
 			$('#rate').html(rate4);
 		});
 		// 버튼5
 		$('#c5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp5.PNG');
 			$('#rate').html(rate5);
 		});
 		// 버튼6
 		$('#c6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp6.PNG');
 			$('#rate').html(rate6);
 		});
 		// 버튼7
 		$('#c7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp7.PNG');
 			$('#rate').html(rate7);
 		});
 		// 버튼8
 		$('#c8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp8.PNG');
 			$('#rate').html(rate8);
 		});
 		// 버튼9
 		$('#c9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp9.PNG');
 			$('#rate').html(rate9);
 		});
 		// 버튼10
 		$('#c10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp10.PNG');
 			$('#rate').html(rate10);
 		});
 	</script>
