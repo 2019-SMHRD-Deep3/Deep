@@ -95,6 +95,7 @@ img#img {
 	height: 42px;
 	font-size: 15px;
 }
+
 p#texttext, .intSE, article#Join, article#login, p#rate, .inTag a {
 	color: white;
 }
@@ -329,7 +330,11 @@ table tbody tr {
 
 			<!-- Intro -->
 			<article id="intro" class="intSE conPage">
+<<<<<<< HEAD
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
+=======
+				<h2 class="major">서울, 새롭게 소개합니다.</h2>
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 				<span><img src="img/sese.PNG"/></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
@@ -407,6 +412,7 @@ table tbody tr {
 
 			<!-- About -->
 			<article id="about" class="conPage">
+<<<<<<< HEAD
 				<h2 class="major">국가별 선호 여행지</h2>
 				<div class="">
 					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
@@ -420,6 +426,21 @@ table tbody tr {
 					<button class="country" id="c8">베트남</button>
 					<button class="country" id="c9">홍콩</button>
 					<button class="country" id="c10">중동</button>
+=======
+				<h2 class="major">국가별 선호 여행지</h2>
+				<div class="">
+					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+					<button class="country" id="c1">미국</button>
+					<button class="country" id="c2">중국</button>
+					<button class="country" id="c3">일본</button>
+					<button class="country" id="c4">독일</button>
+					<button class="country" id="c5">프랑스</button>
+					<button class="country" id="c6">영국</button>
+					<button class="country" id="c7">러시아</button>
+					<button class="country" id="c8">베트남</button>
+					<button class="country" id="c9">홍콩</button>
+					<button class="country" id="c10">중동</button>
+>>>>>>> branch 'master' of https://github.com/2019-SMHRD-Deep3/Deep.git
 				</div>
 
 				<script type="text/javascript">
