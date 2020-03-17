@@ -17,7 +17,7 @@ public class UpdateCon implements ICommand {
 
 		HttpSession session = request.getSession();
 		MemberDTO info = (MemberDTO) session.getAttribute("info");
-//		System.out.println("立加茄 Email : " + info.getEmail());
+//		System.out.println("立加茄 Id : " + info.getId());
 
 		String id = info.getId();
 		String pw = request.getParameter("pw");

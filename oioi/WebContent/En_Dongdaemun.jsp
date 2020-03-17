@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="utf-8">
 <title>Dongdaemun</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
@@ -59,201 +59,213 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			 <% String act = (String)request.getParameter("act"); %> 
+						 <% String act = "í™œë™ì„±í–¥_"; %> 
 			
 			<%= act %> <br>
 
 			<% 
-				// ÀÌ¹ÌÁö °æ·Î¸í
+				// ì´ë¯¸ì§€ ê²½ë¡œëª…
 				String url_1=""; String url_2=""; String url_3="";
 			   
-			    // ÃßÃµ ÄÚ½º¸í
+			    // ì¶”ì²œ ì½”ìŠ¤ëª…
 			    String head_1 = ""; String head_2 = ""; String head_3 = "";
 			   
-			    // ÃßÃµ ÄÚ½º¿¡ ´ëÇÑ ¼³¸í¹® 
+			    // ì¶”ì²œ ì½”ìŠ¤ì— ëŒ€í•œ ì„¤ëª…ë¬¸ 
 	  	    	String content_1 = "";  String content_2 = "";  String content_3 = "";
 			   
-			   if(act.equals("È°µ¿¼ºÇâ_°í±Ã,¿ª»çÀ¯ÀûÁö¹æ¹®")||act.equals("È°µ¿¼ºÇâ_ÀüÅë¹®È­Ã¼Çè")){
+			   if(act.equals("í™œë™ì„±í–¥_ê³ ê¶,ì—­ì‚¬ìœ ì ì§€ë°©ë¬¸")||act.equals("í™œë™ì„±í–¥_ì „í†µë¬¸í™”ì²´í—˜")){
 				   url_1 = "background-image: url('img/course/DDP_a1.jpg');";
 				   url_2 = "background-image: url('img/course/DDP_a2.JPG');";
 				   url_3 = "background-image: url('img/course/DDP_a3.JPG');";
 				   
-				   head_1 = "µ¿´ë¹® ¿ª»ç¹®È­°ø¿ø";
-				   head_2 = "ÈïÀÎÁö¹®";
+				   head_1 = "Dongdaemun History & Culture Park";
+				   head_2 = "Heunginjimun";
 				   head_3 = "";
 				   
-				   content_1 = "¼­¿ïÆ¯º°½Ã Áß±¸ÀÇ ¿¾ µ¿´ë¹®¿îµ¿Àå ºÎÁö¿¡ ±¸ÃàµÈ " + "<br>" + 
-				   				"¼­¿ïÀÇ ¿¾ ¿ª»ç¸¦ º¸¿©ÁÖ·Á´Â ÃëÁö·Î ¸¸µé¾îÁø °ø¿øÀÌ´Ù. "+ "<br>" + 
-						 	 	"ÇÑ¾çµµ¼º ¼ø¼º±æ ÈïÀÎÁö¹® ±¸°£¿¡ ÀÖÀ¸´Ï " + "<br>" + 
-				   				"¼ø¼º±æÀ» °È´Ù°¡ ¹æ¹®ÇÏ´Â °ÍÀÌ ÁÁ´Ù."+ "<br>" + 
-						   		"µ¿´ë¹®µğÀÚÀÎÇÃ¶óÀÚ¸¦ °Ç¼³Çß´Âµ¥ ¿îµ¿ÀåÀ» Ã¶°ÅÇÏ´Â °úÁ¤¿¡¼­ "+ "<br>" + 
-						   		"¹ß±¼µÈ Á¶¼±½Ã´ëÀÇ ¹®È­À¯»êµéÀÌ ¹ß°ßµÇ¾ú´Ù.";
-				   content_2 = "ÈïÀÎÁö¹®(ıéìÒñıÚ¦)Àº Á¶¼±ÀÇ ¼öµµÀÎ ÇÑ¾çÀÇ 4´ë¹®(ÓŞÚ¦) ÁßÀÇ ÇÏ³ª·Î, ÇÑ¼ººÎ¸¦ º¸È£ÇÏ±â À§ÇØ ¸¸µç ¼­¿ï ¼º°ûÀÇ ¿©´ü ¼º¹® °¡¿îµ¥ µ¿ÂÊÀÇ Å« ´ë¹®¿¡ ÇØ´çÇÑ´Ù.  "+ "<br>" +
-						   		"¸ğ¾ç»õ°¡ °¡´Ã°í ¿¬¾àÇØ º¸ÀÌ¸ç Àå½ÄÀÌ °­Á¶µÈ °ÍÀÌ Á¶¼± ÈÄ±âÀÇ ¼¶¼¼ÇÏ°í È­·ÁÇÑ ¾Æ¸§´Ù¿òÀ» Áö´Ñ ¹®È­Àç·Î ÇöÀç´Â ÁÂ¿ìÀÇ ¼ºº®ÀÌ ¸ğµÎ Çæ¾îÁ® ¼º¹®¸¸ ³²¾Ò´Ù." + "<br>" + 
-						 	  "¼­¿ïÀÇ ¼º¹® °¡¿îµ¥ ¹®·ç¸¦ 2ÃşÀ¸·Î ¸¸µç °ÍÀº ¼ş·Ê¹®°ú ÈïÀÎÁö¹®¹Û¿¡ ¾ø´Ù.";
-				   content_3 = "¹®·ç´Â ¹®À» ÁöÅ°´Â Àå¼ö°¡ ¸Ó¹«´Â °÷À¸·Î "+ "<br>" +"À¯»ç½Ã¿¡´Â ±º»ç¸¦ ÁöÈÖÇÏ´Â ÁöÈÖ¼ÒÀÇ ¿ªÇÒµµ Çß´Ù."  + "<br>" +
-						   		"¹®·ç ¹Ù±ùÀ¸·Î´Â º®µ¹·Î µÈ ´ãÀå°ú ³ª¹«ÆÇÀ¸·Î µÈ Ã¢¹®À» ¼³Ä¡ÇØ¼­ " + "<br>" + "ÀûÀ» ¸·´Â µ¥ À¯¸®ÇÏ°Ô ÇÏ¿´´Ù.";
+				   content_1 = "This park is built to show the old history of Seoul ," + "<br>" + 
+				   				"built on the site of the old Dongdaemun Stadium in Jung-gu, Seoul. "+ "<br>" + 
+						 	 	"Hanyangdoseong Sunseong-gil It is located in Heunginjimun section, " + "<br>" + 
+				   				"so it is better to walk and visit Sunseong-gil."+ "<br>" + 
+						   		"The Dongdaemun Design Plaza was constructed,  "+ "<br>" + 
+						   		"but cultural heritages discovered during the demolition of the playground were discovered.";
+				   content_2 = "Heunginjimun is one of the four main gates of Hanyang," + "<br>" +  "the capital of the Joseon Dynasty, and is the largest gate   "+ "<br>" +
+						   		"in the east of the eight gates of the Seoul Castle created to protect the Hanseongbu." + "<br>" + 
+						 	  "It is a cultural asset with a delicate and gorgeous beauty in the late Joseon Dynasty "+ "<br>" +
+						   		"that looks thin and fragile and emphasizes the decoration."+ "<br>" +
+						   		"Among the gates of Seoul, only the Sungnyemun and Heunginjimun "+ "<br>" +
+						   		"were made of the second floor.";
+				   content_3 = "Munru is the place where the longevity guards stay,  "+ "<br>" +
+						   		"and in case of emergency it also served as a command post for commanding the military."  + "<br>" +
+						   		"Outside the gates, brick walls and wooden windows  " + "<br>" + 
+						   		"were installed to help prevent enemies.";
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_°ø¿¬,¹Î¼Ó,Çà»ç,ÃàÁ¦ °ü¶÷¹×Âü°¡")||act.equals("È°µ¿¼ºÇâ_¹Ú¹°°ü,Àü½Ã°ü¹æ¹®")){
+				}else if (act.equals("í™œë™ì„±í–¥_ê³µì—°,ë¯¼ì†,í–‰ì‚¬,ì¶•ì œ ê´€ëŒë°ì°¸ê°€")||act.equals("í™œë™ì„±í–¥_ë°•ë¬¼ê´€,ì „ì‹œê´€ë°©ë¬¸")){
 					
 					url_1 = "background-image: url('img/course/DDP_b1.jpg');";
 					url_2 = "background-image: url('img/course/DDP_b2.JPG');";
 					url_3 = "background-image: url('img/course/DDP_b3.JPG');";
 					
-					head_1 = "µ¿´ë¹® ¹Ğ¸®¿À·¹";
-					head_2 = "¼­¿ï ¿ª»ç ¹Ú¹°°ü";
-					head_3 = "ÇÑ¾çµµ¼º¹Ú¹°°ü";
+					head_1 = "Dongdaemun Milliore";
+					head_2 = "Seoul Museum of History";
+					head_3 = "Hanyang Provincial Museum";
 					   
-					content_1 = "¹Ğ¸®¿À·¹, µÎÅ¸ µîÀÇ ´ëÇü ¼îÇÎ¸ôÀº 10´ë¿Í 20´ë µî ÀşÀºÃş¿¡°Ô  "+ "<br>" +"»ç¶û¹Ş´Â ¼îÇÎ °ø°£À¸·Î  ¼îÇÎ¸ô¸¶´Ù ¾ß¿Ü°ø¿¬ÀåÀ» ¸¶·ÃÇÏ¿©  " +"<br>" + 
-								"°¡¼öÃÊÃ»°ø¿¬, ºñº¸ÀÌ¼î, ´í½º°æ¿¬ µî ´Ù¾çÇÑ ÀÌº¥Æ®¸¦ ¿­°í ÀÖÀ¸¸ç ¿Ü±¹ÀÎµéÀÇ ¾ß°£ Åõ¾î ÄÚ½º·Îµµ ÀÌ¸§³­ °÷ÀÌ´Ù."+"<br>" + 
-								"¸ŞÀÎ±Ş ´í½ºÆÀµé°ú Å©°í ÀÛÀº ÀÌº¥Æ® °ø¿¬ÀÌ È°¼ºÈ­ µÇ¾î ÀÖ°í  "+ "<br>" +" Á¤½Ä µ¥ºß¸¦ ¾ÕµÎ°í ÀÖ´Â ¾ÆÀÌµ¹ ±×·ìÀÇ °ø¿¬ÀÌ ¿­¸®±âµµ ÇÑ´Ù.";
-					content_2 = "À¯¼­±íÀº ¼­¿ïÀÇ ¿ª»ç¿Í ÀüÅë¹®È­¸¦ Á¤¸®ÇÏ¿© º¸¿©ÁÜÀ¸·Î½á  "+ "<br>" +" ¼­¿ï¿¡ ´ëÇÑ ÀÌÇØ¿Í ÀÎ½ÄÀ» ½ÉÈ­ÇÏ´Â ÇÑÆí ¼­¿ï½Ã¹Î ¹× ¼­¿ïÀ» Ã£´Â" +"<br>" + 
-								"³»¿Ü±¹ÀÎµé¿¡°Ô ¼­¿ïÀÇ ¹®È­¸¦ ´À³¢°í Ã¼ÇèÇÒ ±âÈ¸¸¦ Á¦°øÇÑ´Ù. " ;
-					content_3 = "ÇÑ¾çµµ¼º µÑ·¯º¸±â¿Í °°ÀÌ ±¸°£º°·Î ¸î°¡Áö ÁÖÁ¦¸¦ ³ª´²¼­"+ "<br>" +
-								" µµ¼º µû¶ó µè´Â ¿¾³¯ÀÌ¾ß±âµµ Àç¹ÌÀÖ°í, "+ "<br>" +
-								"¹Ì´Ï¾îÃ³·Î ¸¸µé¾îÁø ¼º°û ¸ğÇüµµ °ü¶÷ÇÏ´Â ¹¦¹Ì°¡ ÀÖ´Ù."+ "<br>" +
-								"¼º°û °ü·Ã ¿¾ ¹®Çå°ú ¿¬Àå ¹× ½ºÅ©¸°¿¡ ÀÖ´Â »çÁø°ú ÇÔ²²"+ "<br>" +
-								"ÃµÃµÈ÷ µÑ·¯º¸¸é¼­ ¿¾ ¼­¿ïÀ» ´À³¥ ¼ö ÀÖ´Ù. ";
+					content_1 = "Large shopping malls such as Migliore and Duta  "+ "<br>" +
+								"are popular shopping spaces for young people," + "<br>" + 
+								"such as teenagers and 20s.  " +"<br>" + 
+								"They have outdoor concert halls in each mall to hold various events" + "<br>" + 
+								"such as singer invitation performances, "+"<br>" + 
+								"B-boy shows, dance competitions," +"<br>" +  "and even as a night tour course for foreigners." ;
+					content_2 = "It provides a chance to experience and experience Seoul's culture "+ "<br>" +
+								"and deepen the understanding and perception of Seoul" +"<br>" + 
+								"while showing the history and traditional culture of Seoul in a historical way. " ;
+					content_3 = "Like the tour of Hanyangdoseong Castle, "+ "<br>" +
+								" here are several themes divided by section, "+ "<br>" +
+								"and the old stories heard along the city are interesting,"+ "<br>" +
+								"and there is also the beauty of viewing miniature castle models."+ "<br>" +
+								" You can feel the old Seoul while slowly looking around with "+ "<br>" +
+								"the old documents related to the castle, pictures of tools and screens.";
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_³îÀÌ°ø¿ø,Å×¸¶ÆÄÅ©")){
+				}else if (act.equals("í™œë™ì„±í–¥_ë†€ì´ê³µì›,í…Œë§ˆíŒŒí¬")){
 					
 					url_1 = "background-image: url('img/course/DDP_c1.jpg');";
 					url_2 = "background-image: url('img/course/DDP_c2.JPG');";
 					url_3 = "background-image: url('img/course/DDP_c3.jpg');";
 					
-					head_1 = "ÆÇÅ¸ VR Å×¸¶ÆÄÅ©";
-					head_2 = "¾ÆÆ®·¢Æ¼ºê Å×¸¶ÆÄÅ© " + "<br>" + "¡®¶ó¶ã¸®¿¡¡¯";
-					head_3 = "ÀÏ·ç¼Ç ¿ùµå";
+					head_1 = "Fanta VR Theme Park";
+					head_2 = "Attraction Theme Park " + "<br>" + "â€˜Lattlierâ€™";
+					head_3 = "Illusion World";
 					   
-					content_1 = "VRº¸Æ®, ¸¶³àÀÇ ºøÀÚ·ç µîÀ» Å¸°í ÀÌ¸®Àú¸® ¿òÁ÷ÀÌ¸é¼­" +"<br>" + 
-								"»ı»ıÇÏ°Ô Ã¼ÇèÇÏ¸ç Áñ±æ ¼ö ÀÖ´Â °÷." +"<br>" + 
-								"¿©·¯¸íÀÌ °°ÀÌ Ã¼ÇèÇÒ ¼ö ÀÖ´Â °÷µµ ÀÖ°í, "+ "<br>" +"1ÀÎ Ã¼ÇèÀ¸·Î °¡»óÇö½ÇÀ» Áñ±æ ¼öµµ ÀÖ´Ù."+ "<br>" +
-								"Æ¯È÷ »ç°¢Å¥ºê ¾È¿¡¼­ ÄÉÀÌÅ© Áİ±â¿Í °úÀÏÀÚ¸£±â´Â" + "<br>" +
-								" ¸¹Àº »ç¶÷µé¿¡°Ô ÀÎ±âÀÖ´Â Ã¼ÇèÀÌ´Ù.";
-					content_2 = "¶ó¶ã¸®¿¡'´Â ÀÎ»óÁÖÀÇ ÀÛÇ°À» ´«À¸·Î °¨»óÇÏ´Â °Í¿¡ ³ª¾Æ°¡ "+ "<br>" +"±× ½Ã´ëÀÇ °ø°£ ¼ÓÀ¸·Î ¿©ÇàÀ» ¶°³¯ ¼ö ÀÖ´Â Ã¼ÇèÇü Å×¸¶ÆÄÅ©´Ù." +"<br>" + 
-								"±×¸®½º ·Î¸¶ ½ÅÈ­¿¡ ³ª¿À´Â 9¸íÀÇ ¹ÂÁî¸¦ Çü»óÈ­ÇÑ ¶ó¶ã¸®¿¡ ÀÔ±¸°¡ ÀÎ»óÀûÀÌ´Ù. ";
-					content_3 = "µ¿´ë¹® ½ÃÀå Áß½É 37°¡Áö VRÃ¼Çè Á¸ÀÌ´Ù." +"<br>" + 
-								" °¢ÀÚ ´Ù¸¥ Ã¼ÇèÀ» ÇÒ ¼ö ÀÖ°í, ¿øÇÏ´Â VRÀ» ¼±ÅÃÇÏ¿© Àç¹ÌÀÖ°Ô ³î ¼ö ÀÖ°í, "+ "<br>" +"¾ÆÄÉÀÌµå °ÔÀÓµµ ¸î°¡Áö ÀÖ¾î¼­ ´Ù¾çÇÏ°Ô Áñ±æ ¼ö ÀÖ´Ù. " ;
+					content_1 = "VR boat, witch's broom, and so on." +"<br>" + 
+								"There are places where multiple people can experience together," +"<br>" + 
+								"and you can enjoy virtual reality as a one-person experience. "+ "<br>" +
+								"In particular, picking up cakes and cutting fruit in a square cube is"+ "<br>" +
+								"a popular experience for many people." ;
+					content_2 = "'Lattelier' is an experiential theme park that allows  "+ "<br>" +
+								" you to go on a journey into the space of that era," +"<br>" + 
+								"in addition to appreciating the impressionist works . " +"<br>" + 
+								"The entrance to the Ratellier, " +"<br>" + 
+								"which depicts nine muses from Greek Roman mythology, is impressive.";
+					content_3 = "It is a 37 VR experience zone centered on the Dongdaemun market." +"<br>" + 
+								" You can have different experiences,  "+ "<br>" +
+								"choose the VR you want and have fun, " + "<br>" +
+								"and there are several arcade games to enjoy.";
 					
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_µå¶ó¸¶,¿µÈ­Âû¿µÁö¹æ¹®")){
+				}else if (act.equals("í™œë™ì„±í–¥_ë“œë¼ë§ˆ,ì˜í™”ì°°ì˜ì§€ë°©ë¬¸")){
 					
 					url_1 = "background-image: url('img/course/DDP_d1.jpg');";
 					url_2 = "background-image: url('img/course/DDP_d2.jpg');";
 					url_3 = "background-image: url('img/course/DDP_d3.jpg');";
 					
-					head_1 = "¼­ÃÌ°ñ¸ñ" + "<br>" +"(±×³à´Â ¿¹»¼´Ù)";
-					head_2 = "µ¿´ë¹® ¾ÆÆÄÆ®(¼û¹Ù²ÀÁú)";
+					head_1 = "Seochon Alley" + "<br>" +"(She was pretty)";
+					head_2 = "Dongdaemun Apartment " + "<br>" +" (Hide and Hide)";
 					head_3 = "";
 					   
-					content_1 = "ÇÑ±¹ µå¶ó¸¶¿¡´Â À¯¸Ó, ·Î¸Ç½º¿Í ÈïºĞÀÌ µÚ¼¯¿© ¸¸µé¾îÁø Æ¯À¯ÀÇ ´À³¦ÀÌ ÀÖ´Ù. "+ "<br>" +"µå¶ó¸¶°¡ Á¦ÀÛµÇ¾ú´ø ÇöÀåÀ» Ã£¾Æ ´ç½ÅÀÌ °¡Àå ÁÁ¾ÆÇÏ´Â ±× Àå¸éÀ» µÇ»õ°Ü º¸ÀÚ. "+ "<br>" +" °æ¼ºÀÇ ¸ğ½ÀÀ» ±×´ë·Î ´À³¥ ¼ö ÀÖ´Ù." +"<br>" + 
-								"¾Æ±âÀÚ±âÇÑ ¼­ÃÌ °ñ¸ñºÎÅÍ ¸ÚÁø °æÄ¡ÀÇ ÀÎ¿Õ»êÀÌ³ª"+ "<br>" +
-								"µ¿´ë¹®µğÀÚÀÎÇÃ¶óÀÚ±îÁö, µå¶ó¸¶ ÆÒÀÌ °¡º¼ °÷Àº ¸¹´Ù.";
-					content_2 = "¼­¿ï½Ã ¹Ì·¡À¯»êÀ¸·Î ÁöÁ¤µÈ ¾ÆÆÄÆ®. "+ "<br>" +"¹Ì·¡ À¯»ê ÁöÁ¤Àº ¼­¿ï½Ã°¡ ±ÙÇö´ë ¹®¹° º¸Àü ´ëÃ¥À¸·Î ¸¶·ÃÇÑ °ÍÀÌ´Ù.";
-					content_3 = "´ëÇÑÁÖÅÃ°ø»ç°¡ °ÇÃàÇÑ Ã¹ ¾ÆÆÄÆ®·Î 1965³â ¿Ï°øµÆ´Ù." +"<br>" + 
-								"1970³â´ë¸¸ ÇÏ´õ¶óµµ ¿¬¿¹ÀÎµéÀÌ ¸¹ÀÌ »ì¾Æ ¿¬¿¹ÀÎ¾ÆÆÄÆ®·Îµµ ºÒ·È´Ù." ;
+					content_1 = "Korean dramas have a unique feeling created by a mixture of humor, "+ "<br>" +
+								"romance and excitement."+ "<br>" +
+								" Find the scene where the drama was made " +"<br>" + 
+								"and recall the scene you like the most."+ "<br>" +
+								"You can feel the shape of Gyeongseong as it is."+ "<br>" +
+								"From charming Seochon alleys to Inwangsan "+ "<br>" +
+								"and Dongdaemun Design Plaza with great views, "+ "<br>" +
+								"there are many places for drama fans to go.";
+					content_2 = "Apartment designated as a future heritage in Seoul. "+ "<br>" +
+								"The designation of the future heritage was prepared by the Seoul Metropolitan Government"+ "<br>" +
+								"as a countermeasure to preserve modern civilization.";
+					content_3 = "The first apartment built by the Korea Housing Corporation," +"<br>" + 
+								"completed in 1965. Even in the 1970s," +"<br>" + 
+								" many celebrities lived and were called celebrity apartments." ;
 					
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_ºäÆ¼°ü±¤")||act.equals("È°µ¿¼ºÇâ_¼îÇÎ")){
+				}else if (act.equals("í™œë™ì„±í–¥_ë·°í‹°ê´€ê´‘")||act.equals("í™œë™ì„±í–¥_ì‡¼í•‘")){
 					
 					url_1 = "background-image: url('img/course/DDP_f1.JPG');";
 					url_2 = "background-image: url('img/course/DDP_f2.JPG');";
 					url_3 = "background-image: url('img/course/DDP_f3.jpg');";
 					
-					head_1 = "Çö´ë½ÃÆ¼¾Æ¿ï·¿(¶óÀÌÇÁ ½ºÅ¸ÀÏ¸ô)";
-					head_2 = "¼­¿ï¾à·É½ÃÀå";
-					head_3 = "ÇÑ¹æÁøÈï¼¾ÅÍ";
+					head_1 = "Hyundai City Outlet (Lifestyle Mall)";
+					head_2 = "Seoul Yangnyeong Market";
+					head_3 = "Oriental Medicine Promotion Center";
 					   
-					content_1 = "2Ãş¿¡ À§Ä¡ÇÑ ºê·¹µå°¡µçÀº º£ÀÌÅ· Á¦Ç° ÆÇ¸Å¿Í "+ "<br>" +"ÇÇ³ªÆ÷·¹ º£ÀÌÅ· ½ºÆ©µğ¿À¸¦ °°ÀÌ ¿î¿µÇÏ°í ÀÖ±â ¶§¹®¿¡" +"<br>" + 
-								"±¸ÀÔ or Ã¼Çè ÀüºÎ °æÇèÇÒ ¼ö ÀÖ´Ù."+ "<br>" +
-								"Ãşº° ±¸¼ºÀº ÁöÇÏ1~2Ãş Ã¼ÇèÇü ¶óÀÌÇÁ½ºÅ¸ÀÏ¸ô,"+ "<br>" +
-								"3~8Ãş ÆĞ¼Ç¾Æ¿ï·¿ ¸ÅÀåÀÌ ÀÖ°í,"+ "<br>" + "ÁöÇÏ 2Ãş°ú 9Ãş¿¡´Â F&B Àü¹®°üÀÌ °¢°¢ µé¾î¼¹´Ù.";
-					content_2 = "±¹³» ÃÖ´ëÀÇ ÇÑÀÇ¾à Á¾ÇÕ ´ÜÁö·Î, 800¿© °³°¡ ³Ñ´Â ÇÑ¾à °ü·Ã Á¡Æ÷¸¦ È®º¸ÇÏ°í ÀÖ´Ù. "+ "<br>" +"°¢Á¾ ¹Î°£ ¿ä¹ı¿¡ µîÀåÇÏ´Â °³±¸¸®, ÀÚ¶ó, ¹Î¹°»õ¿ì µî Èñ±ÍÇÑ ¾àÀçµµ ±¸ÀÔÇÒ ¼ö ÀÖÀ¸¸ç," +"<br>" + 
-								"ÅÁÁ¦¿øÀÌ ÀÖ¾î ¼ö¼ö·á 1¸¸ ¿ø Á¤µµ¸¸ ÁöºÒÇÏ¸é ¾àÀ» ¸Ô±â ÆíÇÏ°Ô ¹ĞºÀ Æ÷Àå ÇØÁØ´Ù." +"<br>" + 
-								" ¶ÇÇÑ ÀÎ»ï ½ÃÀå¿¡¼­´Â ÀÎ»ï, È«»ï, ¹Ì»ï°ú °¢Á¾ ²Ü," +"<br>" +
-								"±¹³»»ê ¿µÁö¹ö¼¸ µîÀ» ÆÇ¸ÅÇÑ´Ù.";
-					content_3 = "ÀüÅë ÇÑ¿Á ÇüÅÂ(¿¬¸éÀû 9Ãµ604§³)·Î Áö¾îÁø ÇÑ¹æÁøÈï¼¾ÅÍ ¾È¿¡´Â "+ "<br>" +"ÇÑÀÇ¾à¹Ú¹°°ü, ÇÑ¹æÃ¼Çè½Ã¼³, ÇÑ¹æ»óÇ°È«º¸°ü, ÇÑ¹æÄ«Æä°¡ ÀÖ´Ù." +"<br>" + 
-								"¼¾ÅÍ´Â ÇÑ¹æ Ãµ¿¬ ÆÑÀ» Á÷Á¢ ¸¸µé¾î ºÙÀÌ°í ¿Â¿­ ¸ÅÆ®¿¡ ´©¿öº¸´Â µî "+ "<br>" +"´Ù¾çÇÑ Ã¼Çè ÄÜÅÙÃ÷¸¦ ¸¶·ÃÇØ °ü±¤°´À» ¼­¿ï¾à·É½Ã·Î ²ø¾îµéÀÎ´Ù´Â °èÈ¹ÀÌ´Ù." ;
+					content_1 = "Bread Garden, located on the 2nd floor, runs both baking products "+ "<br>" +
+								"and Pinapore Baking Studio, " +"<br>" + 
+								"so you can experience all of your purchases or experiences."+ "<br>" +
+								"Each floor consists of an experiential lifestyle mall on the 1st "+ "<br>" +
+								"and 2nd floors of the basement,"+ "<br>" + 
+								"and a fashion outlet store on the 3rd and 8th floors."+ "<br>" +
+								"F & B specialty halls are located on the 2nd and 9th floors, respectively.";
+					content_2 = "It is the nation's largest comprehensive herbal medicine complex, "+ "<br>" +"and has over 800 herbal medicine-related stores." +"<br>" + 
+								"You can also purchase rare medicines such as frogs, zara, " +"<br>" + 
+								" and freshwater prawns that appear in various folk remedies," +"<br>" +
+								"and there is a tangjewon, which makes it easy to pack "+"<br>" +
+								" and pack the medicine for a fee of 10,000 won."+"<br>" +
+								"In addition, the ginseng market sells ginseng,"+"<br>" +
+								"red ginseng, white ginseng, various kinds of honey, "+"<br>" +
+								"and domestically produced Youngji mushrooms.";
+					content_3 = "Inside the Oriental Medicine Promotion Center,  "+ "<br>" +
+								"built in a traditional hanok (total area of â€‹â€‹9,604 ã¡)," +"<br>" + 
+								"there are Oriental Medicine Museum, Oriental Medicine Experience Center, "+ "<br>" +
+								"Oriental Medicine Promotion Center , and Oriental Medicine Cafe.";
 					
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_½ºÆ÷Ã÷È°µ¿")|| act.equals("È°µ¿¼ºÇâ_·¹Æ÷Ã÷È°µ¿")){
+				}else if (act.equals("í™œë™ì„±í–¥_ìŠ¤í¬ì¸ í™œë™")|| act.equals("í™œë™ì„±í–¥_ë ˆí¬ì¸ í™œë™")){
 					
 					url_1 = "background-image: url('img/course/DDP_h1.jpg');";
 					url_2 = "background-image: url('img/course/DDP_h2.JPG');";
 					url_3 = "background-image: url('img/course/DDP_h3.JPG');";
 					
-					head_1 = "¶ô º¼¸µÀå(·Ôµ¥ÇÇÆ®ÀÎ)";
-					head_2 = "³ëº¸ÅÚ ¾Ú¹è¼­´õ";
-					head_3 = "DS´ë¼º½ºÆ÷Ã÷";
+					head_1 = "Rock Bowling Alley (Lotte Fit Inn)";
+					head_2 = "Novotel Ambassador";
+					head_3 = "DS Daesung Sports";
 					   
-					content_1 = "5Ãş¿¡ º¹ÇÕ·¹Àú°ø°£À¸·Î "+ "<br>" +"490¿©§³(150¿©Æò) ±Ô¸ğÀÌ¸ç, 7°³ ·¹ÀÎÀÌ µé¾î¼¹´Ù."+ "<br>" +
-								"º¼¸µ ¿Ü¿¡µµ ´ÙÆ®, ³ó±¸°ÔÀÓ µîÀ» Áñ±æ ¼ö ÀÖ´Ù.";
-					content_2 = "ÈïÀÎÁö¹®ÀÇ Ã³¸¶¸¦ ¸ğÆ¼ºê·Î ¸ğ´øÇÏ°í ¾È¶ôÇÑ ÀÎÅ×¸®¾î°¡ µ¸º¸ÀÌ´Â È£ÅÚ·Î" +"<br>" +
-								"5¼º ±Ô¸ğ·Î 331½ÇÀÇ È£ÅÚ°ú ÆíÀÇ ÁÖ¹æ½Ã¼³À» °®Ãá 192½ÇÀÇ ·¹Áö´ø½º, ºßÆä ·¹½ºÅä¶û, "+ "<br>" +"·Îºñ¶ó¿îÁö ¹Ù, µ¨¸®, ·çÇÁÅé ¹Ù, ¾ß¿Ü ¼ö¿µÀå, ÇÇÆ®´Ï½º¿Í »ç¿ì³ª µîÀ» °®Ãß°í ÀÖÀ¸¸ç" +"<br>" +
-								"ÃÖ´ë 280¸í±îÁö ¼ö¿ë °¡´ÉÇÑ ±×·£µå º¼·ë, ¼Ò±Ô¸ğ ´Ù¸ñÀû ¹ÌÆÃ ·ë µîÀÌ ±¸ºñµÅ ÀÖ´Ù." ;
-					content_3 = " 5Ãş °Ç¹° ÀüÃ¼°¡ ¿ÀÁ÷ ¾ß±¸ ¸¶´Ï¾Æ¸¸À» À§ÇÑ, ¾ß±¸ ºê·£µå¸¸ Ãë±ŞÇÏ´Â °÷ÀÌ´Ù." + "<br>" +
-								"¹ÌÁî³ë ºê·£µå¸¦ ÁßÁ¡À¸·Î 20¿© °¡Áö ±Û·Î¹ú ºê·£µå ¹× ±¹³» ºê·£µå¸¦ ÇÑ °ø°£¿¡¼­ " + "<br>" + "Á÷Á¢ Á¢ÇÒ ¼ö ÀÖ´Â ¡®¾ß±¸¼ºÁö¡¯¿Í °°Àº °÷À¸·Î"+ "<br>" + 
-								"5Ãş¿¡´Â Å¸°İ°ú Åõ±¸ Àü¿ë ¿¬½ÀÀåÀÌ ¸¶·ÃµÅ ÀÖ¾î Å×½ºÆ®µµ °¡´ÉÇÏ´Ù." ;
+					content_1 = "It is a complex leisure space on the 5th floor and is about 490 square meters (150 pyeong) in size, with 7 lanes. In addition to bowling, you can enjoy darts and basketball games. ";
+					content_2 = "The hotel has a modern and comfortable interior with the eaves of Heunginjimun. It is a 5-star hotel with 331 hotels and 192 residences with convenient kitchen facilities, buffet restaurant, lobby lounge bar, deli, rooftop bar, outdoor pool, fitness It has a sauna, a grand ballroom for up to 280 people, and a small multipurpose meeting room." ;
+					content_3 = " The entire five-story building is only for baseball enthusiasts, and only for baseball brands. With a focus on the Mizuno brand, it is the same as the 'Yajijiji Temple' where you can directly contact about 20 global and domestic brands in one space." ;
 					
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_½Äµµ¶ô°ü±¤")){
+				}else if (act.equals("í™œë™ì„±í–¥_ì‹ë„ë½ê´€ê´‘")){
 					
 					url_1 = "background-image: url('img/course/DDP_i1.JPG');";
 					url_2 = "background-image: url('img/course/DDP_i2.JPG');";
 					url_3 = "background-image: url('img/course/DDP_i3.JPG');";
 					
-					head_1 = "µ¿ÇØÇØ¹°ÅÁ";
-					head_2 = "µ¿´ë¹® Å«Áıº¸½Ó";
-					head_3 = "µµ±úºñ ºÒ°í±â";
+					head_1 = "Donghaehaemultang";
+					head_2 = "Dongdaemun keunjib bossam";
+					head_3 = "Dokkaebi bulgogi";
 					   
-					content_1 = "µ¿´ë¹®¼º°û°ø¿ø ³»·Á¿À´Â ±æ¿¡ À§Ä¡ÇÔ. "+ "<br>" +
-								"ÇØ¹°ÅÁÀº ¹®¾î, ²É°Ô, ³«Áö, »õ¿ì, ¸ğ½ÃÁ¶°³ µîÀÇ °¢Á¾ ÇØ»ê¹°¿¡ "+ "<br>" +
-								"°íÃßÀå ¾ç³äÀ» ³Ö¾î Ä®Ä®ÇÏ°í ½Ã¿øÇÑ ±¹¹° ¸ÀÀ» ³½ À½½ÄÀ¸·Î  "+ "<br>" +"½Ì½ÌÇÏ°í ´Ù¾çÇÑ ÇØ»ê¹°ÀÇ ¸ÀÀ» °ñ°í·ç Áñ±æ ¼ö ÀÖ´Ù.";
-					content_2 = "º¸½ÓÀº '»î¾Æ¼­ »À¸¦ Ãß·Á³½ ¼Ò ¶Ç´Â µÅÁö µûÀ§ÀÇ ¸Ó¸®¸¦ º¸¿¡ ½Î¼­ ¹«°Å¿î °ÍÀ¸·Î ´­·¯  "+ "<br>" +
-								"´Ü´ÜÇÏ°Ô ¸¸µç µÚ ½ä¾î¼­ ¸Ô´Â À½½Ä'ÀÌ¶ó°í ÇÏ¿´À¸³ª,"+ "<br>" +
-								"Çö´ëÀÇ º¸½ÓÀº ³¿»õ¾øÀÌ »îÀº µÅÁö°í±â¸¦ ÆíÀ°À¸·Î ½ä°í"+ "<br>" +
-								"¹èÃß¼Ó ¾ç³ä»ıÀıÀÌ¿Í ÇÔ²² ¹èÃåÀÙ¿¡ ½Î¼­ ¸Ô´Â À½½ÄÀÌ´Ù. " ;
-					content_3 = "µµ±úºñºÒ°í±â´Â APM¼îÇÎ¸ô µÚÂÊÀÇ ½Ä´ç°¡¿¡ À§Ä¡ÇÔ."+ "<br>" +
-								"»ç°ñÀ°¼ö·Î ¸ÀÀ» ³½ ºÒ°í±â¸¦ ºÒÆÇ À§¿¡ ¿Ã·Á   "+ "<br>" +"Á¶¸®ÇÑ À½½ÄÀ¸·Î ½Ó°ú ºÒ°í±â Àü°ñ ±¹¹°À» °°ÀÌ Áñ±æ ¼ö ÀÖ´Ù. "+ "<br>" +
-								"ºÒ°í±â ¿Ü¿¡µµ ´Ù¸¥ ÇÑ±¹À½½ÄÀ» ¸Àº¼ ¼ö ÀÖ´Ù. ";
+					content_1 = "Located on the way down Dongdaemun Castle Park. Haemultang is a crispy and cool broth-flavored food with red pepper paste seasoned in various seafood such as octopus, blue crab, octopus, shrimp, and shellfish. You can enjoy a variety of seafood flavors evenly. " ;
+					content_2 = "Bossam is 'Boil the bone heads of select cattle or swine something wrapped in a beam press as heavy, but that after hardly made sliced eating food' of modern bossam is Slice the boiled pork with no odor cold cuts with baechusok seasoned raw clause It is a food wrapped in cabbage leaves. ";
+					content_3 = "Dokkaebi Bulgogi is located in a restaurant area behind the APM shopping mall. You can enjoy ssam and bulgogi hotpot broth as food cooked by placing the bulgogi flavored with beef bone broth on a hot plate. In addition to bulgogi, you can taste other Korean food." ;
 		
 					
-				}else if (act.equals("È°µ¿¼ºÇâ_ÀÚ¿¬°æ°ü°¨»ó")|| act.equals("È°µ¿¼ºÇâ_ÈŞ¾ç,ÈŞ½Ä")){
+				}else if (act.equals("í™œë™ì„±í–¥_ìì—°ê²½ê´€ê°ìƒ")|| act.equals("í™œë™ì„±í–¥_íœ´ì–‘,íœ´ì‹")){
 					
-					url_1 = "background-image: url('img/course/DDP_j1.jpg');";
-					url_2 = "background-image: url('img/course/DDP_j2.jpg');";
-					url_3 = "background-image: url('img/course/DDP_j3.jpg');";
+					url_1 = "background-image: url('img/course/DDP_j1.JPG');";
+					url_2 = "background-image: url('img/course/DDP_j2.JPG');";
+					url_3 = "background-image: url('img/course/DDP_j3.JPG');";
 					
-					head_1 = "³«»ê°ø¿ø";
-					head_2 = "µ¿´ë¹® ¼º°û°ø¿ø";
-					head_3 = "ÀÌÈ­µ¿º®È­¸¶À»";
+					head_1 = "Naksan Park";
+					head_2 = "Dongdaemun Castle Park";
+					head_3 = "Ehwa-dong Mural Painting Village";
 					   
-					content_1 = "º¹ÀâÇÑ °Å¸®¿Í °íÃşºôµùÀÌ ÁñºñÇÑ °Å¸®¿¡ ¾îÁö·´´Ù¸é,  "+ "<br>" +
-								"¸ÚÁø Ç³±¤À» ´ãÀº °íÁî³ËÇÑ ºĞÀ§±âÀÇ »êÃ¥±æÀ» ¸¸³¯ ¼ö ÀÖ´Â °÷ÀÌ´Ù. "+ "<br>" +"¼ºº®À» µû¶ó ¿©À¯·Î¿î ³¶¸¸ÀûÀÎ ¼­¿ï¸¶½ÇÀ» ¶°³ªº¸ÀÚ. ";
-					content_2 = "µ¿´ë¹® ¿ª¿¡¼­ ³»·Á ÈïÀÎÁö¹® °Ç³ÊÆí ¼º°û±æ ½ÃÀÛÀ¸·Î "+ "<br>" +
-								"³«»ê°ø¿øÀ» °ÅÃÄ ÇıÈ­¹®±îÁö ÁöÇÏÃ¶ 2Á¤°ÅÀå Á¤µµµÇ´Â °Å¸®ÀÌ´Ù. ";
-					content_3 = "³«»ê°ø¿ø¿¡¼­ ¼º°û±æÀ» µû¶ó ³»·Á¿À¸é ¿ìÃøÀ¸·Î ÀÌÈ­µ¿ º®È­¸¶À»ÀÌ ÀÖ°í, "+ "<br>" +
-								"ÀÌ ¼º°û±æÀ» µû¶ó °è¼Ó ³»·Á°¡¸é ÈïÀÎÁö¹®°ø¿ø°ú "+ "<br>" +
-								"ÇÑ¾çµµ¼º¹Ú¹°°üÀ¸·Î ¿¬°áµÇ¾î ÀÖ¾î ¼º°¢±æ Åõ¾î¸¦ ÇÒ ¼ö ÀÖ´Ù."+ "<br>" + 
-								"°È´Ù°¡ ½¬¾ú´Ù °¥¸¸ÇÑ Àü¸ÁÁÁÀº Ä«Æä°¡ ¸¹´Ù.";
+					content_1 = "If you are dizzy on a busy street with complicated streets and high-rise buildings, it is a place where you can meet a quiet atmosphere of walking trails with wonderful scenery. Let's take a relaxing romantic Seoul drink along the walls." ;
+					content_2 = "It is about 2 subway stops from Dongdaemun Station to Hyehwamun through Naksan Park. ";
+					content_3 = "If you descend from Naksan Park along the fortress road, there is a mural village on the right side of Ihwa-dong. If you continue down the wall, you can take a tour of Seonggak-gil because it is connected to Heunginjimun Park and Hanyangdoseong Museum. There are many cafÃ©s with good views to walk and rest. ";
 					
 					
 				}else {
 					url_1 = "background-image: url('img/course/DDP_a1.jpg');";
-					url_2 = "background-image: url('img/course/DDP_c1.JPG');";
+					url_2 = "background-image: url('img/course/DDP_c1.jpg');";
 					url_3 = "background-image: url('img/course/DDP_j1.JPG');";
 					
-					head_1 = "µ¿´ë¹® ¿ª»ç¹®È­°ø¿ø";
-					head_2 = "¾ÆÆ®·¢Æ¼ºê Å×¸¶ÆÄÅ© " + "<br>" + "¡®¶ó¶ã¸®¿¡¡¯";
-					head_3 = "³«»ê°ø¿ø";
+					head_1 = "Dongdaemun History & Culture Park";
+					head_2 = "Attraction Theme Park " + "<br>" + "â€˜Lattlierâ€™";
+					head_3 = "Naksan Park";
 					
-					content_1 = "¿ì¸®³ª¶ó ÃÖÃÊÀÇ º»´çÀÌ¸ç ÇÑ±¹ ÃµÁÖ±³È¸ÀÇ »óÂ¡ÀÌ´Ù." +"<br>" + 
-						      "¹«Áö°³ Çü»óÀÇ ±Ã¸¢ ÃµÀåÀ¸·Î µÇ¾î ÀÖ°í, "+ "<br>" +" ¿ÜºÎ´Â °íµñÀå½ÄÀ» ÅëÇØ ¿õÀåÇÔÀ» µå·¯³»°í ÀÖ´Ù." + "<br>" + 
-				    		  "»©³õÁö ¸»°í µé·¯ ºÁ¾ß ÇÒ °÷Àº Á¦´Ü ¾Æ·¡ÂÊ¿¡ ÀÖ´Â ÁöÇÏ¼º´çÀ¸·Î" +"<br>" + "19¼¼±â ÃµÁÖ±³ ¹ÚÇØ·Î Èñ»ı´çÇÑ ¼ºÀÎ À¯ÇØ 5À§¿Í  "+ "<br>" +"ÀÏ¹İ ¼ø±³ÀÚ À¯ÇØ 4À§¸¦ ºÀ¾ÈÇÏ°í ÀÖ´Ù." ;
-     				content_2 = "°í±Şºê·£µåºÎÅÍ SPAºê·£µå, º¸¼¼¸ÅÀå±îÁö "+ "<br>" +"´Ù¾çÇÏ°Ô ¼îÇÎÀ» Áñ±æ ¼ö ÀÖ´Ù." +"<br>" + 
-								"°¡Àå ÀÎ±â ÀÖ´Â ¼îÇÎ ¸ÅÀåÀº ´Ü¿¬ ºäÆ¼ ¸ÅÀå. "+ "<br>" +"¸íµ¿ ¼îÇÎ°Å¸®¿¡´Â ¸¹Àº ºäÆ¼ºê·£µå ¸ÅÀåµéÀÌ ÀÖ´Ù. ";
-					content_3 = "¿Ê°ú ´Ù¾çÇÑ ¼ÒÇ°µéÇÏ°í °¡¹æ È­ÀåÇ° µîµî ÆÇ¸ÅÇÏ´Â °÷." +"<br>" + 
-								"Á¾·ù°¡ ´Ù¾çÇØ¼­ ±¸°æÇÏ±â ÁÁ°í, "+ "<br>" +"2Ãş±îÁö´Â »õ ¿Ê, 3,4ÃşÀº ºóÆ¼ÁöÇÑ ´À³¦ÀÇ ¼îÇÎ°ø°£ÀÌ´Ù." ;
+					content_1 = "It is the first parish of Korea and the symbol of the Korean Catholic Church. It has a rainbow-shaped ceiling, and the exterior shows its grandeur through Gothic decorations. A must-visit is the Underground Cathedral, located beneath the altar, which holds the fifth largest remains of adults and the fourth largest remains of ordinary martyrs who were victims of persecution by Catholics in the 19th century.";
+     				content_2 = "You can enjoy a variety of shopping from luxury brands to SPA brands and bonded stores." + "<br>" + " The most popular shopping store is definitely a beauty store. " + "<br>" + "Myeongdong Shopping Street has many beauty brand stores. ";
+					content_3 = "ì˜·ê³¼ ë‹¤ì–‘í•œ ì†Œí’ˆë“¤í•˜ê³  ê°€ë°© í™”ì¥í’ˆ ë“±ë“± íŒë§¤í•˜ëŠ” ê³³." +"<br>" + 
+								"ì¢…ë¥˜ê°€ ë‹¤ì–‘í•´ì„œ êµ¬ê²½í•˜ê¸° ì¢‹ê³ , "+ "<br>" +"2ì¸µê¹Œì§€ëŠ” ìƒˆ ì˜·, 3,4ì¸µì€ ë¹ˆí‹°ì§€í•œ ëŠë‚Œì˜ ì‡¼í•‘ê³µê°„ì´ë‹¤." ;
 				}
 				
 				
@@ -269,7 +281,7 @@ h1{
 						<div class="content"  id="content1">
 							<h1><%= head_1 %></h1>
 							<p class="major"><%= content_1 %></p>
-							<!-- Ã¢À» ¾Æ·¡·Î ³»·ÁÁÖ´Â ¹öÆ°  -->
+							<!-- ì°½ì„ ì•„ë˜ë¡œ ë‚´ë ¤ì£¼ëŠ” ë²„íŠ¼  -->
 							<ul class="actions stacked">
 								<li><a href="#two" class="button big wide smooth-scroll-middle">Down</a></li>
 							</ul>
@@ -330,8 +342,8 @@ h1{
 									<a href="img/gallery/fulls/DDP_a1.jpg" class="image">
 										<img src="img/gallery/thumbs/DDP_a1.jpg" height="450px" /></a>
 									<div class="caption">
-										<h3>µ¿´ë¹® ¿ª»ç¹®È­°ø¿ø</h3>
-										<p>¿¾ µ¿´ë¹®¿îµ¿Àå ºÎÁö<br> ¼­¿ïÀÇ ¿ª»ç¸¦ º¸¿©ÁÖ´Â °ø¿ø</p>
+										<h3>ë™ëŒ€ë¬¸ ì—­ì‚¬ë¬¸í™”ê³µì›</h3>
+										<p>ì˜› ë™ëŒ€ë¬¸ìš´ë™ì¥ ë¶€ì§€<br> ì„œìš¸ì˜ ì—­ì‚¬ë¥¼ ë³´ì—¬ì£¼ëŠ” ê³µì›</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
@@ -339,8 +351,8 @@ h1{
 									<a href="img/gallery/fulls/DDP_a2.JPG" class="image">
 										<img src="img/gallery/thumbs/DDP_a2.JPG" height="450px" /></a>
 									<div class="caption">
-										<h3>ÈïÀÎÁö¹®(µ¿´ë¹®)</h3>
-										<p>Á¶¼±ÀÇ ¼öµµÀÎ ÇÑ¾çÀÇ 4´ë¹®(ÓŞÚ¦) ÁßÀÇ ÇÏ³ª</p>
+										<h3>í¥ì¸ì§€ë¬¸(ë™ëŒ€ë¬¸)</h3>
+										<p>ì¡°ì„ ì˜ ìˆ˜ë„ì¸ í•œì–‘ì˜ 4ëŒ€ë¬¸(å¤§é–€) ì¤‘ì˜ í•˜ë‚˜</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
@@ -349,8 +361,8 @@ h1{
 									<a href="img/gallery/fulls/DDP_b1.jpg" class="image">
 										<img src="img/gallery/thumbs/DDP_b1.jpg" height="450px" /></a>
 									<div class="caption">
-										<h3>µ¿´ë¹® ¹Ğ¸®¿À·¹</h3>
-										<p>ÀşÀºÃş¿¡°Ô »ç¶û¹Ş´Â ¼îÇÎ °ø°£</p>
+										<h3>ë™ëŒ€ë¬¸ ë°€ë¦¬ì˜¤ë ˆ</h3>
+										<p>ì Šì€ì¸µì—ê²Œ ì‚¬ë‘ë°›ëŠ” ì‡¼í•‘ ê³µê°„</p>
 										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
@@ -358,8 +370,8 @@ h1{
 									<a href="img/gallery/fulls/DDP_b2.JPG" class="image">
 										<img src="img/gallery/thumbs/DDP_b2.JPG" height="450px" /></a>
 									<div class="caption">
-										<h3>¼­¿ï ¿ª»ç ¹Ú¹°°ü</h3>
-										<p>¼­¿ïÀÇ ¹®È­¸¦ ´À³¢°í Ã¼ÇèÇÒ ±âÈ¸¸¦ Á¦°ø  <br>
+										<h3>ì„œìš¸ ì—­ì‚¬ ë°•ë¬¼ê´€</h3>
+										<p>ì„œìš¸ì˜ ë¬¸í™”ë¥¼ ëŠë¼ê³  ì²´í—˜í•  ê¸°íšŒë¥¼ ì œê³µ  <br>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -370,8 +382,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_b3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>ÇÑ¾çµµ¼º¹Ú¹°°ü</h3>
-										<p>µµ¼º µû¶ó µè´Â ¿¾³¯ÀÌ¾ß±âµµ Àç¹ÌÀÖ°í, <br> ¹Ì´Ï¾îÃ³·Î ¸¸µé¾îÁø ¼º°û ¸ğÇüµµ   <br> °ü¶÷ÇÏ´Â ¹¦¹Ì°¡ ÀÖ´Ù.</p>
+										<h3>í•œì–‘ë„ì„±ë°•ë¬¼ê´€</h3>
+										<p>ë„ì„± ë”°ë¼ ë“£ëŠ” ì˜›ë‚ ì´ì•¼ê¸°ë„ ì¬ë¯¸ìˆê³ , <br> ë¯¸ë‹ˆì–´ì²˜ë¡œ ë§Œë“¤ì–´ì§„ ì„±ê³½ ëª¨í˜•ë„   <br> ê´€ëŒí•˜ëŠ” ë¬˜ë¯¸ê°€ ìˆë‹¤.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -382,8 +394,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_c1.jpg" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>µ¿´ë¹® ÆÇÅ¸VRÅ×¸¶ÆÄÅ©</h3>
-										<p>½Å³ª°í ½º¸±ÀÖ´Â VRÃ¼Çè  <br>
+										<h3>ë™ëŒ€ë¬¸ íŒíƒ€VRí…Œë§ˆíŒŒí¬</h3>
+										<p>ì‹ ë‚˜ê³  ìŠ¤ë¦´ìˆëŠ” VRì²´í—˜  <br>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -394,8 +406,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_c2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>¾ÆÆ®·¢Æ¼ºê Å×¸¶ÆÄÅ© ¡®¶ó¶ã¸®¿¡¡¯</h3>
-										<p>ÀÎ»óÁÖÀÇ ÀÛÇ°½Ã´ëÀÇ °ø°£¼ÓÀ¸·Î  <br> ¿©ÇàÀ» ¶°³¯ ¼ö ÀÖ´Â Ã¼ÇèÇü Å×¸¶ÆÄÅ©</p>
+										<h3>ì•„íŠ¸ë™í‹°ë¸Œ í…Œë§ˆíŒŒí¬ â€˜ë¼ëœ°ë¦¬ì—â€™</h3>
+										<p>ì¸ìƒì£¼ì˜ ì‘í’ˆì‹œëŒ€ì˜ ê³µê°„ì†ìœ¼ë¡œ  <br> ì—¬í–‰ì„ ë– ë‚  ìˆ˜ ìˆëŠ” ì²´í—˜í˜• í…Œë§ˆíŒŒí¬</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -406,8 +418,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_c3.jpg" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>ÀÏ·ç¼Ç ¿ùµå</h3>
-										<p>µ¿´ë¹® ½ÃÀå Áß½É 37°¡Áö VRÃ¼Çè Á¸ <br> 
+										<h3>ì¼ë£¨ì…˜ ì›”ë“œ</h3>
+										<p>ë™ëŒ€ë¬¸ ì‹œì¥ ì¤‘ì‹¬ 37ê°€ì§€ VRì²´í—˜ ì¡´ <br> 
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -418,8 +430,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_d1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>ÀÌÈ­µ¿ º®È­¸¶À»</h3>
-										<p>±×³à´Â ¿¹»¼´Ù µå¶ó¸¶ ÃÔ¿µÁö <br> À¯¸Ó, ·Î¸Ç½º¿¡ ¾î¿ï¸®´Â ¹è°æ</p>
+										<h3>ì´í™”ë™ ë²½í™”ë§ˆì„</h3>
+										<p>ê·¸ë…€ëŠ” ì˜ˆë»¤ë‹¤ ë“œë¼ë§ˆ ì´¬ì˜ì§€ <br> ìœ ë¨¸, ë¡œë§¨ìŠ¤ì— ì–´ìš¸ë¦¬ëŠ” ë°°ê²½</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -430,8 +442,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_f1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>Çö´ë½ÃÆ¼¾Æ¿ï·¿</h3>
-										<p>º£ÀÌÅ· Á¦Ç° ÆÇ¸Å¿Í <br> ÇÇ³ªÆ÷·¹ º£ÀÌÅ· ½ºÆ©µğ¿À¸¦ °°ÀÌ ¿î¿µ <br> </p>
+										<h3>í˜„ëŒ€ì‹œí‹°ì•„ìš¸ë ›</h3>
+										<p>ë² ì´í‚¹ ì œí’ˆ íŒë§¤ì™€ <br> í”¼ë‚˜í¬ë ˆ ë² ì´í‚¹ ìŠ¤íŠœë””ì˜¤ë¥¼ ê°™ì´ ìš´ì˜ <br> </p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -442,8 +454,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_f2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>¼­¿ï¾à·É½ÃÀå</h3>
-										<p>±¹³» ÃÖ´ëÀÇ ÇÑÀÇ¾à Á¾ÇÕ ´ÜÁö</p>
+										<h3>ì„œìš¸ì•½ë ¹ì‹œì¥</h3>
+										<p>êµ­ë‚´ ìµœëŒ€ì˜ í•œì˜ì•½ ì¢…í•© ë‹¨ì§€</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -454,8 +466,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_f3.jpg" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>ÇÑ¹æÁøÈï¼¾ÅÍ</h3>
-										<p>ÇÑÀÇ¾à¹Ú¹°°ü, ÇÑ¹æÃ¼Çè½Ã¼³, <br>ÇÑ¹æ»óÇ°È«º¸°ü, ÇÑ¹æÄ«Æä°¡ ÀÖ´Â °÷.</p>
+										<h3>í•œë°©ì§„í¥ì„¼í„°</h3>
+										<p>í•œì˜ì•½ë°•ë¬¼ê´€, í•œë°©ì²´í—˜ì‹œì„¤, <br>í•œë°©ìƒí’ˆí™ë³´ê´€, í•œë°©ì¹´í˜ê°€ ìˆëŠ” ê³³.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -466,8 +478,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_h2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>³ëº¸ÅÚ ¾Ú¹è¼­´õ</h3>
-										<p>ÈïÀÎÁö¹®ÀÇ Ã³¸¶¸¦ ¸ğÆ¼ºê·Î ÇÑ <br>5¼º ±Ô¸ğÀÇ È£ÅÚ.</p>
+										<h3>ë…¸ë³´í…” ì•°ë°°ì„œë”</h3>
+										<p>í¥ì¸ì§€ë¬¸ì˜ ì²˜ë§ˆë¥¼ ëª¨í‹°ë¸Œë¡œ í•œ <br>5ì„± ê·œëª¨ì˜ í˜¸í…”.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -478,8 +490,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_i1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>µ¿ÇØÇØ¹°ÅÁ</h3>
-										<p> ´Ù¾çÇÑ ÇØ»ê¹°ÀÇ ¸ÀÀ» ´À³¥ ¼ö ÀÖ´Â °÷.</p>
+										<h3>ë™í•´í•´ë¬¼íƒ•</h3>
+										<p> ë‹¤ì–‘í•œ í•´ì‚°ë¬¼ì˜ ë§›ì„ ëŠë‚„ ìˆ˜ ìˆëŠ” ê³³.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -490,8 +502,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_j1.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>³«»ê°ø¿ø</h3>
-										<p>°íÁî³ËÇÑ ºĞÀ§±âÀÇ »êÃ¥±æ </p>
+										<h3>ë‚™ì‚°ê³µì›</h3>
+										<p>ê³ ì¦ˆë„‰í•œ ë¶„ìœ„ê¸°ì˜ ì‚°ì±…ê¸¸ </p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -502,8 +514,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_i3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>µ¿´ë¹® Å«Áıº¸½Ó</h3>
-										<p>»ç°ñÀ°¼ö·Î ¸ÀÀ» ³½ ºÒ°í±â</p>
+										<h3>ë™ëŒ€ë¬¸ í°ì§‘ë³´ìŒˆ</h3>
+										<p>ì‚¬ê³¨ìœ¡ìˆ˜ë¡œ ë§›ì„ ë‚¸ ë¶ˆê³ ê¸°</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -514,8 +526,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_j2.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>µ¿´ë¹® ¼º°û°ø¿ø</h3>
-										<p>ÈïÀÎÁö¹® °Ç³ÊÆí ¼º°û±æ</p>
+										<h3>ë™ëŒ€ë¬¸ ì„±ê³½ê³µì›</h3>
+										<p>í¥ì¸ì§€ë¬¸ ê±´ë„ˆí¸ ì„±ê³½ê¸¸</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -526,8 +538,8 @@ h1{
 										<img src="img/gallery/thumbs/DDP_j3.JPG" height="450px" />
 									</a>
 									<div class="caption">
-										<h3>ÀÌÈ­µ¿º®È­¸¶À»</h3>
-										<p>´Ù¾çÇÑ Å×¸¶ÀÇ º®È­°¡ ±×·ÁÁø ¿¹»Û ¸¶À»±æ </p>
+										<h3>ì´í™”ë™ë²½í™”ë§ˆì„</h3>
+										<p>ë‹¤ì–‘í•œ í…Œë§ˆì˜ ë²½í™”ê°€ ê·¸ë ¤ì§„ ì˜ˆìœ ë§ˆì„ê¸¸ </p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
