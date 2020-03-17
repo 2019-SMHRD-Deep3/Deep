@@ -185,8 +185,8 @@ p#rate{
 			<%
 				} else {
 			%>
-			<td class="inTag"><a
-				href="#Login"><%=info.getId()%> </a></td>
+			<td class="inTag">
+				<span style="color:#ff0000;"><%=info.getId()%>님 환영합니다.</span></td>
 			<td class="inTag"><a
 				href="LogoutService.do?num=3">Logout </a></td>
 			<td class="inTag"><a
