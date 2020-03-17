@@ -80,11 +80,10 @@ img#img {
 
 #lan {
 	top: 0px;
-	/* left: 10; */
-	min-height: 8%;
 	width: 100%;
-	height: auto;
+	height: 75px;
 	background-color: rgba(1, 1, 1, 0.6);
+	position: absolute;
 }
 
 #lan td {
@@ -138,12 +137,8 @@ p#rate{
 #headers{
 	display:table;
 	table-layout: fixed;
-	border-spacing: 0px 20px;
-/* 	display:grid;
-	grid-template-rows: repeat(auto-fit,175px);
-	grid-template-columns: repeat(auto-fit,175px);
-	place-items: center center;
-	gap: 0px 10px; */
+	border-spacing: 55px 20px;
+
 }
 .mainimg {
     width: 150px;
@@ -167,7 +162,8 @@ p#rate{
 	%>
 	<!-- Wrapper -->
 
-	<div id="wrapper" position=relative;>
+<div id="wrapper" position=relative;>
+	
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
@@ -178,8 +174,8 @@ p#rate{
 			</script> -->
 
 		<!-- Header -->
-	<div  id="lan" style="position: absolute; right: 0px;">
-	<table style="width:20% ;position: absolute; right: 0px;" >
+	<div  id="lan">
+	<table style="width:20%; position: absolute; right: 0px;" >
 	
 			<%
 				if (info == null) {
@@ -235,14 +231,14 @@ p#rate{
 		<header>
 			
 				<div id="headers">
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">서비스</a></div>&nbsp;&nbsp;
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">관광명소</a></div>&nbsp;&nbsp;
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">랭킹</a></div>&nbsp;&nbsp;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">서비스</a></div>
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">관광명소</a></div>
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">랭킹</a></div>
 					<%if(info==null){%>
-						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">코스추천</a></div>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor">코스추천</a></div>
 						<%}
 					else{%>
-						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp" style="position : absolute;">넷</a></div>
+						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" href="K-survey.jsp">넷</a></div>
 					<%}%>	
 				<!--<li><a href="#elements">Elements</a></li>-->
 					
@@ -319,7 +315,7 @@ p#rate{
 			<!-- Intro -->
 			<article id="intro" class="intSE">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span class="image main"><img src="images/back.PNG" alt="서울" /></span>
+				<span class="image main"><img src="img/night9.jpg" alt="서울" /></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
 				<p align="center">
@@ -372,16 +368,19 @@ p#rate{
 
 				<script type="text/javascript">
 					$(document).ready(function() {
-						$('#g').show(); //페이지를 로드할 때 표시할 요소
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
 					});
 					var btn1 = document.querySelector('.major1');
 
 					btn1.addEventListener('click', function() {
 						$('#g').hide();
+						$('.display').show();
 					});
 
 					var btn2 = document.querySelector('.major2');
 					btn2.addEventListener('click', function() {
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
 						$('#g').show(); //클릭 시 두 번째 요소 표시
 					});
 				</script>
@@ -394,8 +393,8 @@ p#rate{
 			<!-- About -->
 			<article id="about">
 				<h2 class="major">국가별 선호 여행지</h2>
-				<div class = "g">
-				<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
+				<div class = "">
+				<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
 					<button class = "country" id = "c1">미국</button>
 					<button class = "country" id = "c2">중국</button>
 					<button class = "country" id = "c3">일본</button>
@@ -441,13 +440,13 @@ p#rate{
 		<!-- Footer -->
 		<footer id="footer">
 			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
+				&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.
 			</p>
 		</footer>
 
 	</div>
 	
-	<p id = "rate1">1.명동/남대문/북창
+		<p id = "rate1">1.명동/남대문/북창
 					2.종로/청계
 					3.강남역
 					4.이태원
@@ -507,90 +506,92 @@ p#rate{
 	
 	<script type="text/javascript">
 		
-	var text = document.querySelector('#rate');
-	var popimgs = document.getElementById('popimg2');
-	var rate1 = document.querySelector('#rate1')
-	rate1.setAttribute('style', 'white-space: pre-line;');
-	rate1.textContent;
-	var rate2 = document.querySelector('#rate2');
-	rate2.setAttribute('style', 'white-space: pre-line;');
-	rate2.textContent;
-	var rate3 = document.querySelector('#rate3');
-	rate3.setAttribute('style', 'white-space: pre-line;');
-	rate3.textContent;
-	var rate4 = document.querySelector('#rate4');
-	rate4.setAttribute('style', 'white-space: pre-line;');
-	rate4.textContent;
-	var rate5 = document.querySelector('#rate5');
-	rate5.setAttribute('style', 'white-space: pre-line;');
-	rate5.textContent;
-	var rate6 = document.querySelector('#rate6');
-	rate6.setAttribute('style', 'white-space: pre-line;');
-	rate6.textContent;
-	var rate7 = document.querySelector('#rate7');
-	rate7.setAttribute('style', 'white-space: pre-line;');
-	rate7.textContent;
-	var rate8 = document.querySelector('#rate8');
-	rate8.setAttribute('style', 'white-space: pre-line;');
-	rate8.textContent;
-	var rate9 = document.querySelector('#rate9');
-	rate9.setAttribute('style', 'white-space: pre-line;');
-	rate9.textContent;
-	var rate10 = document.querySelector('#rate10');
-	rate10.setAttribute('style', 'white-space: pre-line;');
-	rate10.textContent;
-	// 버튼 1
-	$('#c1:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place1.PNG');
-		$('#rate').html(rate1);
-	});
+		var text = document.querySelector('#rate');
+		var popimgs = document.getElementById('popimg0');
+		var rate1 = document.querySelector('#rate1')
+		rate1.setAttribute('style', 'white-space: pre-line;');
+		rate1.textContent;
+		var rate2 = document.querySelector('#rate2');
+		rate2.setAttribute('style', 'white-space: pre-line;');
+		rate2.textContent;
+		var rate3 = document.querySelector('#rate3');
+		rate3.setAttribute('style', 'white-space: pre-line;');
+		rate3.textContent;
+		var rate4 = document.querySelector('#rate4');
+		rate4.setAttribute('style', 'white-space: pre-line;');
+		rate4.textContent;
+		var rate5 = document.querySelector('#rate5');
+		rate5.setAttribute('style', 'white-space: pre-line;');
+		rate5.textContent;
+		var rate6 = document.querySelector('#rate6');
+		rate6.setAttribute('style', 'white-space: pre-line;');
+		rate6.textContent;
+		var rate7 = document.querySelector('#rate7');
+		rate7.setAttribute('style', 'white-space: pre-line;');
+		rate7.textContent;
+		var rate8 = document.querySelector('#rate8');
+		rate8.setAttribute('style', 'white-space: pre-line;');
+		rate8.textContent;
+		var rate9 = document.querySelector('#rate9');
+		rate9.setAttribute('style', 'white-space: pre-line;');
+		rate9.textContent;
+		var rate10 = document.querySelector('#rate10');
+		rate10.setAttribute('style', 'white-space: pre-line;');
+		rate10.textContent;
+		// 버튼 1
+		$('#c1:button').on('click', function() {
 
-	// 버튼2
-	$('#c2:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place2.PNG');
-		$('#rate').html(rate2);
-	});
-	// 버튼3
-	$('#c3:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place3.PNG');
-		$('#rate').html(rate3);
-	});
-	// 버튼4
-	$('#c4:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place4.PNG');
-		$('#rate').html(rate4);
-	});
-	// 버튼5
-	$('#c5:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place5.PNG');
-		$('#rate').html(rate5);
-	});
-	// 버튼6
-	$('#c6:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place6.PNG');
-		$('#rate').html(rate6);
-	});
-	// 버튼7
-	$('#c7:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place7.PNG');
-		$('#rate').html(rate7);
-	});
-	// 버튼8
-	$('#c8:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place8.PNG');
-		$('#rate').html(rate8);
-	});
-	// 버튼9
-	$('#c9:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place9.PNG');
-		$('#rate').html(rate9);
-	});
-	// 버튼10
-	$('#c10:button').on('click', function() {
-		$('#popimg2').attr('src', 'img/place10.PNG');
-		$('#rate').html(rate10);
-	});
-</script>
+			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#rate').html(rate1);
+		});
+
+		// 버튼2
+		$('#c2:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#rate').html(rate2);
+		});
+		// 버튼3
+		$('#c3:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#rate').html(rate3);
+		});
+		// 버튼4
+		$('#c4:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#rate').html(rate4);
+		});
+		// 버튼5
+		$('#c5:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#rate').html(rate5);
+		});
+		// 버튼6
+		$('#c6:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#rate').html(rate6);
+		});
+		// 버튼7
+		$('#c7:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#rate').html(rate7);
+		});
+		// 버튼8
+		$('#c8:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#rate').html(rate8);
+		});
+		// 버튼9
+		$('#c9:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#rate').html(rate9);
+		});
+		// 버튼10
+		$('#c10:button').on('click', function() {
+			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#rate').html(rate10);
+		});
+	</script>
+	
 	
 	
 	
@@ -788,6 +789,7 @@ p#rate{
 		test10.textContent;
 		// 버튼 1
 		$('#ko1:button').on('click', function() {
+
 			$('#popimg0').attr('src', 'img/place1.PNG');
 			$('#texttext').html(test1);
 		});
@@ -850,33 +852,47 @@ p#rate{
          만 65세 어르신, 외국인 : 3000원
          한복착용자 : 무료</p>
 	<p id="texttext22">홍대거리에는 이색카페들, 소규모 갤러리와 화랑, 소품점과 패션숍, 라이브카페와 클럽, 예술시장, 각종 맛집 등은 홍대거리를 더욱 자유스럽게 만든다. 다양한 행사와 거리공연, 축제 등의 문화요소를 간직하고 있어 홍대주변은 항상 많은 사람들로 북적거린다. 또한, 홍대주변을 구성하는 미술학원거리, 피카소거리, 클럽거리, 걷고 싶은거리 등 이색거리가 홍대거리로의 발걸음을 즐겁게 한다.
-		
-		홍대 걷고싶은거리 : 홍대 걷고싶은거리는 홍대를 대표하는 곳으로 야외 무대 공연장을 설치해 인디밴드의 거리공연과 젊은이들의 역동적인 모습을 느낄 수 있는 곳이다.
-		
-		홍대 벽화거리 : 홍대 벽화거리는 홍익대학교 후문에 위치한 카네마야 제면소부터 포시즌하우스까지 이어지는 와우산로 22길에 펼쳐져 있다.낙서 같은 그림도 많으나 디자인 예술에 가까운 벽화도 많아 피카소 거리라고 불리며, 연인들의 데이트 코스로 널리 알려져있다.
-		
-		홍대앞 예술시장 프리마켓 / 홍대앞 희망시장 : 홍익대 정문 앞 홍익어린이 공원에서는 매년 3월부터 11월까지 매주 토요일은 홍대앞 예술시장 프리마켓이, 매주 일요일은 홍대앞 희망시장이 열린다.각각의 예술시장에서는 일반 시민작가들의 참여와 손으로 직접 만든 수공예품 판매,생활창작 아티스트들의 작품전시 및 판매가 이루어진다.
+홍대 걷고싶은거리 : 홍대 걷고싶은거리는 홍대를 대표하는 곳으로 야외 무대 공연장을 설치해 인디밴드의 거리공연과 젊은이들의 역동적인 모습을 느낄 수 있는 곳이다.
+홍대 벽화거리 : 홍대 벽화거리는 홍익대학교 후문에 위치한 카네마야 제면소부터 포시즌하우스까지 이어지는 와우산로 22길에 펼쳐져 있다.낙서 같은 그림도 많으나 디자인 예술에 가까운 벽화도 많아 피카소 거리라고 불리며, 연인들의 데이트 코스로 널리 알려져있다.
+홍대앞 예술시장 프리마켓 / 홍대앞 희망시장 : 홍익대 정문 앞 홍익어린이 공원에서는 매년 3월부터 11월까지 매주 토요일은 홍대앞 예술시장 프리마켓이, 매주 일요일은 홍대앞 희망시장이 열린다.각각의 예술시장에서는 일반 시민작가들의 참여와 손으로 직접 만든 수공예품 판매,생활창작 아티스트들의 작품전시 및 판매가 이루어진다.
 
 </p>
 	<p id="texttext33">주소 : 서울 종로구 낙산길 41 동숭동 산2-10
 
-		수도 서울을 구성하는 내사산(內四山:북악산·남산·인왕산·낙산)의 하나이자 주산(主山)인 북악산의 좌청룡(左靑龍)에 해당하는 낙산의 자연환경과 역사적 문화환경을 복원함으로써 서울시민들에게 쾌적한 공원 경관을 제공하고, 자연 탐방을 통해 역사와 문화 교육의 장을 제공할 목적으로 조성되었다.
-		총면적은 6만 1145평으로, 1999년 12월 30일 착공해 2002년 7월 완공하였다. 주요 시설은 ① 전시 및 관리실, 매점 및 화장실, 비우당(庇雨堂), 육각 정자, 노인정 등 건축시설 5동 ② 12개의 배드민턴장과 1개의 농구장으로 이루어진 운동시설 ③ 10개의 휴게소와 117개의 의자로 구성된 편의시설 ④ 중앙광장·이벤트광장 및 3개의 전망광장으로 이루어진 광장시설 ⑤ 기타 안내판 외 28개 시설 등이다. 그 외에 공원 녹지화를 위해 소나무를 포함해 총 40종 8만 9670그루의 나무를 심었다.
-		주변 유적으로는 서울 동대문(東大門:보물 1), 서울성곽(사적 10), 이화장(梨花莊:서울기념물 6) 등이 있다. 그 밖에 마을 전체가 온통 붉은 열매를 맺는 나무로만 둘러싸여 있다 해서 이름 붙여진 홍수동(紅樹洞:홍숫골), 단종이 영월(寧越) 청령포(淸泠浦)에서 귀양살이할 때 왕비가 저고리깃·댕기 등에 자줏빛 물을 들이기 위해 사용했다는 자지동천(紫芝洞泉:자주동천·자주우물), 《지봉유설(芝峰類說)》의 저자 이수광(李晬光)이 외조부의 집을 손질하며 겨우 비만 가릴 수 있는 집이라는 뜻으로 당호를 붙인 비우당, 우물이 나란히 5개가 있어 이름 붙여진 오형제 우물터, 오부학당 가운데 하나인 동부학당 터 등이 있다.</p>
+수도 서울을 구성하는 내사산(內四山:북악산·남산·인왕산·낙산)의 하나이자 주산(主山)인 북악산의 좌청룡(左靑龍)에 해당하는 낙산의 자연환경과 역사적 문화환경을 복원함으로써 서울시민들에게 쾌적한 공원 경관을 제공하고, 자연 탐방을 통해 역사와 문화 교육의 장을 제공할 목적으로 조성되었다.
+총면적은 6만 1145평으로, 1999년 12월 30일 착공해 2002년 7월 완공하였다. 주요 시설은 ① 전시 및 관리실, 매점 및 화장실, 비우당(庇雨堂), 육각 정자, 노인정 등 건축시설 5동 ② 12개의 배드민턴장과 1개의 농구장으로 이루어진 운동시설 ③ 10개의 휴게소와 117개의 의자로 구성된 편의시설 ④ 중앙광장·이벤트광장 및 3개의 전망광장으로 이루어진 광장시설 ⑤ 기타 안내판 외 28개 시설 등이다. 그 외에 공원 녹지화를 위해 소나무를 포함해 총 40종 8만 9670그루의 나무를 심었다.
+주변 유적으로는 서울 동대문(東大門:보물 1), 서울성곽(사적 10), 이화장(梨花莊:서울기념물 6) 등이 있다. 그 밖에 마을 전체가 온통 붉은 열매를 맺는 나무로만 둘러싸여 있다 해서 이름 붙여진 홍수동(紅樹洞:홍숫골), 단종이 영월(寧越) 청령포(淸泠浦)에서 귀양살이할 때 왕비가 저고리깃·댕기 등에 자줏빛 물을 들이기 위해 사용했다는 자지동천(紫芝洞泉:자주동천·자주우물), 《지봉유설(芝峰類說)》의 저자 이수광(李晬光)이 외조부의 집을 손질하며 겨우 비만 가릴 수 있는 집이라는 뜻으로 당호를 붙인 비우당, 우물이 나란히 5개가 있어 이름 붙여진 오형제 우물터, 오부학당 가운데 하나인 동부학당 터 등이 있다.</p>
 	<p id="texttext44">주소 : 서울 용산구 남산공원길 103 서울타워
 
-		개장 시간 : 매일 11:00 - 20:00
+개장 시간 : 매일 11:00 - 20:00
 
-		요금 : 전망대 (대인) 11,000원 전망대(소인) 9000원
+요금 : 전망대 (대인) 11,000원 전망대(소인) 9000원
 
-		제1의 관광명소 남산서울타워
-		국내외 관광객들이 년 1,200만 명 방문하는 서울 제1의 관광명소인 남산서울타워
-		최근 한류 바람을 몰고 각종 예능, 드라마의 촬영지로 이름이 높아지면서 관광객 방문이 더욱 늘어나는 추세입니다. 
-		서울 중심부에 위치해 360도 전방향으로 서울 시내를 훤히 내려다볼 수 있는 천혜의 입지 조건을 갖추고 있어, 세계 최대의 여행 출판사인 론리 플래닛이 선정한 세계 500대 관광지에 뽑히기도 했습니다.
-		최근 사무동을 리모델링해 오픈한 서울타워플라자엔 다양한 편의시설과 볼거리, 식음료 매장을 갖춰 관광객에게 서비스를 제공합니다.
+제1의 관광명소 남산서울타워
+국내외 관광객들이 년 1,200만 명 방문하는 서울 제1의 관광명소인 남산서울타워
+최근 한류 바람을 몰고 각종 예능, 드라마의 촬영지로 이름이 높아지면서 관광객 방문이 더욱 늘어나는 추세입니다. 
+서울 중심부에 위치해 360도 전방향으로 서울 시내를 훤히 내려다볼 수 있는 천혜의 입지 조건을 갖추고 있어, 세계 최대의 여행 출판사인 론리 플래닛이 선정한 세계 500대 관광지에 뽑히기도 했습니다.
+최근 사무동을 리모델링해 오픈한 서울타워플라자엔 다양한 편의시설과 볼거리, 식음료 매장을 갖춰 관광객에게 서비스를 제공합니다.
 
 	</p>
-	<p id="texttext55">5번</p>
+	<p id="texttext55">전화번호 : 02-2290-6114
+
+		주소 : 서울 종로구 창신동
+
+		우리 역사의 소중한 유물들이 멋진 새 보금자리를 찾았다. 2005년 10월 개관한
+		국립중앙박물관은 30만㎡의 방대한 공간에 30만여 점(2012년 1월 기준)의 유물을 보관, 전시하는 세계적 규모의
+		박물관이다. 용산의 옛 주한미군부대 자리에 위치한 이곳은 자연과 인공의 조화를 소중히 여긴 선조들의 지혜를 이어받아 호수와
+		정원이 어우러지게 설계를 하였으며 남산과 한강이 둘러싸는 ‘배산임수(背山臨水)’의 장소에 자리 잡았다. 지하 1층 지상 6층의
+		박물관 건물은 두 개의 건물이 하나로 연결된 듯 이어지는 외관에 전시 공간과 유물의 보관 공간, 연구 공간과 각종 부대시설이
+		모여 있다. 건물 내부로 들어서면 경천사 십층석탑과 고달사 쌍사자 석등이 자리 잡은 중앙 통로인 ‘역사의 길’을 중심으로
+		6개의 상설 전시관이 운영되고 있다. 세 개 층 좌우로 선사·고대관, 중·근세관, 기증관, 서화관, 아시아관, 조각·공예관으로
+		나뉘어 15,000여 점의 유물이 전시되고 있다. 전체 유물을 꼼꼼히 살핀다면 약 일주일의 시간이 걸린다는 방대한 규모이니
+		박물관이 선정한 ‘중요 유물 100선’ 등의 코스 선택을 하거나 시간을 가지고 나누어 관람하는 요령이 필요하다. 전시관 단위로
+		운영되는 해설사의 안내 시간을 이용하거나 자동 안내기를 사용하는 것도 좋은 방법이다. 유물의 전시는 기존의 나열식 방법에서
+		벗어나 각 유물의 가치를 돋보이게 하는 첨단의 조명과 특수효과 등이 사용되어 더욱 흥미롭다. 또한 그동안 보기 힘들었던 수많은
+		외국 유물들을 상설전시해 아시아의 중심 박물관으로서 위상을 높여가고 있다. 상설전시관과 더불어 기획전시관, 어린이전시관,
+		야외전시관들이 볼거리를 더하며 전문 공연장과 도서관까지 자리하는 종합 문화 공간이다. 박물관 곳곳에 자리하는 식당 공간도
+		특색을 지닌 먹거리를 준비하고 있다. 홈페이지 등을 통하여 사전에 정보를 준비한다면 더욱 알찬 시간여행을 떠날 수 있다.</p>
 	<p id="texttext66">6번</p>
 	<p id="texttext77">7번</p>
 	<p id="texttext88">8번</p>
