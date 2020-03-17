@@ -227,7 +227,7 @@
 			<div id = "submit">
 				<input type="button" value="전송" onclick="mySub()">
 			</div>
-			 <div id = seoul >당신이 바라던 서울 : 
+			 <div id = seoul style="display:none; ">당신이 바라던 서울 : 
 			 	<!-- <a id='result' href='#'></a> -->
 				<button id="result1" style ="display:none" ></button>
 				<button id="result2" style ="display:none"></button>
@@ -248,7 +248,7 @@
 			 <br><br>
 		</div>
 
-
+                                                                                     
 	<!-- </form> -->
 
 	<script type="text/javascript">
@@ -312,12 +312,18 @@
 
 		
 		
+		
 		 $.ajax({
              url : "http://localhost:9000/re/" + age + "/" + gender + "/" + nation + "/" + month + "/" + trip_type + "/" + item
                    + "/" + stay + "/" + act,
              method : "POST",
              success : function(rs) {
             	 //alert('success'+JSON.strify(rs))
+            	 
+            	 $('#submit').attr('style', "display:none");
+            	 $('#seoul').attr('style', "display:inline");
+            	
+            
             	 if (rs.result1 == 1){
 	  					$('#result1').text('#명동, 남대문, 북창');
 	  					$('#result1').attr('style', "display:inline");
@@ -403,6 +409,7 @@
 	  					$('#result14').attr('onclick', "location='"+url14+ "'" );
 	  				}
 
+	  				 $('#seoul').attr('style', "margin: auto; text-align: center;");
              }
        }); 
 		
