@@ -137,21 +137,28 @@ table tbody tr {
 	font-size: 20px;
 }
 
-#OnTopMenu, #OffTopMenu{
+#OnTopMenu,#OffTopMenu{
 	display: inline;
-	width: 18%;
-	height: 50px;
 	position: absolute;
-	left: 48%;
-	top: 25px;
+	top: 17px;
 	font-size: 20px;
+	height: 50px;
+}
+#OnTopMenu{
+	width: 18%;
+	left: 48%;
+}
+#OffTopMenu{
+	width: 18%;
+	left: 44%;
 }
 .tMenu{
+	display:inline;
 	text-align: center;
 	vertical-align: middle;
-	display:inline;
+	margin-left: 7px;
+	margin-right: 7px;
 }
-
 .tag{
 	color:#ffffff;
 	text-decoration: none;
