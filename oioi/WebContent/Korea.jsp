@@ -96,6 +96,7 @@ img#img {
 	font-size: 15px;
 }
 
+<<<<<<< HEAD
 p#texttext, .intSE, article#Join, article#login, p#rate, .inTag a {
 	color: white;
 }
@@ -331,7 +332,7 @@ table tbody tr {
 			<!-- Intro -->
 			<article id="intro" class="intSE conPage">
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span class="image main"><img src="img/night1.PNG" alt="서울" /></span>
+				<span><img src="img/sese.PNG"/></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
 				<p align="center">
@@ -479,7 +480,7 @@ table tbody tr {
 	<script type="text/javascript">
 		
 		var text = document.querySelector('#rate');
-		var popimgs = document.getElementById('popimg0');
+		var popimgs = document.getElementById('popimg2');
 		var rate1 = document.querySelector('#rate1')
 		rate1.setAttribute('style', 'white-space: pre-line;');
 		rate1.textContent;
@@ -514,53 +515,53 @@ table tbody tr {
 		// 버튼 선택시 해당 버튼의 이미지 출력
 		// 버튼 1
 		$('#c1:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place1.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp1.PNG');
 			$('#rate').html(rate1);
 		});
 
 		// 버튼2
 		$('#c2:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place2.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp2.PNG');
 			$('#rate').html(rate2);
 		});
 		// 버튼3
 		$('#c3:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place3.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp3.PNG');
 			$('#rate').html(rate3);
 		});
 		// 버튼4
 		$('#c4:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place4.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp4.PNG');
 			$('#rate').html(rate4);
 		});
 		// 버튼5
 		$('#c5:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place5.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp5.PNG');
 			$('#rate').html(rate5);
 		});
 		// 버튼6
 		$('#c6:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place6.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp6.PNG');
 			$('#rate').html(rate6);
 		});
 		// 버튼7
 		$('#c7:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place7.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp7.PNG');
 			$('#rate').html(rate7);
 		});
 		// 버튼8
 		$('#c8:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place8.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp8.PNG');
 			$('#rate').html(rate8);
 		});
 		// 버튼9
 		$('#c9:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place9.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp9.PNG');
 			$('#rate').html(rate9);
 		});
 		// 버튼10
 		$('#c10:button').on('click', function() {
-			$('#popimg0').attr('src', 'img/place10.PNG');
+			$('#popimg2').attr('src', 'img/pie/kp10.PNG');
 			$('#rate').html(rate10);
 		});
 	</script>
@@ -930,12 +931,5 @@ table tbody tr {
       }  
    </script>
    
-   <script>
- 	$('.conPage').on('click',function(){
- 		$('#headers').css({display:'none'}),
- 		$('.topMenu').css({display:'block'});
- 	});
-   </script>
-
 </body>
 </html>

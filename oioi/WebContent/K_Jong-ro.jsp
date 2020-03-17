@@ -59,8 +59,7 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<%-- <% String act = (String)request.getParameter("act"); %> --%>
-			<% String act = "¤·¤·¤·"; %>
+			<% String act = (String)request.getParameter("act"); %> 
 			<%= act %> <br>
 
 			<% 
