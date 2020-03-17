@@ -109,7 +109,7 @@ article#Join {
 }
 
 article#login {
-	color: white ! important;
+	color: white !important;
 }
 
 .linkcolor {
@@ -190,7 +190,7 @@ p#rate{
 			<td class="inTag"><a
 				href="LogoutService.do?num=6">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="Sp_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -443,9 +443,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>

@@ -151,7 +151,6 @@ p#rate{
 	text-align: center;
 	vertical-align: middle;
 }
-
 </style>
 
 
@@ -442,9 +441,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>

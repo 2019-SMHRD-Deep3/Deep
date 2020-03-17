@@ -332,7 +332,9 @@ table tbody tr {
 
 			<!-- Intro -->
 			<article id="intro" class="intSE conPage">
+
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
+
 				<span><img src="img/sese.PNG"/></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
@@ -410,6 +412,7 @@ table tbody tr {
 
 			<!-- About -->
 			<article id="about" class="conPage">
+
 				<h2 class="major">국가별 선호 여행지</h2>
 				<div class="">
 					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
@@ -423,6 +426,7 @@ table tbody tr {
 					<button class="country" id="c8">베트남</button>
 					<button class="country" id="c9">홍콩</button>
 					<button class="country" id="c10">중동</button>
+
 				</div>
 
 				<script type="text/javascript">

@@ -191,7 +191,7 @@ p#rate{
 			<td class="inTag"><a
 				href="LogoutService.do?num=4">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="En_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -444,9 +444,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>

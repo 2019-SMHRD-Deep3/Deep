@@ -109,7 +109,7 @@ article#Join {
 }
 
 article#login {
-	color: white;
+	color: white !important;
 }
 
 .linkcolor {
@@ -151,7 +151,6 @@ p#rate{
 	text-align: center;
 	vertical-align: middle;
 }
-
 </style>
 
 
@@ -191,7 +190,7 @@ p#rate{
 			<td class="inTag"><a
 				href="LogoutService.do?num=5">Logout </a></td>
 			<td class="inTag"><a
-				href="update.jsp">ChangeInfo</a></td>
+				href="Fr_update.jsp">ChangeInfo</a></td>
 			<%
 				}
 			%>
@@ -231,7 +230,7 @@ p#rate{
 			
 				<div id="headers">
 					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#intro">Service</a></div>
-					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">Attractions</a></div>;
+					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#work">Attractions</a></div>
 					<div class = "mainimg" style="font-size: 20px;"  ><a class="linkcolor" href="#about">Top5</a></div>
 					<%if(info==null){%>
 						<div class = "mainimg"><a style="font-size: 20px;" class="linkcolor" style="position : absolute;">Make Course</a></div>
@@ -449,9 +448,9 @@ p#rate{
 
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">
-				&copy; Untitled. Design: <a href="https://html5up.net">DBDBDEEP</a>.
-			</p>
+			<h2 class="copyright">
+				&copy; Untitled. Design: <a href="#">Welcome to Seoul</a>
+			</h2>
 		</footer>
 
 	</div>

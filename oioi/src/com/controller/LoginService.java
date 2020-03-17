@@ -32,6 +32,8 @@ public class LoginService extends HttpServlet {
 			session.setAttribute("info", info);
 		}
 
+		response.sendRedirect("Korea.html");
+
 	}
 
 }
