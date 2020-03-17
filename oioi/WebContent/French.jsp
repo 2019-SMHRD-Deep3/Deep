@@ -277,7 +277,7 @@ p#rate{
 							<td>ID</td>
 							<td><input placeholder="enter ID" type="text" name=id>
 							</td>
-							<td><input type="button" value="Confirm Overlap"></td>
+							<td><input type="button" value="Confirm Overlap" id = "btn"></td>
 						</tr>
 						<tr>
 							<td>Password</td>

@@ -163,6 +163,9 @@ table tbody tr {
 	color:#ffffff;
 	text-decoration: none;
 }
+.tag:hover{
+	color: yellow;
+}
 
 </style>
 
@@ -198,37 +201,34 @@ table tbody tr {
 					<div class="tMenu"><a class="tag" href="#about">랭킹</a></div>
 				</div>
 			<% } %>
-			<table style="width: 20%; position: absolute; right: 6%;display:inline-block;">
+			
+			<table id="info_lay" style="width: 20%; position: absolute; right: 0%;display:inline-block;">
 				<tr>
-					<%
-				if (info == null) {
-			%>
-					<td class="inTag"><a href="#Login">Login</a></td>
-
-					<td class="inTag"><a href="#Join">Join </a></td>
-					<%
-				} else {
-			%>
-			<td class="inTag"><a
-				href="#Login"><%=info.getId()%> </a></td>
-			<td class="inTag"><a
-				href="LogoutService.do?num=1">Logout </a></td>
-			<td class="inTag"><a
-				href="K_update.jsp">ChangeInfo</a></td>
-			<% } %>
-
-					<td>
-						<link rel="stylesheet"
-							href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-							integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-							crossorigin="anonymous"> <script
-							src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					<% if (info == null) { %>
+						<td class="inTag"><a href="#Login">Login</a></td>
+						<td class="inTag"><a href="#Join">Join </a></td>
+					<% } else {	%>
+						<td class="inTag"><a href="#Login"> <%=info.getId()%> </a></td>
+						<td class="inTag"><a href="LogoutService.do?num=1">Logout </a></td>
+						<td class="inTag"><a href="K_update.jsp">ChangeInfo</a></td>
+												
+						<script>
+							$('#info_lay').css({right:'6%'});	
+						</script>
+						
+					<% } %>
+						<td>
+							<link rel="stylesheet"
+								href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+								integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+								crossorigin="anonymous"> 
+							<script	src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 							integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-							crossorigin="anonymous"></script> <script
-							src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+							crossorigin="anonymous"></script> 
+							<script	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
 							integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-							crossorigin="anonymous"></script> <script
-							src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+							crossorigin="anonymous"></script> 
+							<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 							integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 							crossorigin="anonymous"></script>
 						<div class="dropdown">
@@ -236,19 +236,19 @@ table tbody tr {
 								id="dropdownMenuButton" data-toggle="dropdown"
 								aria-haspopup="true" aria-expanded="false">LANGAUGE</button>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-								<a class="dropdown-item" href="Korea.jsp">한국어</a> <a
-									class="dropdown-item" href="English.jsp">English</a> <a
-									class="dropdown-item" href="China.jsp">简体中文</a> <a
-									class="dropdown-item" href="Japan.jsp">日本語</a> <a
-									class="dropdown-item" href="Spain.jsp">Español</a> <a
-									class="dropdown-item" href="French.jsp">Français</a>
+								<a class="dropdown-item" href="Korea.jsp">한국어</a> 
+								<a class="dropdown-item" href="English.jsp">English</a> 
+								<a class="dropdown-item" href="China.jsp">简体中文</a> 
+								<a class="dropdown-item" href="Japan.jsp">日本語</a> 
+								<a class="dropdown-item" href="Spain.jsp">Español</a> 
+								<a class="dropdown-item" href="French.jsp">Français</a>
 							</div>
 						</div>
 					</td>
 				</tr>
 			</table>
 		</div>
-
+		
 		<div id="headers">
 			<div class="mainimg" style="font-size: 20px;">
 				<a class="linkcolor" href="#intro">서비스</a>
