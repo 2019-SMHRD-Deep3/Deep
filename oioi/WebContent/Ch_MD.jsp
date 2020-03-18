@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>明洞</title>
+<title>明洞，南大门，北昌</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -59,9 +59,7 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<%-- <% String act = (String)request.getParameter("act"); %> --%>
-			<% String act = "활d관감상"; %>
-			<%= act %> <br>
+			<% String act = (String)request.getParameter("act"); %> 
 <% 
 				// 이미지 경로명
 				String url_1=""; String url_2=""; String url_3="";
@@ -125,7 +123,7 @@ h1{
 							"因此您可以在照片区中留下回忆。"+ "<br>" +
 							"如果您订购饮料，则可以看到美丽的Hello Kitty Art Latte，"+ "<br>" +
 							"还可以购买各种精美的礼物作为礼物。"+ "<br>" +
-							"如果您在购物时需要休息的地方，值得停下来。" ;
+							"如果您在购物时需要休息的地方，值得停go down。" ;
 					content_3 = "这是蜂蜜黄油杏仁和各种杏仁的热门热门课程！"+ "<br>" +
 							"位于明洞站6-7号出口的高Heriot地下室，"+ "<br>" +
 							"您可以按类型取样各种杏仁。"+ "<br>" +
@@ -248,7 +246,7 @@ h1{
 					content_1 = "拥有30年传统石锅拌饭传统的"+ "<br>" +"石锅拌饭餐厅吸引了世界各地的美食"+ "<br>" +
 							"在传统的韩国碗中，将一碗有色的香草，坚果和冰粥"+ "<br>" +
 							"放在彼此的顶部，以 品尝和品尝美味。"+ "<br>" +
-							"您还可以享用纯肉，烤肉和鸡尾酒米酒。下来";
+							"您还可以享用纯肉，烤肉和鸡尾酒米酒。go down";
 					content_2 = "这是一家位于首尔中区明洞的五花肉餐厅。"+ "<br>" +
 							"猪肚是指猪肉或食物的腹部的特定部分。"+ "<br>" +
 							"在这家餐厅里，您可以品尝到多汁的五花肉和泡菜，它们都浸在自己的手中。"+ "<br>" +
@@ -325,7 +323,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">下来</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -340,7 +338,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">下来</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -357,7 +355,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">下来</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 
 						</div>
@@ -370,12 +368,9 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>画廊</h2>
-							<!-- <p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">详细资料</a>).</p> -->
-						</div>
+						<br><h2>画廊</h2>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">上</a></li>
+								<li><a href="#one" class="button">Go up</a></li>
 							</ul>
 
 						<!-- Gallery -->
@@ -386,7 +381,7 @@ h1{
 									<div class="caption">
 										<h3>明洞大教堂</h3>
 										<p>韩国第一个教堂中殿，韩国天主教堂的象征</p>
-										<ul class="actions fixed"><li><span class="button small">详细资料</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -395,7 +390,7 @@ h1{
 									<div class="caption">
 										<h3>南大门（Sungryemun）</h3>
 										<p>它是由南门（Nammun）建造的韩国古老建筑，在朝鲜王朝成立之初将首都迁至首尔时建造</p>
-										<ul class="actions fixed"><li><span class="button small">详细资料</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								
@@ -405,7 +400,7 @@ h1{
 									<div class="caption">
 										<h3>北村韩屋村</h3>
 										<p>在这里可以看到韩国传统民居（韩屋）</p>
-										<ul class="actions fixed"><li><span class="button small">详细资料</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -415,7 +410,7 @@ h1{
 										<h3>明洞艺术剧院</h3>
 										<p>还举办诸如正统戏剧，实验戏剧，哑剧表演，音乐剧等特殊活动，以及戏剧节和表演艺术节。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -427,7 +422,7 @@ h1{
 										<h3>性能表现</h3>
 										<p>在厨房使用一切东西进行打击乐表演Saisai韩国的传统舞蹈和观众参与是一个有趣的节日</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -439,7 +434,7 @@ h1{
 										<h3>线友商店</h3>
 										<p>明洞萨沃伊饭店Line Friends旗舰店</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -451,7 +446,7 @@ h1{
 										<h3>凯蒂猫咖啡馆</h3>
 										<p>您可以在这里看到漂亮的Hello Kitty艺术拿铁咖啡并购买各种精美礼品作为礼物</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -463,7 +458,7 @@ h1{
 										<h3>蜂蜜黄油杏仁</h3>
 										<p>这是蜂蜜黄油杏仁和各种杏仁的热门课程。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -475,7 +470,7 @@ h1{
 										<h3>明洞巷</h3>
 										<p>黑人牧师正在拍摄电影驱魔，主要背景是明洞。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -487,7 +482,7 @@ h1{
 										<h3>北村韩屋村</h3>
 										<p>这是一部以爱情温度戏剧拍摄网站北村韩屋村为背景的韩国戏剧。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -499,7 +494,7 @@ h1{
 										<h3>3D黑色艺术博物馆</h3>
 										<p>全球唯一的3D BLACKART博物馆，具有神秘的光学幻觉技术。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -511,7 +506,7 @@ h1{
 										<h3>首尔历史博物馆</h3>
 										<p>一个城市历史博物馆，展示史前至近代首尔的历史和文化.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -523,7 +518,7 @@ h1{
 										<h3>明洞娱乐街</h3>
 										<p>Gobawi Hill Road漫画艺术街.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -535,7 +530,7 @@ h1{
 										<h3>Stylenanda Pink酒店</h3>
 										<p>以酒店为主题的旗舰店。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -547,7 +542,7 @@ h1{
 										<h3>西科</h3>
 										<p>化妆自我吧台“ BEAUTY SPACE”，让人联想到梦妆桌</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -559,7 +554,7 @@ h1{
 										<h3>明洞购物街</h3>
 										<p>您可以享受从奢侈品牌到SPA品牌和保税店的各种购物。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -571,7 +566,7 @@ h1{
 										<h3>奥兰</h3>
 										<p>卖衣服，各种配饰，手提袋化妆品等</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -583,7 +578,7 @@ h1{
 										<h3>微笑多人间</h3>
 										<p>在这里，您可以与房间中各种主题的朋友一起舒适地玩耍。</p>
 										<ul class="actions fixed">
-											<li><span class="button small">详细资料</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>

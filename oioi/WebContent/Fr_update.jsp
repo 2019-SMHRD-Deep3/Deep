@@ -45,7 +45,7 @@ display:table-cell; vertical-align: middle; text-align: center;
 						<%
 							MemberDTO info = (MemberDTO) session.getAttribute("info");
 						%>
-						접속한 Id :<%=info.getId()%>
+						Id :<%=info.getId()%>
 						<input name="pw" type="password" placeholder="Entrez votre PW요"
 							style="width: 500px; margin: 0 auto;">
 						<input name="name" type="text" placeholder="Veuillez saisir votre nom"

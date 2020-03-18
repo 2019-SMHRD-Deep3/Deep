@@ -71,7 +71,7 @@ span {
 	<!-- 국가 -->
 	<br>
 	<div>
-		<b>국가</b>
+		<b>Country</b>
 	</div>
 	<br>
 	<div id="Q_Nation">
@@ -97,7 +97,7 @@ span {
 				<option>Philippines
 				<option>Australia
 				<option>HongKong
-				<option>other
+				<option>Other
 			</select>
 		</div>
 	</div>
@@ -320,7 +320,7 @@ span {
 				if (rs.result1 == 1) {
 					$('#result1').text('#Myeongdong, Namdaemun, Bukchang');
 					$('#result1').attr('style', "display:inline");
-					url1 = 'K_MD.jsp?act=' + act;
+					url1 = 'En_MD.jsp?act=' + act;
 					$('#result1').on('click', popupPage1);
 				}
 				if (rs.result2 == 1) {
@@ -332,7 +332,7 @@ span {
 				if (rs.result3 == 1) {
 					$('#result3').text('#Dongdaemun Fassion Town');
 					$('#result3').attr('style', "display:inline");
-					url3 = 'K_Dongdaemun.jsp?act=' + act;
+					url3 = 'En_Dongdaemun.jsp?act=' + act;
 					$('#result3').on('click', popupPage3);
 				}
 				if (rs.result4 == 1) {
@@ -417,7 +417,7 @@ span {
 				.open(
 						url1,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage2() {
 		if (play != true)
@@ -427,7 +427,7 @@ span {
 				.open(
 						url2,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage3() {
 		if (play != true)
@@ -437,7 +437,7 @@ span {
 				.open(
 						url3,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage4() {
 		if (play != true)
@@ -447,7 +447,7 @@ span {
 				.open(
 						url4,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage5() {
 		if (play != true)
@@ -457,7 +457,7 @@ span {
 				.open(
 						url5,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage6() {
 		if (play != true)
@@ -467,7 +467,7 @@ span {
 				.open(
 						url6,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage7() {
 		if (play != true)
@@ -477,7 +477,7 @@ span {
 				.open(
 						url7,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage8() {
 		if (play != true)
@@ -487,7 +487,7 @@ span {
 				.open(
 						url8,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage9() {
 		if (play != true)
@@ -497,7 +497,7 @@ span {
 				.open(
 						url9,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage10() {
 		if (play != true)
@@ -507,7 +507,7 @@ span {
 				.open(
 						url10,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPag11() {
 		if (play != true)
@@ -517,7 +517,7 @@ span {
 				.open(
 						url11,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage12() {
 		if (play != true)
@@ -527,7 +527,7 @@ span {
 				.open(
 						url12,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage13() {
 		if (play != true)
@@ -537,7 +537,7 @@ span {
 				.open(
 						url13,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 	function popupPage14() {
 		if (play != true)
@@ -547,7 +547,7 @@ span {
 				.open(
 						url14,
 						"_blank",
-						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=800px");
+						"toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=0,width=1900px,height=780px");
 	}
 </script>
 </body>
