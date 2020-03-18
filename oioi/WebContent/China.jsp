@@ -249,21 +249,17 @@ p#rate{
 
 
 			<!-- Login -->
-			<article id="Login">
-				<form action="LoginService.do?num=3" method="post">
-					<table>
+			<article id="Login" style="width:100%;">
+				<form action="LoginService.do?num=1" method="post">
+					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td>ID</td>
-							<td><input placeholder="enter ID" type="text" name=id></td>
+							<td><input placeholder="ID" type="text" name=id style="color:white;"></td>
 						</tr>
 						<tr>
-							<td>PW</td>
-							<td><input placeholder="enter PW" type="password" name=pw></td>
+							<td><input placeholder="PASSWORD" type="password" name=pw style="color:white;"></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td><input type=submit value="LOGIN"> <input
-								type=reset value="RESET"></td>
+							<td><input type=submit value="LOGIN"> </td>
 						</tr>
 					</table>
 				</form>
@@ -271,42 +267,31 @@ p#rate{
 
 
 			<!-- Join -->
-			<article id="Join">
-				<form action="JoinService.do?num=3" method="post">
-					<table>
+			<article id="Join" style="width:100%;">
+				<form action="JoinService.do?num=1" method="post">
+					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td>ID</td>
-							<td><input placeholder="enter ID" type="text" name=id>
-							</td>
-							<td><input type="button" value="Confirm Overlap" id = "btn"></td>
+							<td><input id='search' placeholder="USER ID" type="text"
+								name=id></td>
+							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
 						</tr>
 						<tr>
-							<td>Password</td>
-							<td colspan=2><input placeholder="at least 6 characters"
-								type="password" name=pw></td>
+							<td colspan=2><input placeholder="USER PASSWORD" type="password"
+								name=pw></td>
 						</tr>
 						<tr>
-							<td>Confirm Password</td>
-							<td colspan=2><input placeholder="re-enter pw"
-								type="password" name=pw></td>
+							<td colspan=2><input placeholder="Re-EntryPW" type="password"
+								name=pw></td>
 						</tr>
+						
 						<tr>
-							<td>NAME</td>
-							<td colspan=2><input placeholder="enter name" type="text"
-								name=name></td>
-						</tr>
-
-						<tr>
-							<td>E-MAIL</td>
-							<td colspan=2><input placeholder="enter email" type="text"
+							<td colspan=2><input placeholder="E-MAIL" type="text"
 								name=email></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="JOIN" id="joinBtn"> <input
-								type=reset value="RESET"></td>
+							<td colspan=2><input type=submit value="JOIN"> </td>
 						</tr>
-					</table>
+					</table> 
 				</form>
 			</article>
 
@@ -401,42 +386,66 @@ p#rate{
 
 
 			<!-- About -->
-			<article id="about">
-				<h2 class="major">国家排名前5位</h2>
-				<div class = "">
-				<span><img id="popimg2" src="images/pic03.jpg" alt=""></span>
-				<button class = "country" id = "c1">U.S.A</button>
-					<button class = "country" id = "c2">CHINA</button>
-					<button class = "country" id = "c3">JAPAN</button>
-					<button class = "country" id = "c4">FRENCE</button>
-					<button class = "country" id = "c5">GERMANY</button>
-					<button class = "country" id = "c6">U.K</button>
-					<button class = "country" id = "c7">RUSSIA</button>
-					<button class = "country" id = "c8">VIETNAM</button>
-					<button class = "country" id = "c9">HONGKONG</button>
-					<button class = "country" id = "c10">U.A.E</button>
+			<link rel="stylesheet" href="dist/css/custom.css">
+
+<!-- [ REQUIRED ] -->
+<link rel="stylesheet" href="dist/css/bpHS.min.css">
+
+			<!-- About -->
+			<article id="about" class="conPage">
+
+				<h2 class="major">국가별 선호 여행지</h2>
+			
+			<div class="container">
+					<div class="bp-hs" id="demo-default">
+						<div class="bp-hs_inner">
+							
+							<div class="bp-hs_inner__item" data-transform="scale">
+								<img src="SEOULIMAGE/S1.PNG" alt="Boompx Hero Slider 01" />
+							</div>
+							<div class="bp-hs_inner__item" data-transform="rotate">
+								<img src="SEOULIMAGE/S3.PNG" alt="Boompx Hero Slider 02" />
+							</div>
+							<div class="bp-hs_inner__item" data-transform="rotate">
+								<img src="SEOULIMAGE/S4.PNG" alt="Boompx Hero Slider 03" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S5.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S6.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S7.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S8.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S9.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S10.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S11.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+							<div class="bp-hs_inner__item">
+								<img src="SEOULIMAGE/S12.PNG" alt="Boompx Hero Slider 04" />
+							</div>
+						</div>
+					</div>
 				</div>
-				
-				<script type="text/javascript">
-					$(document).ready(function() {
-						$('.display').show(); //페이지를 로드할 때 표시할 요소
-						$('#g').hide(); //페이지를 로드할 때 숨길 요소
-					});
-					var btn1 = document.querySelector('.major1');
 
-					btn1.addEventListener('click', function() {
-						$('#g').hide();
-						$('.display').show();
-					});
-
-					var btn2 = document.querySelector('.major2');
-					btn2.addEventListener('click', function() {
-						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
-						$('#g').show(); //클릭 시 두 번째 요소 표시
-					});
-				</script>
-				<p id="rate"></p>
 			</article>
+
+	<!-- [ REQUIRED ] -->
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="dist/js/vendors/jquery.touchSwipe.min.js"></script>
+	<!-- optional (required for touchSwipe option) -->
+	<script src="dist/js/bpHS.min.js"></script>
+	<!-- [ Demo Script ] -->
+	<script src="dist/js/custom.js"></script>
 
 
 			<!-- Contact -->
@@ -971,9 +980,9 @@ p#rate{
             data : 'id='+id,
             success : function(result){
             	if(result == true)
-            		alert("该ID是重复的。");
+            		alert("아이디가 중복되었습니다.");
             	else
-            		alert("这是一个可用的ID。");
+            		alert("사용가능한 아이디입니다.");
             },
             error : function(){
             	console.log(2);
