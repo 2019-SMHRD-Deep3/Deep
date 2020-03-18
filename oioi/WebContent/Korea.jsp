@@ -285,21 +285,17 @@ table tbody tr {
 
 
 			<!-- Login -->
-			<article id="Login">
+			<article id="Login" style="width:100%;">
 				<form action="LoginService.do?num=1" method="post">
-					<table>
+					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td>아이디</td>
-							<td><input placeholder="아이디 입력" type="text" name=id></td>
+							<td><input placeholder="아이디 입력" type="text" name=id style="color:white;"></td>
 						</tr>
 						<tr>
-							<td>비밀번호</td>
-							<td><input placeholder="비밀번호 입력" type="password" name=pw></td>
+							<td><input placeholder="비밀번호 입력" type="password" name=pw style="color:white;"></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td><input type=submit value="로그인"> <input
-								type=reset value="초기화"></td>
+							<td><input type=submit value="로그인"> </td>
 						</tr>
 					</table>
 				</form>
@@ -307,39 +303,32 @@ table tbody tr {
 
 
 			<!-- Join -->
-			<article id="Join">
+			<article id="Join" style="width:100%;">
 				<form action="JoinService.do?num=1" method="post">
-					<table>
+					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td>아이디</td>
 							<td><input id='search' placeholder="아이디 입력 " type="text"
 								name=id></td>
 							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
 						</tr>
 						<tr>
-							<td>비밀번호</td>
 							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
 								name=pw></td>
 						</tr>
 						<tr>
-							<td>비밀번호 확인</td>
 							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
 								name=pw></td>
 						</tr>
 						<tr>
-							<td>이름</td>
 							<td colspan=2><input placeholder="전화번호 입력 " type="text"
 								name=name></td>
 						</tr>
 						<tr>
-							<td>이메일</td>
 							<td colspan=2><input placeholder="이메일 입력 " type="text"
 								name=email></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="회원가입"> <input
-								type=reset value="초기화"></td>
+							<td colspan=2><input type=submit value="회원가입"> </td>
 						</tr>
 					</table> 
 					<!-- <script>
