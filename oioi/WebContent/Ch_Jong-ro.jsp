@@ -59,9 +59,8 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<%-- <% String act = (String)request.getParameter("act"); %> --%>
-			<% String act = "활동성향_자연경관감상"; %>
-			<%= act %> <br>
+		<%-- 	<% String act = (String)request.getParameter("act"); %> 
+ --%>			<% String act = "활동성향_고궁,역사유적지방문"; %> 
 
 			<% 
 				// 이미지 경로명
@@ -288,7 +287,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">Go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -303,7 +302,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">Go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -320,7 +319,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Go down</a></li>
 							</ul>
 
 						</div>
@@ -333,11 +332,10 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
+							<br>
 							<h2>画廊</h2>
-							<p>这是一个<strong>画廊</strong>元件。它可以像灯箱一样工作（在给定<code> lightbox </code>类时），您可以使用许多修饰符</span>以及其他自定义其<span class =“ demo-controls”>外观为它分配一个可选的<code> onload </code>或<code> onscroll </code>过渡修饰符（<a href="#reference-gallery">详细信息</a>）。</p></div>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">Up</a></li>
+								<li><a href="#one" class="button">Go Up</a></li>
 							</ul>
 
 						<!-- Gallery -->

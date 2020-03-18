@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Myeongdong</title>
+<title>Myeongdong, Namdaemun, Bukchang</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -59,9 +59,8 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<%-- <% String act = (String)request.getParameter("act"); %> --%>
-			<% String act = "dd"; %>
-			<%= act %> <br>
+			<% String act = (String)request.getParameter("act"); %>
+
 
 			<% 
 				// 이미지 경로명
@@ -268,7 +267,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">vers le bas</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -283,7 +282,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">vers le bas</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -300,7 +299,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">vers le bas</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 
 						</div>
@@ -313,12 +312,9 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Galerie</h2>
-							<!-- <p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p> -->
-						</div>
+						<br>	<h2>Galerie</h2>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">en haut</a></li>
+								<li><a href="#one" class="button">go up</a></li>
 							</ul>
 
 						<!-- Gallery -->

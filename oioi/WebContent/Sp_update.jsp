@@ -45,7 +45,7 @@ display:table-cell; vertical-align: middle; text-align: center;
 						<%
 							MemberDTO info = (MemberDTO) session.getAttribute("info");
 						%>
-						Á¢¼ÓÇÑ Id :<%=info.getId()%>
+						Id :<%=info.getId()%>
 						<input name="pw" type="password" placeholder="Put PassWord"
 							style="width: 500px; margin: 0 auto;">
 						<input name="name" type="text" placeholder="Put Name"

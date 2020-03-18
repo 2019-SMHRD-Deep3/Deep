@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Dongdaemun</title>
+<title>Dongdaemun Fassion Town</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -59,9 +59,7 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			 <% String act = (String)request.getParameter("act"); %> 
-			<%= act %> <br>
-
+			<% String act = (String)request.getParameter("act"); %>
 			<% 
 				// 이미지 경로명
 				String url_1=""; String url_2=""; String url_3="";
@@ -232,7 +230,7 @@ h1{
 					head_2 = "Dongdaemun keunjib bossam";
 					head_3 = "Dokkaebi bulgogi";
 					   
-					content_1 = "Located on the way down Dongdaemun Castle Park. Haemultang is a crispy and cool broth-flavored food with red pepper paste seasoned in various seafood such as octopus, blue crab, octopus, shrimp, and shellfish. You can enjoy a variety of seafood flavors evenly. " ;
+					content_1 = "Located on the way go down Dongdaemun Castle Park. Haemultang is a crispy and cool broth-flavored food with red pepper paste seasoned in various seafood such as octopus, blue crab, octopus, shrimp, and shellfish. You can enjoy a variety of seafood flavors evenly. " ;
 					content_2 = "Bossam is 'Boil the bone heads of select cattle or swine something wrapped in a beam press as heavy, but that after hardly made sliced eating food' of modern bossam is Slice the boiled pork with no odor cold cuts with baechusok seasoned raw clause It is a food wrapped in cabbage leaves. ";
 					content_3 = "Dokkaebi Bulgogi is located in a restaurant area behind the APM shopping mall. You can enjoy ssam and bulgogi hotpot broth as food cooked by placing the bulgogi flavored with beef bone broth on a hot plate. In addition to bulgogi, you can taste other Korean food." ;
 		
@@ -249,7 +247,7 @@ h1{
 					   
 					content_1 = "If you are dizzy on a busy street with complicated streets and high-rise buildings, it is a place where you can meet a quiet atmosphere of walking trails with wonderful scenery. Let's take a relaxing romantic Seoul drink along the walls." ;
 					content_2 = "It is about 2 subway stops from Dongdaemun Station to Hyehwamun through Naksan Park. ";
-					content_3 = "If you descend from Naksan Park along the fortress road, there is a mural village on the right side of Ihwa-dong. If you continue down the wall, you can take a tour of Seonggak-gil because it is connected to Heunginjimun Park and Hanyangdoseong Museum. There are many cafés with good views to walk and rest. ";
+					content_3 = "If you descend from Naksan Park along the fortress road, there is a mural village on the right side of Ihwa-dong. If you continue go down the wall, you can take a tour of Seonggak-gil because it is connected to Heunginjimun Park and Hanyangdoseong Museum. There are many cafés with good views to walk and rest. ";
 					
 					
 				}else {
@@ -281,7 +279,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -296,7 +294,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -313,7 +311,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 
 						</div>
@@ -326,12 +324,9 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Gallery</h2>
-							<p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p>
-						</div>
+						<br>	<h2>Gallery</h2>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">Up</a></li>
+								<li><a href="#one" class="button">Go Up</a></li>
 							</ul>
 
 						<!-- Gallery -->

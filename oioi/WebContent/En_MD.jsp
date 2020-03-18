@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>명동</title>
+<title>Myeongdong, Namdaemun, Bukchang</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -60,8 +60,6 @@ h1{
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
 			<% String act = (String)request.getParameter("act"); %> 
-			<%= act %> <br>
-
 			<% 
 				// 이미지 경로명
 				String url_1=""; String url_2=""; String url_3="";
@@ -161,7 +159,7 @@ h1{
 							"you can feel the appearance of Gyeongseong , a Seoul in the 1930s ." + "<br>" + 
 							"This is a good place to visit when you want to feel the modern Seoul.";
 					content_2 = "Black Priests filmed in high angle The location of " + "<br>" + 
-							"Myeongdong's downtown area is an alley opposite Myeongdong Jungang Olive Young, " + "<br>" + 
+							"Myeongdong's go downtown area is an alley opposite Myeongdong Jungang Olive Young, " + "<br>" + 
 							"a 6-minute walk from Myeongdong Cathedral." + "<br>" + 
 							"The film is an exorcism, a rare topic in Korean films, and its main background is Myeong-dong." + "<br>" + 
 							"It will be fun to compare the feeling of the movie scene with the actual visit." ;
@@ -298,7 +296,7 @@ h1{
 							"architecture and Western architecture.";
 					content_2 = "This mountain is 265.2m high and surrounds central Seoul."+ "<br>" +
 							"Currently, on the mountaintop, there is a broadcasting tower called Seoul Tower "+ "<br>" +
-							"and Palgakjeong, where you can go up and down with a cable car."+ "<br>" +
+							"and Palgakjeong, where you can go up and go down with a cable car."+ "<br>" +
 							"Namsan Park, a natural park, is installed on the slopes of the east, "+ "<br>" +
 							"west, and north of Namsan to provide a resting place for Seoul citizens." ;
 					content_3 = "A stream flowing through the boundary between Jongno-gu and Jung-gu, "+ "<br>" +"in the middle of Seoul."+ "<br>" +
@@ -315,21 +313,32 @@ h1{
 				
 				
 				else {
-					url_1 = "background-image: url('img/course/MD_a1.jpg');";
-					url_2 = "background-image: url('img/course/MD_g1.jpg');";
-					url_3 = "background-image: url('img/course/MD_g3.jpg');";
-					
-					head_1 = "명동 성당";
-					head_2 = "명동 쇼핑 거리";
-					head_3 = "에이랜드";
-					
-					content_1 = "우리나라 최초의 본당이며 한국 천주교회의 상징이다." +"<br>" + 
-						      "무지개 형상의 궁륭 천장으로 되어 있고, "+ "<br>" +" 외부는 고딕장식을 통해 웅장함을 드러내고 있다." + "<br>" + 
-				    		  "빼놓지 말고 들러 봐야 할 곳은 제단 아래쪽에 있는 지하성당으로" +"<br>" + "19세기 천주교 박해로 희생당한 성인 유해 5위와  "+ "<br>" +"일반 순교자 유해 4위를 봉안하고 있다." ;
-     				content_2 = "고급브랜드부터 SPA브랜드, 보세매장까지 "+ "<br>" +"다양하게 쇼핑을 즐길 수 있다." +"<br>" + 
-								"가장 인기 있는 쇼핑 매장은 단연 뷰티 매장. "+ "<br>" +"명동 쇼핑거리에는 많은 뷰티브랜드 매장들이 있다. ";
-					content_3 = "옷과 다양한 소품들하고 가방 화장품 등등 판매하는 곳." +"<br>" + 
-								"종류가 다양해서 구경하기 좋고, "+ "<br>" +"2층까지는 새 옷, 3,4층은 빈티지한 느낌의 쇼핑공간이다." ;
+					 url_1 = "background-image: url('img/course/MD_a1.jpg');";
+					   url_2 = "background-image: url('img/course/MD_a2.jpg');";
+					   url_3 = "background-image: url('img/course/MD_a3.jpg');";
+					   
+					   head_1 = "Myeongdong Cathedral";
+					   head_2 = "Namdaemun (Sungryemun)";
+					   head_3 = "Bukchon Hanok Village";
+					   
+					   content_1 = "It is the first parish of Korea and the symbol of the Korean Catholic Church. " + "<br>" + 
+							   		"It has a rainbow-shaped ceiling, and the exterior shows " + "<br>" + 
+					   				"its grandeur through Gothic decorations. " + "<br>" + 
+							   		"A must-visit is the Underground Cathedral, located beneath the altar, " + "<br>" + 
+					   				"which holds the fifthlargest remains of adults " + "<br>" + 
+							   		"and the fourth largest remains of ordinary martyrs " + "<br>" + 
+					   				"who were victims of persecution by Catholics in the 19th century ." ;
+					   content_2 = "It is an old Korean architecture built by Nammun, " + "<br>" + "built while the capital was transferred to Seoul " + "<br>" + 
+					   				"along with the founding of the Joseon Dynasty ." + "<br>" + 
+							   		"It is the gate that connects the city to the shortest distance from the Han River" + "<br>" + 
+							   		"and has the most passage of people and goods." + "<br>" + 
+							  		"When the tank was opened in 1899, it could no longer serve as a gate," + "<br>" + 
+							   		"and only some walls remain in the Sungnyemun section.";
+					   content_3 = "Old traces of Seoul." + "<br>" + 
+							   		"It is a place where you can see Korean traditional houses (Hanok), " + "<br>" + 
+					   				"and some houses are used as hanok stays " + "<br>" + "and traditional tea houses for guests." + "<br>" + 
+							   		"It takes about 3 hours to walk around." ;
+						
 				}
 				
 				
@@ -347,7 +356,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -362,7 +371,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -379,7 +388,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 
 						</div>
@@ -392,12 +401,9 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Gallery</h2>
-							<p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p>
-						</div>
+						<br>	<h2>Gallery</h2>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">Up</a></li>
+								<li><a href="#one" class="button"> Go Up</a></li>
 							</ul>
 
 						<!-- Gallery -->

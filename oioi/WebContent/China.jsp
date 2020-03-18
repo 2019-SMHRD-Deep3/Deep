@@ -971,9 +971,9 @@ p#rate{
             data : 'id='+id,
             success : function(result){
             	if(result == true)
-            		alert("아이디가 중복되었습니다.");
+            		alert("该ID是重复的。");
             	else
-            		alert("사용가능한 아이디입니다.");
+            		alert("这是一个可用的ID。");
             },
             error : function(){
             	console.log(2);

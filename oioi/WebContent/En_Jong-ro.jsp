@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>종로</title>
+<title>Jongro, Cheonggyu</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -59,9 +59,8 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<%-- <% String act = (String)request.getParameter("act"); %> --%>
-			<% String act = "활동성향_자연경관감상"; %>
-			<%= act %> <br>
+			<% String act = (String)request.getParameter("act"); %> 
+
 
 			<% 
 				// 이미지 경로명
@@ -88,7 +87,7 @@ h1{
 						   "Palace, it was called Donggung along with Changgyeonggung in the Joseon Dynasty." ;
 				   content_2 = "It was also called Bukgyeol because it was located in the north of Doseong."+"<br>"+
 						   "It was founded in accordance with the establishment of the Joseon Dynasty and was initially used as a palace,"+"<br>"+
-						   "but after being burned down during the Imjin War, it remained in ruins for a long time";
+						   "but after being burned go go down during the Imjin War, it remained in ruins for a long time";
 				   content_3 = "In the midst of the rapidly changing world, there is a street to preserve and inherit the unique style of Korea."+"<br>"+
 						   "You can see a lot of Korean art, and traditional cars as well as temple food, and"+"<br>"+
 						   "many things that come to mind when you say 'Korea' are in Insadong."+"<br>"+
@@ -114,7 +113,7 @@ h1{
 							"In addition to exhibitions,"+"<br>"+
 							"we also offer programs that allow you to experience traditional culture by wearing hanbok made by children's ages, from kindergarten students to elementary school students ." ;
 					content_3 = "Gongpyeong Urban Heritage Exhibition is a city museum that preserves and displays the"+"<br>"+
-							"16th century buildings and roads of the Joseon Dynasty excavated during the redevelopment process of downtown Gongpyeong 1, 2, and 4 districts."+"<br>"+
+							"16th century buildings and roads of the Joseon Dynasty excavated during the redevelopment process of go go downtown Gongpyeong 1, 2, and 4 districts."+"<br>"+
 							"In the Gongpyeong City Heritage Exhibition Hall,"+"<br>"+
 							"you can see the life and life of the Hanyang people during the Joseon Dynasty";
 					
@@ -295,7 +294,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -310,7 +309,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -327,7 +326,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Down</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">go down</a></li>
 							</ul>
 
 						</div>
@@ -340,12 +339,9 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Gallery</h2>
-							<p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p>
-						</div>
+						<br>	<h2>Gallery</h2>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">Up</a></li>
+								<li><a href="#one" class="button">Go Up</a></li>
 							</ul>
 
 						<!-- Gallery -->

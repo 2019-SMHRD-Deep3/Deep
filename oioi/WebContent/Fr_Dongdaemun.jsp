@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Dongdaemun</title>
+<title>Dongdaemun Fassion Town</title>
 <link rel="stylesheet" href="assets/css/main_course.css" />
 <style type="text/css">
 .iii{
@@ -60,8 +60,8 @@ h1{
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
 			<% String act = (String)request.getParameter("act"); %> 
-						
-			<%= act %> <br>
+			
+
 
 			<% 
 				// 이미지 경로명
@@ -187,7 +187,7 @@ h1{
 					   
 					content_1 = "Si vous avez le vertige dans une rue animée avec des rues compliquées et des immeubles de grande hauteur, c'est un endroit où vous pouvez rencontrer une atmosphère calme de sentiers de randonnée avec des paysages magnifiques. Prenons un verre relaxant romantique de Séoul le long des murs." ;
 					content_2 = "Il est à environ 2 stations de métro de la gare de Dongdaemun à Hyehwamun via le parc Naksan.";
-					content_3 = "Si vous descendez du parc Naksan le long de la route de la forteresse, il y a un village mural sur le côté droit d'Ihwa-dong. Si vous continuez Vers le bas le mur, vous pouvez faire une visite de Seonggak-gil car il est relié au parc Heunginjimun et au musée Hanyangdoseong. Il y a beaucoup de cafés avec de bonnes vues pour marcher et se reposer.";
+					content_3 = "Si vous descendez du parc Naksan le long de la route de la forteresse, il y a un village mural sur le côté droit d'Ihwa-dong. Si vous continuez Go down le mur, vous pouvez faire une visite de Seonggak-gil car il est relié au parc Heunginjimun et au musée Hanyangdoseong. Il y a beaucoup de cafés avec de bonnes vues pour marcher et se reposer.";
 					
 					
 				}else {
@@ -216,7 +216,7 @@ h1{
 							<p class="major"><%= content_1 %></p>
 							<!-- 창을 아래로 내려주는 버튼  -->
 							<ul class="actions stacked">
-								<li><a href="#two" class="button big wide smooth-scroll-middle">Vers le bas</a></li>
+								<li><a href="#two" class="button big wide smooth-scroll-middle">Go down</a></li>
 							</ul>
 						</div>
 						<div class="image"  style="height:763px; width:925px;">
@@ -231,7 +231,7 @@ h1{
 							<h1><%= head_2 %></h1>
 							<p class="major"><%= content_2 %></p>
 							<ul class="actions stacked">
-								<li><a href="#three" class="button big wide smooth-scroll-middle">Vers le bas</a></li>
+								<li><a href="#three" class="button big wide smooth-scroll-middle">Go down</a></li>
 							</ul>
 							<!-- <ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -248,7 +248,7 @@ h1{
 							<h1><%= head_3 %></h1>
 							<p class="major"><%= content_3 %></p>
 							<ul class="actions stacked">
-								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Vers le bas</a></li>
+								<li><a href="#gallery" class="button big wide smooth-scroll-middle">Go down</a></li>
 							</ul>
 
 						</div>
@@ -261,12 +261,9 @@ h1{
 
 				<!-- Gallery -->
 					<section class="wrapper style1 align-center">
-						<div class="inner">
-							<h2>Galerie</h2>
-							<p>This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).</p>
-						</div>
+						<hr>	<h2>Galerie</h2>
 						<ul class="actions stacked">
-								<li><a href="#one" class="button">Haut</a></li>
+								<li><a href="#one" class="button">Go up</a></li>
 							</ul>
 
 						<!-- Gallery -->
@@ -277,7 +274,7 @@ h1{
 									<div class="caption">
 										<h3>Parc historique et culturel de Dongdaemun</h3>
 										<p>Site de l'ancien stade Dongdaemun<br> Parc qui protège l'histoire de Séoul</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -286,7 +283,7 @@ h1{
 									<div class="caption">
 										<h3>Heunginjimun</h3>
 										<p>L'une des quatre portes de Hanyang, la capitale de Joseon</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								
@@ -296,7 +293,7 @@ h1{
 									<div class="caption">
 										<h3>Dongdaemun Milliore</h3>
 										<p>L'espace DongShopping adoré par les jeunes peopledaemun Milliore</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -306,7 +303,7 @@ h1{
 										<h3>Musée d'histoire de Séoul</h3>
 										<p>Fournit l'occasion de découvrir et de découvrir la culture de Séoul<br>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -318,7 +315,7 @@ h1{
 										<h3>Musée provincial de Hanyang</h3>
 										<p>C'est amusant d'écouter les vieilles histoires qui suivent Doseong, <br> Diagramme de modèle de château miniature <br> Il y a une vue intéressante.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -330,7 +327,7 @@ h1{
 										<h3>Parc à thème Dongdaemun Fanta VR</h3>
 										<p>Expérience VR passionnante et passionnante <br>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -342,7 +339,7 @@ h1{
 										<h3>Parc d'attractions d'attraction 'Lattlier'</h3>
 										<p>Dans l'espace des œuvres impressionnistes  <br> Parc à thème de type expérience où vous pouvez voyager</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -354,7 +351,7 @@ h1{
 										<h3>Illusion World</h3>
 										<p>Dongdaemun market center 37 Zone d'expérience VR <br> 
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -366,7 +363,7 @@ h1{
 										<h3>Ehwa-dong Mural Village</h3>
 										<p>'Elle était belle'Lieu du drame</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -378,7 +375,7 @@ h1{
 										<h3>Hyundai City Outlet</h3>
 										<p>Produits de boulangerie à vendre <br> Exécutez le Pinapore Baking Studio ensemble<br> </p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -390,7 +387,7 @@ h1{
 										<h3>Marché de Séoul Yangnyeong</h3>
 										<p>Le plus grand complexe de phytothérapie de Corée</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -402,7 +399,7 @@ h1{
 										<h3>Centre de promotion de la médecine orientale</h3>
 										<p>Un endroit où il y a un musée de médecine orientale, un centre d'expériences à base de plantes, <br> une salle de promotion de produits à base de plantes et un café oriental.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -414,7 +411,7 @@ h1{
 										<h3>Ambassadeur Novotel</h3>
 										<p>Motif d'avant-toit Heunginjimun <br>C'est un hôtel 5 étoiles.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -426,7 +423,7 @@ h1{
 										<h3>Donghaehaemultang</h3>
 										<p> Un endroit où vous pourrez déguster une variété de fruits de mer.</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -438,7 +435,7 @@ h1{
 										<h3>Parc Naksan</h3>
 										<p>Promenade avec une atmosphère calme </p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -450,7 +447,7 @@ h1{
 										<h3>dongdaemun keunjibbossam</h3>
 										<p>Bulgogi assaisonné de bouillon d'os de boeuf</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -462,7 +459,7 @@ h1{
 										<h3>Parc du château de Dongdaemun</h3>
 										<p>Seonggwak-gil en face de Heunginjimun</p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
@@ -474,7 +471,7 @@ h1{
 										<h3>Village de peinture murale d'Ehwa-dong</h3>
 										<p>Belle route de village avec des peintures murales de thèmes divers </p>
 										<ul class="actions fixed">
-											<li><span class="button small">Détails</span></li>
+											<li><span class="button small">Details</span></li>
 										</ul>
 									</div>
 								</article>
