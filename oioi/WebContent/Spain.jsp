@@ -247,21 +247,17 @@ p#rate{
 
 
 			<!-- Login -->
-			<article id="Login">
-				<form action="LoginService.do?num=6" method="post">
-					<table>
+			<article id="Login" style="width:100%;">
+				<form action="LoginService.do?num=1" method="post">
+					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td>ID</td>
-							<td><input placeholder="enter ID" type="text" name=id></td>
+							<td><input placeholder="아이디 입력" type="text" name=id style="color:white;"></td>
 						</tr>
 						<tr>
-							<td>PW</td>
-							<td><input placeholder="enter PW" type="password" name=pw></td>
+							<td><input placeholder="비밀번호 입력" type="password" name=pw style="color:white;"></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td><input type=submit value="LOGIN"> <input
-								type=reset value="RESET"></td>
+							<td><input type=submit value="로그인"> </td>
 						</tr>
 					</table>
 				</form>
@@ -269,41 +265,34 @@ p#rate{
 
 
 			<!-- Join -->
-			<article id="Join">
-				<form action="JoinService.do?num=6" method="post">
-					<table>
+			<article id="Join" style="width:100%;">
+				<form action="JoinService.do?num=1" method="post">
+					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td>ID</td>
-							<td><input placeholder="enter ID" type="text" name=id>
-							</td>
-							<td><input type="button" value="Confirm Overlap" id = "btn"></td>
+							<td><input id='search' placeholder="아이디 입력 " type="text"
+								name=id></td>
+							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
 						</tr>
 						<tr>
-							<td>Password</td>
-							<td colspan=2><input placeholder="at least 6 characters"
-								type="password" name=pw></td>
+							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
+								name=pw></td>
 						</tr>
 						<tr>
-							<td>Confirm Password</td>
-							<td colspan=2><input placeholder="re-enter pw"
-								type="password" name=pw></td>
+							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
+								name=pw></td>
 						</tr>
 						<tr>
-							<td>NAME</td>
-							<td colspan=2><input placeholder="enter name" type="text"
+							<td colspan=2><input placeholder="전화번호 입력 " type="text"
 								name=name></td>
 						</tr>
 						<tr>
-							<td>E-MAIL</td>
-							<td colspan=2><input placeholder="enter email" type="text"
+							<td colspan=2><input placeholder="이메일 입력 " type="text"
 								name=email></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td colspan=2><input type=submit value="JOIN"> <input
-								type=reset value="RESET"></td>
+							<td colspan=2><input type=submit value="회원가입"> </td>
 						</tr>
-					</table>
+					</table> 
 				</form>
 			</article>
 
