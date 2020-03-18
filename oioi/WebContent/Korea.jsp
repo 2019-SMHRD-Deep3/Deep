@@ -314,7 +314,7 @@ table tbody tr {
 							<td>아이디</td>
 							<td><input id='search' placeholder="아이디 입력 " type="text"
 								name=id></td>
-							<td><button type="button" id="btn">입력</button></td>
+							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
 						</tr>
 						<tr>
 							<td>비밀번호</td>
@@ -341,7 +341,14 @@ table tbody tr {
 							<td colspan=2><input type=submit value="회원가입"> <input
 								type=reset value="초기화"></td>
 						</tr>
-					</table>
+					</table> 
+					<!-- <script>
+						function Btn_click(){
+							if('#search'==null){
+								alert("아이디를 입력해주세요");
+							}
+						}
+					</script> -->
 				</form>
 			</article>
 
