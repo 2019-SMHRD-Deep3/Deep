@@ -75,7 +75,7 @@ span {
 						<option> Taiwan
 						<option> Allemagne
 						<option> Russie
-						<option> malaisie
+						<option> Malaisie
 						<option> Mongolie
 						<option> États-Unis
 						<option> Vietnam
@@ -124,7 +124,8 @@ span {
 					<select name=act id=act style ="font-weight: bold;">
 						<option> Cité interdite, site historique
 						<option> Performance, folklore, événements, visionnement et participation à des festivals
-						<option> Parc d'attractions, parc à thème</option><option> Projection dramatique et cinématographique
+						<option> Parc d'attractions, parc à thème
+						<option> Projection dramatique et cinématographique
 						<option> Rapport d'activités
 						<option> Visitez un musée ou une salle d'exposition
 						<option> Beauty Tour
@@ -278,52 +279,52 @@ span {
 		var act = $('#act').val();
 
 		// 인원 구성
- 		if(member == 'Family, relatives'){
+ 		if(member == 'Famille, parents'){
 			member = '인원구성_' + '가족, 친지';
-		}else if(member == 'Coworkers'){
+		}else if(member == 'Collègues'){
 			member = '인원구성_' + '직장동료';
-		}else if(member == 'Friends, lovers'){
+		}else if(member == 'Amis, amants'){
 			member = '인원구성_' + '친구, 연인';
 		}else if(member == 'alone'){
-			member = '인원구성_' + '혼자 방문';
+			member = '인원구성_' + 'seul';
 		}else if(member == 'Other'){
-			member = '인원구성_' + '기타';
+			member = '인원구성_' + 'Autre';
 		}
  		
  		// 고려 요인
- 		if(consider == 'K-POP, Hallyu star related fan meeting, location,etc.'){
+ 		if(consider == "K-POP, réunion des fans liés à l'étoile Hallyu, emplacement, etc."){
  			consider = '고려요인_' + 'K-POP, 한류스타 관련 팬 미팅, 촬영지 등 경험';
-		}else if(consider == 'Economical travel cost'){
+		}else if(consider == 'Coût de voyage économique'){
 			consider ='고려요인_' + '경제적인 여행비용';
-		}else if(consider == 'climate, distinct four seasons'){
+		}else if(consider == 'climat, quatre saisons distinctes'){
 			consider = '고려요인_' + '기후, 뚜렷한 사계절 ';
 		}else if(consider == 'Leisure and sports activities'){
 			consider = '고려요인_' + '레저 및 스포츠 활동';
 		}else if(consider == 'shopping'){
 			consider = '고려요인_' + '쇼핑 ';
-		}else if(consider == 'Convenience and safety of tourism such as accommodation and transportation'){
+		}else if(consider == "Commodité et sécurité du tourisme comme l'hébergement et le transport"){
 			consider ='고려요인_' +  '숙박, 교통 등 관광 편리성 및 안전성';
-		}else if(consider == 'Exploring historical and cultural sites'){
+		}else if(consider == 'Explorer les sites historiques et culturels'){
 			consider = '고려요인_' + '역사, 문화 유적 탐방';
-		}else if(consider == 'nightlife, amusement facilities'){
+		}else if(consider == "vie nocturne, installations d'amusement"){
 			consider = '고려요인_' + '유흥, 놀이 시설';
-		}else if(consider == 'Food, gourmet exploration'){
+		}else if(consider == 'Cuisine, exploration gourmande'){
 			consider = '고려요인_' + '음식, 미식 탐방';
-		}else if(consider == 'Distance to travel'){
+		}else if(consider == 'Distance à parcourir'){
 			consider = '고려요인_' + '자국과의 이동 거리';
-		}else if(consider == 'Appreciating the natural scenery'){
+		}else if(consider == 'Apprécier le paysage naturel'){
 			consider = '고려요인_' + '자연 풍경 감상';
-		}else if(consider == 'treatment and beauty service'){
+		}else if(consider == 'traitement et service de beauté'){
 			consider = '고려요인_' + '치료 및 미용 서비스';
-		}else if(consider == 'Visit friends and relatives'){
+		}else if(consider == 'Visitez des amis et des parents'){
 			consider = '고려요인_' + '친구, 친지 방문';
-		}else if(consider == 'Experience Korean traditional culture such as temple stay and Taekwondo'){
+		}else if(consider == 'Découvrez la culture traditionnelle coréenne comme le séjour au temple et le taekwondo'){
 			consider = '고려요인_' + '템플스테이, 태권도 등 한국 전통 문화 체험';
-		}else if(consider == 'Fashionable and fashionable modern culture'){
+		}else if(consider == 'Culture moderne à la mode et à la mode'){
 			consider = '고려요인_' + '패션, 유행 등 세련된 현대 문화 ';
 		}else if(consider == 'vacation time'){
 			consider = '고려요인_' + '휴가 시간 ';
-		}else if(consider == 'Other'){
+		}else if(consider == 'Autre'){
 			consider = '기타';
 		}
  		
@@ -331,114 +332,116 @@ span {
  		// 국가
  		if(nation == 'Taiwan'){
  			nation = '국가_' + '대만';
-		}else if(nation == 'Germany'){
+		}else if(nation == 'Allemagne'){
 			nation ='국가_' + '독일';
-		}else if(nation == 'Russia'){
+		}else if(nation == 'Russie'){
 			nation ='국가_' + '러시아';
-		}else if(nation == 'Malaysia'){
+		}else if(nation == 'Malaisie'){
 			nation ='국가_' + '말레이시아';
-		}else if(nation == 'Mongolia'){
+		}else if(nation == 'Mongolie'){
 			nation ='국가_' + '몽골';
-		}else if(nation == 'U.S.A'){
+		}else if(nation == 'États-Unis'){
 			nation ='국가_' + '미국';
 		}else if(nation == 'Vietnam'){
 			nation ='국가_' + '베트남';
-		}else if(nation == 'Singapore'){
+		}else if(nation == 'Singapour'){
 			nation ='국가_' + '싱가포르';
-		}else if(nation == 'U.K'){
+		}else if(nation == 'Royaume-Uni'){
 			nation ='국가_' + '영국';
-		}else if(nation == 'India'){
+		}else if(nation == 'Inde'){
 			nation ='국가_' + '인도';
-		}else if(nation == 'Indonesia'){
+		}else if(nation == 'Indonésie'){
 			nation ='국가_' + '인도네시아';
-		}else if(nation == 'Japan'){
+		}else if(nation == 'Japon'){
 			nation ='국가_' + '일본';
-		}else if(nation == 'China'){
+		}else if(nation == 'Chine'){
 			nation ='국가_' + '중국';
-		}else if(nation == 'U.A.E'){
+		}else if(nation == 'Moyen-Orient'){
 			nation ='국가_' + '중동';
 		}else if(nation == 'Canada'){
 			nation ='국가_' + '캐나다';
-		}else if(nation == 'Frence'){
+		}else if(nation == 'Thaïlande'){
+			nation ='국가_' + '태국';
+		}else if(nation == 'France'){
 			nation ='국가_' + '프랑스';
 		}else if(nation == 'Philippines'){
 			nation ='국가_' + '필리핀';
-		}else if(nation == 'Australia'){
+		}else if(nation == 'Australie'){
 			nation ='국가_' + '호주';
-		}else if(nation == 'HongKong'){
+		}else if(nation == 'Hong Kong'){
 			nation ='국가_' + '홍콩';
-		}else if(nation == 'Other'){
+		}else if(nation == 'Autre'){
 			nation ='국가_' + '기타';		
 		}
 
  		
  		// 쇼핑품목
- 		if(item == 'bag'){
+ 		if(item == 'sac'){
  			item = "쇼핑품목_"+ '가방류';
 		}else if(item == 'cigarette'){
 			item = "쇼핑품목_" + '담배';
-		}else if(item == 'Jewelry, accessories'){
+		}else if(item == 'Bijoux, accessoires'){
 			item = "쇼핑품목_" + '보석,악세사리';
-		}else if(item == 'grocery'){
+		}else if(item == 'épicerie'){
 			item = "쇼핑품목_" + '식료품';
-		}else if(item == 'shoes'){
+		}else if(item == 'chaussures'){
 			item = "쇼핑품목_" + '신발류';
-		}else if(item == 'clothing'){
+		}else if(item == 'vêtements'){
 			item = "쇼핑품목_" + '의류';
-		}else if(item == 'Ginseng, herbal medicine'){
+		}else if(item == 'Ginseng, phytothérapie'){
 			item = "쇼핑품목_" + '인삼,한약재';
-		}else if(item == 'Traditional folk crafts, lacquerware, woodcarving products'){
+		}else if(item == 'Artisanat traditionnel, laque, produits de sculpture sur bois'){
 			item = "쇼핑품목_" + '전통민예품,칠기,목각제품';
-		}else if(item == 'mainstream'){
+		}else if(item == 'grand public'){
 			item = "쇼핑품목_" + '주류';
-		}else if(item == 'Hallyu star related products'){
+		}else if(item == 'Produits liés à Hallyu star'){
 			item = "쇼핑품목_" + '한류 스타 관련 상품';
-		}else if(item == 'perfume, cosmetics'){
+		}else if(item == 'parfum, cosmétique'){
 			item = "쇼핑품목_" + '향수,화장품';
-		}else if(item == 'Other'){
+		}else if(item == 'Autre'){
 			item = "쇼핑품목_" + '기타';
 		}
  		
  		// 활동성향
- 		if(act == 'Forbidden City, Historic Site'){
+ 		if(act == 'Cité interdite, site historique'){
  			act = "활동성향_"+ '고궁,역사유적지방문';
-		}else if(act == 'Performance, Folklore, Events, Festival viewing participation'){
+		}else if(act == 'Performance, folklore, événements, visionnement et participation à des festivals'){
 			act = "활동성향_" + '공연,민속,행사,축제 관람및참가';
-		}else if(act == 'Amusement park, theme park'){
+		}else if(act == "Parc d'attractions, parc à thème"){
 			act = "활동성향_" + '놀이공원,테마파크';
-		}else if(act == 'Drama, movie location visit'){
+		}else if(act == 'Projection dramatique et cinématographique'){
 			act = "활동성향_" + '드라마,영화찰영지방문';
-		}else if(act == 'Report activities'){
+		}else if(act == "Rapport d'activités"){
 			act = "활동성향_" + '레포츠활동 ';
-		}else if(act == 'museums and exhibition halls'){
+		}else if(act == "Visitez un musée ou une salle d'exposition"){
 			act = "활동성향_" + '박물관,전시관방문';
-		}else if(act == 'Beauty Tourism'){
+		}else if(act == 'Beauty Tou'){
 			act = "활동성향_" + '뷰티관광';
-		}else if(act == 'Shopping'){
+		}else if(act == 'shopping'){
 			act = "활동성향_" + '쇼핑';
-		}else if(act == 'Sports'){
+		}else if(act == 'Activités sportives'){
 			act = "활동성향_" + '스포츠활동';
 		}else if(act == 'inspection'){
 			act = "활동성향_" + '시찰';
-		}else if(act == 'City tour bus'){
+		}else if(act == 'Bus touristique'){
 			act = "활동성향_" + '시티투어버스이용';
-		}else if(act == 'Gastronomic tourism'){
+		}else if(act == 'visite gastronomique'){
 			act = "활동성향_" + '식도락관광';
-		}else if(act == 'Business'){
+		}else if(act == 'performance commerciale'){
 			act = "활동성향_" + '업무수행';
-		}else if(act == 'Training, education, research'){
+		}else if(act == 'Formation, éducation, recherche'){
 			act = "활동성향_" + '연수,교육,연구';
-		}else if(act == 'Nightlife, entertainment'){
+		}else if(act == 'vie nocturne, divertissement'){
 			act = "활동성향_" + '유흥,오락';
-		}else if(act == 'Medical tourism'){
+		}else if(act == 'tourisme médical'){
 			act = "활동성향_" + '의료관광';
-		}else if(act == 'Natural scenery'){
+		}else if(act == 'Appréciation du paysage naturel'){
 			act = "활동성향_" + '자연경관감상 ';
-		}else if(act == 'Traditional culture experience'){
+		}else if(act == 'Expérience de la culture traditionnelle'){
 			act = "활동성향_" + '전통문화체험';
-		}else if(act == 'Recreation'){
+		}else if(act == 'Loisirs, détente'){
 			act = "활동성향_" + '휴양,휴식';
-		}else if(act == 'other'){
+		}else if(act == 'Autre'){
 			act = "활동성향_" + '기타';
 		}
  		

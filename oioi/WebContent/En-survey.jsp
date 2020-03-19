@@ -365,6 +365,8 @@ span {
 			nation ='국가_' + '중동';
 		}else if(nation == 'Canada'){
 			nation ='국가_' + '캐나다';
+		}else if(nation == 'Thailand'){
+			nation ='국가_' + '태국';
 		}else if(nation == 'Frence'){
 			nation ='국가_' + '프랑스';
 		}else if(nation == 'Philippines'){
