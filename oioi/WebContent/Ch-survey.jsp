@@ -206,6 +206,7 @@ span {
 						<option>家庭，亲戚
 						<option>同事
 						<option>朋友，恋人单独
+						<option>独游
 						<option>>其他
 					</select>
 				</div>
@@ -280,167 +281,169 @@ span {
 		var act = $('#act').val();
 
 		// 인원 구성
- 		if(member == 'Family, relatives'){
+ 		if(member == '家庭，亲戚'){
 			member = '인원구성_' + '가족, 친지';
-		}else if(member == 'Coworkers'){
+		}else if(member == '同事'){
 			member = '인원구성_' + '직장동료';
-		}else if(member == 'Friends, lovers'){
+		}else if(member == '朋友，恋人单独'){
 			member = '인원구성_' + '친구, 연인';
-		}else if(member == 'alone'){
+		}else if(member == '独游'){
 			member = '인원구성_' + '혼자 방문';
-		}else if(member == 'Other'){
+		}else if(member == '其他'){
 			member = '인원구성_' + '기타';
 		}
  		
  		// 고려 요인
- 		if(consider == 'K-POP, Hallyu star related fan meeting, location,etc.'){
+ 		if(consider == 'K-POP，与韩流明星相关的粉丝见面会，拍摄现场体验'){
  			consider = '고려요인_' + 'K-POP, 한류스타 관련 팬 미팅, 촬영지 등 경험';
-		}else if(consider == 'Economical travel cost'){
+		}else if(consider == '经济旅行费用'){
 			consider ='고려요인_' + '경제적인 여행비용';
-		}else if(consider == 'climate, distinct four seasons'){
+		}else if(consider == '气候，不同的四个季节 '){
 			consider = '고려요인_' + '기후, 뚜렷한 사계절 ';
-		}else if(consider == 'Leisure and sports activities'){
+		}else if(consider == '康体活动'){
 			consider = '고려요인_' + '레저 및 스포츠 활동';
-		}else if(consider == 'shopping'){
+		}else if(consider == '逛街 '){
 			consider = '고려요인_' + '쇼핑 ';
-		}else if(consider == 'Convenience and safety of tourism such as accommodation and transportation'){
+		}else if(consider == '游客的便利和安全，例如住宿和交通'){
 			consider ='고려요인_' +  '숙박, 교통 등 관광 편리성 및 안전성';
-		}else if(consider == 'Exploring historical and cultural sites'){
+		}else if(consider == '参观历史文化景点'){
 			consider = '고려요인_' + '역사, 문화 유적 탐방';
-		}else if(consider == 'nightlife, amusement facilities'){
+		}else if(consider == '夜生活，娱乐设施'){
 			consider = '고려요인_' + '유흥, 놀이 시설';
-		}else if(consider == 'Food, gourmet exploration'){
+		}else if(consider == '食物，美食探索'){
 			consider = '고려요인_' + '음식, 미식 탐방';
-		}else if(consider == 'Distance to travel'){
+		}else if(consider == '行驶距离'){
 			consider = '고려요인_' + '자국과의 이동 거리';
-		}else if(consider == 'Appreciating the natural scenery'){
+		}else if(consider == '欣赏自然风光'){
 			consider = '고려요인_' + '자연 풍경 감상';
-		}else if(consider == 'treatment and beauty service'){
+		}else if(consider == '美容服务'){
 			consider = '고려요인_' + '치료 및 미용 서비스';
-		}else if(consider == 'Visit friends and relatives'){
+		}else if(consider == '探亲访友'){
 			consider = '고려요인_' + '친구, 친지 방문';
-		}else if(consider == 'Experience Korean traditional culture such as temple stay and Taekwondo'){
+		}else if(consider == '体验寺庙住宿和跆拳道等韩国传统文化'){
 			consider = '고려요인_' + '템플스테이, 태권도 등 한국 전통 문화 체험';
-		}else if(consider == 'Fashionable and fashionable modern culture'){
+		}else if(consider == '流行时尚的现代文化'){
 			consider = '고려요인_' + '패션, 유행 등 세련된 현대 문화 ';
-		}else if(consider == 'vacation time'){
+		}else if(consider == '休假时间'){
 			consider = '고려요인_' + '휴가 시간 ';
-		}else if(consider == 'Other'){
+		}else if(consider == '其他'){
 			consider = '기타';
 		}
  		
  		
  		// 국가
- 		if(nation == 'Taiwan'){
+ 		if(nation == '台湾'){
  			nation = '국가_' + '대만';
-		}else if(nation == 'Germany'){
+		}else if(nation == '德国'){
 			nation ='국가_' + '독일';
-		}else if(nation == 'Russia'){
+		}else if(nation == '俄罗斯'){
 			nation ='국가_' + '러시아';
-		}else if(nation == 'Malaysia'){
+		}else if(nation == '马来西亚'){
 			nation ='국가_' + '말레이시아';
-		}else if(nation == 'Mongolia'){
+		}else if(nation == '蒙古'){
 			nation ='국가_' + '몽골';
-		}else if(nation == 'U.S.A'){
+		}else if(nation == '美国'){
 			nation ='국가_' + '미국';
-		}else if(nation == 'Vietnam'){
+		}else if(nation == '越南'){
 			nation ='국가_' + '베트남';
-		}else if(nation == 'Singapore'){
+		}else if(nation == '新加坡'){
 			nation ='국가_' + '싱가포르';
-		}else if(nation == 'U.K'){
+		}else if(nation == '英国'){
 			nation ='국가_' + '영국';
-		}else if(nation == 'India'){
+		}else if(nation == '印度'){
 			nation ='국가_' + '인도';
-		}else if(nation == 'Indonesia'){
+		}else if(nation == '印度尼西亚'){
 			nation ='국가_' + '인도네시아';
-		}else if(nation == 'Japan'){
+		}else if(nation == '日本'){
 			nation ='국가_' + '일본';
-		}else if(nation == 'China'){
+		}else if(nation == '中国'){
 			nation ='국가_' + '중국';
-		}else if(nation == 'U.A.E'){
+		}else if(nation == '中东'){
 			nation ='국가_' + '중동';
-		}else if(nation == 'Canada'){
+		}else if(nation == '加拿大'){
 			nation ='국가_' + '캐나다';
-		}else if(nation == 'Frence'){
+		}else if(nation == '泰国'){
+			nation ='국가_' + '태국';
+		}else if(nation == '法国'){
 			nation ='국가_' + '프랑스';
-		}else if(nation == 'Philippines'){
+		}else if(nation == '菲律宾'){
 			nation ='국가_' + '필리핀';
-		}else if(nation == 'Australia'){
+		}else if(nation == '澳大利亚'){
 			nation ='국가_' + '호주';
-		}else if(nation == 'HongKong'){
+		}else if(nation == '香港'){
 			nation ='국가_' + '홍콩';
-		}else if(nation == 'Other'){
+		}else if(nation == '其他'){
 			nation ='국가_' + '기타';		
 		}
 
  		
  		// 쇼핑품목
- 		if(item == 'bag'){
+ 		if(item == '袋'){
  			item = "쇼핑품목_"+ '가방류';
-		}else if(item == 'cigarette'){
+		}else if(item == '香烟'){
 			item = "쇼핑품목_" + '담배';
-		}else if(item == 'Jewelry, accessories'){
+		}else if(item == '珠宝，配饰'){
 			item = "쇼핑품목_" + '보석,악세사리';
-		}else if(item == 'grocery'){
+		}else if(item == '杂货'){
 			item = "쇼핑품목_" + '식료품';
-		}else if(item == 'shoes'){
+		}else if(item == '鞋'){
 			item = "쇼핑품목_" + '신발류';
-		}else if(item == 'clothing'){
+		}else if(item == '服装'){
 			item = "쇼핑품목_" + '의류';
-		}else if(item == 'Ginseng, herbal medicine'){
+		}else if(item == '人参，草药'){
 			item = "쇼핑품목_" + '인삼,한약재';
-		}else if(item == 'Traditional folk crafts, lacquerware, woodcarving products'){
+		}else if(item == '传统民间工艺品，漆器，木雕产品'){
 			item = "쇼핑품목_" + '전통민예품,칠기,목각제품';
-		}else if(item == 'mainstream'){
+		}else if(item == '主流'){
 			item = "쇼핑품목_" + '주류';
-		}else if(item == 'Hallyu star related products'){
+		}else if(item == '韩流明星相关商品'){
 			item = "쇼핑품목_" + '한류 스타 관련 상품';
-		}else if(item == 'perfume, cosmetics'){
+		}else if(item == '香水，化妆品'){
 			item = "쇼핑품목_" + '향수,화장품';
-		}else if(item == 'Other'){
+		}else if(item == '其他'){
 			item = "쇼핑품목_" + '기타';
 		}
  		
  		// 활동성향
- 		if(act == 'Forbidden City, Historic Site'){
+ 		if(act == '故宫，古迹'){
  			act = "활동성향_"+ '고궁,역사유적지방문';
-		}else if(act == 'Performance, Folklore, Events, Festival viewing participation'){
+		}else if(act == '表演，民俗，活动，节日观看和参与'){
 			act = "활동성향_" + '공연,민속,행사,축제 관람및참가';
-		}else if(act == 'Amusement park, theme park'){
+		}else if(act == '游乐园，主题公园'){
 			act = "활동성향_" + '놀이공원,테마파크';
-		}else if(act == 'Drama, movie location visit'){
+		}else if(act == '戏剧和电影放映'){
 			act = "활동성향_" + '드라마,영화찰영지방문';
-		}else if(act == 'Report activities'){
+		}else if(act == '报告活动'){
 			act = "활동성향_" + '레포츠활동 ';
-		}else if(act == 'museums and exhibition halls'){
+		}else if(act == '参观博物馆和展览馆'){
 			act = "활동성향_" + '박물관,전시관방문';
-		}else if(act == 'Beauty Tourism'){
+		}else if(act == '美容旅游'){
 			act = "활동성향_" + '뷰티관광';
-		}else if(act == 'Shopping'){
+		}else if(act == '逛街'){
 			act = "활동성향_" + '쇼핑';
-		}else if(act == 'Sports'){
+		}else if(act == '体育活动'){
 			act = "활동성향_" + '스포츠활동';
-		}else if(act == 'inspection'){
+		}else if(act == '检验'){
 			act = "활동성향_" + '시찰';
-		}else if(act == 'City tour bus'){
+		}else if(act == '城市观光巴士'){
 			act = "활동성향_" + '시티투어버스이용';
-		}else if(act == 'Gastronomic tourism'){
+		}else if(act == '美食旅游'){
 			act = "활동성향_" + '식도락관광';
-		}else if(act == 'Business'){
+		}else if(act == '经营业绩'){
 			act = "활동성향_" + '업무수행';
-		}else if(act == 'Training, education, research'){
+		}else if(act == '培训，教育，研究'){
 			act = "활동성향_" + '연수,교육,연구';
-		}else if(act == 'Nightlife, entertainment'){
+		}else if(act == '夜生活，娱乐'){
 			act = "활동성향_" + '유흥,오락';
-		}else if(act == 'Medical tourism'){
+		}else if(act == '医疗旅游'){
 			act = "활동성향_" + '의료관광';
-		}else if(act == 'Natural scenery'){
+		}else if(act == '自然风光'){
 			act = "활동성향_" + '자연경관감상 ';
-		}else if(act == 'Traditional culture experience'){
+		}else if(act == '传统文化体验'){
 			act = "활동성향_" + '전통문화체험';
-		}else if(act == 'Recreation'){
+		}else if(act == '休闲，休息'){
 			act = "활동성향_" + '휴양,휴식';
-		}else if(act == 'other'){
+		}else if(act == '其他'){
 			act = "활동성향_" + '기타';
 		}
  		
@@ -479,7 +482,7 @@ span {
 	  				if (rs.result3 == 1){
 	  					$('#result3').text('#东大门时尚小镇');
 	  					$('#result3').attr('style', "display:inline");
-	  					url3 = 'CH_Dongdaemun.jsp?act='+act;
+	  					url3 = 'Ch_Dongdaemun.jsp?act='+act;
 	  					$('#result3').on('click',popupPage3);
 	  				}
 	  				if (rs.result4 == 1){
