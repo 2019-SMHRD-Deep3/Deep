@@ -250,7 +250,7 @@ p#rate{
 
 			<!-- Login -->
 			<article id="Login" style="width:100%;">
-				<form action="LoginService.do?num=1" method="post">
+				<form action="LoginService.do?num=4" method="post">
 					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
 							<td><input placeholder="ID" type="text" name=id style="color:white;"></td>
@@ -268,12 +268,12 @@ p#rate{
 
 			<!-- Join -->
 			<article id="Join" style="width:100%;">
-				<form action="JoinService.do?num=1" method="post">
+				<form id="joinForm" action="JoinService.do?num=4" method="post" onsubmit="return false">
 					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
 							<td><input id='search' placeholder="USER ID" type="text"
 								name=id></td>
-							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
+							<td><button type="button" id="btn" onClick="Btn_click();">ID Check</button></td>
 						</tr>
 						<tr>
 							<td colspan=2><input placeholder="USER PASSWORD" type="password"
@@ -289,7 +289,7 @@ p#rate{
 								name=email></td>
 						</tr>
 						<tr>
-							<td colspan=2><input type=submit value="JOIN"> </td>
+							<td colspan=2><input id="joinCheck" type=submit value="JOIN"> </td>
 						</tr>
 					</table> 
 				</form>
@@ -1046,7 +1046,17 @@ p#rate{
 	</script>
 
 	<script type="text/javascript">
-			
+	var joinCheck = true;
+	$("#joinCheck").on('click',jojoinchch);
+	
+	function jojoinchch(){
+		if(joinCheck){
+			alert('Please check if the ID is duplicate.');
+			$("#joinForm").attr("onsubmit","return false");
+		}else{
+			$("#joinForm").attr("onsubmit","");
+		}
+	}		
 			$('#btn').on('click',play);
 			
       function play(){
@@ -1060,9 +1070,9 @@ p#rate{
             data : 'id='+id,
             success : function(result){
             	if(result == true)
-            		alert("아이디가 중복되었습니다.");
+            		alert("The ID is duplicated.");
             	else
-            		alert("사용가능한 아이디입니다.");
+            		alert("This is an available ID.");
             },
             error : function(){
             	console.log(2);
