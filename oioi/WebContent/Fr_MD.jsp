@@ -325,7 +325,7 @@ h1{
 									<div class="caption">
 										<h3>Cathédrale de Myeongdong</h3>
 										<p>La première nef de Corée, symbole de l'Église catholique coréenne</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -334,7 +334,7 @@ h1{
 									<div class="caption">
 										<h3>Namdaemun (Sungryemun)</h3>
 										<p>Il s'agit d'une ancienne architecture coréenne construite par Nammun, construite pendant le transfert de la capitale à Séoul avec la fondation de la dynastie Joseon.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								
@@ -344,7 +344,7 @@ h1{
 									<div class="caption">
 										<h3>Bukchon Hanok Village</h3>
 										<p>Où vous pouvez voir les maisons traditionnelles coréennes (Hanok)</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -353,7 +353,7 @@ h1{
 									<div class="caption">
 										<h3>Théâtre des arts de Myeongdong</h3>
 										<p>Des événements spéciaux tels que des drames orthodoxes, des pièces expérimentales, des spectacles muets, des comédies musicales, ainsi que des festivals de théâtre et des festivals d'arts d'interprétation sont également organisés.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -363,7 +363,7 @@ h1{
 									<div class="caption">
 										<h3>Performances</h3>
 										<p>La performance de percussion utilisant tout dans la cuisine La danse traditionnelle de Corée de Saisai et la participation du public est un festival passionnant</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -373,7 +373,7 @@ h1{
 									<div class="caption">
 										<h3>Boutique Line Friends</h3>
 										<p>Magasin phare Myeongdong Savoy Hotel Line Friends</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -383,7 +383,7 @@ h1{
 									<div class="caption">
 										<h3>Hello Kitty Cafe</h3>
 										<p>Un endroit où vous pouvez voir de jolis lattes d'art Hello Kitty et acheter divers articles de fantaisie pour des cadeaux</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -393,7 +393,7 @@ h1{
 									<div class="caption">
 										<h3>Amande au beurre de miel</h3>
 										<p>Il s'agit d'un cours chaud et populaire pour les amandes au beurre de miel et diverses amandes.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -403,7 +403,7 @@ h1{
 									<div class="caption">
 										<h3>Myeongdong Alley</h3>
 										<p>Les prêtres noirs tournent l'exorcisme cinématographique et le contexte principal est Myeong-dong.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -413,7 +413,7 @@ h1{
 									<div class="caption">
 										<h3>Bukchon Hanok Village</h3>
 										<p>Amour Température Drame Lieu de tournage Bukchon</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -423,7 +423,7 @@ h1{
 									<div class="caption">
 										<h3>Musée d'art noir 3D</h3>
 										<p>Le seul musée BLACKART 3D au monde avec une mystérieuse technique d'illusion d'optique.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -433,7 +433,7 @@ h1{
 									<div class="caption">
 										<h3>Musée d'histoire de Séoul</h3>
 										<p>Un musée d'histoire urbaine qui montre l'histoire et la culture de Séoul de la préhistoire aux temps modernes.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -443,7 +443,7 @@ h1{
 									<div class="caption">
 										<h3>Myeongdong Street for Fun</h3>
 										<p>Gobawi Hill Road Manga Art Street.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -453,7 +453,7 @@ h1{
 									<div class="caption">
 										<h3>Stylenanda Pink Hotel</h3>
 										<p>Magasin phare avec motif d'hôtel.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -463,7 +463,7 @@ h1{
 									<div class="caption">
 										<h3>Chicor</h3>
 										<p>'BEAUTY SPACE', un self bar de maquillage rappelant une coiffeuse de rêve</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -473,7 +473,7 @@ h1{
 									<div class="caption">
 										<h3>Rue commerçante de Myeongdong</h3>
 										<p>Vous pouvez profiter d'une variété d'achats, des marques de luxe aux marques SPA et aux magasins sous douane.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -483,7 +483,7 @@ h1{
 									<div class="caption">
 										<h3>Aland</h3>
 										<p>Vendre des vêtements, divers accessoires, des sacs de cosmétiques, etc.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 								<article>
@@ -493,7 +493,7 @@ h1{
 									<div class="caption">
 										<h3>Chambre Multi Smile</h3>
 										<p>Un endroit où vous pouvez jouer confortablement avec des amis dans votre chambre avec différents thèmes.</p>
-										<ul class="actions fixed"><li><span class="button small">Détails</span></li></ul>
+										<ul class="actions fixed"><li><span class="button small">Details</span></li></ul>
 									</div>
 								</article>
 							

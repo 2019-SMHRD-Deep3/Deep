@@ -34,7 +34,7 @@ span {
 }
 
 #QnA {
-	border: 1px solid #ffffff;
+	border: 7px solid #8080A3;
 	margin-top: 3%;
 	margin-left: 20%;
 	margin-right: 20%;
@@ -60,19 +60,20 @@ span {
 	margin-left: 25%;
 	margin-right: 25%;
 }
+
 </style>
 
 </head>
-<!-- <body style="background-image: url(img/fabio-oyXis2kALVg-unsplash.jpg); max-width: 100%; height: 100%;">  -->
+<body style="background-image: url(img/survey_bg.jpg); max-width: 100%; height: 100%;">
 
 	<!-- 설문조사 -->
 
 		<div id="QnA">
 			<!-- 국가 -->
-			<br><div><b>국가</b></div><br>
+			<br><div style ="font-size: 30px;"><b>국가</b></div><br>
 			<div id="Q_Nation">
 				<div id="A_val">
-					<select name=nation id = nation>
+					<select name=nation id = nation style ="font-weight: bold;">
 						<option>대만
 						<option>독일
 						<option>러시아
@@ -100,29 +101,28 @@ span {
 			<hr>
 			
 			<!-- 여행형태 취향 -->
-			<br><div><b>여행형태 취향</b></div><br>
+			<br><div style ="font-size: 30px;"><b>여행형태 취향</b></div><br>
 			<div id="Q_type">
 				<div class="T_type">
 					<input type="button" class=tripBtn val="Air-tel"><br>
-					<span> Air-tel </span>
+					<span><b style="font-size: 23px;"> Air-tel </b></span>
 				</div>
 				<div class="T_type">	 
 					<input type="button" class=tripBtn val="개별여행"><br>
-					<span> 개별여행 </span> 
+					<span><b style="font-size: 18px;"> 개별여행</b></span> 
 				</div>
 				<div class="T_type">
 					<input type="button" class=tripBtn val="단체여행"><br>
-					<span>단체여행 </span>
+					<span><b style="font-size: 18px;">단체여행 </b> </span>
 				</div>
 			</div><br>
 			<hr>
 			
 			<!-- 좋아하는 활동 -->
-			 <br>
-			<div><b>좋아하는 활동</b></div><br>			
+			<br><div style ="font-size: 30px;"><b>좋아하는 활동</b></div><br>			
 			<div id="Q_Active"> 
 				<div class="activite">
-					<select name=act id=act>
+					<select name=act id=act style ="font-weight: bold;">
 						<option>고궁,역사유적지방문 
 						<option>공연,민속,행사,축제 관람및참가 
 						<option>놀이공원,테마파크
@@ -150,10 +150,10 @@ span {
 			
 			<!-- 고려요인 -->
 			 <br>
-			<div><b>고려요인</b></div><br>			
+			<div style ="font-size: 30px;"><b>고려요인</b></div><br>			
 			<div id="Q_Consider"> 
 				<div class="A_consider">
-					<select name=consider id=consider>
+					<select name=consider id=consider style ="font-weight: bold;">
 						<option>K-POP, 한류스타 관련 팬 미팅, 촬영지 등 경험
 						<option>경제적인 여행비용
 						<option>기후, 뚜렷한 사계절 
@@ -177,10 +177,10 @@ span {
 			<hr>
 
 			<!-- 쇼핑 품목 -->
-			<br><div><b>쇼핑을 한다면 구매 1순위 품목</b></div><br>
+			<br><div style ="font-size: 30px;"><b>쇼핑을 한다면 구매 1순위 품목</b></div><br>
 			<div id="Q_buy">
 				<div class="bught">
-					<select name=item id=item>
+					<select name=item id=item style ="font-weight: bold;">
 						<option>가방류
 						<option>담배 
 						<option>보석,악세사리 
@@ -199,14 +199,14 @@ span {
 			<hr>
 
 			<!-- 인원 구성 -->
-			<br><div><b>인원 구성</b></div><br>
+			<br><div style ="font-size: 30px;"><b>인원 구성</b></div><br>
 			<div id="Q_Member">
 				<div class="A_member">
-					<select name=member id=member>
+					<select name=member id=member style ="font-weight: bold;">
 						<option>가족, 친지
 						<option>직장동료
 						<option>친구, 연인
-						<option>혼자 방분
+						<option>혼자 방문
 						<option>기타
 					</select>
 				</div>
