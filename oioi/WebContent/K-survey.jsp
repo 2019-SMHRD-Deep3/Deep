@@ -33,6 +33,7 @@ span {
 	font-size: 18px;
 }
 
+
 #QnA {
 	border: 7px solid #8080A3;
 	margin-top: 3%;
