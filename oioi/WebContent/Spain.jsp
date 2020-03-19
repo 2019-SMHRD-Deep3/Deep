@@ -248,16 +248,16 @@ p#rate{
 
 			<!-- Login -->
 			<article id="Login" style="width:100%;">
-				<form action="LoginService.do?num=1" method="post">
+				<form action="LoginService.do?num=6" method="post">
 					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td><input placeholder="아이디 입력" type="text" name=id style="color:white;"></td>
+							<td><input placeholder="ID" type="text" name=id style="color:white;"></td>
 						</tr>
 						<tr>
-							<td><input placeholder="비밀번호 입력" type="password" name=pw style="color:white;"></td>
+							<td><input placeholder="USER PASSWORD" type="password" name=pw style="color:white;"></td>
 						</tr>
 						<tr>
-							<td><input type=submit value="로그인"> </td>
+							<td><input type=submit value="LOGIN"> </td>
 						</tr>
 					</table>
 				</form>
@@ -266,31 +266,27 @@ p#rate{
 
 			<!-- Join -->
 			<article id="Join" style="width:100%;">
-				<form action="JoinService.do?num=1" method="post">
+				<form id="joinForm" action="JoinService.do?num=6" method="post" onsubmit="return false">
 					<table style = "margin: 0px auto; text-align: center;">
 						<tr>
-							<td><input id='search' placeholder="아이디 입력 " type="text"
+							<td><input id='search' placeholder="USER ID" type="text"
 								name=id></td>
-							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
+							<td><button type="button" id="btn" onClick="Btn_click();">ID Check</button></td>
 						</tr>
 						<tr>
-							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
+							<td colspan=2><input placeholder="USER PASSWORD" type="password"
 								name=pw></td>
 						</tr>
 						<tr>
-							<td colspan=2><input placeholder="비밀번호 재입력 " type="password"
-								name=pw></td>
-						</tr>
-						<tr>
-							<td colspan=2><input placeholder="전화번호 입력 " type="text"
+							<td colspan=2><input placeholder="Re-EntryPW" type="text"
 								name=name></td>
 						</tr>
 						<tr>
-							<td colspan=2><input placeholder="이메일 입력 " type="text"
+							<td colspan=2><input placeholder="E-MAIL" type="text"
 								name=email></td>
 						</tr>
 						<tr>
-							<td colspan=2><input type=submit value="회원가입"> </td>
+							<td colspan=2><input id="joinCheck" type=submit value="JOIN"> </td>
 						</tr>
 					</table> 
 				</form>
@@ -1048,7 +1044,17 @@ La Plaza de la Torre de Seúl, recientemente remodelada y abierta, ofrece varias
 
 
 	<script type="text/javascript">
-			
+	var joinCheck = true;
+	$("#joinCheck").on('click',jojoinchch);
+	
+	function jojoinchch(){
+		if(joinCheck){
+			alert("Verifique si la ID está duplicada.");
+			$("#joinForm").attr("onsubmit","return false");
+		}else{
+			$("#joinForm").attr("onsubmit","");
+		}
+	}					
 			$('#btn').on('click',play);
 			
       function play(){
@@ -1062,9 +1068,9 @@ La Plaza de la Torre de Seúl, recientemente remodelada y abierta, ofrece varias
             data : 'id='+id,
             success : function(result){
             	if(result == true)
-            		alert("아이디가 중복되었습니다.");
+            		alert("La identificación está duplicada.");
             	else
-            		alert("사용가능한 아이디입니다.");
+            		alert("Esta es una identificación disponible.");
             },
             error : function(){
             	console.log(2);

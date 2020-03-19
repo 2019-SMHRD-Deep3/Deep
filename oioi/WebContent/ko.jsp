@@ -191,14 +191,14 @@ table tbody tr {
 				<div id="OnTopMenu" class="topMenu" style="display:none;">
 					<div class="tMenu"><a class="tag" href="#intro">서비스</a></div>
 					<div class="tMenu"><a class="tag" href="#work">관광명소</a></div>
-					<div class="tMenu"><a class="tag" href="#about">가이드</a></div>
+					<div class="tMenu"><a class="tag" href="#about">랭킹</a></div>
 					<div class="tMenu"><a class="tag" href="K-survey.jsp">코스추천</a></div>
 				</div>
 			<%} else{ %>
 				<div id="OffTopMenu" class="topMenu" style="display:none;">
 					<div class="tMenu"><a class="tag" href="#intro">서비스</a></div>
 					<div class="tMenu"><a class="tag" href="#work">관광명소</a></div>
-					<div class="tMenu"><a class="tag" href="#about">가이드</a></div>
+					<div class="tMenu"><a class="tag" href="#about">랭킹</a></div>
 				</div>
 			<% } %>
 			
@@ -272,7 +272,12 @@ table tbody tr {
 			<!--<li><a href="#elements">Elements</a></li>-->
 
 		</div>
-		
+		<script>
+			$('.mainimg').on('click', function() {
+				$('#headers').css({display : 'none'}), 
+				$('.topMenu').css({display : 'block'});
+			});
+		</script>
 		</header>
 
 		<!-- Main -->
@@ -304,7 +309,7 @@ table tbody tr {
 						<tr>
 							<td><input id='search' placeholder="아이디 입력 " type="text"
 								name=id></td>
-							<td><button type="button" id="btn" onClick="Btn_click();">중복확인</button></td>
+							<td><button type="button" id="btn" onClick="Btn_click();">입력</button></td>
 						</tr>
 						<tr>
 							<td colspan=2><input placeholder="비밀번호 입력 " type="password"
@@ -416,57 +421,46 @@ table tbody tr {
 			</article>
 
 
-<link rel="stylesheet" href="dist/css/custom.css">
-
-<!-- [ REQUIRED ] -->
-<link rel="stylesheet" href="dist/css/bpHS.min.css">
 
 			<!-- About -->
 			<article id="about" class="conPage">
 
-				<h2 class="major">가이드</h2>
-			
-			<div class="container">
-					<div class="bp-hs" id="demo-default">
-						<div class="bp-hs_inner">
-							
-							<div class="bp-hs_inner__item" data-transform="scale">
-								<img src="SEOULIMAGE/E1.PNG" alt="Boompx Hero Slider 01" />
-							</div>
-							<div class="bp-hs_inner__item" data-transform="rotate">
-								<img src="SEOULIMAGE/E3.PNG" alt="Boompx Hero Slider 02" />
-							</div>
-							<div class="bp-hs_inner__item" data-transform="rotate">
-								<img src="SEOULIMAGE/E4.PNG" alt="Boompx Hero Slider 03" />
-							</div>
-							<div class="bp-hs_inner__item">
-								<img src="SEOULIMAGE/E5.PNG" alt="Boompx Hero Slider 04" />
-							</div>
-							<div class="bp-hs_inner__item">
-								<img src="SEOULIMAGE/E6.PNG" alt="Boompx Hero Slider 04" />
-							</div>
-							<div class="bp-hs_inner__item">
-								<img src="SEOULIMAGE/E7.PNG" alt="Boompx Hero Slider 04" />
-							</div>
-							<div class="bp-hs_inner__item">
-								<img src="SEOULIMAGE/E8.PNG" alt="Boompx Hero Slider 04" />
-							</div>
-							<div class="bp-hs_inner__item">
-								<img src="SEOULIMAGE/E9.PNG" alt="Boompx Hero Slider 04" />
-							</div>
-						</div>
-					</div>
+				<h2 class="major">국가별 선호 여행지</h2>
+				<div class="">
+					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+					<button class="country" id="c1">미국</button>
+					<button class="country" id="c2">중국</button>
+					<button class="country" id="c3">일본</button>
+					<button class="country" id="c4">독일</button>
+					<button class="country" id="c5">프랑스</button>
+					<button class="country" id="c6">영국</button>
+					<button class="country" id="c7">러시아</button>
+					<button class="country" id="c8">베트남</button>
+					<button class="country" id="c9">홍콩</button>
+					<button class="country" id="c10">중동</button>
+
 				</div>
 
-			</article>
+				<script type="text/javascript">
+					$(document).ready(function() {
+						$('.display').show(); //페이지를 로드할 때 표시할 요소
+						$('#g').hide(); //페이지를 로드할 때 숨길 요소
+					});
+					var btn1 = document.querySelector('.major1');
 
-	<!-- [ REQUIRED ] -->
-	<script src="http://code.jquery.com/jquery.min.js"></script>
-	<script src="dist/js/vendors/jquery.touchSwipe.min.js"></script>
-	<!-- optional (required for touchSwipe option) -->
-	<script src="dist/js/bpHS.min.js"></script>
-	<!-- [ Demo Script ] -->
-	<script src="dist/js/custom.js"></script>
+					btn1.addEventListener('click', function() {
+						$('#g').hide();
+						$('.display').show();
+					});
+
+					var btn2 = document.querySelector('.major2');
+					btn2.addEventListener('click', function() {
+						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('#g').show(); //클릭 시 두 번째 요소 표시
+					});
+				</script>
+				<p id="rate"></p>
+			</article>
 
 			<!-- Contact -->
 
@@ -489,7 +483,16 @@ table tbody tr {
 
 <!-- 이 아래로는 모두 컨텐츠 내용 및 스크립트에 해당하는 내용 -->
 
-	
+	<p id="rate1">1.명동/남대문/북창 2.종로/청계 3.강남역 4.이태원 5.동대문 패션타운</p>
+	<p id="rate2">1.명동/남대문/북창 2.동대문 패션타운 3.신촌/홍대 4.잠실(롯데월드) 5.종로/청계</p>
+	<p id="rate3">1.명동/남대문/북창 2.동대문 패션타운 3.신촌/홍대 4.종로/청계 5.강남역</p>
+	<p id="rate4">1.명동/남대문/북창 2.종로/총계 3.강남역 4.이태원 5.신촌/홍대</p>
+	<p id="rate5">1.명동/남대문/북창 2.종로/총계 3.강남역 4.신촌/홍대 5.동대문 패션타운</p>
+	<p id="rate6">1.명동/남대문/북창 2.종로/총계 3.강남역 4.동대문 패션타운 5.신촌/홍대</p>
+	<p id="rate7">1.명동/남대문/북창 2.동대문 패션타운 3.종로/청계 4.강남역 5.이태원</p>
+	<p id="rate8">1.명동/남대문/북창 2.동대문 패션타운 3.종로/청계 4.강남역 5.이태원</p>
+	<p id="rate9">1.명동/남대문/북창 2.동대문 패션타운 3.신촌/홍대 4.종로/청계 5.강남역</p>
+	<p id="rate10">1.명동/남대문/북창 2.동대문 패션타운 3.종로/청계 4.강남역 5.이태원</p>
 
 	<script type="text/javascript">
 		
@@ -965,8 +968,9 @@ table tbody tr {
 			$("#joinForm").attr("onsubmit","");
 		}
 	}
-			
-			$('#btn').on('click',play);
+	
+		
+	$('#btn').on('click',play);
 			
       function play(){
          var id = $('#search').val();
@@ -978,10 +982,13 @@ table tbody tr {
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("아이디가 중복되었습니다.");
-            	else
+            		joinCheck = true;
+            	}else{
             		alert("사용가능한 아이디입니다.");
+            		joinCheck = false;
+            	}
             },
             error : function(){
             	console.log(2);
