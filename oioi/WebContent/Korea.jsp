@@ -137,36 +137,6 @@ table tbody tr {
 	font-size: 20px;
 }
 
-#OnTopMenu,#OffTopMenu{
-	display: inline;
-	position: absolute;
-	top: 17px;
-	font-size: 20px;
-	height: 50px;
-}
-#OnTopMenu{
-	width: 18%;
-	left: 40%;
-}
-#OffTopMenu{
-	width: 18%;
-	left: 44%;
-}
-.tMenu{
-	display:inline;
-	text-align: center;
-	vertical-align: middle;
-	margin-left: 7px;
-	margin-right: 7px;
-}
-.tag{
-	color:#ffffff;
-	text-decoration: none;
-}
-.tag:hover{
-	color: yellow;
-}
-
 </style>
 
 
@@ -178,7 +148,7 @@ table tbody tr {
 	<!-- Wrapper -->
 
 	<div id="wrapper" style="position: relative;">
-
+	
 		<video id="videobcg" autoplay="autoplay" loop="loop" muted="muted"
 			style="position: fixed;">
 			<source src="video/seoul.mp4" type="video/mp4">
@@ -187,21 +157,6 @@ table tbody tr {
 		<!-- Header -->
 
 		<div id="lan" style="z-index: 9999;">
-			<%if(info!=null){%>
-				<div id="OnTopMenu" class="topMenu" style="display:none;">
-					<div class="tMenu"><a class="tag" href="#intro">서비스</a></div>
-					<div class="tMenu"><a class="tag" href="#work">관광명소</a></div>
-					<div class="tMenu"><a class="tag" href="#about">가이드</a></div>
-					<div class="tMenu"><a class="tag" href="K-survey.jsp">코스추천</a></div>
-				</div>
-			<%} else{ %>
-				<div id="OffTopMenu" class="topMenu" style="display:none;">
-					<div class="tMenu"><a class="tag" href="#intro">서비스</a></div>
-					<div class="tMenu"><a class="tag" href="#work">관광명소</a></div>
-					<div class="tMenu"><a class="tag" href="#about">가이드</a></div>
-				</div>
-			<% } %>
-			
 			<table id="info_lay" style="width: 20%; position: absolute; right: 0%;display:inline-block;">
 				<tr>
 					<% if (info == null) { %>
@@ -248,7 +203,7 @@ table tbody tr {
 				</tr>
 			</table>
 		</div>
-		
+		<div style="top: 10%; width: 100%; height: 10px;"></div>
 		<div id="headers">
 			<div class="mainimg" style="font-size: 20px;">
 				<a class="linkcolor" href="#intro">서비스</a>
@@ -274,7 +229,7 @@ table tbody tr {
 		</div>
 		
 		</header>
-
+	<div style="top: 38%; width: 100%; height: 20px;"></div>
 		<!-- Main -->
 		<div id="main">
 
@@ -359,27 +314,31 @@ table tbody tr {
 
 			<article id="work" class="conPage">
 				<h1>서울 10대 랜드마크</h1>
+			<div style="margin-top:10px; margin-bottom: 10px;">	
 				<h3 class="major1" href="#" style="display: inline;">
 					<div id="day" class="a1">주간</div>
 				</h3>
 				<h3 class="major2" href="#" style="display: inline;">
-					<div id="day" class="a2">야간</div>
+				<div id="day" class="a2">야간</div>
 				</h3>
-				<div class='display'>
+			</div>	
+				<div class='display' style="margin-top:15px;">
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
-					<button class="ten" id="ko1">#경복궁</button>
-					<button class="ten" id="ko2">#명동</button>
-					<button class="ten" id="ko3">#인사동</button>
-					<button class="ten" id="ko4">#코엑스</button>
-					<button class="ten" id="ko5">#창덕궁</button>
-					<button class="ten" id="ko6">#봉은사</button>
-					<button class="ten" id="ko7">#63빌딩</button>
-					<button class="ten" id="ko8">#전쟁기념관</button>
-					<button class="ten" id="ko9">#북촌한옥마을</button>
-					<button class="ten" id="ko10">#국립중앙박물관</button>
+					<div>
+						<button class="ten" id="ko1">#경복궁</button>
+						<button class="ten" id="ko2">#명동</button>
+						<button class="ten" id="ko3">#인사동</button>
+						<button class="ten" id="ko4">#코엑스</button>
+						<button class="ten" id="ko5">#창덕궁</button>
+						<button class="ten" id="ko6">#봉은사</button>
+						<button class="ten" id="ko7">#63빌딩</button>
+						<button class="ten" id="ko8">#전쟁기념관</button>
+						<button class="ten" id="ko9">#북촌한옥마을</button>
+						<button class="ten" id="ko10">#국립중앙박물관</button>
+					</div>
 				</div>
 
-				<div id='g'>
+				<div id='g' style="margin-top:15px;">
 					<span><img id="popimg1" src="img/k1.PNG" alt="" /></span>
 					<button class="next" id="k1">#경복궁</button>
 					<button class="next" id="k2">#홍대</button>
