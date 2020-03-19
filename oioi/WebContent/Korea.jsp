@@ -921,6 +921,7 @@ table tbody tr {
 			alert('중복체크를 다시 확인해주세요.');
 			$("#joinForm").attr("onsubmit","return false");
 		}else{
+			alert('가입되었습니다.');
 			$("#joinForm").attr("onsubmit","");
 		}
 	}
@@ -937,10 +938,13 @@ table tbody tr {
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("아이디가 중복되었습니다.");
-            	else
+            		joinCheck = true;
+            	}else{
             		alert("사용가능한 아이디입니다.");
+            		joinCheck = false;
+            	}
             },
             error : function(){
             	console.log(2);

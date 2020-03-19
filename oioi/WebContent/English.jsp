@@ -1054,6 +1054,7 @@ p#rate{
 			alert('Please check if the ID is duplicate.');
 			$("#joinForm").attr("onsubmit","return false");
 		}else{
+			alert('Member registration completed.');
 			$("#joinForm").attr("onsubmit","");
 		}
 	}		
@@ -1069,10 +1070,13 @@ p#rate{
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("The ID is duplicated.");
-            	else
+            		joinCheck = true;
+            	}else{
             		alert("This is an available ID.");
+            		joinCheck = false;
+            	}
             },
             error : function(){
             	console.log(2);

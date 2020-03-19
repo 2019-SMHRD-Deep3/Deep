@@ -186,7 +186,7 @@ p#rate{
 				} else {
 			%>
 			<td class="inTag">
-				<span style="color:#ff0000;"><%=info.getId()%>님 환영합니다.</span></td>
+				<span style="color:white;"><%=info.getId()%></span></td>
 			<td class="inTag"><a
 				href="LogoutService.do?num=3">Logout </a></td>
 			<td class="inTag"><a
@@ -973,6 +973,7 @@ p#rate{
 			alert('请检查ID是否重复。');
 			$("#joinForm").attr("onsubmit","return false");
 		}else{
+			alert('会员注册完成');
 			$("#joinForm").attr("onsubmit","");
 		}
 	}
@@ -989,10 +990,13 @@ p#rate{
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("该ID是重复的。");
-            	else
+            		joinCheck = true;
+            
+            	}else{
             		alert("这是一个可用的ID。");
+            		joinCheck = false;}
             },
             error : function(){
             	console.log(2);
