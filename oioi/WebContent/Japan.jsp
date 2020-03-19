@@ -972,6 +972,7 @@ p#rate{
 			alert('重複チェックを再度確認してください。');
 			$("#joinForm").attr("onsubmit","return false");
 		}else{
+			alert('登録が完了しました。');
 			$("#joinForm").attr("onsubmit","");
 		}
 	}
@@ -988,10 +989,13 @@ p#rate{
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("ユーザ名が重複しています。");
-            	else
+            		joinCheck = true;
+            	}else{
             		alert("使用可能なIDです。");
+            		joinCheck = false;
+            	}
             },
             error : function(){
             	console.log(2);

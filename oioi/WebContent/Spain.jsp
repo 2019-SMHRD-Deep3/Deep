@@ -1052,6 +1052,7 @@ La Plaza de la Torre de Seúl, recientemente remodelada y abierta, ofrece varias
 			alert("Verifique si la ID está duplicada.");
 			$("#joinForm").attr("onsubmit","return false");
 		}else{
+			alert('Registro de membresía completo.');
 			$("#joinForm").attr("onsubmit","");
 		}
 	}					
@@ -1067,10 +1068,13 @@ La Plaza de la Torre de Seúl, recientemente remodelada y abierta, ofrece varias
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("La identificación está duplicada.");
-            	else
+            		joinCheck = true;
+            	}else{
             		alert("Esta es una identificación disponible.");
+            		joinCheck = false;
+            	}
             },
             error : function(){
             	console.log(2);

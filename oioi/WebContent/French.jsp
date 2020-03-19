@@ -1065,6 +1065,7 @@ La superficie totale était de 6 145 pyeong, et la construction a commencé le 3
 			alert("Veuillez vérifier si l'ID est en double.");
 			$("#joinForm").attr("onsubmit","return false");
 		}else{
+			alert('Inscription des membres terminée.');
 			$("#joinForm").attr("onsubmit","");
 		}
 	}			
@@ -1080,10 +1081,13 @@ La superficie totale était de 6 145 pyeong, et la construction a commencé le 3
             dataType : "json",
             data : 'id='+id,
             success : function(result){
-            	if(result == true)
+            	if(result == true){
             		alert("L'ID est dupliqué.");
-            	else
+            		joinCheck = true;
+            	}else{
             		alert("Il s'agit d'un ID disponible.");
+            		joinCheck = false;
+            	}
             },
             error : function(){
             	console.log(2);
