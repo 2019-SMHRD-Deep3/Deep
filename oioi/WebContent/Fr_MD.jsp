@@ -59,7 +59,8 @@ h1{
 
 <!-- Wrapper -->
 			<div id="wrapper" class="divided">
-			<% String act = (String)request.getParameter("act"); %>
+			<%-- <% String act = (String)request.getParameter("act"); %> --%>
+			<% String act = "활동성향_고궁,역사유적지방문"; %>
 
 
 			<% 
