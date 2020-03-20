@@ -65,17 +65,30 @@ img#img {
 	z-index: -1000;
 	overflow: hidden;
 }
-
+.sese{
+	max-width: 100%;
+	height: auto !important;
+}
 #day {
 	display: inline;
 }
 
 .a1:hover {
-	color: red;
+	color: black;
+	background-color: white;
+	font-size: 50px;
+}
+.a1:active {
+	color: black;
+	background-color: white;
+	font-size: 50px;
 }
 
+
 .a2:hover {
-	color: blue;
+	color: black;
+	background-color: white;
+	font-size: 50px;	
 }
 
 #lan {
@@ -151,6 +164,7 @@ p#rate{
 	text-align: center;
 	vertical-align: middle;
 }
+
 </style>
 
 
@@ -226,6 +240,7 @@ p#rate{
 
 		</table>
 	</div>
+	<div style="top: 10%; width: 100%; height: 30px;"></div>
 		<header>
 			
 				<div id="headers">
@@ -243,7 +258,7 @@ p#rate{
 				</div>
 		</header>
 
-
+ 	<div style="top: 38%; width: 100%; height: 20px;"></div>
 		<!-- Main -->
 		<div id="main">
 
@@ -300,8 +315,8 @@ p#rate{
 
 			<!-- Intro -->
 			<article id="intro" class="intSE">
-				<h2 class="major">首尔，新的介绍。</h2>
-				<span ><img src="img/sese.PNG"/></span>
+				<h2 class="major"><b>首尔，新的介绍。</b></h2>
+				<span ><img src="img/sese.PNG" id ="sese"/></span>
 				<br /> <br />
 				<p align="center">收到您的宝贵信息，</p>
 				<p align="center">
@@ -322,40 +337,48 @@ p#rate{
 
 
 			<article id="work">
-				<h1>首尔十大景点</h1>
-				<h3 class="major1" href="#" style="display: inline;">
-					<div id="day" class="a1">每周一次</div>
-				</h3>
-				<h3 class="major2" href="#" style="display: inline;">
-					<div id="day" class="a2">晚上</div>
-				</h3>
-
+				<h1><b>首尔十大景点</b></h1>
+				<div style="margin-top:30px; margin-bottom: 30px;">	
+					<h3 class="major1" href="#" style="display: inline;">
+						<div id="day" class="a1 aa" style="border: 3px solid white; " >每周一次</div>
+					</h3>
+					<h3 class="major2" href="#" style="display: inline;">
+						<div id="day" class="a2 aa" style="border: 3px solid white; margin-left: 10px;">晚上</div>
+					</h3>
+				</div>
 				<div class='display'>
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
-					<button class="ten" id="ko1">#景福宫</button>
-					<button class="ten" id="ko2">#明洞</button>
-					<button class="ten" id="ko3">#仁寺洞</button>
-					<button class="ten" id="ko4">#COEX</button>
-					<button class="ten" id="ko5">#昌德宫</button>
-					<button class="ten" id="ko6">#奉恩寺</button>
-					<button class="ten" id="ko7">#63大楼</button>
-					<button class="ten" id="ko8">#战争纪念馆</button>
-					<button class="ten" id="ko9">#北村韩屋村</button>
-					<button class="ten" id="ko10">#韩国国家博物馆</button>
+					<div style="margin-top:30px; margin-bottom:30px;">
+						<div style="margin-top:10px;  margin-bottom:10px;">
+						<button class="ten totalBtn" id="ko1">#景福宫</button>
+						<button class="ten totalBtn" id="ko2">#明洞</button>
+						<button class="ten totalBtn" id="ko3">#仁寺洞</button>
+						<button class="ten totalBtn" id="ko4">#COEX</button>
+						<button class="ten totalBtn" id="ko5">#昌德宫</button></div>
+						<div style="margin-top:10px; margin-bottom:10px;">
+						<button class="ten totalBtn" id="ko6">#奉恩寺</button>
+						<button class="ten totalBtn" id="ko7">#63大楼</button>
+						<button class="ten totalBtn" id="ko8">#战争纪念馆</button>
+						<button class="ten totalBtn" id="ko9">#北村韩屋村</button></div>
+						<button class="ten totalBtn" id="ko10">#韩国国家博物馆</button>
+					</div>
 				</div>
 
 				<div id='g'>
 					<span><img id="popimg1" src="img/k1.PNG" alt="" /></span>
-					<button class="next" id="k1">#景福宫</button>
-					<button class="next" id="k2">#弘大</button>
-					<button class="next" id="k3">#中山公园</button>
-					<button class="next" id="k4">#首尔N塔</button>
-					<button class="next" id="k5">#江南站</button>
-					<button class="next" id="k6">#清溪川</button>
-					<button class="next" id="k7">#加罗苏吉尔</button>
-					<button class="next" id="k8">#汝ou岛汉江公园</button>
-					<button class="next" id="k9">#乐天世界</button>
-
+					<div style="margin-top:30px; margin-bottom:30px;">
+						<div style="margin-top:10px;  margin-bottom:10px;">
+						<button class="next totalBtn" id="k1">#景福宫</button>
+						<button class="next totalBtn" id="k2">#弘大</button>
+						<button class="next totalBtn" id="k3">#中山公园</button>
+						<button class="next totalBtn" id="k4">#首尔N塔</button></div>
+						<div style="margin-top:10px;  margin-bottom:10px;">
+						<button class="next totalBtn" id="k5">#江南站</button>
+						<button class="next totalBtn" id="k6">#清溪川</button>
+						<button class="next totalBtn" id="k7">#加罗苏吉尔</button></div>
+						<button class="next totalBtn" id="k8">#汝矣岛汉江公园</button>
+						<button class="next totalBtn" id="k9">#乐天世界</button>
+					</div>
 				</div>
 
 
@@ -368,16 +391,21 @@ p#rate{
 
 					btn1.addEventListener('click', function() {
 						$('#g').hide();
+						$('.ptext').hide();
 						$('.display').show();
 					});
 
 					var btn2 = document.querySelector('.major2');
 					btn2.addEventListener('click', function() {
-
 						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('.ptext').hide();
 						$('#g').show(); //클릭 시 두 번째 요소 표시
-
 					});
+					
+					$('.totalBtn').on('click',function(){
+						$('.ptext').show();
+					});
+					
 				</script>
 				<p id="texttext"></p>
 
@@ -392,21 +420,21 @@ p#rate{
 <link rel="stylesheet" href="dist/css/bpHS.min.css">
 
 			<!-- About -->
-			<article id="about" class="conPage">
+			<article id="about" class="conPage" >
 
-				<h2 class="major">국가별 선호 여행지</h2>
+				<h2 class="major"><b>最喜欢的旅行目的地</b></h2>
 			
 			<div class="container">
 					<div class="bp-hs" id="demo-default">
 						<div class="bp-hs_inner">
 							
-							<div class="bp-hs_inner__item" data-transform="scale">
+							<div class="bp-hs_inner__item" >
 								<img src="SEOULIMAGE/S1.PNG" alt="Boompx Hero Slider 01" />
 							</div>
-							<div class="bp-hs_inner__item" data-transform="rotate">
+							<div class="bp-hs_inner__item">
 								<img src="SEOULIMAGE/S3.PNG" alt="Boompx Hero Slider 02" />
 							</div>
-							<div class="bp-hs_inner__item" data-transform="rotate">
+							<div class="bp-hs_inner__item">
 								<img src="SEOULIMAGE/S4.PNG" alt="Boompx Hero Slider 03" />
 							</div>
 							<div class="bp-hs_inner__item">
@@ -646,7 +674,7 @@ p#rate{
 </script>
 
 
-	<p id="texttext1">电话：02-3700-3900
+	<p id="texttext1" class="ptext">电话：02-3700-3900
 
 		地址：首尔景福宫市钟路区gu路161地址：世宗路1-91
 
@@ -662,22 +690,22 @@ p#rate{
 		景福宫的大小约为750个房间，这象征着国家和皇室的规模，超出了国王看望办公室的空间。
 		那是一个地方。景福宫一直保存完好，国王从建国到最后一直在此看望他的事务。
 		它成为韩国人喜爱的代表朝鲜国家的地标之一。景福宫是光化门门口的兴陵门 如果走过庚正门，您会发现它是代表朝鲜王朝的建筑物。</p>
-	<p id="texttext2">地址：首尔市中区明洞
+	<p id="texttext2" class="ptext">地址：首尔市中区明洞
 	
 		明洞是韩国最昂贵的土地，是首尔的象征。忠武路虽然是朝鲜时期的居住区，但在日本殖民时期已发展成为商业区，并成为明洞周边地区的商业区。明洞有着悠久的购物文化，据说是时尚的领导者，可以说它是针对购物而优化的，因为这里不仅有各种商店，而且还有国内著名的百货商店，还有奢侈品和品牌商店以及保税店。此外，由于购物，美食和娱乐，明洞不仅是韩国人的好去处，也是外国人在韩国享受的好地方。</p>
-	<p id="texttext3">地址：首尔市钟路区仁寺洞
+	<p id="texttext3" class="ptext">地址：首尔市钟路区仁寺洞
 		
 		仁寺洞Ssamji-gil是首尔钟路区仁寺洞的一栋建筑物。
 		Ssamji是纯朝鲜语单词，意思是“口袋”。 Ssamji-gil的意思是通过在“ ssam-ji”之后附加“
 		gil”来为Insa-dong胡同添加各种文化娱乐元素。
 		Ssamji-gil是一家专门从事手工艺品的购物中心，现已成为仁寺洞的旅游胜地。螺旋形建筑总建筑面积为4,066.01平方米（约1,200坪），汇集了70多家手工艺品商店，文化产品，纪念品商店，画廊和带有韩国传统手工艺品的餐厅。做吧因为整个第四层都连接到一条小巷，所以“吉尔”贴附在建筑物上。它是菱形的院子周围的“ㅁ”形。每层楼都通往一个缓坡，穿过商店走到屋顶空中花园。</p>
-	<p id="texttext4">电话：02-6000-0114
+	<p id="texttext4" class="ptext">电话：02-6000-0114
 
 		地址：首尔特别市江南区永东大路513地址：三成洞159
 
 		营业时间：每天10：00-18：00备注（活动结束时间不同）
 		作为交通，通讯，先进的商业基础设施，全球最佳的展览，文化和旅游胜地的全球商业圣地，它是韩国最大的展览厅，于1979年3月开幕，旨在为国际贸易和文化交流提供场所。它的总建筑面积为11,000坪（130,000坪），包括地上4层和地下4层，包括12个专业展览馆和一个可同时容纳7000人的会议厅。此外，它拥有完善的国际业务支持系统，每年举办150多个专业展览，各种国际会议和活动，并通过将海外买家与国内进出口公司直接联系来增加贸易。这里有一个水族馆，不仅韩国游客而且外国游客也可以看到市中心的大型水族馆。</p>
-	<p id="texttext5">电话：02-3668-2300
+	<p id="texttext5" class="ptext">电话：02-3668-2300
 
 		地址：首尔市钟路区由谷路99号地址：沃龙洞2-71
 
@@ -685,12 +713,12 @@ p#rate{
 		周一休息
 		昌德宫是位于首尔钟路区的朝鲜王朝的宫殿。它是综合环境设计的一个示例，该设计协调了建筑和景观的美化，同时，它也是重要的文化遗产，使人们能够阅读韩国的空间氛围。它在建筑史上展现了朝鲜王朝的原型，光顾的美化作为我国代表性的皇家园林具有重要意义，昌德宫被誉为朝鲜历史悠久的故宫。冲突中，成为国王的第五个儿子成为国王，但是拒绝进入景福宫的太宗杀死了他的兄弟，他建立了新的宫殿并看了办公室。
 		昌德宫由于历史悠久，故宫是代表韩国的宫殿，代表韩国的是很多特色景点。</p>
-	<p id="texttext6">电话：02-3218-4800
+	<p id="texttext6" class="ptext">电话：02-3218-4800
 
 		地址：首尔特别市江南区奉恩寺路531
 
 		奉恩寺有些不熟悉，没有寺庙，到处都是在平日和节假日不停祈祷和崇拜的人。宗教与日常生活息息相关，但对于那些想要静静地游览寺庙的人来说，宗教也不太好。这是一个很多人经常祈祷的地方，因此需要增加设施和空间，因此奉恩寺一直在建设中。奉恩寺是在新罗安那尔国王的王墓中建造的，后来成为已故朝鲜国王忠贤的寺庙。通常，我们所知道的寺庙都在人们不居住的山区或普通百姓生活的半径范围之外，奉恩寺位于首尔的中部。方便地，许多外国宗教人士也曾经访问过韩国。</p>
-	<p id="texttext7">电话：1833-7001
+	<p id="texttext7" class="ptext">电话：1833-7001
 
 		地址：首尔特别市永登浦区63-ro韩华金融中心50号地址：63汝ou岛洞韩华金融中心60号地址
 
@@ -706,7 +734,7 @@ p#rate{
 		该公司的建立目的不是为了牟利，而是为了同时拥有两只兔子而获得了“韩国地标”的头衔。
 		就是这样与乐天塔不同，韩华等公司设有办公室，各种旅游设施，天文台和地下基地拥有利用摩天大楼优势的旅游空间。首尔汝ou岛的63楼
 		据说是首尔的地标性建筑之一，仍然吸引着许多游客，因为您可以从市中心最高的观景台欣赏到首尔的全部景观。</p>
-	<p id="texttext8">电话：02-709-3139
+	<p id="texttext8" class="ptext">电话：02-709-3139
 
 		地址：首尔市龙山区梨泰院路29号战争纪念馆地址：龙山洞1-ga战争纪念馆
 
@@ -721,7 +749,7 @@ p#rate{
 		它具有能够更详细，生动地听取说明的优点。此外，朝鲜半岛的战争史
 		您可以检查一下。据说，战争纪念馆在熟悉朝鲜半岛局势的德国人中很受欢迎。朝鲜半岛分为两部分。战争纪念馆
 		我认为这是感受我们遗忘的战争历史的好方法。</p>
-	<p id="texttext9">电话：02-2133-1372
+	<p id="texttext9" class="ptext">电话：02-2133-1372
 
 		地址：首尔市钟路区桂洞街37号：桂洞北村文化中心105
 		
@@ -729,7 +757,7 @@ p#rate{
 		Hanok保护区撤出。已输入。总共有2297栋建筑，其中1408栋是韩屋，其余为普通建筑。在北村街上设置了北村洋板生活文化展示馆和北村韩屋村的象征性雕塑，并举办了盖头洞传统村落节，在那里您可以看到老祖先的生活。附近的景点包括景福宫，昌德宫，德寿宫，金原和三清公园。从昌德宫（Wongeo-dong
 		Gongbang-gil）望出去的北村1景是北村2景，加荷洞11 gae，北村3景，加荷洞31 gae 4山
 		如何通过保存完好的韩屋的第5北村下坡胡同，第5街Gaoch-dong的北村6，第33街Gahoe-dong的北村7和Bukchon感受韩国祖先的居住形式，</p>
-	<p id="texttext10">电话：02-2077-9000
+	<p id="texttext10" class="ptext">电话：02-2077-9000
 
 		地址：首尔市龙山区西冰谷路137地址：龙山区6街168-6
 
@@ -961,8 +989,21 @@ p#rate{
 			$('#popimg1').attr('src', 'img/night9.jpg');
 			$('#texttext').html(test99);
 		});
+		
+
 	</script>
 
+	<script type="text/javascript">
+
+		$('.aa').on('click', function() {
+			$('.aa').css({color:''}),
+			$('.aa').css({backgroundColor: ''}),
+			$('.aa').css({fontSize: ''});
+			$(this).css({color:'black'}),
+			$(this).css({backgroundColor:'white'}),
+			$(this).css({fontSize:'50px'});	
+		});
+	</script>
 	
 	<script type="text/javascript">
 	var joinCheck = true;
