@@ -203,7 +203,7 @@ table tbody tr {
 				</tr>
 			</table>
 		</div>
-		<div style="top: 10%; width: 100%; height: 10px;"></div>
+		<div style="top: 10%; width: 100%; height: 30px;"></div>
 		<div id="headers">
 			<div class="mainimg" style="font-size: 20px;">
 				<a class="linkcolor" href="#intro">서비스</a>
@@ -297,7 +297,7 @@ table tbody tr {
 			<article id="intro" class="intSE conPage">
 
 				<h2 class="major">서울, 새롭게 소개합니다.</h2>
-				<span><img src="img/sese.PNG"/></span>
+				<span><img src="img/sese.PNG" style="max-width: 100%; height: auto !important;"/></span>
 				<br /> <br />
 				<p align="center">고객님의 소중한 정보를 받아,</p>
 				<p align="center">
@@ -324,31 +324,33 @@ table tbody tr {
 			</div>	
 				<div class='display' style="margin-top:15px;">
 					<span><img id="popimg0" src="img/k1.PNG" alt="" /></span>
-					<div>
-						<button class="ten" id="ko1">#경복궁</button>
-						<button class="ten" id="ko2">#명동</button>
-						<button class="ten" id="ko3">#인사동</button>
-						<button class="ten" id="ko4">#코엑스</button>
-						<button class="ten" id="ko5">#창덕궁</button>
-						<button class="ten" id="ko6">#봉은사</button>
-						<button class="ten" id="ko7">#63빌딩</button>
-						<button class="ten" id="ko8">#전쟁기념관</button>
-						<button class="ten" id="ko9">#북촌한옥마을</button>
-						<button class="ten" id="ko10">#국립중앙박물관</button>
+					<div style="margin-top:15px; margin-bottom:15px;">
+						<button class="ten totalBtn" id="ko1">#경복궁</button>
+						<button class="ten totalBtn" id="ko2">#명동</button>
+						<button class="ten totalBtn" id="ko3">#인사동</button>
+						<button class="ten totalBtn" id="ko4">#코엑스</button>
+						<button class="ten totalBtn" id="ko5">#창덕궁</button>
+						<button class="ten totalBtn" id="ko6">#봉은사</button>
+						<button class="ten totalBtn" id="ko7">#63빌딩</button>
+						<button class="ten totalBtn" id="ko8">#전쟁기념관</button>
+						<button class="ten totalBtn" id="ko9">#북촌한옥마을</button>
+						<button class="ten totalBtn" id="ko10">#국립중앙박물관</button>
 					</div>
 				</div>
 
 				<div id='g' style="margin-top:15px;">
 					<span><img id="popimg1" src="img/k1.PNG" alt="" /></span>
-					<button class="next" id="k1">#경복궁</button>
-					<button class="next" id="k2">#홍대</button>
-					<button class="next" id="k3">#낙산공원</button>
-					<button class="next" id="k4">#서울 N 타워</button>
-					<button class="next" id="k5">#강남역</button>
-					<button class="next" id="k6">#청계천</button>
-					<button class="next" id="k7">#가로수길</button>
-					<button class="next" id="k8">#여의도 한강 공원</button>
-					<button class="next" id="k9">#롯데월드</button>
+					<div style="margin-top:15px; margin-bottom:15px;">
+					<button class="next totalBtn" id="k1">#경복궁</button>
+					<button class="next totalBtn" id="k2">#홍대</button>
+					<button class="next totalBtn" id="k3">#낙산공원</button>
+					<button class="next totalBtn" id="k4">#서울 N 타워</button>
+					<button class="next totalBtn" id="k5">#강남역</button>
+					<button class="next totalBtn" id="k6">#청계천</button>
+					<button class="next totalBtn" id="k7">#가로수길</button>
+					<button class="next totalBtn" id="k8">#여의도 한강 공원</button>
+					<button class="next totalBtn" id="k9">#롯데월드</button>
+					</div>
 				</div>
 
 
@@ -361,18 +363,26 @@ table tbody tr {
 
 					btn1.addEventListener('click', function() {
 						$('#g').hide();
+						$('.ptext').hide();
 						$('.display').show();
 					});
 
 					var btn2 = document.querySelector('.major2');
 					btn2.addEventListener('click', function() {
 						$('.display').hide(); //클릭 시 첫 번째 요소 숨김
+						$('.ptext').hide();
 						$('#g').show(); //클릭 시 두 번째 요소 표시
 					});
+					
+					$('.totalBtn').on('click',function(){
+						$('.ptext').show();
+					});
+					
 				</script>
 				<p id="texttext"></p>
 
 			</article>
+
 
 
 <link rel="stylesheet" href="dist/css/custom.css">
@@ -389,13 +399,13 @@ table tbody tr {
 					<div class="bp-hs" id="demo-default">
 						<div class="bp-hs_inner">
 							
-							<div class="bp-hs_inner__item" data-transform="scale">
+							<div class="bp-hs_inner__item">
 								<img src="SEOULIMAGE/E1.PNG" alt="Boompx Hero Slider 01" />
 							</div>
-							<div class="bp-hs_inner__item" data-transform="rotate">
+							<div class="bp-hs_inner__item">
 								<img src="SEOULIMAGE/E3.PNG" alt="Boompx Hero Slider 02" />
 							</div>
-							<div class="bp-hs_inner__item" data-transform="rotate">
+							<div class="bp-hs_inner__item">
 								<img src="SEOULIMAGE/E4.PNG" alt="Boompx Hero Slider 03" />
 							</div>
 							<div class="bp-hs_inner__item">
@@ -540,7 +550,7 @@ table tbody tr {
 	</script>
 
 
-	<p id="texttext1">전화번호 : 02-3700-3900 
+	<p id="texttext1" class="ptext">전화번호 : 02-3700-3900 
 	
 		주소 : 서울 종로구 사직로 161 경복궁 지번 :
 		
@@ -555,14 +565,14 @@ table tbody tr {
 		집무를 보는 경복궁은 지금도 보존이 잘 되어 있어, 외국인 뿐만 아니라 한국인에게 지금까지 사랑받는 조선이라는 나라를 대표하는
 		건축물 중 하나가 되었다. 경복궁은 정문 광화문을 따라 흥례문 ,근정문을 지나 오면 조선왕조를 대표하는 건축물이라는 것을
 		한번에 알 수 있는 조선의 색을 담은 건물이라고 할수 있다.</p>
-	<p id="texttext2">주소 : 서울 중구 명동
+	<p id="texttext2" class="ptext">주소 : 서울 중구 명동
 		
 		대한민국에서 가장 비싼 땅인 명동은 서울특별시를 상징하는 번화가이다. 조선 시대에는 주택가였으나 일제강점기 충무로가 상업지역으로
 		발전하며 인접지역인 명동도 상가형태로 변하게 되어 대한민국 최고의 번화가로 발돋움 하게 되었다. 명동은 유행의 선도자라고 불릴 정도로 거대한 쇼핑 문화가 형성되어 잇는데,
 		국내 유명 백화점은 물론 명품,브랜드 매장뿐 만아니라 보세가게까지 다양한 상점이 있어 쇼핑에 최적화 되있다고 말할 수 있다. 또한
 		명동에는 쇼핑과 함께 먹을거리,즐길거리 등이 있어 내국인 뿐만아니라 외국인들도 한국에서 즐길 수 있는 최적의 공간이라 불릴수
 		있다.~</p>
-	<p id="texttext3">주소 : 서울 종로구 인사동 인사동
+	<p id="texttext3" class="ptext">주소 : 서울 종로구 인사동 인사동
 	
 		쌈지길은 서울시 종로구 인사동 내에 있는 건물을 말한다. 쌈지란 '주머니'를 뜻하는 순우리말이다.
 		쌈지길은 '쌈지' 뒤에 '길'을 붙여 인사동 골목에 여러 문화적 재미요소를 더한다는 뜻을 지녔다.쌈지길은 가아 건축 연구소 최문규 건축가가 (주)쌈지의 권유로 만든 건물이다.
@@ -572,7 +582,7 @@ table tbody tr {
 		둘러싼‘ㅁ’자 형태다. 각 층은 완만한 경사로로 이어져 이곳저곳 가게를 구경하며 걷다보면 옥상의 하늘정원에 다다른다.또한
 		쌈지길은 인사동길에 면해 있던'열두 가게' 를 그대로 유지함으로써 인사동길의 성격을 살리는 동시에, 건물 내부에 마당과
 		오름길을 통해 인사동의 성격을 살림으로써, 창의적 재해석과 전통의 진화를 성공적으로 해석해냈다</p>
-	<p id="texttext4">전화번호 : 02-6000-0114
+	<p id="texttext4" class="ptext">전화번호 : 02-6000-0114
 	
 		주소 : 서울 강남구 영동대로 513 지번 : 삼성동 159
 		
@@ -584,7 +594,7 @@ table tbody tr {
 		비즈니스를 위한 종합적인 지원체제를 갖추고 연간 150여 회의 전문 전시회,각종 국제회의와 이벤트를 개최하는 한편, 해외
 		유수의 바이어와 국내 수출입업체를 직접 연결시키는 등 교역 증대 역할도 한다.또한 코엑스내 아쿠아리움이 있어 한국인관광객 뿐만
 		아니라 외국인 관광객들도 도심 속에서 큰 규모에 아쿠아리움을 구경할 수 있다.</p>
-	<p id="texttext5">전화번호 : 02-3668-2300
+	<p id="texttext5" class="ptext">전화번호 : 02-3668-2300
 	
 		주소 : 서울 종로구 율곡로 99 지번 : 와룡동 2-71
 		
@@ -595,7 +605,7 @@ table tbody tr {
 		탄생한 조선의 궁궐이라고 불리우는데,조선을 건국한 이성계의 아들들과 신하들 사이에서 권려 다툼이 벌어져 왕위 다툼을 하던중
 		왕이 되었던 다섯째 아들이 왕이되었으나 형제들을 죽였던 경복궁으로 들어가는것을 싫어했던 태종은 새로운 궁궐을 지어 집무를
 		보았는데, 그 궁궐이 창덕궁이다. 아픈 역사를 지닌 만큼 특별하고 볼 것이 많은 조선을 대표하는 대한민국을 대표하는 궁궐이다.</p>
-	<p id="texttext6">전화번호 : 02-3218-4800
+	<p id="texttext6" class="ptext">전화번호 : 02-3218-4800
 	
 		주소 : 서울 강남구 봉은사로 531 봉은사 지번 : 삼성동 73
 		
@@ -606,7 +616,7 @@ table tbody tr {
 		아는 절은 사람들이 살지 않는 산이나 일반 시민들의 생활반경 밖에 있는것이 많은데 봉은사는 서울 한가운데, 그것도 강남이라는
 		서울에서 제일 유동인구가 많은 정중앙에 위치해 종교인들의 왕래가 많은것은 물론, 교통과 접근이 편리해 많은 외국인 종교인들도
 		한번씩은 들러가는 대한민국을 대표하는 사찰이 되었다.</p>
-	<p id="texttext7">전화번호 : 1833-7001
+	<p id="texttext7" class="ptext">전화번호 : 1833-7001
 	
 		주소 : 서울 영등포구 63로 50 한화금융센터_63 지번:여의도동 60 한화금융센터_63
 		
@@ -622,7 +632,7 @@ table tbody tr {
 		기업들의 사무실등이 있고 각종 부대시설과 전망대, 지하에는 수족관 까지 초고층건물의 이점을 상술에 이용한 관광공간을 마련한
 		점이 특징이다. 여의도에 있는 63빌딩은 전망대를 통해 서울 정중앙에서 제일 높은 전망대에서 서울을 전부 둘러 볼 수 있어
 		아직도 많은 관광객들이 찾는 서울에 랜드마크중 한곳이라고 한다.</p>
-	<p id="texttext8">전화번호 : 02-709-3139
+	<p id="texttext8" class="ptext">전화번호 : 02-709-3139
 	
 		주소 : 서울 용산구 이태원로 29 전쟁기념관 지번 : 용산동1가 8 전쟁기념관
 		
@@ -636,7 +646,7 @@ table tbody tr {
 		설명을 들을 수 있는 장점이 있다. 또한 전쟁역사실에서 지금까지의 한반도의 전쟁 역사를 한번에 확인할 수 있다. 전쟁 기념관은
 		남.북으로 나눠져 있는 한반도 상황을 잘 알고 있는 독일인들에게 인기라고 한다. 전쟁기념관을 통해서 우리가 잊고 있던
 		전쟁역사를 다시한번 느껴보는 것도 좋은 방법이라고 생각한다.</p>
-	<p id="texttext9">전화번호 : 02-2133-1372
+	<p id="texttext9" class="ptext">전화번호 : 02-2133-1372
 		
 		주소 : 서울 종로구 계동길 37 지번 : 계동 105
 		
@@ -650,7 +660,7 @@ table tbody tr {
 		가회동 11번지 일대는 북촌3경, 가회동 31번지 언덕이 4경, 한옥이 잘 보존되어 있는 가회동 내리막 골목길이 북촌5경,
 		가회동 오르막 골목길이 북촌6경, 가회동 31번지가 북촌7경, 삼청동 돌계단길이 북촌8경을 통해 대한민국 선조들의 주거 형태를
 		느껴 보는건 어떠한가?</p>
-	<p id="texttext10">전화번호 : 02-2077-9000
+	<p id="texttext10" class="ptext">전화번호 : 02-2077-9000
 	
 		주소 : 서울 용산구 서빙고로 137 지번 : 용산동6가 168-6
 		
@@ -769,10 +779,10 @@ table tbody tr {
 			$('#texttext').html(test10);
 		});
 	</script>
-	<p id="texttext11">경복궁 야간개장 기간 : 매년 4월말 ~ 11월 초 장소 : 경복궁 주최 : 문화재청
+	<p id="texttext11" class="ptext">경복궁 야간개장 기간 : 매년 4월말 ~ 11월 초 장소 : 경복궁 주최 : 문화재청
 
 		요금 : 일반인 : 3000원 만 65세 어르신, 외국인 : 3000원 한복착용자 : 무료</p>
-	<p id="texttext22">홍대거리에는 이색카페들, 소규모 갤러리와 화랑, 소품점과 패션숍, 라이브카페와 클럽,
+	<p id="texttext22" class="ptext">홍대거리에는 이색카페들, 소규모 갤러리와 화랑, 소품점과 패션숍, 라이브카페와 클럽,
 		예술시장, 각종 맛집 등은 홍대거리를 더욱 자유스럽게 만든다. 다양한 행사와 거리공연, 축제 등의 문화요소를 간직하고 있어
 		홍대주변은 항상 많은 사람들로 북적거린다. 또한, 홍대주변을 구성하는 미술학원거리, 피카소거리, 클럽거리, 걷고 싶은거리 등
 		이색거리가 홍대거리로의 발걸음을 즐겁게 한다. 홍대 걷고싶은거리 : 홍대 걷고싶은거리는 홍대를 대표하는 곳으로 야외 무대
@@ -782,7 +792,7 @@ table tbody tr {
 		/ 홍대앞 희망시장 : 홍익대 정문 앞 홍익어린이 공원에서는 매년 3월부터 11월까지 매주 토요일은 홍대앞 예술시장
 		프리마켓이, 매주 일요일은 홍대앞 희망시장이 열린다.각각의 예술시장에서는 일반 시민작가들의 참여와 손으로 직접 만든 수공예품
 		판매,생활창작 아티스트들의 작품전시 및 판매가 이루어진다.</p>
-	<p id="texttext33">주소 : 서울 종로구 낙산길 41 동숭동 산2-10 수도 서울을 구성하는
+	<p id="texttext33" class="ptext">주소 : 서울 종로구 낙산길 41 동숭동 산2-10 수도 서울을 구성하는
 		내사산(內四山:북악산·남산·인왕산·낙산)의 하나이자 주산(主山)인 북악산의 좌청룡(左靑龍)에 해당하는 낙산의 자연환경과 역사적
 		문화환경을 복원함으로써 서울시민들에게 쾌적한 공원 경관을 제공하고, 자연 탐방을 통해 역사와 문화 교육의 장을 제공할 목적으로
 		조성되었다. 총면적은 6만 1145평으로, 1999년 12월 30일 착공해 2002년 7월 완공하였다. 주요 시설은 ① 전시
@@ -795,14 +805,14 @@ table tbody tr {
 		들이기 위해 사용했다는 자지동천(紫芝洞泉:자주동천·자주우물), 《지봉유설(芝峰類說)》의 저자 이수광(李晬光)이 외조부의 집을
 		손질하며 겨우 비만 가릴 수 있는 집이라는 뜻으로 당호를 붙인 비우당, 우물이 나란히 5개가 있어 이름 붙여진 오형제 우물터,
 		오부학당 가운데 하나인 동부학당 터 등이 있다.</p>
-	<p id="texttext44">주소 : 서울 용산구 남산공원길 103 서울타워 개장 시간 : 매일 11:00 -
+	<p id="texttext44" class="ptext">주소 : 서울 용산구 남산공원길 103 서울타워 개장 시간 : 매일 11:00 -
 		20:00 요금 : 전망대 (대인) 11,000원 전망대(소인) 9000원 제1의 관광명소 남산서울타워 국내외 관광객들이 년
 		1,200만 명 방문하는 서울 제1의 관광명소인 남산서울타워 최근 한류 바람을 몰고 각종 예능, 드라마의 촬영지로 이름이
 		높아지면서 관광객 방문이 더욱 늘어나는 추세입니다. 서울 중심부에 위치해 360도 전방향으로 서울 시내를 훤히 내려다볼 수
 		있는 천혜의 입지 조건을 갖추고 있어, 세계 최대의 여행 출판사인 론리 플래닛이 선정한 세계 500대 관광지에 뽑히기도
 		했습니다. 최근 사무동을 리모델링해 오픈한 서울타워플라자엔 다양한 편의시설과 볼거리, 식음료 매장을 갖춰 관광객에게 서비스를
 		제공합니다.</p>
-	<p id="texttext55">전화번호 : 02-2290-6114 주소 : 서울 종로구 창신동 우리 역사의 소중한
+	<p id="texttext55" class="ptext">전화번호 : 02-2290-6114 주소 : 서울 종로구 창신동 우리 역사의 소중한
 		유물들이 멋진 새 보금자리를 찾았다. 2005년 10월 개관한 국립중앙박물관은 30만㎡의 방대한 공간에 30만여 점(2012년
 		1월 기준)의 유물을 보관, 전시하는 세계적 규모의 박물관이다. 용산의 옛 주한미군부대 자리에 위치한 이곳은 자연과 인공의
 		조화를 소중히 여긴 선조들의 지혜를 이어받아 호수와 정원이 어우러지게 설계를 하였으며 남산과 한강이 둘러싸는
@@ -817,10 +827,10 @@ table tbody tr {
 		위상을 높여가고 있다. 상설전시관과 더불어 기획전시관, 어린이전시관, 야외전시관들이 볼거리를 더하며 전문 공연장과 도서관까지
 		자리하는 종합 문화 공간이다. 박물관 곳곳에 자리하는 식당 공간도 특색을 지닌 먹거리를 준비하고 있다. 홈페이지 등을 통하여
 		사전에 정보를 준비한다면 더욱 알찬 시간여행을 떠날 수 있다.</p>
-	<p id="texttext66">6번</p>
-	<p id="texttext77">7번</p>
-	<p id="texttext88">8번</p>
-	<p id="texttext99">전화번호 : 02-1661-2000 주소 : 서울 송파구 올림픽로 240 지번 :
+	<p id="texttext66" class="ptext">6번</p>
+	<p id="texttext77" class="ptext">7번</p>
+	<p id="texttext88" class="ptext">8번</p>
+	<p id="texttext99" class="ptext">전화번호 : 02-1661-2000 주소 : 서울 송파구 올림픽로 240 지번 :
 		잠실동 40-1 요금 : 자유이용권(성인 : 56,000원 청소년 : 50,000원 어린이 : 46.000원)
 
 		After4(성인 : 45,000원 청소년 40.000원, 어린이 : 35,000원) 롯데그룹이 국민들의 여가 선용과 외국인
