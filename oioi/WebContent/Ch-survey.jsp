@@ -43,6 +43,7 @@ span {
 	padding-left: 3%;
 	padding-right: 3%;
 	padding-bottom: 2.1%;
+	background-color: rgba(23,27,35, 0.8);
 }
 
 #Q_type{
